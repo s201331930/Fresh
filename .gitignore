@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Downloaded market data (regenerated on demand by the loader)
+data/cache/
+
+# Keep the committed example report; ignore ad-hoc run outputs elsewhere
+reports/*.tmp

@@ -1,0 +1,100 @@
+# =============================================================================
+# Multi-Strategy Long-Only Trading System -- Master Configuration
+# =============================================================================
+# Design principles (non-negotiable):
+#   * LONG ONLY        -> no short positions ever
+#   * LEVERAGE FREE    -> aggregate exposure never exceeds available equity
+#   * RISK MANAGED     -> every open trade carries a stop-loss, and may carry a
+#                         take-profit and/or a trailing stop
+#   * UNCORRELATED     -> strategies are designed around different return
+#                         drivers and instruments so their P&L streams diversify
+# =============================================================================
+
+backtest:
+  start: "2008-01-01"        # long sample spanning multiple regimes (GFC, COVID, 2022)
+  end:   null                # null -> today
+  initial_capital: 1_000_000
+  # Annual risk-free rate used for Sharpe/Sortino and as the yield on idle cash.
+  risk_free_rate: 0.02
+  # Trading frictions applied to every fill.
+  commission_bps: 1.0        # 1 bp per side
+  slippage_bps: 5.0          # 5 bps assumed adverse fill
+  benchmark: "SPY"           # buy & hold reference
+
+data:
+  cache_dir: "data/cache"
+  # If a download fails (offline / rate-limited), fall back to a cached file,
+  # and if none exists, synthesise a reproducible series so the pipeline always
+  # runs. Synthetic data is clearly flagged in the report.
+  allow_synthetic_fallback: true
+  synthetic_seed: 7
+
+# Capital is split across strategies. Weights are normalised internally.
+# Each strategy trades within its own capital sleeve (leverage-free per sleeve),
+# so the book as a whole is leverage-free.
+portfolio:
+  weights:
+    trend_following: 0.30
+    mean_reversion: 0.20
+    dual_momentum: 0.30
+    breakout: 0.20
+  # Volatility-parity overlay: re-scale sleeve weights by inverse realised vol.
+  use_vol_parity: true
+  vol_parity_lookback: 90
+
+strategies:
+
+  # 1) TREND FOLLOWING -- time-series momentum on a diversified ETF basket.
+  #    Return driver: persistent multi-month trends. Profits in sustained
+  #    bull markets, sits in cash during downtrends.
+  trend_following:
+    enabled: true
+    universe: ["SPY", "QQQ", "EFA", "EEM", "TLT", "GLD", "DBC", "VNQ"]
+    fast_ma: 50
+    slow_ma: 200
+    breakout_lookback: 100      # confirm with N-day high
+    atr_period: 20
+    atr_trailing_mult: 4.0      # wide trailing stop -> ride the trend
+    stop_atr_mult: 3.0          # initial hard stop
+    max_positions: 6
+    risk_per_trade: 0.01        # fraction of sleeve risked to the initial stop
+
+  # 2) MEAN REVERSION -- Connors-style RSI(2) dip buying inside an uptrend.
+  #    Return driver: short-term oversold bounces. Counter-trend timing, so it
+  #    is structurally decorrelated from the trend sleeve.
+  mean_reversion:
+    enabled: true
+    universe: ["SPY", "QQQ", "IWM", "XLK", "XLF", "XLE", "XLV", "EEM"]
+    trend_filter_ma: 200        # only buy dips above the long-term trend
+    rsi_period: 2
+    rsi_entry: 10.0             # deeply oversold
+    rsi_exit: 60.0              # exit on snap-back
+    max_holding_days: 10
+    stop_loss_pct: 0.08
+    take_profit_pct: 0.10
+    max_positions: 4
+
+  # 3) DUAL MOMENTUM -- cross-sectional + absolute momentum asset rotation.
+  #    Return driver: relative strength across asset classes with a defensive
+  #    bond/cash switch. Distinct from the others (monthly, single-asset hold).
+  dual_momentum:
+    enabled: true
+    universe: ["SPY", "EFA", "EEM", "GLD", "TLT", "VNQ", "DBC"]
+    safe_asset: "BIL"           # short T-bills proxy when momentum is negative
+    lookback_months: 6
+    top_n: 2
+    rebalance: "M"              # month-end
+    trailing_pct: 0.15          # protective trailing stop between rebalances
+
+  # 4) BREAKOUT -- Donchian channel breakout (turtle style) on trendy/vol assets.
+  #    Return driver: volatility expansion / range breakouts.
+  breakout:
+    enabled: true
+    universe: ["QQQ", "GLD", "SLV", "DBC", "USO", "TLT", "EEM", "GBTC"]
+    entry_lookback: 55
+    exit_lookback: 20           # Donchian exit channel
+    atr_period: 20
+    stop_atr_mult: 2.0
+    atr_trailing_mult: 3.0
+    max_positions: 5
+    risk_per_trade: 0.01
