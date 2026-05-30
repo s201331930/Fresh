@@ -7,7 +7,10 @@ The loader tries, in order:
        enabled in config) so the whole pipeline still runs when offline.
 
 Every series is normalised to OHLCV columns with a tz-naive ``DatetimeIndex``
-and adjusted prices (splits/dividends folded in) so back-tests are honest.
+and adjusted prices (splits/dividends folded in) so back-tests are honest. A
+de-spiking pass (Hampel filter) removes bad ticks -- prices that deviate far
+from a local median and revert -- which are common in vendor data for some
+exchanges (e.g. several-fold one-/two-day jumps in adjusted closes).
 """
 
 from __future__ import annotations
@@ -59,10 +62,12 @@ class DataLoader:
         cache_dir: str = "data/cache",
         allow_synthetic_fallback: bool = True,
         synthetic_seed: int = 7,
+        despike_threshold: float = 0.40,
     ) -> None:
         self.cache_dir = cache_dir
         self.allow_synthetic_fallback = allow_synthetic_fallback
         self.synthetic_seed = synthetic_seed
+        self.despike_threshold = despike_threshold
         os.makedirs(cache_dir, exist_ok=True)
 
     # ------------------------------------------------------------------ #
@@ -80,9 +85,43 @@ class DataLoader:
         for sym in symbols:
             df = self._load_one(sym, start, end)
             if df is not None and len(df) > 50:
-                out.frames[sym] = df
+                # De-spike on every path (covers stale dirty cache too).
+                out.frames[sym] = self._clean_bad_ticks(df, self.despike_threshold)
             else:
                 print(f"  [data] WARNING: insufficient data for {sym}, skipping")
+        return out
+
+    # ------------------------------------------------------------------ #
+    # Data cleaning
+    # ------------------------------------------------------------------ #
+    @staticmethod
+    def _clean_bad_ticks(df: pd.DataFrame, threshold: float = 0.40) -> pd.DataFrame:
+        """Hampel-style de-spike: replace prices far from a local median.
+
+        A genuine trend or (already-adjusted) split tracks the rolling median; a
+        bad tick deviates from it by more than ``threshold`` and reverts. Such
+        points are snapped to the local median and the rest of the OHLC bar is
+        rescaled by the same factor so the series stays internally consistent.
+        Two passes catch short (multi-day) plateaus.
+        """
+        out = df.copy()
+        if len(out) < 5:
+            return out
+        orig_close = out["close"].astype(float).values
+        close = pd.Series(orig_close.copy())
+        for _ in range(2):
+            med = close.rolling(7, center=True, min_periods=3).median()
+            med = med.bfill().ffill()
+            dev = (close / med - 1.0).abs()
+            bad = dev > threshold
+            if not bool(bad.any()):
+                break
+            close = close.where(~bad, med)
+        fixed = close.values
+        scale = np.divide(fixed, orig_close, out=np.ones_like(orig_close), where=orig_close > 0)
+        for col in ("open", "high", "low", "close"):
+            if col in out.columns:
+                out[col] = out[col].astype(float).values * scale
         return out
 
     # ------------------------------------------------------------------ #
