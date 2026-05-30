@@ -1,119 +1,163 @@
-# Multi-Strategy Long-Only Trading System
+# Quant Trading & Portfolio-Optimisation Toolkit
 
-A research-grade backtesting framework for a **long-only, leverage-free** book
-built from several **deliberately uncorrelated** strategy sleeves. Every open
-position is risk-managed with a **stop-loss**, and — depending on the sleeve — a
-**take-profit** and/or a **trailing stop**. The whole pipeline produces a
-desk-ready tear-sheet with the full set of backtesting KPIs.
+A research-grade Python toolkit for **long-only, leverage-free** systematic
+investing. It contains two complementary systems that share one data layer,
+metrics engine and reporting stack:
 
-> **Design mandate**
-> - **Long only** — we never short.
-> - **Leverage free** — every purchase is gated by available cash, so aggregate
->   exposure can never exceed equity.
-> - **Risk managed** — no position is ever held without a stop.
-> - **Uncorrelated** — sleeves are built around different return drivers and
->   instruments so their P&L streams diversify each other.
+1. **Multi-Strategy System** — a book of several *uncorrelated* signal
+   strategies (trend, mean-reversion, dual-momentum, breakout), each position
+   risk-managed with stop-loss / take-profit / trailing stops, blended into one
+   portfolio. See [`scripts/run_backtest.py`](scripts/run_backtest.py).
+2. **Portfolio Optimiser** — *mathematical* mean-variance / risk-based
+   optimisation of a **specific** basket of holdings, with monthly rebalancing,
+   a trend/cash switch, volatility targeting, trailing stops and a circuit
+   breaker, validated by a 15+ year **train / test / validate** walk-forward.
+   See [`scripts/optimize_portfolio.py`](scripts/optimize_portfolio.py).
+
+> **Mandate (both systems):** long only, leverage free (exposure ≤ equity at all
+> times), every risk position carries a stop, and capital is diversified across
+> low-correlation return drivers.
 
 ---
 
-## Why this design
+## System 2: Portfolio Optimiser (mathematical optimisation)
 
-A single long-only strategy is hostage to one return driver and one regime.
-Blending several *uncorrelated* sleeves is the cleanest, leverage-free way to
-raise risk-adjusted return: when one sleeve is flat or drawing down, another is
-usually working. The objective here is **capital preservation with steady
-compounding and shallow drawdowns**, not chasing the index.
+Built for an investor's actual buy-and-hold basket — by default
+`QQQ, VEU, STC (7010.SR), Al Rajhi (1120.SR), Bonyan REIT (4347.SR),
+Alinma Hospitality REIT (4349.SR)` — and answers: *what mix maximises
+risk-adjusted return while controlling risk?*
 
-In the reference backtest (2008→present, US-listed ETF proxies) the blended
-book delivered a far smaller drawdown than buy-and-hold equities at a comparable
-Sharpe and a much higher Calmar, with a market beta near zero — i.e. it behaves
-like a genuine diversifier rather than a closet index fund. See
-[`reports/backtest_report.md`](reports/backtest_report.md) for the full numbers.
+**What it does**
+- Races optimisation methods — `equal_weight`, `inverse_vol`, `min_variance`,
+  `max_sharpe`, `risk_parity`, `max_diversification` — each under a **core**
+  (fully-invested) and a **defensive** (trend filter + 10% vol target + 20%
+  trailing stops + 20% circuit breaker) profile.
+- Estimation-error defences: **Ledoit-Wolf covariance shrinkage** and
+  EWM expected returns shrunk toward the cross-sectional mean, plus a 35%
+  per-name cap. (Without these, max-Sharpe overfits and min-variance with cash
+  degenerates to an all-cash solution.)
+- **Walk-forward** with **train / test / validate** splits over **16+ years**.
+  The champion is chosen on the *development* window (train+test) and then
+  judged on the **untouched validate** holdout — the standard guard against
+  curve-fitting.
+- **Dynamic universe:** because the REITs listed recently (Bonyan 2018, Alinma
+  Hospitality 2023), each holding joins the optimisation only once it has enough
+  listed history. This preserves the long backtest while still using all current
+  holdings. (SAR is USD-pegged at 3.75, so USD and Saudi names combine without
+  FX adjustment.)
+- **Data hygiene:** a Hampel median filter removes vendor bad ticks (several-fold
+  one-day price spikes that appear in some Saudi adjusted closes) before any
+  statistics are computed.
 
-## The four sleeves
+**Reference result (2010→2026, see `reports/portfolio_optimization_report.md`)**
 
-| Sleeve | Return driver | Instruments | Entry logic | Risk exits |
-|---|---|---|---|---|
-| **Trend Following** | Multi-month price trends | Diversified ETFs (equities, bonds, gold, commodities, REITs) | Price > 200d MA, 50d > 200d MA, new 100d high | ATR hard stop + wide ATR trailing stop; MA-cross exit |
-| **Mean Reversion** | Short-term oversold bounces *in an uptrend* | US equity index/sector ETFs | Close > 200d MA **and** RSI(2) < 10 | % stop, % take-profit, RSI snap-back exit, 10-day time stop |
-| **Dual Momentum** | Cross-sectional + absolute momentum rotation | Multi-asset ETFs with a T-bill safe asset | Monthly: hold top-N by 6-month momentum, else go to cash/bills | Protective trailing stop between rebalances |
-| **Breakout** | Volatility expansion / range breakouts | Higher-vol / trendy assets (Nasdaq, metals, energy, EM, crypto proxy) | Close ≥ 55-day Donchian high | ATR stop + ATR trailing stop; 20-day Donchian exit |
+| | Champion (risk-parity, core) | Your Buy & Hold | Defensive variant |
+|---|---|---|---|
+| Full-sample Sharpe | 0.70 | 0.69 | ~0.55 |
+| Full-sample CAGR | 9.1% | 9.3% | ~7% |
+| Max Drawdown | -23% | -23% | **-21%** |
+| Validate max DD | -13% | -16% | **-13%** |
 
-These are combined with configurable base weights and an optional
-**inverse-volatility (vol-parity)** overlay that tilts capital toward whichever
-sleeves are currently calmest. Because the portfolio return is a convex
-combination of sleeve returns (weights ≥ 0, summing to 1), the **book stays
-leverage-free** at every level.
+**Honest verdict (this is the important part).** For a small, already-diversified
+6-name book, naive **1/N is very hard to beat** (the DeMiguel–Garlappi–Uppal
+result). The optimiser's value is therefore *robust risk budgeting and
+discipline*, not extra return: risk-parity matches buy & hold's risk-adjusted
+return with lower single-name concentration. The **defensive** profile is genuine
+**crash insurance** — it materially reduced the 2020 and 2022 drawdowns — at the
+cost of lagging in the 2023–25 bull. The surest way to push the frontier out is
+to add more *uncorrelated* assets, which this engine supports out of the box.
 
-## KPIs reported
+```bash
+python scripts/optimize_portfolio.py --config config_portfolio.yaml
+```
+
+Edit `config_portfolio.yaml` to change holdings (name → Yahoo ticker), methods,
+caps, the risk overlays, or the split fractions.
+
+---
+
+## System 1: Multi-Strategy Signal Book
+
+Four deliberately uncorrelated long-only sleeves, each risk-managed and blended
+with an inverse-volatility overlay.
+
+| Sleeve | Return driver | Risk exits |
+|---|---|---|
+| **Trend Following** | Multi-month trends across diversified ETFs | ATR stop + wide ATR trailing stop; MA-cross exit |
+| **Mean Reversion** | RSI(2) oversold bounces above the 200d trend | % stop, % take-profit, snap-back exit, 10-day time stop |
+| **Dual Momentum** | Cross-sectional + absolute momentum rotation with a T-bill safe asset | Protective trailing stop between monthly rebalances |
+| **Breakout** | 55-day Donchian breakouts on trendy/vol assets | ATR stop + ATR trailing stop; 20-day Donchian exit |
+
+Reference run (2008→present): blended Sharpe ≈ 0.57 with a -6% max drawdown vs
+SPY's -52%, beta ≈ 0.10. See `reports/backtest_report.md`.
+
+```bash
+python scripts/run_backtest.py --config config.yaml
+```
+
+---
+
+## KPIs reported (both systems)
 
 Return & risk: Total Return, CAGR, Annualised Volatility, Sharpe, Sortino,
-Calmar. Drawdown: Max Drawdown, Average Drawdown, Max Drawdown Duration. Tail
-risk: daily VaR/CVaR (95%), skew, kurtosis, best/worst day. Benchmark-relative:
-Beta, annualised Alpha, correlation to benchmark. Trade-level: number of trades,
-win rate, profit factor, payoff ratio, expectancy, average win/loss, best/worst
-trade, average holding period, and an exit-reason breakdown (stop / target /
-trailing / signal / time). Plus a **cross-strategy correlation matrix** — the
-key diversification check — and a monthly/annual returns table.
+Calmar. Drawdown: Max/Average Drawdown, Max Drawdown Duration. Tail risk: daily
+VaR/CVaR (95%), skew, kurtosis, best/worst day. Benchmark-relative: Beta,
+annualised Alpha, correlation. Trade-level: number of trades, win rate, profit
+factor, payoff ratio, expectancy, average win/loss, holding period. Plus
+correlation matrices, efficient-frontier and allocation charts, and monthly /
+per-era return tables.
 
 ## Project layout
 
 ```
-config.yaml                  # all knobs: universe, params, costs, weights
+config.yaml                    # multi-strategy config
+config_portfolio.yaml          # portfolio-optimiser config (holdings, methods, risk)
 requirements.txt
-scripts/run_backtest.py      # end-to-end runner -> reports/
+scripts/
+  run_backtest.py              # System 1 runner
+  optimize_portfolio.py        # System 2 runner (optimisation + walk-forward)
 src/quant/
-  data/loader.py             # yfinance download + CSV cache + synthetic fallback
-  engine/backtester.py       # long-only, leverage-free, SL/TP/trailing engine
-  engine/portfolio.py        # sleeve combiner + vol-parity overlay
-  metrics/kpis.py            # all backtesting KPIs
-  strategies/                # trend / mean-reversion / dual-momentum / breakout
-  reporting/report.py        # markdown tear-sheet + PNG charts
-tests/                       # engine & metrics unit tests
-reports/                     # generated tear-sheet, figures, CSVs (committed sample)
+  data/loader.py               # yfinance download + cache + de-spike + synthetic fallback
+  engine/backtester.py         # long-only, leverage-free, SL/TP/trailing engine
+  engine/portfolio.py          # multi-strategy combiner + vol-parity overlay
+  optimization/optimizer.py    # mean-variance / risk-parity / etc. + shrinkage
+  optimization/allocation.py   # rebalancing + trend/vol/stop overlays, dynamic universe
+  optimization/walkforward.py  # train/test/validate splitting & champion selection
+  metrics/kpis.py              # all backtesting KPIs
+  strategies/                  # trend / mean-reversion / dual-momentum / breakout
+  reporting/report.py          # markdown tear-sheet + charts
+tests/                         # engine, metrics & optimiser unit tests (pytest)
+reports/                       # generated reports, figures, CSVs (committed samples)
 ```
 
 ## Quick start
 
 ```bash
 pip install -r requirements.txt
-python scripts/run_backtest.py --config config.yaml
+python scripts/optimize_portfolio.py --config config_portfolio.yaml   # System 2
+python scripts/run_backtest.py        --config config.yaml            # System 1
+python -m pytest tests/ -q                                            # 14 tests
 ```
 
-Outputs land in `reports/`:
-- `backtest_report.md` — the full tear-sheet
-- `figures/` — equity curves, drawdown, correlation heatmap, weight evolution
-- `trades.csv`, `portfolio_equity.csv`, `strategy_weights.csv`, `correlation_matrix.csv`
-
-The data loader caches downloads under `data/cache/`. If a symbol cannot be
-downloaded (offline / rate-limited) it falls back to a stale cache and, as a last
-resort, a **reproducible synthetic series** so the pipeline always runs — any
-synthetic symbols are flagged at the top of the report.
+Downloads are cached under `data/cache/`; if a symbol can't be fetched the loader
+falls back to stale cache and finally to a reproducible synthetic series (flagged
+in the report) so the pipeline always runs.
 
 ## Backtest hygiene (no look-ahead, honest fills)
 
-- Signals are computed on the **close of day _t_** and filled at the **open of
-  day _t+1_**. Rolling highs used for breakouts are shifted one bar.
-- Stop / target / trailing exits are **intrabar**. If a bar could hit both the
-  stop and the target, the **stop is assumed to fill first** (worst case); gaps
-  through the stop fill at the open.
-- **Per-side commission and adverse slippage** are charged on every fill; idle
-  cash earns the configured risk-free rate.
-- Prices are split/dividend **adjusted** so total-return is honest.
-
-## Tests
-
-```bash
-python -m pytest tests/ -q
-```
-
-Covers take-profit, stop-loss and trailing-stop exits, the **leverage-free
-invariant** (exposure ≤ 1, cash ≥ 0 at all times), no-look-ahead fills, and the
-KPI calculations.
+- Signals use only trailing data; optimiser inputs are estimated from windows
+  that end at the rebalance date and are filled at that close. Breakout highs in
+  System 1 are shifted one bar.
+- Per-position stop / target / trailing exits are intrabar; if a bar could hit
+  both stop and target the **stop is assumed first** (worst case); gaps fill at
+  the open.
+- Per-side commission and adverse slippage are charged on every fill; idle cash
+  earns the configured risk-free rate; prices are split/dividend adjusted.
 
 ## Going live — caveats
 
-This is a backtest, not a guarantee. Before risking capital: validate against an
-out-of-sample / walk-forward window, stress costs and slippage, confirm the data
-vendor for live use, and size positions to your own risk budget. ETF proxies are
-used per asset class; swap in your tradable instruments in `config.yaml`.
+Backtests are not guarantees. Validate against out-of-sample / walk-forward
+windows (built in here), stress costs and slippage (Saudi REIT liquidity in
+particular), confirm your live data vendor, and size positions to your own risk
+budget. The toolkit is designed to be extended — add holdings, strategies or
+assets in the config and re-run.
