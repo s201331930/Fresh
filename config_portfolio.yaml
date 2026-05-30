@@ -1,0 +1,72 @@
+# =============================================================================
+# Optimised allocation strategy for a SPECIFIC buy-and-hold portfolio.
+# Holdings: QQQ, VEU, STC, Al Rajhi Bank, Bonyan REIT, Alinma Hospitality REIT.
+# =============================================================================
+# Goal: mathematically optimise the mix to maximise risk-adjusted return while
+# controlling risk, with rebalancing, a trend/cash switch, volatility targeting,
+# trailing stops and a portfolio circuit breaker. Long-only, leverage-free.
+#
+# Data note: the two REITs listed recently (Bonyan 2018, Alinma Hospitality
+# 2023), so a fixed 6-asset 15-year history is impossible. We therefore run a
+# ~16-year backtest on a DYNAMIC universe -- each holding joins the optimisation
+# once it has >= `min_history` of listed data. SAR is USD-pegged (3.75), so
+# combining USD ETFs with Saudi names needs no FX adjustment.
+# =============================================================================
+
+backtest:
+  start: "2010-01-01"
+  end: null
+  initial_capital: 1_000_000
+  risk_free_rate: 0.02
+
+# Map each holding to its Yahoo Finance ticker.
+holdings:
+  QQQ: "QQQ"                       # Invesco Nasdaq-100 ETF (US)
+  VEU: "VEU"                       # Vanguard FTSE All-World ex-US ETF (US)
+  STC: "7010.SR"                   # Saudi Telecom Company (Tadawul)
+  AlRajhi: "1120.SR"               # Al Rajhi Bank (Tadawul)
+  BonyanREIT: "4347.SR"            # Bonyan REIT Fund (Tadawul)
+  AlinmaHospitalityREIT: "4349.SR" # Alinma Hospitality REIT Fund (Tadawul)
+
+# Candidate optimisation methods raced against each other. The champion is the
+# one with the best risk-adjusted score on the TEST era; it is then judged on
+# the untouched VALIDATE era.
+methods:
+  - equal_weight
+  - inverse_vol
+  - min_variance
+  - max_sharpe
+  - risk_parity
+  - max_diversification
+
+optimizer:
+  max_weight: 0.35        # no single holding above 35%
+  # Optimiser returns FULLY-INVESTED relative weights among the trend-qualified
+  # names; the cash decision is made by the overlays (trend filter + vol target),
+  # not the optimiser. (allow_cash=true would let min-variance trivially pick the
+  # zero-variance all-cash solution.)
+  allow_cash: false
+  mu_estimator: "ewm"     # exponentially-weighted expected returns
+  ewm_halflife: 126
+  mu_shrink: 0.5          # shrink expected returns toward the cross-sectional mean
+  shrinkage: null         # auto Ledoit-Wolf covariance shrinkage intensity
+
+allocation:
+  rebalance: "ME"         # month-end
+  lookback_days: 504      # 2y trailing estimation window
+  min_history: 200        # min listed observations before an asset is investable
+  use_trend_filter: true
+  trend_window: 200       # stay in cash on names below their 200d trend
+  use_vol_target: true
+  target_vol: 0.10        # 10% annualised target volatility
+  vol_lookback: 90
+  max_total_exposure: 1.0 # leverage-free
+  per_asset_trail: 0.20   # 20% trailing stop per holding
+  circuit_breaker: 0.20   # de-risk the book on a 20% portfolio drawdown
+  commission_bps: 2.0
+  slippage_bps: 5.0
+
+splits:
+  train_frac: 0.45
+  test_frac: 0.30
+  # validate = remaining 0.25
