@@ -57,6 +57,12 @@ def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
     weekly["Adj Low"] = weekly["Low"] * weekly["A2P"]
     weekly.drop(columns=["Open", "High", "Low", "Close"], inplace=True)
     weekly = weekly[["Adj Open", "Adj Low", "Adj High", "Adj Close", "A2P", "Volume"]]
+    weekly.rename(columns={
+        "Adj Open": "Open",
+        "Adj Low": "Low",
+        "Adj High": "High",
+        "Adj Close": "Close",
+    }, inplace=True)
     weekly.index.name = "Week_Ending"
     return weekly
 
