@@ -51,6 +51,7 @@ def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
         }
     )
     weekly.dropna(subset=["Open"], inplace=True)
+    weekly["A2P"] = weekly["Adj Close"] / weekly["Close"]
     weekly.index.name = "Week_Ending"
     return weekly
 

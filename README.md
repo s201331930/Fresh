@@ -13,6 +13,7 @@ Predictive-model prototype for identifying favorable entry points on **SPY** usi
 | `Close` | Raw closing price (last trading day of the week) |
 | `Adj Close` | Adjusted closing price (split & dividend adjusted) |
 | `Volume` | Total shares traded during the week |
+| `A2P` | Adjustment-to-price ratio (`Adj Close / Close`) |
 
 `Close` is the raw unadjusted price; `Adj Close` is adjusted for splits and dividends.
 
