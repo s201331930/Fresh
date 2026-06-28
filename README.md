@@ -6,7 +6,7 @@ Predictive-model prototype for identifying favorable entry points on **SPY** usi
 
 | Field | Description |
 |-------|-------------|
-| `Week_Ending` | Friday date marking the end of each trading week |
+| `Week_Starting` | Monday date marking the start of each trading week |
 | `Open` | Opening price (first trading day of the week) |
 | `High` | Highest price during the week |
 | `Low` | Lowest price during the week |

@@ -30,7 +30,7 @@ def fetch_daily_data(ticker: str, start: str) -> pd.DataFrame:
 
 def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
     """
-    Resample daily bars into weekly bars (Mon-Fri week ending Friday).
+    Resample daily bars into weekly bars (Mon-Fri, labeled by Monday start date).
 
     Aggregation rules mirror market convention:
       Open  -> first trading day of the week
@@ -49,7 +49,8 @@ def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
         }
     )
     weekly.dropna(subset=["Open"], inplace=True)
-    weekly.index.name = "Week_Ending"
+    weekly.index = weekly.index - pd.Timedelta(days=4)
+    weekly.index.name = "Week_Starting"
     return weekly
 
 
@@ -59,7 +60,7 @@ def main():
     print(f"  Daily rows retrieved: {len(daily)}")
     print(f"  Date range: {daily.index.min().date()} -> {daily.index.max().date()}")
 
-    print("Resampling to weekly bars (Mon-Fri, week ending Friday) ...")
+    print("Resampling to weekly bars (Mon-Fri, labeled by week start Monday) ...")
     weekly = resample_to_weekly(daily)
     print(f"  Weekly rows: {len(weekly)}")
     print(f"  Date range: {weekly.index.min().date()} -> {weekly.index.max().date()}")
