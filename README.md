@@ -7,10 +7,6 @@ Predictive-model prototype for identifying favorable entry points on **SPY** usi
 | Field | Description |
 |-------|-------------|
 | `Week_Ending` | Friday date marking the end of each trading week |
-| `Open` | Opening price (first trading day of the week) |
-| `High` | Highest price during the week |
-| `Low` | Lowest price during the week |
-| `Close` | Raw closing price (last trading day of the week) |
 | `Adj Close` | Adjusted closing price (split & dividend adjusted) |
 | `Volume` | Total shares traded during the week |
 | `A2P` | Adjustment-to-price ratio (`Adj Close / Close`) |
