@@ -10,10 +10,11 @@ Predictive-model prototype for identifying favorable entry points on **SPY** usi
 | `Open` | Opening price (first trading day of the week) |
 | `High` | Highest price during the week |
 | `Low` | Lowest price during the week |
-| `Close` | Closing price (last trading day of the week) |
+| `Close` | Raw closing price (last trading day of the week) |
+| `Adj Close` | Adjusted closing price (split & dividend adjusted) |
 | `Volume` | Total shares traded during the week |
 
-Prices are **split-adjusted** (Yahoo Finance `auto_adjust=True`).
+`Close` is the raw unadjusted price; `Adj Close` is adjusted for splits and dividends.
 
 ## Quick Start
 

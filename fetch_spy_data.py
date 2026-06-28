@@ -22,7 +22,7 @@ START_DATE = "2000-01-01"
 def fetch_daily_data(ticker: str, start: str) -> pd.DataFrame:
     """Pull daily OHLCV from Yahoo Finance."""
     tk = yf.Ticker(ticker)
-    df = tk.history(start=start, interval="1d", auto_adjust=True)
+    df = tk.history(start=start, interval="1d", auto_adjust=False)
     if df.empty:
         raise RuntimeError(f"No data returned for {ticker}")
     return df
@@ -33,11 +33,12 @@ def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
     Resample daily bars into weekly bars (Mon-Fri week ending Friday).
 
     Aggregation rules mirror market convention:
-      Open  -> first trading day of the week
-      High  -> highest intra-week high
-      Low   -> lowest intra-week low
-      Close -> last trading day of the week
-      Volume -> sum of daily volumes
+      Open      -> first trading day of the week
+      High      -> highest intra-week high
+      Low       -> lowest intra-week low
+      Close     -> last trading day of the week (raw)
+      Adj Close -> last trading day of the week (split & dividend adjusted)
+      Volume    -> sum of daily volumes
     """
     weekly = daily.resample("W-FRI").agg(
         {
@@ -45,6 +46,7 @@ def resample_to_weekly(daily: pd.DataFrame) -> pd.DataFrame:
             "High": "max",
             "Low": "min",
             "Close": "last",
+            "Adj Close": "last",
             "Volume": "sum",
         }
     )
