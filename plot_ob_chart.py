@@ -90,7 +90,7 @@ def main():
     ax.tick_params(axis="y", colors="#cccccc", labelsize=9)
     ax.yaxis.label.set_color("#cccccc")
     ax.set_ylabel("Price (Adjusted)", fontsize=11)
-    ax.set_title("SPY Weekly Candlesticks with Order Blocks (periods=7)", fontsize=14, color="white", pad=15)
+    ax.set_title("SPY Weekly Candlesticks with Order Blocks (periods=5)", fontsize=14, color="white", pad=15)
 
     for spine in ax.spines.values():
         spine.set_color("#444444")

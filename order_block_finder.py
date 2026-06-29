@@ -26,7 +26,7 @@ OUTPUT_CSV = DATA_DIR / "spy_weekly_with_ob.csv"
 
 def detect_order_blocks(
     df: pd.DataFrame,
-    periods: int = 7,
+    periods: int = 5,
     threshold: float = 0.0,
 ) -> pd.DataFrame:
     """
@@ -40,7 +40,8 @@ def detect_order_blocks(
     threshold : minimum absolute percent move from the OB candle's close
                 to the last candle in the sequence (close[1] in Pine terms).
 
-    Returns the input DataFrame augmented with OB columns.
+    OB flags are attributed to the OB candle itself (matching Pine Script's
+    offset = -ob_period behaviour), NOT to the detection bar.
     """
     n = len(df)
     ob_period = periods + 1
@@ -70,11 +71,11 @@ def detect_order_blocks(
                 if closes[i - j] > opens[i - j]:
                     up_count += 1
             if up_count == periods and relmove:
-                bull_ob[i] = True
-                ob_high[i] = highs[ob_idx]
-                ob_low[i] = lows[ob_idx]
-                ob_mid[i] = (highs[ob_idx] + lows[ob_idx]) / 2
-                ob_type[i] = "Bullish"
+                bull_ob[ob_idx] = True
+                ob_high[ob_idx] = highs[ob_idx]
+                ob_low[ob_idx] = lows[ob_idx]
+                ob_mid[ob_idx] = (highs[ob_idx] + lows[ob_idx]) / 2
+                ob_type[ob_idx] = "Bullish"
 
         # --- Bearish OB: OB candle is an up candle, followed by `periods` down candles ---
         if closes[ob_idx] > opens[ob_idx]:
@@ -83,11 +84,11 @@ def detect_order_blocks(
                 if closes[i - j] < opens[i - j]:
                     down_count += 1
             if down_count == periods and relmove:
-                bear_ob[i] = True
-                ob_high[i] = highs[ob_idx]
-                ob_low[i] = lows[ob_idx]
-                ob_mid[i] = (highs[ob_idx] + lows[ob_idx]) / 2
-                ob_type[i] = "Bearish"
+                bear_ob[ob_idx] = True
+                ob_high[ob_idx] = highs[ob_idx]
+                ob_low[ob_idx] = lows[ob_idx]
+                ob_mid[ob_idx] = (highs[ob_idx] + lows[ob_idx]) / 2
+                ob_type[ob_idx] = "Bearish"
 
     result = df.copy()
     result["OB_Bull"] = bull_ob.astype(int)
@@ -111,7 +112,7 @@ def main():
     df = pd.read_csv(INPUT_CSV, index_col="Week_Ending", parse_dates=True)
     print(f"Loaded {len(df)} weekly bars")
 
-    periods = 7
+    periods = 5
     threshold = 0.0
     print(f"Parameters: periods={periods}, threshold={threshold}%")
 
