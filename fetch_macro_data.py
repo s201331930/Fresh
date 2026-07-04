@@ -109,6 +109,8 @@ def main():
     ob_bear = int(merged["OB_Bear"].sum())
     print(f"  Bullish OBs: {ob_bull}, Bearish OBs: {ob_bear}")
 
+    merged["Target"] = (merged["OB_Type"] == "Bullish").astype(int)
+
     # --- Add technical indicators ---
     print("\nComputing technical indicators ...")
 
