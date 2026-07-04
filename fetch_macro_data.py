@@ -9,6 +9,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 from pathlib import Path
+from order_block_finder import detect_order_blocks
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -100,6 +101,13 @@ def main():
     print("\n--- Last 5 rows ---")
     print(merged.tail().to_string())
 
+    # --- Add Order Block signals ---
+    print("\nRunning Order Block detection (periods=5, threshold=0%) ...")
+    merged = detect_order_blocks(merged, periods=5, threshold=0.0)
+    ob_bull = int(merged["OB_Bull"].sum())
+    ob_bear = int(merged["OB_Bear"].sum())
+    print(f"  Bullish OBs: {ob_bull}, Bearish OBs: {ob_bear}")
+
     nulls = merged.isnull().sum()
     if nulls.any():
         print("\n--- Null counts per column ---")
@@ -107,6 +115,8 @@ def main():
 
     merged.to_csv(OUTPUT_CSV, float_format="%.4f")
     print(f"\nSaved to {OUTPUT_CSV}")
+    print(f"Final shape: {merged.shape[0]} rows x {merged.shape[1]} columns")
+    print(f"Columns: {list(merged.columns)}")
 
 
 if __name__ == "__main__":
