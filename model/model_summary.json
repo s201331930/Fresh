@@ -1,0 +1,16 @@
+{
+  "features": 98,
+  "train_rows": 282,
+  "val_rows": 207,
+  "test_rows": 208,
+  "train_positives": 9,
+  "val_positives": 6,
+  "test_positives": 10,
+  "scale_pos_weight": 30.3,
+  "best_iteration": 6,
+  "best_threshold": 0.58,
+  "val_roc_auc": 0.5779,
+  "val_pr_auc": 0.0635,
+  "test_roc_auc": 0.7826,
+  "test_pr_auc": 0.1429
+}
