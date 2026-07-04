@@ -108,23 +108,32 @@ def main():
     ob_bear = int(merged["OB_Bear"].sum())
     print(f"  Bullish OBs: {ob_bull}, Bearish OBs: {ob_bear}")
 
-    # --- Compute week-over-week change for price/volume columns ---
+    # --- Log-transform Volume ---
+    print("\nApplying log transform to Volume ...")
+    merged["Volume_Log"] = np.log(merged["Volume"])
+
+    # --- Compute week-over-week percentage change for price columns ---
     ob_cols = {"OB_Bull", "OB_Bear", "OB_Type", "OB_High", "OB_Low", "OB_Mid"}
-    skip_cols = ob_cols | {"A2P"}
-    change_cols = [c for c in merged.columns if c not in skip_cols]
+    skip_cols = ob_cols | {"A2P", "Volume"}
+    price_cols = [c for c in merged.columns if c not in skip_cols and c != "Volume_Log"]
 
-    print(f"\nComputing week-over-week change for: {change_cols}")
-    for col in change_cols:
-        chg_name = f"{col}_Chg"
-        merged[chg_name] = merged[col].diff()
+    print(f"Computing week-over-week % change for: {price_cols}")
+    for col in price_cols:
+        pct_name = f"{col}_PctChg"
+        merged[pct_name] = merged[col].pct_change() * 100
 
-    brent_chg_cols = [c for c in merged.columns if c.startswith("Brent_") and c.endswith("_Chg")]
-    merged[brent_chg_cols] = merged[brent_chg_cols].fillna(0)
+    # Volume change computed on the log-transformed series
+    merged["Volume_Log_Chg"] = merged["Volume_Log"].diff()
 
-    chg_cols_all = [c for c in merged.columns if c.endswith("_Chg")]
-    merged.loc[merged.index[0], chg_cols_all] = 0
+    # Fill Brent pct-change NaNs with 0 (pre-2007 gap)
+    brent_pct_cols = [c for c in merged.columns if c.startswith("Brent_") and c.endswith("_PctChg")]
+    merged[brent_pct_cols] = merged[brent_pct_cols].fillna(0)
 
-    print(f"  Added {len(chg_cols_all)} change columns")
+    # First row has no prior week — set all derived columns to 0
+    derived_cols = [c for c in merged.columns if c.endswith("_PctChg") or c.endswith("_Log_Chg")]
+    merged.loc[merged.index[0], derived_cols] = 0
+
+    print(f"  Added {len(derived_cols)} derived columns (pct change + volume log change)")
 
     nulls = merged.isnull().sum()
     if nulls.any():
