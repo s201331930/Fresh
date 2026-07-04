@@ -108,6 +108,24 @@ def main():
     ob_bear = int(merged["OB_Bear"].sum())
     print(f"  Bullish OBs: {ob_bull}, Bearish OBs: {ob_bear}")
 
+    # --- Compute week-over-week change for price/volume columns ---
+    ob_cols = {"OB_Bull", "OB_Bear", "OB_Type", "OB_High", "OB_Low", "OB_Mid"}
+    skip_cols = ob_cols | {"A2P"}
+    change_cols = [c for c in merged.columns if c not in skip_cols]
+
+    print(f"\nComputing week-over-week change for: {change_cols}")
+    for col in change_cols:
+        chg_name = f"{col}_Chg"
+        merged[chg_name] = merged[col].diff()
+
+    brent_chg_cols = [c for c in merged.columns if c.startswith("Brent_") and c.endswith("_Chg")]
+    merged[brent_chg_cols] = merged[brent_chg_cols].fillna(0)
+
+    chg_cols_all = [c for c in merged.columns if c.endswith("_Chg")]
+    merged.loc[merged.index[0], chg_cols_all] = 0
+
+    print(f"  Added {len(chg_cols_all)} change columns")
+
     nulls = merged.isnull().sum()
     if nulls.any():
         print("\n--- Null counts per column ---")
