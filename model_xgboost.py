@@ -1,25 +1,24 @@
 """
-XGBoost classifier to predict Bullish Order Blocks (Target=1).
+XGBoost regressor to predict next-week return magnitude.
+
+Target: (Close[t+1] - Close[t]) / Close[t]  (percentage return, shifted forward)
 
 Key design decisions to avoid look-ahead bias:
-  1. Chronological split — no shuffling. Train on the past, test on the future.
+  1. Target is SHIFTED FORWARD by one week — we predict next week's return
+     using only information available up to the current week.
+  2. OB group columns excluded entirely (they are confirmed retroactively).
+  3. Chronological split — no shuffling. Train on the past, test on the future.
      Train: first 70%  |  Validation: next 15%  |  Test: final 15%
-  2. No future-leaking features — OB group columns are excluded entirely.
-  3. NaN handling — rows with NaN in features are dropped only AFTER the split
-     boundaries are determined, so the time boundaries stay clean.
-  4. scale_pos_weight used to handle severe class imbalance (~3% positive).
+  4. Last row is dropped (no next-week return available).
 """
 
 import pandas as pd
 import numpy as np
 import xgboost as xgb
 from sklearn.metrics import (
-    classification_report,
-    confusion_matrix,
-    roc_auc_score,
-    precision_recall_curve,
-    average_precision_score,
-    f1_score,
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score,
 )
 import matplotlib
 matplotlib.use("Agg")
@@ -32,8 +31,7 @@ INPUT_CSV = DATA_DIR / "spy_weekly_enriched.csv"
 MODEL_DIR = Path(__file__).parent / "model"
 MODEL_DIR.mkdir(exist_ok=True)
 
-OB_COLS = ["OB_Bull", "OB_Bear", "OB_Type", "OB_High", "OB_Low", "OB_Mid"]
-TARGET_COL = "Target"
+OB_COLS = ["OB_Bull", "OB_Bear", "OB_Type", "OB_High", "OB_Low", "OB_Mid", "Target"]
 
 TRAIN_FRAC = 0.70
 VAL_FRAC = 0.15
@@ -42,11 +40,14 @@ VAL_FRAC = 0.15
 def load_and_prepare():
     df = pd.read_csv(INPUT_CSV, index_col="Week_Ending", parse_dates=True)
 
-    drop_cols = OB_COLS + [TARGET_COL]
-    feature_cols = [c for c in df.columns if c not in drop_cols]
+    df["Next_Week_Return"] = df["Close"].pct_change(1).shift(-1) * 100
+
+    df.dropna(subset=["Next_Week_Return"], inplace=True)
+
+    feature_cols = [c for c in df.columns if c not in OB_COLS + ["Next_Week_Return"]]
 
     X = df[feature_cols]
-    y = df[TARGET_COL]
+    y = df["Next_Week_Return"]
 
     return X, y, feature_cols
 
@@ -84,28 +85,30 @@ def print_section(title):
     print(f"{'=' * w}")
 
 
-def evaluate(model, X, y, label, threshold=0.5):
-    """Evaluate and print metrics for a given split."""
-    y_prob = model.predict_proba(X)[:, 1]
-    y_pred = (y_prob >= threshold).astype(int)
+def evaluate(model, X, y, label):
+    """Evaluate regression metrics."""
+    y_pred = model.predict(X)
 
-    print(f"\n--- {label} (threshold={threshold}) ---")
-    print(confusion_matrix(y, y_pred))
-    print(classification_report(y, y_pred, zero_division=0))
+    mae = mean_absolute_error(y, y_pred)
+    rmse = np.sqrt(mean_squared_error(y, y_pred))
+    r2 = r2_score(y, y_pred)
 
-    if y.sum() > 0 and len(y.unique()) > 1:
-        auc = roc_auc_score(y, y_prob)
-        ap = average_precision_score(y, y_prob)
-        print(f"  ROC-AUC: {auc:.4f}")
-        print(f"  Average Precision (PR-AUC): {ap:.4f}")
-    else:
-        auc, ap = None, None
-        print(f"  (ROC-AUC/AP not computable — only one class in {label})")
+    direction_actual = (y > 0).astype(int)
+    direction_pred = (y_pred > 0).astype(int)
+    dir_accuracy = (direction_actual == direction_pred).mean() * 100
 
-    return y_prob, y_pred, auc, ap
+    print(f"\n--- {label} ---")
+    print(f"  MAE:                {mae:.4f}%")
+    print(f"  RMSE:               {rmse:.4f}%")
+    print(f"  R²:                 {r2:.4f}")
+    print(f"  Direction Accuracy: {dir_accuracy:.2f}%")
+    print(f"  Actual mean return: {y.mean():.4f}%  (std: {y.std():.4f}%)")
+    print(f"  Predicted mean:     {y_pred.mean():.4f}%  (std: {y_pred.std():.4f}%)")
+
+    return y_pred, {"mae": mae, "rmse": rmse, "r2": r2, "dir_accuracy": dir_accuracy}
 
 
-def plot_feature_importance(model, feature_cols, top_n=30):
+def plot_feature_importance(model, top_n=30):
     importance = model.get_booster().get_score(importance_type="gain")
     imp_df = pd.DataFrame(
         {"feature": list(importance.keys()), "gain": list(importance.values())}
@@ -133,45 +136,54 @@ def plot_feature_importance(model, feature_cols, top_n=30):
     return imp_df
 
 
-def plot_precision_recall(y_true, y_prob, label):
-    precision, recall, thresholds = precision_recall_curve(y_true, y_prob)
-    ap = average_precision_score(y_true, y_prob)
-
-    fig, ax = plt.subplots(figsize=(8, 6))
+def plot_predictions_vs_actual(y_true, y_pred, label):
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
     fig.patch.set_facecolor("#1e1e1e")
+
+    # Scatter: predicted vs actual
+    ax = axes[0]
     ax.set_facecolor("#1e1e1e")
-    ax.plot(recall, precision, color="#26a69a", linewidth=2)
-    ax.set_xlabel("Recall", color="#cccccc")
-    ax.set_ylabel("Precision", color="#cccccc")
-    ax.set_title(f"Precision-Recall Curve — {label} (AP={ap:.4f})", color="white", fontsize=13)
+    ax.scatter(y_true, y_pred, alpha=0.5, s=12, color="#26a69a")
+    lims = [min(y_true.min(), y_pred.min()), max(y_true.max(), y_pred.max())]
+    ax.plot(lims, lims, "--", color="#ef5350", linewidth=1, label="Perfect prediction")
+    ax.set_xlabel("Actual Return (%)", color="#cccccc")
+    ax.set_ylabel("Predicted Return (%)", color="#cccccc")
+    ax.set_title(f"Predicted vs Actual — {label}", color="white", fontsize=12)
     ax.tick_params(colors="#cccccc")
+    ax.legend(facecolor="#2a2a2a", edgecolor="#555555", labelcolor="white")
     for spine in ax.spines.values():
         spine.set_color("#444444")
     ax.grid(color="#333333", alpha=0.5)
 
+    # Time series overlay
+    ax2 = axes[1]
+    ax2.set_facecolor("#1e1e1e")
+    x_range = range(len(y_true))
+    ax2.plot(x_range, y_true.values, color="#26a69a", alpha=0.7, linewidth=1, label="Actual")
+    ax2.plot(x_range, y_pred, color="#ef5350", alpha=0.7, linewidth=1, label="Predicted")
+    ax2.axhline(0, color="#666666", linewidth=0.5, linestyle="--")
+    ax2.set_xlabel("Week", color="#cccccc")
+    ax2.set_ylabel("Return (%)", color="#cccccc")
+    ax2.set_title(f"Return Time Series — {label}", color="white", fontsize=12)
+    ax2.tick_params(colors="#cccccc")
+    ax2.legend(facecolor="#2a2a2a", edgecolor="#555555", labelcolor="white")
+    for spine in ax2.spines.values():
+        spine.set_color("#444444")
+    ax2.grid(color="#333333", alpha=0.5)
+
     plt.tight_layout()
-    path = MODEL_DIR / f"pr_curve_{label.lower().replace(' ', '_')}.png"
+    path = MODEL_DIR / f"predictions_{label.lower().replace(' ', '_')}.png"
     fig.savefig(path, dpi=150, bbox_inches="tight", facecolor=fig.get_facecolor())
     plt.close()
-    print(f"  PR curve saved to {path}")
-
-
-def find_best_threshold(y_true, y_prob):
-    """Find threshold that maximises F1 on the given set."""
-    best_f1, best_t = 0, 0.5
-    for t in np.arange(0.05, 0.95, 0.01):
-        preds = (y_prob >= t).astype(int)
-        f = f1_score(y_true, preds, zero_division=0)
-        if f > best_f1:
-            best_f1, best_t = f, t
-    return best_t, best_f1
+    print(f"  Prediction chart saved to {path}")
 
 
 def main():
     print_section("DATA PREPARATION")
     X, y, feature_cols = load_and_prepare()
     print(f"Features: {len(feature_cols)} columns")
-    print(f"Target distribution: {dict(y.value_counts())}")
+    print(f"Target: Next_Week_Return (% change)")
+    print(f"  Mean: {y.mean():.4f}%,  Std: {y.std():.4f}%,  Min: {y.min():.4f}%,  Max: {y.max():.4f}%")
 
     print_section("CHRONOLOGICAL SPLIT")
     X_train, y_train, X_val, y_val, X_test, y_test = chronological_split(X, y)
@@ -180,80 +192,60 @@ def main():
     X_val, y_val = drop_nan_rows(X_val, y_val, "Val")
     X_test, y_test = drop_nan_rows(X_test, y_test, "Test")
 
-    pos = y_train.sum()
-    neg = len(y_train) - pos
-    spw = neg / pos if pos > 0 else 1
-    print(f"\n  Train class balance: {int(neg)} neg / {int(pos)} pos")
-    print(f"  scale_pos_weight: {spw:.1f}")
+    print(f"\n  Train target stats: mean={y_train.mean():.4f}%, std={y_train.std():.4f}%")
+    print(f"  Val target stats:   mean={y_val.mean():.4f}%, std={y_val.std():.4f}%")
+    print(f"  Test target stats:  mean={y_test.mean():.4f}%, std={y_test.std():.4f}%")
 
-    print_section("TRAINING XGBoost")
-    model = xgb.XGBClassifier(
-        n_estimators=500,
+    print_section("TRAINING XGBoost REGRESSOR")
+    model = xgb.XGBRegressor(
+        n_estimators=1000,
         max_depth=5,
-        learning_rate=0.05,
+        learning_rate=0.03,
         subsample=0.8,
-        colsample_bytree=0.8,
-        scale_pos_weight=spw,
-        min_child_weight=3,
+        colsample_bytree=0.7,
+        min_child_weight=5,
         gamma=1,
-        reg_alpha=0.5,
-        reg_lambda=1.0,
-        eval_metric="aucpr",
-        early_stopping_rounds=30,
+        reg_alpha=1.0,
+        reg_lambda=5.0,
+        eval_metric="rmse",
+        early_stopping_rounds=50,
         random_state=42,
-        use_label_encoder=False,
     )
 
     model.fit(
         X_train, y_train,
-        eval_set=[(X_val, y_val)],
-        verbose=50,
+        eval_set=[(X_train, y_train), (X_val, y_val)],
+        verbose=100,
     )
 
     best_iter = model.best_iteration
     print(f"\n  Best iteration: {best_iter}")
 
-    print_section("EVALUATION — DEFAULT THRESHOLD (0.5)")
-    val_prob, _, val_auc, val_ap = evaluate(model, X_val, y_val, "Validation")
-    test_prob, _, test_auc, test_ap = evaluate(model, X_test, y_test, "Test")
-
-    print_section("THRESHOLD TUNING (on Validation set)")
-    best_t, best_f1 = find_best_threshold(y_val, val_prob)
-    print(f"  Best threshold: {best_t:.2f} (F1={best_f1:.4f} on validation)")
-
-    print_section(f"EVALUATION — TUNED THRESHOLD ({best_t:.2f})")
-    evaluate(model, X_val, y_val, "Validation (tuned)", threshold=best_t)
-    evaluate(model, X_test, y_test, "Test (tuned)", threshold=best_t)
+    print_section("EVALUATION")
+    train_pred, train_metrics = evaluate(model, X_train, y_train, "Train")
+    val_pred, val_metrics = evaluate(model, X_val, y_val, "Validation")
+    test_pred, test_metrics = evaluate(model, X_test, y_test, "Test")
 
     print_section("FEATURE IMPORTANCE")
-    imp_df = plot_feature_importance(model, feature_cols)
+    imp_df = plot_feature_importance(model)
     print("\n  Top 15 features by gain:")
     print(imp_df.head(15).to_string(index=False))
 
-    print_section("PRECISION-RECALL CURVES")
-    if y_val.sum() > 0:
-        plot_precision_recall(y_val, val_prob, "Validation")
-    if y_test.sum() > 0:
-        plot_precision_recall(y_test, test_prob, "Test")
+    print_section("PREDICTION CHARTS")
+    plot_predictions_vs_actual(y_val, val_pred, "Validation")
+    plot_predictions_vs_actual(y_test, test_pred, "Test")
 
-    model.save_model(str(MODEL_DIR / "xgb_bullish_ob.json"))
-    print(f"\n  Model saved to {MODEL_DIR / 'xgb_bullish_ob.json'}")
+    model.save_model(str(MODEL_DIR / "xgb_next_week_return.json"))
+    print(f"\n  Model saved to {MODEL_DIR / 'xgb_next_week_return.json'}")
 
     summary = {
+        "model_type": "XGBRegressor",
+        "target": "Next_Week_Return (% change)",
         "features": len(feature_cols),
-        "train_rows": len(X_train),
-        "val_rows": len(X_val),
-        "test_rows": len(X_test),
-        "train_positives": int(y_train.sum()),
-        "val_positives": int(y_val.sum()),
-        "test_positives": int(y_test.sum()),
-        "scale_pos_weight": round(spw, 1),
         "best_iteration": best_iter,
-        "best_threshold": round(best_t, 2),
-        "val_roc_auc": round(val_auc, 4) if val_auc else None,
-        "val_pr_auc": round(val_ap, 4) if val_ap else None,
-        "test_roc_auc": round(test_auc, 4) if test_auc else None,
-        "test_pr_auc": round(test_ap, 4) if test_ap else None,
+        "train": {"rows": len(X_train), **{k: round(v, 4) for k, v in train_metrics.items()}},
+        "validation": {"rows": len(X_val), **{k: round(v, 4) for k, v in val_metrics.items()}},
+        "test": {"rows": len(X_test), **{k: round(v, 4) for k, v in test_metrics.items()}},
     }
     with open(MODEL_DIR / "model_summary.json", "w") as f:
         json.dump(summary, f, indent=2)

@@ -1,16 +1,27 @@
 {
+  "model_type": "XGBRegressor",
+  "target": "Next_Week_Return (% change)",
   "features": 98,
-  "train_rows": 282,
-  "val_rows": 207,
-  "test_rows": 208,
-  "train_positives": 9,
-  "val_positives": 6,
-  "test_positives": 10,
-  "scale_pos_weight": 30.3,
-  "best_iteration": 6,
-  "best_threshold": 0.58,
-  "val_roc_auc": 0.5779,
-  "val_pr_auc": 0.0635,
-  "test_roc_auc": 0.7826,
-  "test_pr_auc": 0.1429
+  "best_iteration": 11,
+  "train": {
+    "rows": 281,
+    "mae": 1.0837,
+    "rmse": 1.4646,
+    "r2": 0.1639,
+    "dir_accuracy": 66.548
+  },
+  "validation": {
+    "rows": 207,
+    "mae": 1.9789,
+    "rmse": 2.8827,
+    "r2": 0.0046,
+    "dir_accuracy": 58.4541
+  },
+  "test": {
+    "rows": 208,
+    "mae": 1.6521,
+    "rmse": 2.1437,
+    "r2": -0.006,
+    "dir_accuracy": 55.7692
+  }
 }
