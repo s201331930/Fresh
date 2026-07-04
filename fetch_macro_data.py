@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 from order_block_finder import detect_order_blocks
+from technical_indicators import add_indicators
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -108,14 +109,37 @@ def main():
     ob_bear = int(merged["OB_Bear"].sum())
     print(f"  Bullish OBs: {ob_bull}, Bearish OBs: {ob_bear}")
 
+    # --- Add technical indicators ---
+    print("\nComputing technical indicators ...")
+
+    merged = add_indicators(
+        merged, prefix="", close_col="Close", high_col="High",
+        low_col="Low", volume_col="Volume",
+    )
+    print("  SPY: MA, EMA, BB, MACD, OBV, RSI, ADX/DI")
+
+    merged = add_indicators(
+        merged, prefix="VIX_", close_col="VIX_Close", high_col="VIX_High",
+        low_col="VIX_Low", volume_col=None,
+    )
+    print("  VIX: MA, EMA, BB, MACD, RSI, ADX/DI")
+
+    merged = add_indicators(
+        merged, prefix="Brent_", close_col="Brent_Close", high_col="Brent_High",
+        low_col="Brent_Low", volume_col=None,
+    )
+    print("  Brent: MA, EMA, BB, MACD, RSI, ADX/DI")
+
     # --- Log-transform Volume ---
     print("\nApplying log transform to Volume ...")
     merged["Volume_Log"] = np.log(merged["Volume"])
 
-    # --- Compute week-over-week percentage change for price columns ---
-    ob_cols = {"OB_Bull", "OB_Bear", "OB_Type", "OB_High", "OB_Low", "OB_Mid"}
-    skip_cols = ob_cols | {"A2P", "Volume"}
-    price_cols = [c for c in merged.columns if c not in skip_cols and c != "Volume_Log"]
+    # --- Compute week-over-week percentage change for base price columns only ---
+    price_cols = [
+        "Open", "Low", "High", "Close",
+        "VIX_Open", "VIX_High", "VIX_Low", "VIX_Close",
+        "Brent_Open", "Brent_High", "Brent_Low", "Brent_Close",
+    ]
 
     print(f"Computing week-over-week % change for: {price_cols}")
     for col in price_cols:
