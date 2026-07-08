@@ -1,27 +1,84 @@
 {
-  "model_type": "XGBRegressor",
-  "target": "Next_Week_Return (% change)",
-  "features": 98,
-  "best_iteration": 11,
-  "train": {
-    "rows": 281,
-    "mae": 1.0837,
-    "rmse": 1.4646,
-    "r2": 0.1639,
-    "dir_accuracy": 66.548
+  "total_features": 179,
+  "lagged_features": 61,
+  "rolling_features": 9,
+  "interaction_features": 12,
+  "blend_weights": {
+    "XGBoost": 0.9812,
+    "LightGBM": 0.0,
+    "Ridge": 0.0188,
+    "XGB_Tuned": 0.0
   },
-  "validation": {
-    "rows": 207,
-    "mae": 1.9789,
-    "rmse": 2.8827,
-    "r2": 0.0046,
-    "dir_accuracy": 58.4541
-  },
-  "test": {
-    "rows": 208,
-    "mae": 1.6521,
-    "rmse": 2.1437,
-    "r2": -0.006,
-    "dir_accuracy": 55.7692
+  "results": {
+    "XGBoost": {
+      "val": {
+        "mae": 1.9673,
+        "rmse": 2.8871,
+        "r2": 0.0015,
+        "dir_accuracy": 57.0
+      },
+      "test": {
+        "mae": 1.6415,
+        "rmse": 2.1407,
+        "r2": -0.0033,
+        "dir_accuracy": 57.69
+      }
+    },
+    "LightGBM": {
+      "val": {
+        "mae": 1.9689,
+        "rmse": 2.8933,
+        "r2": -0.0027,
+        "dir_accuracy": 57.0
+      },
+      "test": {
+        "mae": 1.631,
+        "rmse": 2.1359,
+        "r2": 0.0013,
+        "dir_accuracy": 57.69
+      }
+    },
+    "Ridge": {
+      "val": {
+        "mae": 3.1541,
+        "rmse": 4.725,
+        "r2": -1.6742,
+        "dir_accuracy": 51.21
+      },
+      "test": {
+        "mae": 3.8695,
+        "rmse": 4.8046,
+        "r2": -4.0538,
+        "dir_accuracy": 47.12
+      }
+    },
+    "XGB_Tuned": {
+      "val": {
+        "mae": 1.9653,
+        "rmse": 2.8901,
+        "r2": -0.0005,
+        "dir_accuracy": 57.0
+      },
+      "test": {
+        "mae": 1.6353,
+        "rmse": 2.1391,
+        "r2": -0.0018,
+        "dir_accuracy": 57.69
+      }
+    },
+    "Ensemble": {
+      "val": {
+        "mae": 1.9709,
+        "rmse": 2.8863,
+        "r2": 0.0021,
+        "dir_accuracy": 57.0
+      },
+      "test": {
+        "mae": 1.6371,
+        "rmse": 2.1283,
+        "r2": 0.0083,
+        "dir_accuracy": 57.69
+      }
+    }
   }
 }
