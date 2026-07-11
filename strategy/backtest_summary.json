@@ -1,0 +1,65 @@
+{
+  "backtest_period": "2009-12-25 00:00:00 to 2026-06-19 00:00:00",
+  "oos_predictions": 861,
+  "optimized_threshold": 0.28,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 864.9,
+      "cagr": 14.67,
+      "sharpe": 0.996,
+      "max_drawdown": -31.83,
+      "win_rate": 60.2,
+      "in_market_pct": 80.8,
+      "n_trades": 137,
+      "n_weeks": 861,
+      "bnh_total_return": 768.42,
+      "bnh_cagr": 13.94,
+      "bnh_sharpe": 0.89,
+      "bnh_max_drawdown": -31.83
+    },
+    "Binary (t=opt)": {
+      "total_return": 312.66,
+      "cagr": 8.94,
+      "sharpe": 0.925,
+      "max_drawdown": -14.58,
+      "win_rate": 67.14,
+      "in_market_pct": 16.3,
+      "n_trades": 156,
+      "n_weeks": 861,
+      "bnh_total_return": 768.42,
+      "bnh_cagr": 13.94,
+      "bnh_sharpe": 0.89,
+      "bnh_max_drawdown": -31.83
+    },
+    "Scaled": {
+      "total_return": 321.13,
+      "cagr": 9.07,
+      "sharpe": 0.983,
+      "max_drawdown": -17.96,
+      "win_rate": 59.63,
+      "in_market_pct": 80.8,
+      "n_trades": 751,
+      "n_weeks": 861,
+      "bnh_total_return": 768.42,
+      "bnh_cagr": 13.94,
+      "bnh_sharpe": 0.89,
+      "bnh_max_drawdown": -31.83
+    },
+    "Adaptive": {
+      "total_return": 613.5,
+      "cagr": 12.6,
+      "sharpe": 0.961,
+      "max_drawdown": -24.74,
+      "win_rate": 59.34,
+      "in_market_pct": 70.3,
+      "n_trades": 168,
+      "n_weeks": 861,
+      "bnh_total_return": 768.42,
+      "bnh_cagr": 13.94,
+      "bnh_sharpe": 0.89,
+      "bnh_max_drawdown": -31.83
+    }
+  },
+  "transaction_cost": 0.0002
+}
