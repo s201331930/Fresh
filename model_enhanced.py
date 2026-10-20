@@ -1,5 +1,5 @@
 """
-Enhanced trading model — all 9 improvements integrated.
+Enhanced trading model — all 10 improvements integrated.
 
 #1  NaN imputation (recover ~685 training rows)
 #2  Feature selection (top features by importance)
@@ -10,6 +10,7 @@ Enhanced trading model — all 9 improvements integrated.
 #7  Alternative models (CatBoost added)
 #8  Macro data expansion (TNX, DXY, Gold fetched & joined)
 #9  Probability calibration (directional probability output)
+#10 HMM regime detection (3-state Gaussian HMM, walk-forward fitted)
 """
 
 import pandas as pd
@@ -27,6 +28,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from pathlib import Path
+from hmm_regime import add_hmm_features
 import json
 import warnings
 warnings.filterwarnings("ignore")
@@ -45,6 +47,7 @@ LAG_FEATURES = [
     "RSI_14", "MACD_Hist", "BB_PctB",
     "ADX_14", "DI_Plus_14", "DI_Minus_14",
     "Brent_Close_PctChg", "VIX_RSI_14",
+    "HMM_Regime", "HMM_Prob_Bear", "HMM_Prob_Bull",
 ]
 LAG_PERIODS = [1, 2, 3, 4]
 
@@ -61,6 +64,10 @@ INTERACTIONS = [
     ("VIX_RSI_14", "VIX_MACD_Hist"),
     ("Close_PctChg", "Close_PctChg_Lag1"),
     ("VIX_Close", "RSI_14"),
+    ("HMM_Prob_Bull", "Close_PctChg"),
+    ("HMM_Prob_Bear", "VIX_Close"),
+    ("HMM_Regime", "RSI_14"),
+    ("HMM_Prob_Bull", "MACD_Hist"),
 ]
 
 
@@ -218,6 +225,9 @@ def impute_nans(df):
 
     interact_cols = [c for c in df.columns if "_x_" in c]
     df[interact_cols] = df[interact_cols].fillna(0)
+
+    hmm_cols = [c for c in df.columns if c.startswith("HMM_")]
+    df[hmm_cols] = df[hmm_cols].ffill()
 
     df.ffill(inplace=True)
     df.bfill(inplace=True)
@@ -396,6 +406,12 @@ def main():
                    "VIX_Extreme", "Golden_Cross", "Trend_Bullish"]
     regime_cols = [c for c in regime_cols if c in df.columns]
     print(f"  Added: {regime_cols}")
+
+    # --- #10: HMM Regime Detection ---
+    print_section("#10: HMM REGIME DETECTION")
+    df = add_hmm_features(df, return_col="Close_PctChg", vix_col="VIX_Close")
+    hmm_cols = [c for c in df.columns if c.startswith("HMM_")]
+    print(f"  HMM features added: {hmm_cols}")
 
     # --- #6: Time features ---
     print_section("#6: TIME-BASED FEATURES")
@@ -643,6 +659,7 @@ def main():
             "#5 Regime features", "#6 Time features",
             "#7 CatBoost added", "#8 Macro expansion (TNX, DXY, Gold)",
             "#9 Probability calibration",
+            "#10 HMM regime detection (3-state, walk-forward fitted)",
         ],
         "total_features_before_selection": len(feature_cols),
         "selected_features": len(selected_features),

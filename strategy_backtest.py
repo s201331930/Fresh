@@ -42,6 +42,7 @@ from model_enhanced import (
     OB_COLS,
     print_section,
 )
+from hmm_regime import add_hmm_features
 
 DATA_DIR = Path(__file__).parent / "data"
 INPUT_CSV = DATA_DIR / "spy_weekly_enriched.csv"
@@ -70,6 +71,7 @@ def prepare_full_dataset():
             df[col] = df[col].ffill().fillna(0)
 
     df = add_regime_features(df)
+    df = add_hmm_features(df, return_col="Close_PctChg", vix_col="VIX_Close")
     df = add_time_features(df)
     df = add_targets(df)
     df.dropna(subset=["Next_Week_Return"], inplace=True)
