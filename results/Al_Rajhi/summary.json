@@ -1,0 +1,79 @@
+{
+  "name": "Al_Rajhi",
+  "label": "Al Rajhi Bank (1120)",
+  "ticker": "1120.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 851,
+  "oos_weeks": 469,
+  "oos_period": "2017-08-31 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 38,
+  "hmm_features_selected": [],
+  "model_metrics": {
+    "mae": 2.6342,
+    "rmse": 3.4056,
+    "r2": -0.249,
+    "dir_accuracy": 53.52
+  },
+  "optimized_threshold": 0.04,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 376.85,
+      "cagr": 18.91,
+      "sharpe": 0.982,
+      "max_drawdown": -27.77,
+      "win_rate": 54.18,
+      "in_market_pct": 74.0,
+      "n_trades": 95,
+      "n_weeks": 469,
+      "bnh_total_return": 338.15,
+      "bnh_cagr": 17.8,
+      "bnh_sharpe": 0.855,
+      "bnh_max_drawdown": -40.98
+    },
+    "Binary (t=opt)": {
+      "total_return": 422.69,
+      "cagr": 20.13,
+      "sharpe": 1.042,
+      "max_drawdown": -27.77,
+      "win_rate": 54.52,
+      "in_market_pct": 73.1,
+      "n_trades": 97,
+      "n_weeks": 469,
+      "bnh_total_return": 338.15,
+      "bnh_cagr": 17.8,
+      "bnh_sharpe": 0.855,
+      "bnh_max_drawdown": -40.98
+    },
+    "Scaled": {
+      "total_return": 120.25,
+      "cagr": 9.15,
+      "sharpe": 0.721,
+      "max_drawdown": -23.52,
+      "win_rate": 54.18,
+      "in_market_pct": 74.0,
+      "n_trades": 388,
+      "n_weeks": 469,
+      "bnh_total_return": 338.15,
+      "bnh_cagr": 17.8,
+      "bnh_sharpe": 0.855,
+      "bnh_max_drawdown": -40.98
+    },
+    "Adaptive": {
+      "total_return": 502.64,
+      "cagr": 22.04,
+      "sharpe": 1.092,
+      "max_drawdown": -27.77,
+      "win_rate": 53.4,
+      "in_market_pct": 81.4,
+      "n_trades": 92,
+      "n_weeks": 469,
+      "bnh_total_return": 338.15,
+      "bnh_cagr": 17.8,
+      "bnh_sharpe": 0.855,
+      "bnh_max_drawdown": -40.98
+    }
+  }
+}

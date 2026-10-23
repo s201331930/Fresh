@@ -1,0 +1,85 @@
+{
+  "name": "XLK",
+  "label": "Technology Select Sector",
+  "ticker": "XLK",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_Duration",
+    "HMM_Prob_Sideways",
+    "HMM_Regime_Bear",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime"
+  ],
+  "model_metrics": {
+    "mae": 2.0529,
+    "rmse": 2.7827,
+    "r2": 0.0073,
+    "dir_accuracy": 56.7
+  },
+  "optimized_threshold": 0.06,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1649.22,
+      "cagr": 21.35,
+      "sharpe": 1.156,
+      "max_drawdown": -28.88,
+      "win_rate": 59.9,
+      "in_market_pct": 78.8,
+      "n_trades": 169,
+      "n_weeks": 769,
+      "bnh_total_return": 1551.07,
+      "bnh_cagr": 20.88,
+      "bnh_sharpe": 1.043,
+      "bnh_max_drawdown": -32.62
+    },
+    "Binary (t=opt)": {
+      "total_return": 1670.34,
+      "cagr": 21.45,
+      "sharpe": 1.222,
+      "max_drawdown": -28.88,
+      "win_rate": 61.71,
+      "in_market_pct": 63.8,
+      "n_trades": 181,
+      "n_weeks": 769,
+      "bnh_total_return": 1551.07,
+      "bnh_cagr": 20.88,
+      "bnh_sharpe": 1.043,
+      "bnh_max_drawdown": -32.62
+    },
+    "Scaled": {
+      "total_return": 335.49,
+      "cagr": 10.46,
+      "sharpe": 0.913,
+      "max_drawdown": -22.67,
+      "win_rate": 59.57,
+      "in_market_pct": 78.8,
+      "n_trades": 678,
+      "n_weeks": 769,
+      "bnh_total_return": 1551.07,
+      "bnh_cagr": 20.88,
+      "bnh_sharpe": 1.043,
+      "bnh_max_drawdown": -32.62
+    },
+    "Adaptive": {
+      "total_return": 893.02,
+      "cagr": 16.79,
+      "sharpe": 0.988,
+      "max_drawdown": -26.06,
+      "win_rate": 59.17,
+      "in_market_pct": 72.3,
+      "n_trades": 199,
+      "n_weeks": 769,
+      "bnh_total_return": 1551.07,
+      "bnh_cagr": 20.88,
+      "bnh_sharpe": 1.043,
+      "bnh_max_drawdown": -32.62
+    }
+  }
+}

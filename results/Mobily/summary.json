@@ -1,0 +1,84 @@
+{
+  "name": "Mobily",
+  "label": "Mobily (7020)",
+  "ticker": "7020.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 842,
+  "oos_weeks": 464,
+  "oos_period": "2017-10-05 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.6498,
+    "rmse": 3.6804,
+    "r2": 0.026,
+    "dir_accuracy": 56.03
+  },
+  "optimized_threshold": 0.01,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 990.96,
+      "cagr": 30.71,
+      "sharpe": 1.264,
+      "max_drawdown": -27.47,
+      "win_rate": 53.95,
+      "in_market_pct": 79.1,
+      "n_trades": 116,
+      "n_weeks": 464,
+      "bnh_total_return": 316.47,
+      "bnh_cagr": 17.34,
+      "bnh_sharpe": 0.728,
+      "bnh_max_drawdown": -27.47
+    },
+    "Binary (t=opt)": {
+      "total_return": 957.98,
+      "cagr": 30.26,
+      "sharpe": 1.253,
+      "max_drawdown": -27.47,
+      "win_rate": 53.89,
+      "in_market_pct": 77.6,
+      "n_trades": 122,
+      "n_weeks": 464,
+      "bnh_total_return": 316.47,
+      "bnh_cagr": 17.34,
+      "bnh_sharpe": 0.728,
+      "bnh_max_drawdown": -27.47
+    },
+    "Scaled": {
+      "total_return": 334.91,
+      "cagr": 17.91,
+      "sharpe": 1.191,
+      "max_drawdown": -17.86,
+      "win_rate": 53.68,
+      "in_market_pct": 79.1,
+      "n_trades": 401,
+      "n_weeks": 464,
+      "bnh_total_return": 316.47,
+      "bnh_cagr": 17.34,
+      "bnh_sharpe": 0.728,
+      "bnh_max_drawdown": -27.47
+    },
+    "Adaptive": {
+      "total_return": 421.1,
+      "cagr": 20.32,
+      "sharpe": 0.915,
+      "max_drawdown": -27.47,
+      "win_rate": 52.79,
+      "in_market_pct": 73.5,
+      "n_trades": 118,
+      "n_weeks": 464,
+      "bnh_total_return": 316.47,
+      "bnh_cagr": 17.34,
+      "bnh_sharpe": 0.728,
+      "bnh_max_drawdown": -27.47
+    }
+  }
+}

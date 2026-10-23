@@ -1,0 +1,87 @@
+{
+  "name": "XLE",
+  "label": "Energy Select Sector",
+  "ticker": "XLE",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 2.581,
+    "rmse": 3.6667,
+    "r2": 0.0111,
+    "dir_accuracy": 57.61
+  },
+  "optimized_threshold": 0.15,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 587.22,
+      "cagr": 13.92,
+      "sharpe": 0.682,
+      "max_drawdown": -57.19,
+      "win_rate": 58.43,
+      "in_market_pct": 76.3,
+      "n_trades": 178,
+      "n_weeks": 769,
+      "bnh_total_return": 225.35,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.435,
+      "bnh_max_drawdown": -68.9
+    },
+    "Binary (t=opt)": {
+      "total_return": 261.0,
+      "cagr": 9.07,
+      "sharpe": 0.56,
+      "max_drawdown": -55.51,
+      "win_rate": 60.23,
+      "in_market_pct": 45.1,
+      "n_trades": 199,
+      "n_weeks": 769,
+      "bnh_total_return": 225.35,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.435,
+      "bnh_max_drawdown": -68.9
+    },
+    "Scaled": {
+      "total_return": 193.82,
+      "cagr": 7.56,
+      "sharpe": 0.647,
+      "max_drawdown": -39.85,
+      "win_rate": 58.26,
+      "in_market_pct": 76.3,
+      "n_trades": 663,
+      "n_weeks": 769,
+      "bnh_total_return": 225.35,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.435,
+      "bnh_max_drawdown": -68.9
+    },
+    "Adaptive": {
+      "total_return": 192.81,
+      "cagr": 7.54,
+      "sharpe": 0.457,
+      "max_drawdown": -44.02,
+      "win_rate": 58.43,
+      "in_market_pct": 64.8,
+      "n_trades": 204,
+      "n_weeks": 769,
+      "bnh_total_return": 225.35,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.435,
+      "bnh_max_drawdown": -68.9
+    }
+  }
+}

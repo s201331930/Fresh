@@ -1,0 +1,84 @@
+{
+  "name": "SADAFCO",
+  "label": "SADAFCO (2270)",
+  "ticker": "2270.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 849,
+  "oos_weeks": 467,
+  "oos_period": "2017-09-14 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.4765,
+    "rmse": 3.4051,
+    "r2": 0.0053,
+    "dir_accuracy": 48.39
+  },
+  "optimized_threshold": 0.1,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 120.48,
+      "cagr": 9.2,
+      "sharpe": 0.483,
+      "max_drawdown": -47.8,
+      "win_rate": 47.63,
+      "in_market_pct": 90.4,
+      "n_trades": 52,
+      "n_weeks": 467,
+      "bnh_total_return": 101.09,
+      "bnh_cagr": 8.09,
+      "bnh_sharpe": 0.436,
+      "bnh_max_drawdown": -51.98
+    },
+    "Binary (t=opt)": {
+      "total_return": 160.61,
+      "cagr": 11.26,
+      "sharpe": 0.607,
+      "max_drawdown": -39.28,
+      "win_rate": 49.17,
+      "in_market_pct": 77.5,
+      "n_trades": 94,
+      "n_weeks": 467,
+      "bnh_total_return": 101.09,
+      "bnh_cagr": 8.09,
+      "bnh_sharpe": 0.436,
+      "bnh_max_drawdown": -51.98
+    },
+    "Scaled": {
+      "total_return": 95.78,
+      "cagr": 7.77,
+      "sharpe": 0.592,
+      "max_drawdown": -32.63,
+      "win_rate": 47.63,
+      "in_market_pct": 90.4,
+      "n_trades": 421,
+      "n_weeks": 467,
+      "bnh_total_return": 101.09,
+      "bnh_cagr": 8.09,
+      "bnh_sharpe": 0.436,
+      "bnh_max_drawdown": -51.98
+    },
+    "Adaptive": {
+      "total_return": 135.75,
+      "cagr": 10.02,
+      "sharpe": 0.569,
+      "max_drawdown": -43.15,
+      "win_rate": 46.82,
+      "in_market_pct": 67.2,
+      "n_trades": 101,
+      "n_weeks": 467,
+      "bnh_total_return": 101.09,
+      "bnh_cagr": 8.09,
+      "bnh_sharpe": 0.436,
+      "bnh_max_drawdown": -51.98
+    }
+  }
+}

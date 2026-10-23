@@ -1,0 +1,82 @@
+{
+  "name": "STC",
+  "label": "Saudi Telecom (7010)",
+  "ticker": "7010.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 849,
+  "oos_weeks": 467,
+  "oos_period": "2017-09-14 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 1.9611,
+    "rmse": 2.6071,
+    "r2": 0.0065,
+    "dir_accuracy": 53.96
+  },
+  "optimized_threshold": 0.11,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 160.94,
+      "cagr": 11.27,
+      "sharpe": 0.711,
+      "max_drawdown": -31.45,
+      "win_rate": 52.55,
+      "in_market_pct": 88.0,
+      "n_trades": 52,
+      "n_weeks": 467,
+      "bnh_total_return": 126.3,
+      "bnh_cagr": 9.52,
+      "bnh_sharpe": 0.576,
+      "bnh_max_drawdown": -33.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 168.96,
+      "cagr": 11.65,
+      "sharpe": 0.743,
+      "max_drawdown": -31.45,
+      "win_rate": 52.79,
+      "in_market_pct": 84.4,
+      "n_trades": 64,
+      "n_weeks": 467,
+      "bnh_total_return": 126.3,
+      "bnh_cagr": 9.52,
+      "bnh_sharpe": 0.576,
+      "bnh_max_drawdown": -33.58
+    },
+    "Scaled": {
+      "total_return": 102.68,
+      "cagr": 8.18,
+      "sharpe": 0.813,
+      "max_drawdown": -17.16,
+      "win_rate": 52.55,
+      "in_market_pct": 88.0,
+      "n_trades": 418,
+      "n_weeks": 467,
+      "bnh_total_return": 126.3,
+      "bnh_cagr": 9.52,
+      "bnh_sharpe": 0.576,
+      "bnh_max_drawdown": -33.58
+    },
+    "Adaptive": {
+      "total_return": 145.68,
+      "cagr": 10.53,
+      "sharpe": 0.701,
+      "max_drawdown": -21.47,
+      "win_rate": 52.73,
+      "in_market_pct": 78.4,
+      "n_trades": 90,
+      "n_weeks": 467,
+      "bnh_total_return": 126.3,
+      "bnh_cagr": 9.52,
+      "bnh_sharpe": 0.576,
+      "bnh_max_drawdown": -33.58
+    }
+  }
+}
