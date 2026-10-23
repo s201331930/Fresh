@@ -1,0 +1,81 @@
+{
+  "name": "TSM",
+  "label": "TSMC",
+  "ticker": "TSM",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_x_RSI_14"
+  ],
+  "model_metrics": {
+    "mae": 2.9839,
+    "rmse": 3.9706,
+    "r2": 0.0141,
+    "dir_accuracy": 57.35
+  },
+  "optimized_threshold": -0.18,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 5626.87,
+      "cagr": 31.48,
+      "sharpe": 1.166,
+      "max_drawdown": -55.22,
+      "win_rate": 58.36,
+      "in_market_pct": 77.8,
+      "n_trades": 167,
+      "n_weeks": 769,
+      "bnh_total_return": 4240.58,
+      "bnh_cagr": 29.04,
+      "bnh_sharpe": 1.029,
+      "bnh_max_drawdown": -55.22
+    },
+    "Binary (t=opt)": {
+      "total_return": 12349.54,
+      "cagr": 38.57,
+      "sharpe": 1.326,
+      "max_drawdown": -55.22,
+      "win_rate": 58.0,
+      "in_market_pct": 88.6,
+      "n_trades": 118,
+      "n_weeks": 769,
+      "bnh_total_return": 4240.58,
+      "bnh_cagr": 29.04,
+      "bnh_sharpe": 1.029,
+      "bnh_max_drawdown": -55.22
+    },
+    "Scaled": {
+      "total_return": 1145.49,
+      "cagr": 18.6,
+      "sharpe": 1.121,
+      "max_drawdown": -34.11,
+      "win_rate": 58.36,
+      "in_market_pct": 77.8,
+      "n_trades": 660,
+      "n_weeks": 769,
+      "bnh_total_return": 4240.58,
+      "bnh_cagr": 29.04,
+      "bnh_sharpe": 1.029,
+      "bnh_max_drawdown": -55.22
+    },
+    "Adaptive": {
+      "total_return": 3441.68,
+      "cagr": 27.28,
+      "sharpe": 1.113,
+      "max_drawdown": -37.58,
+      "win_rate": 56.5,
+      "in_market_pct": 72.0,
+      "n_trades": 195,
+      "n_weeks": 769,
+      "bnh_total_return": 4240.58,
+      "bnh_cagr": 29.04,
+      "bnh_sharpe": 1.029,
+      "bnh_max_drawdown": -55.22
+    }
+  }
+}

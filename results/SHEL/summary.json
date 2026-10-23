@@ -1,0 +1,86 @@
+{
+  "name": "SHEL",
+  "label": "Shell plc",
+  "ticker": "SHEL",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 2.4779,
+    "rmse": 3.6717,
+    "r2": 0.0277,
+    "dir_accuracy": 54.62
+  },
+  "optimized_threshold": 0.07,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 798.43,
+      "cagr": 16.0,
+      "sharpe": 0.725,
+      "max_drawdown": -60.07,
+      "win_rate": 53.54,
+      "in_market_pct": 80.9,
+      "n_trades": 181,
+      "n_weeks": 769,
+      "bnh_total_return": 222.24,
+      "bnh_cagr": 8.23,
+      "bnh_sharpe": 0.43,
+      "bnh_max_drawdown": -61.47
+    },
+    "Binary (t=opt)": {
+      "total_return": 1108.01,
+      "cagr": 18.35,
+      "sharpe": 0.835,
+      "max_drawdown": -58.72,
+      "win_rate": 54.44,
+      "in_market_pct": 70.2,
+      "n_trades": 215,
+      "n_weeks": 769,
+      "bnh_total_return": 222.24,
+      "bnh_cagr": 8.23,
+      "bnh_sharpe": 0.43,
+      "bnh_max_drawdown": -61.47
+    },
+    "Scaled": {
+      "total_return": 452.7,
+      "cagr": 12.26,
+      "sharpe": 0.759,
+      "max_drawdown": -49.77,
+      "win_rate": 53.38,
+      "in_market_pct": 80.9,
+      "n_trades": 672,
+      "n_weeks": 769,
+      "bnh_total_return": 222.24,
+      "bnh_cagr": 8.23,
+      "bnh_sharpe": 0.43,
+      "bnh_max_drawdown": -61.47
+    },
+    "Adaptive": {
+      "total_return": 566.22,
+      "cagr": 13.68,
+      "sharpe": 0.697,
+      "max_drawdown": -60.68,
+      "win_rate": 53.86,
+      "in_market_pct": 65.7,
+      "n_trades": 216,
+      "n_weeks": 769,
+      "bnh_total_return": 222.24,
+      "bnh_cagr": 8.23,
+      "bnh_sharpe": 0.43,
+      "bnh_max_drawdown": -61.47
+    }
+  }
+}

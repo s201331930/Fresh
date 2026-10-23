@@ -1,0 +1,84 @@
+{
+  "name": "V",
+  "label": "Visa",
+  "ticker": "V",
+  "market": "US",
+  "data_period": "2008-03-21 to 2026-10-16",
+  "total_weeks": 970,
+  "oos_weeks": 534,
+  "oos_period": "2016-07-29 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Regime_Change",
+    "HMM_Prob_Sideways"
+  ],
+  "model_metrics": {
+    "mae": 2.1997,
+    "rmse": 3.0122,
+    "r2": 0.0301,
+    "dir_accuracy": 58.61
+  },
+  "optimized_threshold": -0.1,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 699.53,
+      "cagr": 22.44,
+      "sharpe": 1.05,
+      "max_drawdown": -30.18,
+      "win_rate": 57.88,
+      "in_market_pct": 93.8,
+      "n_trades": 44,
+      "n_weeks": 534,
+      "bnh_total_return": 462.33,
+      "bnh_cagr": 18.31,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -30.18
+    },
+    "Binary (t=opt)": {
+      "total_return": 675.05,
+      "cagr": 22.07,
+      "sharpe": 1.032,
+      "max_drawdown": -30.18,
+      "win_rate": 57.7,
+      "in_market_pct": 96.1,
+      "n_trades": 32,
+      "n_weeks": 534,
+      "bnh_total_return": 462.33,
+      "bnh_cagr": 18.31,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -30.18
+    },
+    "Scaled": {
+      "total_return": 318.46,
+      "cagr": 14.96,
+      "sharpe": 0.958,
+      "max_drawdown": -26.0,
+      "win_rate": 57.88,
+      "in_market_pct": 93.8,
+      "n_trades": 494,
+      "n_weeks": 534,
+      "bnh_total_return": 462.33,
+      "bnh_cagr": 18.31,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -30.18
+    },
+    "Adaptive": {
+      "total_return": 446.34,
+      "cagr": 17.98,
+      "sharpe": 0.911,
+      "max_drawdown": -31.19,
+      "win_rate": 57.21,
+      "in_market_pct": 81.8,
+      "n_trades": 99,
+      "n_weeks": 534,
+      "bnh_total_return": 462.33,
+      "bnh_cagr": 18.31,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -30.18
+    }
+  }
+}

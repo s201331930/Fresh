@@ -1,0 +1,84 @@
+{
+  "name": "XLI",
+  "label": "Industrials Sector",
+  "ticker": "XLI",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.7773,
+    "rmse": 2.5122,
+    "r2": 0.0287,
+    "dir_accuracy": 59.04
+  },
+  "optimized_threshold": 0.12,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1055.41,
+      "cagr": 17.99,
+      "sharpe": 1.049,
+      "max_drawdown": -30.13,
+      "win_rate": 59.78,
+      "in_market_pct": 83.7,
+      "n_trades": 152,
+      "n_weeks": 769,
+      "bnh_total_return": 490.31,
+      "bnh_cagr": 12.76,
+      "bnh_sharpe": 0.746,
+      "bnh_max_drawdown": -39.27
+    },
+    "Binary (t=opt)": {
+      "total_return": 950.13,
+      "cagr": 17.23,
+      "sharpe": 1.094,
+      "max_drawdown": -30.13,
+      "win_rate": 62.39,
+      "in_market_pct": 57.7,
+      "n_trades": 248,
+      "n_weeks": 769,
+      "bnh_total_return": 490.31,
+      "bnh_cagr": 12.76,
+      "bnh_sharpe": 0.746,
+      "bnh_max_drawdown": -39.27
+    },
+    "Scaled": {
+      "total_return": 443.92,
+      "cagr": 12.13,
+      "sharpe": 1.05,
+      "max_drawdown": -23.08,
+      "win_rate": 59.63,
+      "in_market_pct": 83.7,
+      "n_trades": 699,
+      "n_weeks": 769,
+      "bnh_total_return": 490.31,
+      "bnh_cagr": 12.76,
+      "bnh_sharpe": 0.746,
+      "bnh_max_drawdown": -39.27
+    },
+    "Adaptive": {
+      "total_return": 663.74,
+      "cagr": 14.74,
+      "sharpe": 0.991,
+      "max_drawdown": -32.59,
+      "win_rate": 60.57,
+      "in_market_pct": 63.3,
+      "n_trades": 240,
+      "n_weeks": 769,
+      "bnh_total_return": 490.31,
+      "bnh_cagr": 12.76,
+      "bnh_sharpe": 0.746,
+      "bnh_max_drawdown": -39.27
+    }
+  }
+}

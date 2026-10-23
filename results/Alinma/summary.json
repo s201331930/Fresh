@@ -1,0 +1,83 @@
+{
+  "name": "Alinma",
+  "label": "Alinma Bank",
+  "ticker": "1150.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 851,
+  "oos_weeks": 469,
+  "oos_period": "2017-08-31 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime"
+  ],
+  "model_metrics": {
+    "mae": 2.3161,
+    "rmse": 3.194,
+    "r2": 0.0225,
+    "dir_accuracy": 53.52
+  },
+  "optimized_threshold": 0.29,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 284.44,
+      "cagr": 16.1,
+      "sharpe": 0.832,
+      "max_drawdown": -29.81,
+      "win_rate": 54.12,
+      "in_market_pct": 82.7,
+      "n_trades": 83,
+      "n_weeks": 469,
+      "bnh_total_return": 230.93,
+      "bnh_cagr": 14.19,
+      "bnh_sharpe": 0.686,
+      "bnh_max_drawdown": -31.64
+    },
+    "Binary (t=opt)": {
+      "total_return": 339.95,
+      "cagr": 17.85,
+      "sharpe": 1.026,
+      "max_drawdown": -23.37,
+      "win_rate": 57.09,
+      "in_market_pct": 58.6,
+      "n_trades": 121,
+      "n_weeks": 469,
+      "bnh_total_return": 230.93,
+      "bnh_cagr": 14.19,
+      "bnh_sharpe": 0.686,
+      "bnh_max_drawdown": -31.64
+    },
+    "Scaled": {
+      "total_return": 198.8,
+      "cagr": 12.9,
+      "sharpe": 0.951,
+      "max_drawdown": -20.77,
+      "win_rate": 53.61,
+      "in_market_pct": 82.7,
+      "n_trades": 415,
+      "n_weeks": 469,
+      "bnh_total_return": 230.93,
+      "bnh_cagr": 14.19,
+      "bnh_sharpe": 0.686,
+      "bnh_max_drawdown": -31.64
+    },
+    "Adaptive": {
+      "total_return": 273.14,
+      "cagr": 15.72,
+      "sharpe": 0.824,
+      "max_drawdown": -27.39,
+      "win_rate": 54.15,
+      "in_market_pct": 74.4,
+      "n_trades": 92,
+      "n_weeks": 469,
+      "bnh_total_return": 230.93,
+      "bnh_cagr": 14.19,
+      "bnh_sharpe": 0.686,
+      "bnh_max_drawdown": -31.64
+    }
+  }
+}

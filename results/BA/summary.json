@@ -1,0 +1,82 @@
+{
+  "name": "BA",
+  "label": "Boeing",
+  "ticker": "BA",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 3.4489,
+    "rmse": 5.6954,
+    "r2": 0.0209,
+    "dir_accuracy": 54.62
+  },
+  "optimized_threshold": 0.16,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 252.98,
+      "cagr": 8.9,
+      "sharpe": 0.409,
+      "max_drawdown": -75.9,
+      "win_rate": 54.26,
+      "in_market_pct": 91.5,
+      "n_trades": 107,
+      "n_weeks": 769,
+      "bnh_total_return": 208.52,
+      "bnh_cagr": 7.92,
+      "bnh_sharpe": 0.387,
+      "bnh_max_drawdown": -77.92
+    },
+    "Binary (t=opt)": {
+      "total_return": 648.43,
+      "cagr": 14.58,
+      "sharpe": 0.544,
+      "max_drawdown": -75.09,
+      "win_rate": 56.2,
+      "in_market_pct": 71.3,
+      "n_trades": 233,
+      "n_weeks": 769,
+      "bnh_total_return": 208.52,
+      "bnh_cagr": 7.92,
+      "bnh_sharpe": 0.387,
+      "bnh_max_drawdown": -77.92
+    },
+    "Scaled": {
+      "total_return": 238.73,
+      "cagr": 8.6,
+      "sharpe": 0.41,
+      "max_drawdown": -74.08,
+      "win_rate": 53.98,
+      "in_market_pct": 91.5,
+      "n_trades": 719,
+      "n_weeks": 769,
+      "bnh_total_return": 208.52,
+      "bnh_cagr": 7.92,
+      "bnh_sharpe": 0.387,
+      "bnh_max_drawdown": -77.92
+    },
+    "Adaptive": {
+      "total_return": 276.95,
+      "cagr": 9.39,
+      "sharpe": 0.424,
+      "max_drawdown": -74.49,
+      "win_rate": 55.66,
+      "in_market_pct": 66.6,
+      "n_trades": 217,
+      "n_weeks": 769,
+      "bnh_total_return": 208.52,
+      "bnh_cagr": 7.92,
+      "bnh_sharpe": 0.387,
+      "bnh_max_drawdown": -77.92
+    }
+  }
+}

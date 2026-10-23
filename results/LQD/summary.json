@@ -1,0 +1,88 @@
+{
+  "name": "LQD",
+  "label": "IG Corporate Bond",
+  "ticker": "LQD",
+  "market": "US",
+  "data_period": "2002-08-02 to 2026-10-16",
+  "total_weeks": 1264,
+  "oos_weeks": 696,
+  "oos_period": "2013-06-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 0.7421,
+    "rmse": 1.2553,
+    "r2": 0.0147,
+    "dir_accuracy": 56.9
+  },
+  "optimized_threshold": -0.04,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 63.09,
+      "cagr": 3.72,
+      "sharpe": 0.468,
+      "max_drawdown": -25.42,
+      "win_rate": 57.64,
+      "in_market_pct": 90.2,
+      "n_trades": 89,
+      "n_weeks": 696,
+      "bnh_total_return": 48.46,
+      "bnh_cagr": 3.0,
+      "bnh_sharpe": 0.369,
+      "bnh_max_drawdown": -24.68
+    },
+    "Binary (t=opt)": {
+      "total_return": 65.27,
+      "cagr": 3.83,
+      "sharpe": 0.464,
+      "max_drawdown": -25.16,
+      "win_rate": 57.93,
+      "in_market_pct": 94.3,
+      "n_trades": 59,
+      "n_weeks": 696,
+      "bnh_total_return": 48.46,
+      "bnh_cagr": 3.0,
+      "bnh_sharpe": 0.369,
+      "bnh_max_drawdown": -24.68
+    },
+    "Scaled": {
+      "total_return": 23.78,
+      "cagr": 1.61,
+      "sharpe": 0.653,
+      "max_drawdown": -7.11,
+      "win_rate": 57.32,
+      "in_market_pct": 90.2,
+      "n_trades": 672,
+      "n_weeks": 696,
+      "bnh_total_return": 48.46,
+      "bnh_cagr": 3.0,
+      "bnh_sharpe": 0.369,
+      "bnh_max_drawdown": -24.68
+    },
+    "Adaptive": {
+      "total_return": 80.79,
+      "cagr": 4.52,
+      "sharpe": 0.657,
+      "max_drawdown": -9.51,
+      "win_rate": 59.78,
+      "in_market_pct": 64.7,
+      "n_trades": 148,
+      "n_weeks": 696,
+      "bnh_total_return": 48.46,
+      "bnh_cagr": 3.0,
+      "bnh_sharpe": 0.369,
+      "bnh_max_drawdown": -24.68
+    }
+  }
+}

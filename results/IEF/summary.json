@@ -1,0 +1,85 @@
+{
+  "name": "IEF",
+  "label": "7-10 Year Treasury",
+  "ticker": "IEF",
+  "market": "US",
+  "data_period": "2002-08-02 to 2026-10-16",
+  "total_weeks": 1264,
+  "oos_weeks": 696,
+  "oos_period": "2013-06-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 0.6478,
+    "rmse": 0.8537,
+    "r2": 0.0226,
+    "dir_accuracy": 57.33
+  },
+  "optimized_threshold": 0.06,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 50.36,
+      "cagr": 3.09,
+      "sharpe": 0.571,
+      "max_drawdown": -21.13,
+      "win_rate": 56.28,
+      "in_market_pct": 85.8,
+      "n_trades": 150,
+      "n_weeks": 696,
+      "bnh_total_return": 20.55,
+      "bnh_cagr": 1.41,
+      "bnh_sharpe": 0.255,
+      "bnh_max_drawdown": -23.26
+    },
+    "Binary (t=opt)": {
+      "total_return": 48.31,
+      "cagr": 2.99,
+      "sharpe": 0.691,
+      "max_drawdown": -14.34,
+      "win_rate": 58.66,
+      "in_market_pct": 55.6,
+      "n_trades": 293,
+      "n_weeks": 696,
+      "bnh_total_return": 20.55,
+      "bnh_cagr": 1.41,
+      "bnh_sharpe": 0.255,
+      "bnh_max_drawdown": -23.26
+    },
+    "Scaled": {
+      "total_return": 15.19,
+      "cagr": 1.06,
+      "sharpe": 0.841,
+      "max_drawdown": -4.05,
+      "win_rate": 55.61,
+      "in_market_pct": 85.8,
+      "n_trades": 671,
+      "n_weeks": 696,
+      "bnh_total_return": 20.55,
+      "bnh_cagr": 1.41,
+      "bnh_sharpe": 0.255,
+      "bnh_max_drawdown": -23.26
+    },
+    "Adaptive": {
+      "total_return": 15.74,
+      "cagr": 1.1,
+      "sharpe": 0.265,
+      "max_drawdown": -14.92,
+      "win_rate": 54.61,
+      "in_market_pct": 59.2,
+      "n_trades": 189,
+      "n_weeks": 696,
+      "bnh_total_return": 20.55,
+      "bnh_cagr": 1.41,
+      "bnh_sharpe": 0.255,
+      "bnh_max_drawdown": -23.26
+    }
+  }
+}

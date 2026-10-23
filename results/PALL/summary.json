@@ -1,0 +1,86 @@
+{
+  "name": "PALL",
+  "label": "Palladium ETF",
+  "ticker": "PALL",
+  "market": "US",
+  "data_period": "2010-01-08 to 2026-10-16",
+  "total_weeks": 876,
+  "oos_weeks": 482,
+  "oos_period": "2017-07-28 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 3.8631,
+    "rmse": 5.6116,
+    "r2": 0.0218,
+    "dir_accuracy": 52.49
+  },
+  "optimized_threshold": 0.47,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 47.35,
+      "cagr": 4.27,
+      "sharpe": 0.294,
+      "max_drawdown": -62.4,
+      "win_rate": 52.02,
+      "in_market_pct": 82.2,
+      "n_trades": 108,
+      "n_weeks": 482,
+      "bnh_total_return": 12.49,
+      "bnh_cagr": 1.28,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -71.64
+    },
+    "Binary (t=opt)": {
+      "total_return": 227.67,
+      "cagr": 13.66,
+      "sharpe": 0.64,
+      "max_drawdown": -26.46,
+      "win_rate": 57.02,
+      "in_market_pct": 25.1,
+      "n_trades": 116,
+      "n_weeks": 482,
+      "bnh_total_return": 12.49,
+      "bnh_cagr": 1.28,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -71.64
+    },
+    "Scaled": {
+      "total_return": 112.3,
+      "cagr": 8.46,
+      "sharpe": 0.44,
+      "max_drawdown": -36.92,
+      "win_rate": 51.26,
+      "in_market_pct": 82.2,
+      "n_trades": 424,
+      "n_weeks": 482,
+      "bnh_total_return": 12.49,
+      "bnh_cagr": 1.28,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -71.64
+    },
+    "Adaptive": {
+      "total_return": 272.95,
+      "cagr": 15.26,
+      "sharpe": 0.583,
+      "max_drawdown": -50.07,
+      "win_rate": 53.35,
+      "in_market_pct": 64.9,
+      "n_trades": 153,
+      "n_weeks": 482,
+      "bnh_total_return": 12.49,
+      "bnh_cagr": 1.28,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -71.64
+    }
+  }
+}

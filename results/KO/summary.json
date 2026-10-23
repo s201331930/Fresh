@@ -1,0 +1,84 @@
+{
+  "name": "KO",
+  "label": "Coca-Cola",
+  "ticker": "KO",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 1.7186,
+    "rmse": 2.4206,
+    "r2": 0.0359,
+    "dir_accuracy": 59.04
+  },
+  "optimized_threshold": 0.22,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 740.87,
+      "cagr": 15.49,
+      "sharpe": 1.003,
+      "max_drawdown": -35.77,
+      "win_rate": 60.92,
+      "in_market_pct": 73.9,
+      "n_trades": 217,
+      "n_weeks": 769,
+      "bnh_total_return": 333.16,
+      "bnh_cagr": 10.42,
+      "bnh_sharpe": 0.648,
+      "bnh_max_drawdown": -35.75
+    },
+    "Binary (t=opt)": {
+      "total_return": 336.97,
+      "cagr": 10.49,
+      "sharpe": 1.03,
+      "max_drawdown": -12.97,
+      "win_rate": 65.7,
+      "in_market_pct": 26.9,
+      "n_trades": 215,
+      "n_weeks": 769,
+      "bnh_total_return": 333.16,
+      "bnh_cagr": 10.42,
+      "bnh_sharpe": 0.648,
+      "bnh_max_drawdown": -35.75
+    },
+    "Scaled": {
+      "total_return": 321.37,
+      "cagr": 10.21,
+      "sharpe": 1.178,
+      "max_drawdown": -14.11,
+      "win_rate": 60.39,
+      "in_market_pct": 73.9,
+      "n_trades": 663,
+      "n_weeks": 769,
+      "bnh_total_return": 333.16,
+      "bnh_cagr": 10.42,
+      "bnh_sharpe": 0.648,
+      "bnh_max_drawdown": -35.75
+    },
+    "Adaptive": {
+      "total_return": 310.03,
+      "cagr": 10.01,
+      "sharpe": 0.745,
+      "max_drawdown": -21.61,
+      "win_rate": 59.52,
+      "in_market_pct": 65.5,
+      "n_trades": 258,
+      "n_weeks": 769,
+      "bnh_total_return": 333.16,
+      "bnh_cagr": 10.42,
+      "bnh_sharpe": 0.648,
+      "bnh_max_drawdown": -35.75
+    }
+  }
+}

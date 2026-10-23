@@ -1,0 +1,86 @@
+{
+  "name": "FXC",
+  "label": "Canadian Dollar ETF",
+  "ticker": "FXC",
+  "market": "US",
+  "data_period": "2006-06-30 to 2026-10-16",
+  "total_weeks": 1060,
+  "oos_weeks": 583,
+  "oos_period": "2015-08-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 0.7061,
+    "rmse": 0.9031,
+    "r2": 0.0407,
+    "dir_accuracy": 52.14
+  },
+  "optimized_threshold": -0.01,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 21.03,
+      "cagr": 1.72,
+      "sharpe": 0.385,
+      "max_drawdown": -12.12,
+      "win_rate": 53.38,
+      "in_market_pct": 50.8,
+      "n_trades": 212,
+      "n_weeks": 583,
+      "bnh_total_return": -1.3,
+      "bnh_cagr": -0.12,
+      "bnh_sharpe": 0.016,
+      "bnh_max_drawdown": -14.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 33.58,
+      "cagr": 2.62,
+      "sharpe": 0.548,
+      "max_drawdown": -11.02,
+      "win_rate": 54.12,
+      "in_market_pct": 58.3,
+      "n_trades": 198,
+      "n_weeks": 583,
+      "bnh_total_return": -1.3,
+      "bnh_cagr": -0.12,
+      "bnh_sharpe": 0.016,
+      "bnh_max_drawdown": -14.58
+    },
+    "Scaled": {
+      "total_return": 8.78,
+      "cagr": 0.75,
+      "sharpe": 0.659,
+      "max_drawdown": -1.14,
+      "win_rate": 52.7,
+      "in_market_pct": 50.8,
+      "n_trades": 402,
+      "n_weeks": 583,
+      "bnh_total_return": -1.3,
+      "bnh_cagr": -0.12,
+      "bnh_sharpe": 0.016,
+      "bnh_max_drawdown": -14.58
+    },
+    "Adaptive": {
+      "total_return": 16.26,
+      "cagr": 1.35,
+      "sharpe": 0.312,
+      "max_drawdown": -11.35,
+      "win_rate": 52.92,
+      "in_market_pct": 55.7,
+      "n_trades": 138,
+      "n_weeks": 583,
+      "bnh_total_return": -1.3,
+      "bnh_cagr": -0.12,
+      "bnh_sharpe": 0.016,
+      "bnh_max_drawdown": -14.58
+    }
+  }
+}

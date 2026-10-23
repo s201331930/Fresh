@@ -1,0 +1,81 @@
+{
+  "name": "AAPL",
+  "label": "Apple",
+  "ticker": "AAPL",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 2.8168,
+    "rmse": 3.7697,
+    "r2": 0.0091,
+    "dir_accuracy": 58.65
+  },
+  "optimized_threshold": 0.4,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 3403.35,
+      "cagr": 27.19,
+      "sharpe": 1.034,
+      "max_drawdown": -41.56,
+      "win_rate": 58.58,
+      "in_market_pct": 97.0,
+      "n_trades": 34,
+      "n_weeks": 769,
+      "bnh_total_return": 2487.72,
+      "bnh_cagr": 24.61,
+      "bnh_sharpe": 0.944,
+      "bnh_max_drawdown": -43.64
+    },
+    "Binary (t=opt)": {
+      "total_return": 4288.84,
+      "cagr": 29.14,
+      "sharpe": 1.169,
+      "max_drawdown": -37.43,
+      "win_rate": 60.36,
+      "in_market_pct": 79.7,
+      "n_trades": 184,
+      "n_weeks": 769,
+      "bnh_total_return": 2487.72,
+      "bnh_cagr": 24.61,
+      "bnh_sharpe": 0.944,
+      "bnh_max_drawdown": -43.64
+    },
+    "Scaled": {
+      "total_return": 1921.73,
+      "cagr": 22.54,
+      "sharpe": 1.11,
+      "max_drawdown": -37.01,
+      "win_rate": 58.58,
+      "in_market_pct": 97.0,
+      "n_trades": 729,
+      "n_weeks": 769,
+      "bnh_total_return": 2487.72,
+      "bnh_cagr": 24.61,
+      "bnh_sharpe": 0.944,
+      "bnh_max_drawdown": -43.64
+    },
+    "Adaptive": {
+      "total_return": 3409.32,
+      "cagr": 27.2,
+      "sharpe": 1.066,
+      "max_drawdown": -44.28,
+      "win_rate": 58.92,
+      "in_market_pct": 88.9,
+      "n_trades": 118,
+      "n_weeks": 769,
+      "bnh_total_return": 2487.72,
+      "bnh_cagr": 24.61,
+      "bnh_sharpe": 0.944,
+      "bnh_max_drawdown": -43.64
+    }
+  }
+}

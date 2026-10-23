@@ -1,0 +1,89 @@
+{
+  "name": "USO",
+  "label": "US Oil Fund",
+  "ticker": "USO",
+  "market": "US",
+  "data_period": "2006-04-14 to 2026-10-16",
+  "total_weeks": 1071,
+  "oos_weeks": 590,
+  "oos_period": "2015-07-03 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 3.9794,
+    "rmse": 5.6382,
+    "r2": 0.012,
+    "dir_accuracy": 54.24
+  },
+  "optimized_threshold": 0.0,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 299.07,
+      "cagr": 12.97,
+      "sharpe": 0.551,
+      "max_drawdown": -62.19,
+      "win_rate": 56.91,
+      "in_market_pct": 52.7,
+      "n_trades": 173,
+      "n_weeks": 590,
+      "bnh_total_return": 11.25,
+      "bnh_cagr": 0.94,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -86.66
+    },
+    "Binary (t=opt)": {
+      "total_return": 299.07,
+      "cagr": 12.97,
+      "sharpe": 0.551,
+      "max_drawdown": -62.19,
+      "win_rate": 56.91,
+      "in_market_pct": 52.7,
+      "n_trades": 173,
+      "n_weeks": 590,
+      "bnh_total_return": 11.25,
+      "bnh_cagr": 0.94,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -86.66
+    },
+    "Scaled": {
+      "total_return": 207.97,
+      "cagr": 10.42,
+      "sharpe": 0.544,
+      "max_drawdown": -61.46,
+      "win_rate": 56.59,
+      "in_market_pct": 52.7,
+      "n_trades": 367,
+      "n_weeks": 590,
+      "bnh_total_return": 11.25,
+      "bnh_cagr": 0.94,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -86.66
+    },
+    "Adaptive": {
+      "total_return": 112.0,
+      "cagr": 6.85,
+      "sharpe": 0.369,
+      "max_drawdown": -73.06,
+      "win_rate": 54.08,
+      "in_market_pct": 56.1,
+      "n_trades": 159,
+      "n_weeks": 590,
+      "bnh_total_return": 11.25,
+      "bnh_cagr": 0.94,
+      "bnh_sharpe": 0.232,
+      "bnh_max_drawdown": -86.66
+    }
+  }
+}

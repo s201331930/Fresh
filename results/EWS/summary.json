@@ -1,0 +1,87 @@
+{
+  "name": "EWS",
+  "label": "Singapore ETF",
+  "ticker": "EWS",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear",
+    "HMM_Regime_Lag2",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bull_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 1.7175,
+    "rmse": 2.3783,
+    "r2": 0.0283,
+    "dir_accuracy": 54.88
+  },
+  "optimized_threshold": 0.07,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 334.27,
+      "cagr": 10.44,
+      "sharpe": 0.722,
+      "max_drawdown": -34.36,
+      "win_rate": 54.69,
+      "in_market_pct": 83.2,
+      "n_trades": 124,
+      "n_weeks": 769,
+      "bnh_total_return": 126.12,
+      "bnh_cagr": 5.67,
+      "bnh_sharpe": 0.404,
+      "bnh_max_drawdown": -38.33
+    },
+    "Binary (t=opt)": {
+      "total_return": 354.95,
+      "cagr": 10.79,
+      "sharpe": 0.8,
+      "max_drawdown": -25.38,
+      "win_rate": 55.78,
+      "in_market_pct": 64.1,
+      "n_trades": 211,
+      "n_weeks": 769,
+      "bnh_total_return": 126.12,
+      "bnh_cagr": 5.67,
+      "bnh_sharpe": 0.404,
+      "bnh_max_drawdown": -38.33
+    },
+    "Scaled": {
+      "total_return": 125.64,
+      "cagr": 5.66,
+      "sharpe": 0.747,
+      "max_drawdown": -12.53,
+      "win_rate": 54.37,
+      "in_market_pct": 83.2,
+      "n_trades": 694,
+      "n_weeks": 769,
+      "bnh_total_return": 126.12,
+      "bnh_cagr": 5.67,
+      "bnh_sharpe": 0.404,
+      "bnh_max_drawdown": -38.33
+    },
+    "Adaptive": {
+      "total_return": 225.24,
+      "cagr": 8.3,
+      "sharpe": 0.716,
+      "max_drawdown": -17.51,
+      "win_rate": 55.33,
+      "in_market_pct": 64.6,
+      "n_trades": 170,
+      "n_weeks": 769,
+      "bnh_total_return": 126.12,
+      "bnh_cagr": 5.67,
+      "bnh_sharpe": 0.404,
+      "bnh_max_drawdown": -38.33
+    }
+  }
+}

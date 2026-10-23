@@ -1,0 +1,82 @@
+{
+  "name": "PG",
+  "label": "Procter & Gamble",
+  "ticker": "PG",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 1.6558,
+    "rmse": 2.2549,
+    "r2": 0.0306,
+    "dir_accuracy": 56.31
+  },
+  "optimized_threshold": -0.11,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 381.92,
+      "cagr": 11.22,
+      "sharpe": 0.787,
+      "max_drawdown": -19.08,
+      "win_rate": 58.42,
+      "in_market_pct": 77.2,
+      "n_trades": 143,
+      "n_weeks": 769,
+      "bnh_total_return": 279.2,
+      "bnh_cagr": 9.43,
+      "bnh_sharpe": 0.629,
+      "bnh_max_drawdown": -25.07
+    },
+    "Binary (t=opt)": {
+      "total_return": 511.98,
+      "cagr": 13.03,
+      "sharpe": 0.865,
+      "max_drawdown": -21.13,
+      "win_rate": 58.73,
+      "in_market_pct": 90.1,
+      "n_trades": 99,
+      "n_weeks": 769,
+      "bnh_total_return": 279.2,
+      "bnh_cagr": 9.43,
+      "bnh_sharpe": 0.629,
+      "bnh_max_drawdown": -25.07
+    },
+    "Scaled": {
+      "total_return": 216.86,
+      "cagr": 8.11,
+      "sharpe": 1.056,
+      "max_drawdown": -7.74,
+      "win_rate": 58.25,
+      "in_market_pct": 77.2,
+      "n_trades": 663,
+      "n_weeks": 769,
+      "bnh_total_return": 279.2,
+      "bnh_cagr": 9.43,
+      "bnh_sharpe": 0.629,
+      "bnh_max_drawdown": -25.07
+    },
+    "Adaptive": {
+      "total_return": 309.23,
+      "cagr": 10.0,
+      "sharpe": 0.801,
+      "max_drawdown": -19.49,
+      "win_rate": 58.92,
+      "in_market_pct": 62.7,
+      "n_trades": 219,
+      "n_weeks": 769,
+      "bnh_total_return": 279.2,
+      "bnh_cagr": 9.43,
+      "bnh_sharpe": 0.629,
+      "bnh_max_drawdown": -25.07
+    }
+  }
+}

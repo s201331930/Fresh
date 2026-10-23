@@ -1,0 +1,85 @@
+{
+  "name": "MA",
+  "label": "Mastercard",
+  "ticker": "MA",
+  "market": "US",
+  "data_period": "2006-05-26 to 2026-10-16",
+  "total_weeks": 1065,
+  "oos_weeks": 586,
+  "oos_period": "2015-07-31 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 2.3557,
+    "rmse": 3.3052,
+    "r2": 0.0334,
+    "dir_accuracy": 59.22
+  },
+  "optimized_threshold": 0.37,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 972.86,
+      "cagr": 23.44,
+      "sharpe": 1.011,
+      "max_drawdown": -37.99,
+      "win_rate": 58.5,
+      "in_market_pct": 93.3,
+      "n_trades": 46,
+      "n_weeks": 586,
+      "bnh_total_return": 581.81,
+      "bnh_cagr": 18.57,
+      "bnh_sharpe": 0.826,
+      "bnh_max_drawdown": -37.99
+    },
+    "Binary (t=opt)": {
+      "total_return": 956.13,
+      "cagr": 23.27,
+      "sharpe": 1.095,
+      "max_drawdown": -37.99,
+      "win_rate": 60.14,
+      "in_market_pct": 70.6,
+      "n_trades": 108,
+      "n_weeks": 586,
+      "bnh_total_return": 581.81,
+      "bnh_cagr": 18.57,
+      "bnh_sharpe": 0.826,
+      "bnh_max_drawdown": -37.99
+    },
+    "Scaled": {
+      "total_return": 608.34,
+      "cagr": 18.97,
+      "sharpe": 1.169,
+      "max_drawdown": -28.48,
+      "win_rate": 57.95,
+      "in_market_pct": 93.3,
+      "n_trades": 540,
+      "n_weeks": 586,
+      "bnh_total_return": 581.81,
+      "bnh_cagr": 18.57,
+      "bnh_sharpe": 0.826,
+      "bnh_max_drawdown": -37.99
+    },
+    "Adaptive": {
+      "total_return": 470.2,
+      "cagr": 16.7,
+      "sharpe": 0.787,
+      "max_drawdown": -37.99,
+      "win_rate": 57.92,
+      "in_market_pct": 85.2,
+      "n_trades": 87,
+      "n_weeks": 586,
+      "bnh_total_return": 581.81,
+      "bnh_cagr": 18.57,
+      "bnh_sharpe": 0.826,
+      "bnh_max_drawdown": -37.99
+    }
+  }
+}

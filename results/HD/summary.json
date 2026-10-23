@@ -1,0 +1,85 @@
+{
+  "name": "HD",
+  "label": "Home Depot",
+  "ticker": "HD",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Sideways",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.4142,
+    "rmse": 3.305,
+    "r2": 0.0277,
+    "dir_accuracy": 55.14
+  },
+  "optimized_threshold": -0.19,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 837.43,
+      "cagr": 16.34,
+      "sharpe": 0.775,
+      "max_drawdown": -31.13,
+      "win_rate": 56.26,
+      "in_market_pct": 90.4,
+      "n_trades": 63,
+      "n_weeks": 769,
+      "bnh_total_return": 898.83,
+      "bnh_cagr": 16.84,
+      "bnh_sharpe": 0.766,
+      "bnh_max_drawdown": -37.57
+    },
+    "Binary (t=opt)": {
+      "total_return": 1162.09,
+      "cagr": 18.7,
+      "sharpe": 0.839,
+      "max_drawdown": -31.34,
+      "win_rate": 56.73,
+      "in_market_pct": 98.6,
+      "n_trades": 18,
+      "n_weeks": 769,
+      "bnh_total_return": 898.83,
+      "bnh_cagr": 16.84,
+      "bnh_sharpe": 0.766,
+      "bnh_max_drawdown": -37.57
+    },
+    "Scaled": {
+      "total_return": 384.44,
+      "cagr": 11.26,
+      "sharpe": 0.716,
+      "max_drawdown": -27.07,
+      "win_rate": 56.12,
+      "in_market_pct": 90.4,
+      "n_trades": 682,
+      "n_weeks": 769,
+      "bnh_total_return": 898.83,
+      "bnh_cagr": 16.84,
+      "bnh_sharpe": 0.766,
+      "bnh_max_drawdown": -37.57
+    },
+    "Adaptive": {
+      "total_return": 498.08,
+      "cagr": 12.86,
+      "sharpe": 0.672,
+      "max_drawdown": -31.13,
+      "win_rate": 56.91,
+      "in_market_pct": 71.5,
+      "n_trades": 176,
+      "n_weeks": 769,
+      "bnh_total_return": 898.83,
+      "bnh_cagr": 16.84,
+      "bnh_sharpe": 0.766,
+      "bnh_max_drawdown": -37.57
+    }
+  }
+}

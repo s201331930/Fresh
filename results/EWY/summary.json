@@ -1,0 +1,84 @@
+{
+  "name": "EWY",
+  "label": "South Korea ETF",
+  "ticker": "EWY",
+  "market": "US",
+  "data_period": "2000-05-12 to 2026-10-16",
+  "total_weeks": 1380,
+  "oos_weeks": 759,
+  "oos_period": "2012-04-06 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.6014,
+    "rmse": 3.5247,
+    "r2": 0.0279,
+    "dir_accuracy": 57.05
+  },
+  "optimized_threshold": 0.17,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 826.14,
+      "cagr": 16.47,
+      "sharpe": 0.767,
+      "max_drawdown": -37.37,
+      "win_rate": 56.17,
+      "in_market_pct": 83.3,
+      "n_trades": 102,
+      "n_weeks": 759,
+      "bnh_total_return": 220.12,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.439,
+      "bnh_max_drawdown": -49.73
+    },
+    "Binary (t=opt)": {
+      "total_return": 2783.03,
+      "cagr": 25.9,
+      "sharpe": 1.276,
+      "max_drawdown": -24.78,
+      "win_rate": 62.12,
+      "in_market_pct": 47.3,
+      "n_trades": 209,
+      "n_weeks": 759,
+      "bnh_total_return": 220.12,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.439,
+      "bnh_max_drawdown": -49.73
+    },
+    "Scaled": {
+      "total_return": 590.09,
+      "cagr": 14.15,
+      "sharpe": 0.965,
+      "max_drawdown": -23.88,
+      "win_rate": 55.54,
+      "in_market_pct": 83.3,
+      "n_trades": 664,
+      "n_weeks": 759,
+      "bnh_total_return": 220.12,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.439,
+      "bnh_max_drawdown": -49.73
+    },
+    "Adaptive": {
+      "total_return": 815.4,
+      "cagr": 16.38,
+      "sharpe": 0.83,
+      "max_drawdown": -44.32,
+      "win_rate": 55.3,
+      "in_market_pct": 57.2,
+      "n_trades": 203,
+      "n_weeks": 759,
+      "bnh_total_return": 220.12,
+      "bnh_cagr": 8.3,
+      "bnh_sharpe": 0.439,
+      "bnh_max_drawdown": -49.73
+    }
+  }
+}

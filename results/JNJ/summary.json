@@ -1,0 +1,86 @@
+{
+  "name": "JNJ",
+  "label": "Johnson & Johnson",
+  "ticker": "JNJ",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Regime_Lag2",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bull_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.7205,
+    "rmse": 2.2775,
+    "r2": 0.0287,
+    "dir_accuracy": 56.05
+  },
+  "optimized_threshold": -0.1,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 523.26,
+      "cagr": 13.17,
+      "sharpe": 0.958,
+      "max_drawdown": -17.43,
+      "win_rate": 58.29,
+      "in_market_pct": 76.1,
+      "n_trades": 132,
+      "n_weeks": 769,
+      "bnh_total_return": 507.56,
+      "bnh_cagr": 12.98,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -20.56
+    },
+    "Binary (t=opt)": {
+      "total_return": 916.58,
+      "cagr": 16.98,
+      "sharpe": 1.123,
+      "max_drawdown": -17.43,
+      "win_rate": 58.62,
+      "in_market_pct": 88.3,
+      "n_trades": 60,
+      "n_weeks": 769,
+      "bnh_total_return": 507.56,
+      "bnh_cagr": 12.98,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -20.56
+    },
+    "Scaled": {
+      "total_return": 253.33,
+      "cagr": 8.91,
+      "sharpe": 1.189,
+      "max_drawdown": -7.65,
+      "win_rate": 57.44,
+      "in_market_pct": 76.1,
+      "n_trades": 634,
+      "n_weeks": 769,
+      "bnh_total_return": 507.56,
+      "bnh_cagr": 12.98,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -20.56
+    },
+    "Adaptive": {
+      "total_return": 599.55,
+      "cagr": 14.06,
+      "sharpe": 1.028,
+      "max_drawdown": -21.8,
+      "win_rate": 58.59,
+      "in_market_pct": 68.1,
+      "n_trades": 170,
+      "n_weeks": 769,
+      "bnh_total_return": 507.56,
+      "bnh_cagr": 12.98,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -20.56
+    }
+  }
+}

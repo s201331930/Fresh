@@ -1,0 +1,86 @@
+{
+  "name": "BND",
+  "label": "Total Bond Market",
+  "ticker": "BND",
+  "market": "US",
+  "data_period": "2007-04-13 to 2026-10-16",
+  "total_weeks": 1019,
+  "oos_weeks": 561,
+  "oos_period": "2016-01-22 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Sideways"
+  ],
+  "model_metrics": {
+    "mae": 0.4929,
+    "rmse": 0.6912,
+    "r2": 0.0374,
+    "dir_accuracy": 55.61
+  },
+  "optimized_threshold": 0.02,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 22.64,
+      "cagr": 1.91,
+      "sharpe": 0.419,
+      "max_drawdown": -18.53,
+      "win_rate": 55.95,
+      "in_market_pct": 89.8,
+      "n_trades": 90,
+      "n_weeks": 561,
+      "bnh_total_return": 20.54,
+      "bnh_cagr": 1.75,
+      "bnh_sharpe": 0.366,
+      "bnh_max_drawdown": -18.35
+    },
+    "Binary (t=opt)": {
+      "total_return": 29.99,
+      "cagr": 2.46,
+      "sharpe": 0.572,
+      "max_drawdown": -18.32,
+      "win_rate": 56.51,
+      "in_market_pct": 84.8,
+      "n_trades": 115,
+      "n_weeks": 561,
+      "bnh_total_return": 20.54,
+      "bnh_cagr": 1.75,
+      "bnh_sharpe": 0.366,
+      "bnh_max_drawdown": -18.35
+    },
+    "Scaled": {
+      "total_return": 9.25,
+      "cagr": 0.82,
+      "sharpe": 0.492,
+      "max_drawdown": -3.84,
+      "win_rate": 55.16,
+      "in_market_pct": 89.8,
+      "n_trades": 548,
+      "n_weeks": 561,
+      "bnh_total_return": 20.54,
+      "bnh_cagr": 1.75,
+      "bnh_sharpe": 0.366,
+      "bnh_max_drawdown": -18.35
+    },
+    "Adaptive": {
+      "total_return": 25.98,
+      "cagr": 2.16,
+      "sharpe": 0.556,
+      "max_drawdown": -7.15,
+      "win_rate": 56.06,
+      "in_market_pct": 66.1,
+      "n_trades": 103,
+      "n_weeks": 561,
+      "bnh_total_return": 20.54,
+      "bnh_cagr": 1.75,
+      "bnh_sharpe": 0.366,
+      "bnh_max_drawdown": -18.35
+    }
+  }
+}

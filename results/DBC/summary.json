@@ -1,0 +1,87 @@
+{
+  "name": "DBC",
+  "label": "Commodity Index",
+  "ticker": "DBC",
+  "market": "US",
+  "data_period": "2006-02-10 to 2026-10-16",
+  "total_weeks": 1080,
+  "oos_weeks": 594,
+  "oos_period": "2015-06-05 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.8767,
+    "rmse": 2.4674,
+    "r2": 0.0211,
+    "dir_accuracy": 57.24
+  },
+  "optimized_threshold": 0.07,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 438.78,
+      "cagr": 15.89,
+      "sharpe": 1.124,
+      "max_drawdown": -14.81,
+      "win_rate": 57.36,
+      "in_market_pct": 66.3,
+      "n_trades": 196,
+      "n_weeks": 594,
+      "bnh_total_return": 128.72,
+      "bnh_cagr": 7.51,
+      "bnh_sharpe": 0.492,
+      "bnh_max_drawdown": -39.82
+    },
+    "Binary (t=opt)": {
+      "total_return": 257.98,
+      "cagr": 11.81,
+      "sharpe": 1.087,
+      "max_drawdown": -13.03,
+      "win_rate": 59.43,
+      "in_market_pct": 41.1,
+      "n_trades": 168,
+      "n_weeks": 594,
+      "bnh_total_return": 128.72,
+      "bnh_cagr": 7.51,
+      "bnh_sharpe": 0.492,
+      "bnh_max_drawdown": -39.82
+    },
+    "Scaled": {
+      "total_return": 96.5,
+      "cagr": 6.09,
+      "sharpe": 1.143,
+      "max_drawdown": -7.16,
+      "win_rate": 57.36,
+      "in_market_pct": 66.3,
+      "n_trades": 490,
+      "n_weeks": 594,
+      "bnh_total_return": 128.72,
+      "bnh_cagr": 7.51,
+      "bnh_sharpe": 0.492,
+      "bnh_max_drawdown": -39.82
+    },
+    "Adaptive": {
+      "total_return": 98.88,
+      "cagr": 6.2,
+      "sharpe": 0.509,
+      "max_drawdown": -38.36,
+      "win_rate": 54.69,
+      "in_market_pct": 64.6,
+      "n_trades": 151,
+      "n_weeks": 594,
+      "bnh_total_return": 128.72,
+      "bnh_cagr": 7.51,
+      "bnh_sharpe": 0.492,
+      "bnh_max_drawdown": -39.82
+    }
+  }
+}

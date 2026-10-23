@@ -1,0 +1,88 @@
+{
+  "name": "PPLT",
+  "label": "Platinum ETF",
+  "ticker": "PPLT",
+  "market": "US",
+  "data_period": "2010-01-08 to 2026-10-16",
+  "total_weeks": 876,
+  "oos_weeks": 482,
+  "oos_period": "2017-07-28 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.8748,
+    "rmse": 4.174,
+    "r2": 0.0199,
+    "dir_accuracy": 52.28
+  },
+  "optimized_threshold": 0.48,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 103.25,
+      "cagr": 7.95,
+      "sharpe": 0.454,
+      "max_drawdown": -41.71,
+      "win_rate": 52.97,
+      "in_market_pct": 45.4,
+      "n_trades": 139,
+      "n_weeks": 482,
+      "bnh_total_return": 57.46,
+      "bnh_cagr": 5.02,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -44.16
+    },
+    "Binary (t=opt)": {
+      "total_return": 229.87,
+      "cagr": 13.74,
+      "sharpe": 1.153,
+      "max_drawdown": -13.21,
+      "win_rate": 68.06,
+      "in_market_pct": 14.9,
+      "n_trades": 77,
+      "n_weeks": 482,
+      "bnh_total_return": 57.46,
+      "bnh_cagr": 5.02,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -44.16
+    },
+    "Scaled": {
+      "total_return": 175.02,
+      "cagr": 11.53,
+      "sharpe": 0.817,
+      "max_drawdown": -24.99,
+      "win_rate": 52.05,
+      "in_market_pct": 45.4,
+      "n_trades": 266,
+      "n_weeks": 482,
+      "bnh_total_return": 57.46,
+      "bnh_cagr": 5.02,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -44.16
+    },
+    "Adaptive": {
+      "total_return": 209.06,
+      "cagr": 12.95,
+      "sharpe": 0.596,
+      "max_drawdown": -42.68,
+      "win_rate": 54.61,
+      "in_market_pct": 56.2,
+      "n_trades": 129,
+      "n_weeks": 482,
+      "bnh_total_return": 57.46,
+      "bnh_cagr": 5.02,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -44.16
+    }
+  }
+}

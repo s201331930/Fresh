@@ -1,0 +1,81 @@
+{
+  "name": "SAP",
+  "label": "SAP SE",
+  "ticker": "SAP",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.6651,
+    "rmse": 3.6665,
+    "r2": 0.0049,
+    "dir_accuracy": 56.18
+  },
+  "optimized_threshold": 0.07,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 888.81,
+      "cagr": 16.76,
+      "sharpe": 0.784,
+      "max_drawdown": -49.39,
+      "win_rate": 55.99,
+      "in_market_pct": 83.6,
+      "n_trades": 158,
+      "n_weeks": 769,
+      "bnh_total_return": 406.46,
+      "bnh_cagr": 11.59,
+      "bnh_sharpe": 0.548,
+      "bnh_max_drawdown": -50.13
+    },
+    "Binary (t=opt)": {
+      "total_return": 918.98,
+      "cagr": 17.0,
+      "sharpe": 0.833,
+      "max_drawdown": -49.39,
+      "win_rate": 56.62,
+      "in_market_pct": 70.7,
+      "n_trades": 214,
+      "n_weeks": 769,
+      "bnh_total_return": 406.46,
+      "bnh_cagr": 11.59,
+      "bnh_sharpe": 0.548,
+      "bnh_max_drawdown": -50.13
+    },
+    "Scaled": {
+      "total_return": 197.92,
+      "cagr": 7.66,
+      "sharpe": 0.614,
+      "max_drawdown": -34.48,
+      "win_rate": 55.68,
+      "in_market_pct": 83.6,
+      "n_trades": 678,
+      "n_weeks": 769,
+      "bnh_total_return": 406.46,
+      "bnh_cagr": 11.59,
+      "bnh_sharpe": 0.548,
+      "bnh_max_drawdown": -50.13
+    },
+    "Adaptive": {
+      "total_return": 810.95,
+      "cagr": 16.11,
+      "sharpe": 0.823,
+      "max_drawdown": -45.47,
+      "win_rate": 56.29,
+      "in_market_pct": 69.3,
+      "n_trades": 188,
+      "n_weeks": 769,
+      "bnh_total_return": 406.46,
+      "bnh_cagr": 11.59,
+      "bnh_sharpe": 0.548,
+      "bnh_max_drawdown": -50.13
+    }
+  }
+}

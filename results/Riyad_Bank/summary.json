@@ -1,0 +1,86 @@
+{
+  "name": "Riyad_Bank",
+  "label": "Riyad Bank",
+  "ticker": "1010.SR",
+  "market": "TASI",
+  "data_period": "2012-04-05 to 2026-10-15",
+  "total_weeks": 743,
+  "oos_weeks": 409,
+  "oos_period": "2018-10-25 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 2.8435,
+    "rmse": 3.9749,
+    "r2": 0.0129,
+    "dir_accuracy": 55.99
+  },
+  "optimized_threshold": -0.04,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 304.45,
+      "cagr": 19.44,
+      "sharpe": 0.861,
+      "max_drawdown": -35.29,
+      "win_rate": 54.67,
+      "in_market_pct": 73.3,
+      "n_trades": 79,
+      "n_weeks": 409,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 9.73,
+      "bnh_sharpe": 0.468,
+      "bnh_max_drawdown": -49.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 389.13,
+      "cagr": 22.36,
+      "sharpe": 0.951,
+      "max_drawdown": -35.29,
+      "win_rate": 55.37,
+      "in_market_pct": 75.1,
+      "n_trades": 73,
+      "n_weeks": 409,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 9.73,
+      "bnh_sharpe": 0.468,
+      "bnh_max_drawdown": -49.58
+    },
+    "Scaled": {
+      "total_return": 145.79,
+      "cagr": 12.11,
+      "sharpe": 0.845,
+      "max_drawdown": -25.2,
+      "win_rate": 54.67,
+      "in_market_pct": 73.3,
+      "n_trades": 323,
+      "n_weeks": 409,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 9.73,
+      "bnh_sharpe": 0.468,
+      "bnh_max_drawdown": -49.58
+    },
+    "Adaptive": {
+      "total_return": 144.29,
+      "cagr": 12.03,
+      "sharpe": 0.624,
+      "max_drawdown": -34.41,
+      "win_rate": 54.2,
+      "in_market_pct": 64.1,
+      "n_trades": 95,
+      "n_weeks": 409,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 9.73,
+      "bnh_sharpe": 0.468,
+      "bnh_max_drawdown": -49.58
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "PEP",
+  "label": "PepsiCo",
+  "ticker": "PEP",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bull_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 1.6837,
+    "rmse": 2.3402,
+    "r2": 0.0311,
+    "dir_accuracy": 55.4
+  },
+  "optimized_threshold": 0.03,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 446.46,
+      "cagr": 12.17,
+      "sharpe": 0.815,
+      "max_drawdown": -29.28,
+      "win_rate": 55.36,
+      "in_market_pct": 90.9,
+      "n_trades": 74,
+      "n_weeks": 769,
+      "bnh_total_return": 220.68,
+      "bnh_cagr": 8.2,
+      "bnh_sharpe": 0.546,
+      "bnh_max_drawdown": -29.84
+    },
+    "Binary (t=opt)": {
+      "total_return": 552.2,
+      "cagr": 13.52,
+      "sharpe": 0.904,
+      "max_drawdown": -26.75,
+      "win_rate": 55.96,
+      "in_market_pct": 88.3,
+      "n_trades": 94,
+      "n_weeks": 769,
+      "bnh_total_return": 220.68,
+      "bnh_cagr": 8.2,
+      "bnh_sharpe": 0.546,
+      "bnh_max_drawdown": -29.84
+    },
+    "Scaled": {
+      "total_return": 242.91,
+      "cagr": 8.69,
+      "sharpe": 1.039,
+      "max_drawdown": -10.44,
+      "win_rate": 54.94,
+      "in_market_pct": 90.9,
+      "n_trades": 722,
+      "n_weeks": 769,
+      "bnh_total_return": 220.68,
+      "bnh_cagr": 8.2,
+      "bnh_sharpe": 0.546,
+      "bnh_max_drawdown": -29.84
+    },
+    "Adaptive": {
+      "total_return": 256.02,
+      "cagr": 8.97,
+      "sharpe": 0.721,
+      "max_drawdown": -29.13,
+      "win_rate": 56.07,
+      "in_market_pct": 64.2,
+      "n_trades": 253,
+      "n_weeks": 769,
+      "bnh_total_return": 220.68,
+      "bnh_cagr": 8.2,
+      "bnh_sharpe": 0.546,
+      "bnh_max_drawdown": -29.84
+    }
+  }
+}

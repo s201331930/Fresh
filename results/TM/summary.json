@@ -1,0 +1,88 @@
+{
+  "name": "TM",
+  "label": "Toyota Motor",
+  "ticker": "TM",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Regime_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 2.3005,
+    "rmse": 3.0585,
+    "r2": 0.0395,
+    "dir_accuracy": 53.32
+  },
+  "optimized_threshold": 0.14,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 839.28,
+      "cagr": 16.35,
+      "sharpe": 0.91,
+      "max_drawdown": -28.85,
+      "win_rate": 54.15,
+      "in_market_pct": 65.8,
+      "n_trades": 232,
+      "n_weeks": 769,
+      "bnh_total_return": 284.39,
+      "bnh_cagr": 9.53,
+      "bnh_sharpe": 0.517,
+      "bnh_max_drawdown": -36.6
+    },
+    "Binary (t=opt)": {
+      "total_return": 561.8,
+      "cagr": 13.63,
+      "sharpe": 1.05,
+      "max_drawdown": -23.57,
+      "win_rate": 60.42,
+      "in_market_pct": 25.0,
+      "n_trades": 208,
+      "n_weeks": 769,
+      "bnh_total_return": 284.39,
+      "bnh_cagr": 9.53,
+      "bnh_sharpe": 0.517,
+      "bnh_max_drawdown": -36.6
+    },
+    "Scaled": {
+      "total_return": 346.26,
+      "cagr": 10.64,
+      "sharpe": 1.166,
+      "max_drawdown": -13.35,
+      "win_rate": 53.56,
+      "in_market_pct": 65.8,
+      "n_trades": 607,
+      "n_weeks": 769,
+      "bnh_total_return": 284.39,
+      "bnh_cagr": 9.53,
+      "bnh_sharpe": 0.517,
+      "bnh_max_drawdown": -36.6
+    },
+    "Adaptive": {
+      "total_return": 916.93,
+      "cagr": 16.98,
+      "sharpe": 0.989,
+      "max_drawdown": -29.56,
+      "win_rate": 55.05,
+      "in_market_pct": 56.7,
+      "n_trades": 226,
+      "n_weeks": 769,
+      "bnh_total_return": 284.39,
+      "bnh_cagr": 9.53,
+      "bnh_sharpe": 0.517,
+      "bnh_max_drawdown": -36.6
+    }
+  }
+}

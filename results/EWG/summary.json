@@ -1,0 +1,86 @@
+{
+  "name": "EWG",
+  "label": "Germany ETF",
+  "ticker": "EWG",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 2.0039,
+    "rmse": 2.7799,
+    "r2": 0.0418,
+    "dir_accuracy": 56.05
+  },
+  "optimized_threshold": 0.11,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 257.53,
+      "cagr": 9.0,
+      "sharpe": 0.565,
+      "max_drawdown": -41.33,
+      "win_rate": 56.76,
+      "in_market_pct": 81.8,
+      "n_trades": 136,
+      "n_weeks": 769,
+      "bnh_total_return": 166.98,
+      "bnh_cagr": 6.87,
+      "bnh_sharpe": 0.427,
+      "bnh_max_drawdown": -45.99
+    },
+    "Binary (t=opt)": {
+      "total_return": 459.14,
+      "cagr": 12.34,
+      "sharpe": 0.947,
+      "max_drawdown": -14.12,
+      "win_rate": 61.37,
+      "in_market_pct": 41.7,
+      "n_trades": 214,
+      "n_weeks": 769,
+      "bnh_total_return": 166.98,
+      "bnh_cagr": 6.87,
+      "bnh_sharpe": 0.427,
+      "bnh_max_drawdown": -45.99
+    },
+    "Scaled": {
+      "total_return": 145.68,
+      "cagr": 6.27,
+      "sharpe": 0.735,
+      "max_drawdown": -14.11,
+      "win_rate": 56.44,
+      "in_market_pct": 81.8,
+      "n_trades": 689,
+      "n_weeks": 769,
+      "bnh_total_return": 166.98,
+      "bnh_cagr": 6.87,
+      "bnh_sharpe": 0.427,
+      "bnh_max_drawdown": -45.99
+    },
+    "Adaptive": {
+      "total_return": 334.77,
+      "cagr": 10.45,
+      "sharpe": 0.743,
+      "max_drawdown": -19.66,
+      "win_rate": 58.5,
+      "in_market_pct": 58.9,
+      "n_trades": 190,
+      "n_weeks": 769,
+      "bnh_total_return": 166.98,
+      "bnh_cagr": 6.87,
+      "bnh_sharpe": 0.427,
+      "bnh_max_drawdown": -45.99
+    }
+  }
+}

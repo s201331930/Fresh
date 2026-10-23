@@ -1,0 +1,89 @@
+{
+  "name": "SLV",
+  "label": "Silver ETF",
+  "ticker": "SLV",
+  "market": "US",
+  "data_period": "2006-04-28 to 2026-10-16",
+  "total_weeks": 1069,
+  "oos_weeks": 588,
+  "oos_period": "2015-07-17 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 3.0028,
+    "rmse": 4.2101,
+    "r2": 0.001,
+    "dir_accuracy": 55.44
+  },
+  "optimized_threshold": -0.02,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 498.91,
+      "cagr": 17.15,
+      "sharpe": 0.741,
+      "max_drawdown": -42.59,
+      "win_rate": 55.26,
+      "in_market_pct": 77.6,
+      "n_trades": 137,
+      "n_weeks": 588,
+      "bnh_total_return": 242.2,
+      "bnh_cagr": 11.49,
+      "bnh_sharpe": 0.51,
+      "bnh_max_drawdown": -47.59
+    },
+    "Binary (t=opt)": {
+      "total_return": 556.63,
+      "cagr": 18.11,
+      "sharpe": 0.748,
+      "max_drawdown": -47.48,
+      "win_rate": 55.04,
+      "in_market_pct": 81.0,
+      "n_trades": 121,
+      "n_weeks": 588,
+      "bnh_total_return": 242.2,
+      "bnh_cagr": 11.49,
+      "bnh_sharpe": 0.51,
+      "bnh_max_drawdown": -47.59
+    },
+    "Scaled": {
+      "total_return": 64.15,
+      "cagr": 4.48,
+      "sharpe": 0.363,
+      "max_drawdown": -38.65,
+      "win_rate": 54.61,
+      "in_market_pct": 77.6,
+      "n_trades": 504,
+      "n_weeks": 588,
+      "bnh_total_return": 242.2,
+      "bnh_cagr": 11.49,
+      "bnh_sharpe": 0.51,
+      "bnh_max_drawdown": -47.59
+    },
+    "Adaptive": {
+      "total_return": 229.23,
+      "cagr": 11.11,
+      "sharpe": 0.532,
+      "max_drawdown": -48.51,
+      "win_rate": 53.38,
+      "in_market_pct": 67.9,
+      "n_trades": 170,
+      "n_weeks": 588,
+      "bnh_total_return": 242.2,
+      "bnh_cagr": 11.49,
+      "bnh_sharpe": 0.51,
+      "bnh_max_drawdown": -47.59
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "MUB",
+  "label": "Municipal Bond",
+  "ticker": "MUB",
+  "market": "US",
+  "data_period": "2007-09-14 to 2026-10-16",
+  "total_weeks": 997,
+  "oos_weeks": 549,
+  "oos_period": "2016-04-15 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 37,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 0.4144,
+    "rmse": 0.7931,
+    "r2": 0.0836,
+    "dir_accuracy": 61.2
+  },
+  "optimized_threshold": -0.05,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 39.69,
+      "cagr": 3.22,
+      "sharpe": 0.613,
+      "max_drawdown": -12.41,
+      "win_rate": 62.02,
+      "in_market_pct": 81.1,
+      "n_trades": 68,
+      "n_weeks": 549,
+      "bnh_total_return": 19.58,
+      "bnh_cagr": 1.71,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -12.41
+    },
+    "Binary (t=opt)": {
+      "total_return": 43.45,
+      "cagr": 3.48,
+      "sharpe": 0.648,
+      "max_drawdown": -12.41,
+      "win_rate": 60.5,
+      "in_market_pct": 87.6,
+      "n_trades": 50,
+      "n_weeks": 549,
+      "bnh_total_return": 19.58,
+      "bnh_cagr": 1.71,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -12.41
+    },
+    "Scaled": {
+      "total_return": 10.67,
+      "cagr": 0.97,
+      "sharpe": 0.266,
+      "max_drawdown": -7.47,
+      "win_rate": 60.67,
+      "in_market_pct": 81.1,
+      "n_trades": 478,
+      "n_weeks": 549,
+      "bnh_total_return": 19.58,
+      "bnh_cagr": 1.71,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -12.41
+    },
+    "Adaptive": {
+      "total_return": 43.47,
+      "cagr": 3.48,
+      "sharpe": 0.769,
+      "max_drawdown": -4.55,
+      "win_rate": 61.21,
+      "in_market_pct": 72.3,
+      "n_trades": 71,
+      "n_weeks": 549,
+      "bnh_total_return": 19.58,
+      "bnh_cagr": 1.71,
+      "bnh_sharpe": 0.313,
+      "bnh_max_drawdown": -12.41
+    }
+  }
+}

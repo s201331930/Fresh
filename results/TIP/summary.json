@@ -1,0 +1,87 @@
+{
+  "name": "TIP",
+  "label": "TIPS Bond ETF",
+  "ticker": "TIP",
+  "market": "US",
+  "data_period": "2003-12-05 to 2026-10-16",
+  "total_weeks": 1194,
+  "oos_weeks": 657,
+  "oos_period": "2014-03-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 0.5071,
+    "rmse": 0.7255,
+    "r2": 0.0361,
+    "dir_accuracy": 58.3
+  },
+  "optimized_threshold": 0.0,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 56.02,
+      "cagr": 3.58,
+      "sharpe": 0.81,
+      "max_drawdown": -9.56,
+      "win_rate": 58.75,
+      "in_market_pct": 85.2,
+      "n_trades": 132,
+      "n_weeks": 657,
+      "bnh_total_return": 33.33,
+      "bnh_cagr": 2.3,
+      "bnh_sharpe": 0.454,
+      "bnh_max_drawdown": -14.22
+    },
+    "Binary (t=opt)": {
+      "total_return": 56.02,
+      "cagr": 3.58,
+      "sharpe": 0.81,
+      "max_drawdown": -9.56,
+      "win_rate": 58.75,
+      "in_market_pct": 85.2,
+      "n_trades": 132,
+      "n_weeks": 657,
+      "bnh_total_return": 33.33,
+      "bnh_cagr": 2.3,
+      "bnh_sharpe": 0.454,
+      "bnh_max_drawdown": -14.22
+    },
+    "Scaled": {
+      "total_return": 14.18,
+      "cagr": 1.06,
+      "sharpe": 0.901,
+      "max_drawdown": -1.54,
+      "win_rate": 58.21,
+      "in_market_pct": 85.2,
+      "n_trades": 625,
+      "n_weeks": 657,
+      "bnh_total_return": 33.33,
+      "bnh_cagr": 2.3,
+      "bnh_sharpe": 0.454,
+      "bnh_max_drawdown": -14.22
+    },
+    "Adaptive": {
+      "total_return": 33.69,
+      "cagr": 2.32,
+      "sharpe": 0.568,
+      "max_drawdown": -6.91,
+      "win_rate": 60.09,
+      "in_market_pct": 66.4,
+      "n_trades": 145,
+      "n_weeks": 657,
+      "bnh_total_return": 33.33,
+      "bnh_cagr": 2.3,
+      "bnh_sharpe": 0.454,
+      "bnh_max_drawdown": -14.22
+    }
+  }
+}

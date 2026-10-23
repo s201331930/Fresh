@@ -1,0 +1,86 @@
+{
+  "name": "IYR",
+  "label": "iShares US REIT",
+  "ticker": "IYR",
+  "market": "US",
+  "data_period": "2000-06-23 to 2026-10-16",
+  "total_weeks": 1374,
+  "oos_weeks": 756,
+  "oos_period": "2012-04-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 1.8022,
+    "rmse": 2.6527,
+    "r2": 0.0586,
+    "dir_accuracy": 57.54
+  },
+  "optimized_threshold": 0.34,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 387.86,
+      "cagr": 11.52,
+      "sharpe": 0.715,
+      "max_drawdown": -22.96,
+      "win_rate": 57.42,
+      "in_market_pct": 90.1,
+      "n_trades": 94,
+      "n_weeks": 756,
+      "bnh_total_return": 143.89,
+      "bnh_cagr": 6.32,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -39.25
+    },
+    "Binary (t=opt)": {
+      "total_return": 211.2,
+      "cagr": 8.12,
+      "sharpe": 0.837,
+      "max_drawdown": -7.69,
+      "win_rate": 68.18,
+      "in_market_pct": 11.6,
+      "n_trades": 96,
+      "n_weeks": 756,
+      "bnh_total_return": 143.89,
+      "bnh_cagr": 6.32,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -39.25
+    },
+    "Scaled": {
+      "total_return": 285.31,
+      "cagr": 9.72,
+      "sharpe": 0.901,
+      "max_drawdown": -9.77,
+      "win_rate": 57.12,
+      "in_market_pct": 90.1,
+      "n_trades": 718,
+      "n_weeks": 756,
+      "bnh_total_return": 143.89,
+      "bnh_cagr": 6.32,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -39.25
+    },
+    "Adaptive": {
+      "total_return": 195.94,
+      "cagr": 7.75,
+      "sharpe": 0.581,
+      "max_drawdown": -19.43,
+      "win_rate": 56.04,
+      "in_market_pct": 63.5,
+      "n_trades": 180,
+      "n_weeks": 756,
+      "bnh_total_return": 143.89,
+      "bnh_cagr": 6.32,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -39.25
+    }
+  }
+}

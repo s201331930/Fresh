@@ -1,0 +1,89 @@
+{
+  "name": "FXB",
+  "label": "British Pound ETF",
+  "ticker": "FXB",
+  "market": "US",
+  "data_period": "2006-06-30 to 2026-10-16",
+  "total_weeks": 1060,
+  "oos_weeks": 583,
+  "oos_period": "2015-08-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 0.9267,
+    "rmse": 1.2363,
+    "r2": 0.0349,
+    "dir_accuracy": 54.37
+  },
+  "optimized_threshold": 0.26,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 19.14,
+      "cagr": 1.57,
+      "sharpe": 0.268,
+      "max_drawdown": -20.14,
+      "win_rate": 55.8,
+      "in_market_pct": 47.3,
+      "n_trades": 200,
+      "n_weeks": 583,
+      "bnh_total_return": -7.49,
+      "bnh_cagr": -0.69,
+      "bnh_sharpe": -0.031,
+      "bnh_max_drawdown": -31.29
+    },
+    "Binary (t=opt)": {
+      "total_return": 21.9,
+      "cagr": 1.78,
+      "sharpe": 0.647,
+      "max_drawdown": -1.16,
+      "win_rate": 82.35,
+      "in_market_pct": 2.9,
+      "n_trades": 20,
+      "n_weeks": 583,
+      "bnh_total_return": -7.49,
+      "bnh_cagr": -0.69,
+      "bnh_sharpe": -0.031,
+      "bnh_max_drawdown": -31.29
+    },
+    "Scaled": {
+      "total_return": 20.12,
+      "cagr": 1.65,
+      "sharpe": 0.575,
+      "max_drawdown": -2.77,
+      "win_rate": 55.8,
+      "in_market_pct": 47.3,
+      "n_trades": 374,
+      "n_weeks": 583,
+      "bnh_total_return": -7.49,
+      "bnh_cagr": -0.69,
+      "bnh_sharpe": -0.031,
+      "bnh_max_drawdown": -31.29
+    },
+    "Adaptive": {
+      "total_return": 29.64,
+      "cagr": 2.34,
+      "sharpe": 0.403,
+      "max_drawdown": -7.92,
+      "win_rate": 53.87,
+      "in_market_pct": 50.9,
+      "n_trades": 159,
+      "n_weeks": 583,
+      "bnh_total_return": -7.49,
+      "bnh_cagr": -0.69,
+      "bnh_sharpe": -0.031,
+      "bnh_max_drawdown": -31.29
+    }
+  }
+}

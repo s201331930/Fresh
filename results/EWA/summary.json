@@ -1,0 +1,84 @@
+{
+  "name": "EWA",
+  "label": "Australia ETF",
+  "ticker": "EWA",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.9514,
+    "rmse": 2.7214,
+    "r2": 0.014,
+    "dir_accuracy": 56.7
+  },
+  "optimized_threshold": 0.22,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 385.88,
+      "cagr": 11.28,
+      "sharpe": 0.681,
+      "max_drawdown": -42.16,
+      "win_rate": 56.09,
+      "in_market_pct": 83.2,
+      "n_trades": 124,
+      "n_weeks": 769,
+      "bnh_total_return": 131.45,
+      "bnh_cagr": 5.84,
+      "bnh_sharpe": 0.388,
+      "bnh_max_drawdown": -43.11
+    },
+    "Binary (t=opt)": {
+      "total_return": 282.16,
+      "cagr": 9.49,
+      "sharpe": 0.809,
+      "max_drawdown": -33.96,
+      "win_rate": 68.69,
+      "in_market_pct": 27.8,
+      "n_trades": 209,
+      "n_weeks": 769,
+      "bnh_total_return": 131.45,
+      "bnh_cagr": 5.84,
+      "bnh_sharpe": 0.388,
+      "bnh_max_drawdown": -43.11
+    },
+    "Scaled": {
+      "total_return": 165.84,
+      "cagr": 6.83,
+      "sharpe": 0.705,
+      "max_drawdown": -29.06,
+      "win_rate": 55.78,
+      "in_market_pct": 83.2,
+      "n_trades": 693,
+      "n_weeks": 769,
+      "bnh_total_return": 131.45,
+      "bnh_cagr": 5.84,
+      "bnh_sharpe": 0.388,
+      "bnh_max_drawdown": -43.11
+    },
+    "Adaptive": {
+      "total_return": 202.53,
+      "cagr": 7.77,
+      "sharpe": 0.561,
+      "max_drawdown": -34.71,
+      "win_rate": 56.94,
+      "in_market_pct": 65.5,
+      "n_trades": 170,
+      "n_weeks": 769,
+      "bnh_total_return": 131.45,
+      "bnh_cagr": 5.84,
+      "bnh_sharpe": 0.388,
+      "bnh_max_drawdown": -43.11
+    }
+  }
+}

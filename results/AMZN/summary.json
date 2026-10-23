@@ -1,0 +1,81 @@
+{
+  "name": "AMZN",
+  "label": "Amazon",
+  "ticker": "AMZN",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 3.0937,
+    "rmse": 4.1716,
+    "r2": 0.0177,
+    "dir_accuracy": 56.44
+  },
+  "optimized_threshold": -0.02,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 3934.91,
+      "cagr": 28.41,
+      "sharpe": 0.998,
+      "max_drawdown": -50.59,
+      "win_rate": 56.2,
+      "in_market_pct": 94.4,
+      "n_trades": 41,
+      "n_weeks": 769,
+      "bnh_total_return": 2452.75,
+      "bnh_cagr": 24.49,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -54.83
+    },
+    "Binary (t=opt)": {
+      "total_return": 4172.02,
+      "cagr": 28.9,
+      "sharpe": 1.01,
+      "max_drawdown": -50.59,
+      "win_rate": 56.32,
+      "in_market_pct": 94.7,
+      "n_trades": 41,
+      "n_weeks": 769,
+      "bnh_total_return": 2452.75,
+      "bnh_cagr": 24.49,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -54.83
+    },
+    "Scaled": {
+      "total_return": 2069.85,
+      "cagr": 23.13,
+      "sharpe": 1.083,
+      "max_drawdown": -33.48,
+      "win_rate": 56.2,
+      "in_market_pct": 94.4,
+      "n_trades": 706,
+      "n_weeks": 769,
+      "bnh_total_return": 2452.75,
+      "bnh_cagr": 24.49,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -54.83
+    },
+    "Adaptive": {
+      "total_return": 3935.59,
+      "cagr": 28.41,
+      "sharpe": 1.056,
+      "max_drawdown": -41.47,
+      "win_rate": 56.9,
+      "in_market_pct": 83.0,
+      "n_trades": 113,
+      "n_weeks": 769,
+      "bnh_total_return": 2452.75,
+      "bnh_cagr": 24.49,
+      "bnh_sharpe": 0.873,
+      "bnh_max_drawdown": -54.83
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "BABA",
+  "label": "Alibaba",
+  "ticker": "BABA",
+  "market": "US",
+  "data_period": "2014-09-19 to 2026-10-16",
+  "total_weeks": 631,
+  "oos_weeks": 348,
+  "oos_period": "2020-02-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 4.7923,
+    "rmse": 6.362,
+    "r2": 0.02,
+    "dir_accuracy": 53.16
+  },
+  "optimized_threshold": 0.47,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 21.08,
+      "cagr": 2.9,
+      "sharpe": 0.258,
+      "max_drawdown": -68.62,
+      "win_rate": 49.8,
+      "in_market_pct": 72.1,
+      "n_trades": 73,
+      "n_weeks": 348,
+      "bnh_total_return": -50.13,
+      "bnh_cagr": -9.88,
+      "bnh_sharpe": 0.003,
+      "bnh_max_drawdown": -79.43
+    },
+    "Binary (t=opt)": {
+      "total_return": 113.22,
+      "cagr": 11.98,
+      "sharpe": 0.568,
+      "max_drawdown": -42.88,
+      "win_rate": 54.05,
+      "in_market_pct": 31.9,
+      "n_trades": 72,
+      "n_weeks": 348,
+      "bnh_total_return": -50.13,
+      "bnh_cagr": -9.88,
+      "bnh_sharpe": 0.003,
+      "bnh_max_drawdown": -79.43
+    },
+    "Scaled": {
+      "total_return": 139.54,
+      "cagr": 13.94,
+      "sharpe": 0.672,
+      "max_drawdown": -36.83,
+      "win_rate": 49.8,
+      "in_market_pct": 72.1,
+      "n_trades": 273,
+      "n_weeks": 348,
+      "bnh_total_return": -50.13,
+      "bnh_cagr": -9.88,
+      "bnh_sharpe": 0.003,
+      "bnh_max_drawdown": -79.43
+    },
+    "Adaptive": {
+      "total_return": 43.64,
+      "cagr": 5.56,
+      "sharpe": 0.327,
+      "max_drawdown": -67.16,
+      "win_rate": 50.47,
+      "in_market_pct": 60.9,
+      "n_trades": 85,
+      "n_weeks": 348,
+      "bnh_total_return": -50.13,
+      "bnh_cagr": -9.88,
+      "bnh_sharpe": 0.003,
+      "bnh_max_drawdown": -79.43
+    }
+  }
+}

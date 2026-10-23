@@ -1,0 +1,85 @@
+{
+  "name": "VNQ",
+  "label": "US REIT ETF",
+  "ticker": "VNQ",
+  "market": "US",
+  "data_period": "2004-10-01 to 2026-10-16",
+  "total_weeks": 1151,
+  "oos_weeks": 634,
+  "oos_period": "2014-08-29 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 1.9113,
+    "rmse": 2.8292,
+    "r2": 0.0429,
+    "dir_accuracy": 56.78
+  },
+  "optimized_threshold": -0.03,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 285.84,
+      "cagr": 11.71,
+      "sharpe": 0.745,
+      "max_drawdown": -16.8,
+      "win_rate": 57.17,
+      "in_market_pct": 77.0,
+      "n_trades": 140,
+      "n_weeks": 634,
+      "bnh_total_return": 95.03,
+      "bnh_cagr": 5.63,
+      "bnh_sharpe": 0.368,
+      "bnh_max_drawdown": -39.59
+    },
+    "Binary (t=opt)": {
+      "total_return": 350.67,
+      "cagr": 13.14,
+      "sharpe": 0.803,
+      "max_drawdown": -16.8,
+      "win_rate": 57.45,
+      "in_market_pct": 81.5,
+      "n_trades": 124,
+      "n_weeks": 634,
+      "bnh_total_return": 95.03,
+      "bnh_cagr": 5.63,
+      "bnh_sharpe": 0.368,
+      "bnh_max_drawdown": -39.59
+    },
+    "Scaled": {
+      "total_return": 99.32,
+      "cagr": 5.82,
+      "sharpe": 0.761,
+      "max_drawdown": -8.22,
+      "win_rate": 56.56,
+      "in_market_pct": 77.0,
+      "n_trades": 555,
+      "n_weeks": 634,
+      "bnh_total_return": 95.03,
+      "bnh_cagr": 5.63,
+      "bnh_sharpe": 0.368,
+      "bnh_max_drawdown": -39.59
+    },
+    "Adaptive": {
+      "total_return": 62.19,
+      "cagr": 4.05,
+      "sharpe": 0.356,
+      "max_drawdown": -24.04,
+      "win_rate": 55.04,
+      "in_market_pct": 64.2,
+      "n_trades": 180,
+      "n_weeks": 634,
+      "bnh_total_return": 95.03,
+      "bnh_cagr": 5.63,
+      "bnh_sharpe": 0.368,
+      "bnh_max_drawdown": -39.59
+    }
+  }
+}

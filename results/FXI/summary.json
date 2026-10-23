@@ -1,0 +1,89 @@
+{
+  "name": "FXI",
+  "label": "China Large-Cap ETF",
+  "ticker": "FXI",
+  "market": "US",
+  "data_period": "2004-10-08 to 2026-10-16",
+  "total_weeks": 1150,
+  "oos_weeks": 633,
+  "oos_period": "2014-09-05 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Regime",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Regime_Lag2",
+    "HMM_Prob_Bear_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 2.6565,
+    "rmse": 3.4653,
+    "r2": 0.0395,
+    "dir_accuracy": 55.61
+  },
+  "optimized_threshold": 0.3,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 314.98,
+      "cagr": 12.4,
+      "sharpe": 0.666,
+      "max_drawdown": -29.97,
+      "win_rate": 55.69,
+      "in_market_pct": 63.8,
+      "n_trades": 145,
+      "n_weeks": 633,
+      "bnh_total_return": 1.28,
+      "bnh_cagr": 0.1,
+      "bnh_sharpe": 0.131,
+      "bnh_max_drawdown": -59.06
+    },
+    "Binary (t=opt)": {
+      "total_return": 337.83,
+      "cagr": 12.9,
+      "sharpe": 0.851,
+      "max_drawdown": -22.82,
+      "win_rate": 60.62,
+      "in_market_pct": 25.3,
+      "n_trades": 148,
+      "n_weeks": 633,
+      "bnh_total_return": 1.28,
+      "bnh_cagr": 0.1,
+      "bnh_sharpe": 0.131,
+      "bnh_max_drawdown": -59.06
+    },
+    "Scaled": {
+      "total_return": 277.63,
+      "cagr": 11.53,
+      "sharpe": 0.82,
+      "max_drawdown": -22.2,
+      "win_rate": 55.69,
+      "in_market_pct": 63.8,
+      "n_trades": 453,
+      "n_weeks": 633,
+      "bnh_total_return": 1.28,
+      "bnh_cagr": 0.1,
+      "bnh_sharpe": 0.131,
+      "bnh_max_drawdown": -59.06
+    },
+    "Adaptive": {
+      "total_return": 482.3,
+      "cagr": 15.57,
+      "sharpe": 0.853,
+      "max_drawdown": -33.92,
+      "win_rate": 57.72,
+      "in_market_pct": 51.2,
+      "n_trades": 243,
+      "n_weeks": 633,
+      "bnh_total_return": 1.28,
+      "bnh_cagr": 0.1,
+      "bnh_sharpe": 0.131,
+      "bnh_max_drawdown": -59.06
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "VWO",
+  "label": "Vanguard EM ETF",
+  "ticker": "VWO",
+  "market": "US",
+  "data_period": "2005-03-11 to 2026-10-16",
+  "total_weeks": 1128,
+  "oos_weeks": 621,
+  "oos_period": "2014-11-28 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 1.8823,
+    "rmse": 2.4923,
+    "r2": 0.0161,
+    "dir_accuracy": 56.68
+  },
+  "optimized_threshold": 0.11,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 197.9,
+      "cagr": 9.57,
+      "sharpe": 0.634,
+      "max_drawdown": -32.83,
+      "win_rate": 56.37,
+      "in_market_pct": 80.8,
+      "n_trades": 124,
+      "n_weeks": 621,
+      "bnh_total_return": 87.09,
+      "bnh_cagr": 5.39,
+      "bnh_sharpe": 0.381,
+      "bnh_max_drawdown": -35.14
+    },
+    "Binary (t=opt)": {
+      "total_return": 164.82,
+      "cagr": 8.5,
+      "sharpe": 0.675,
+      "max_drawdown": -23.34,
+      "win_rate": 59.17,
+      "in_market_pct": 46.5,
+      "n_trades": 187,
+      "n_weeks": 621,
+      "bnh_total_return": 87.09,
+      "bnh_cagr": 5.39,
+      "bnh_sharpe": 0.381,
+      "bnh_max_drawdown": -35.14
+    },
+    "Scaled": {
+      "total_return": 78.18,
+      "cagr": 4.96,
+      "sharpe": 0.688,
+      "max_drawdown": -18.0,
+      "win_rate": 55.98,
+      "in_market_pct": 80.8,
+      "n_trades": 561,
+      "n_weeks": 621,
+      "bnh_total_return": 87.09,
+      "bnh_cagr": 5.39,
+      "bnh_sharpe": 0.381,
+      "bnh_max_drawdown": -35.14
+    },
+    "Adaptive": {
+      "total_return": 171.44,
+      "cagr": 8.72,
+      "sharpe": 0.668,
+      "max_drawdown": -33.73,
+      "win_rate": 58.13,
+      "in_market_pct": 60.4,
+      "n_trades": 168,
+      "n_weeks": 621,
+      "bnh_total_return": 87.09,
+      "bnh_cagr": 5.39,
+      "bnh_sharpe": 0.381,
+      "bnh_max_drawdown": -35.14
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "XLRE",
+  "label": "Real Estate Sector",
+  "ticker": "XLRE",
+  "market": "US",
+  "data_period": "2015-10-09 to 2026-10-16",
+  "total_weeks": 576,
+  "oos_weeks": 316,
+  "oos_period": "2020-10-02 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 1.9609,
+    "rmse": 2.5266,
+    "r2": 0.0193,
+    "dir_accuracy": 51.27
+  },
+  "optimized_threshold": 0.47,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 77.77,
+      "cagr": 9.93,
+      "sharpe": 0.636,
+      "max_drawdown": -36.04,
+      "win_rate": 51.84,
+      "in_market_pct": 77.5,
+      "n_trades": 65,
+      "n_weeks": 316,
+      "bnh_total_return": 42.93,
+      "bnh_cagr": 6.05,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -33.79
+    },
+    "Binary (t=opt)": {
+      "total_return": 21.11,
+      "cagr": 3.2,
+      "sharpe": 0.426,
+      "max_drawdown": -12.34,
+      "win_rate": 48.28,
+      "in_market_pct": 9.2,
+      "n_trades": 22,
+      "n_weeks": 316,
+      "bnh_total_return": 42.93,
+      "bnh_cagr": 6.05,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -33.79
+    },
+    "Scaled": {
+      "total_return": 38.14,
+      "cagr": 5.46,
+      "sharpe": 0.54,
+      "max_drawdown": -23.18,
+      "win_rate": 51.84,
+      "in_market_pct": 77.5,
+      "n_trades": 259,
+      "n_weeks": 316,
+      "bnh_total_return": 42.93,
+      "bnh_cagr": 6.05,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -33.79
+    },
+    "Adaptive": {
+      "total_return": 94.35,
+      "cagr": 11.56,
+      "sharpe": 0.779,
+      "max_drawdown": -22.63,
+      "win_rate": 53.4,
+      "in_market_pct": 65.2,
+      "n_trades": 75,
+      "n_weeks": 316,
+      "bnh_total_return": 42.93,
+      "bnh_cagr": 6.05,
+      "bnh_sharpe": 0.411,
+      "bnh_max_drawdown": -33.79
+    }
+  }
+}

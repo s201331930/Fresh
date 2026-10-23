@@ -1,0 +1,81 @@
+{
+  "name": "ASML",
+  "label": "ASML Holdings",
+  "ticker": "ASML",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 3.4024,
+    "rmse": 4.6275,
+    "r2": 0.0287,
+    "dir_accuracy": 58.0
+  },
+  "optimized_threshold": -0.17,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 7907.43,
+      "cagr": 34.5,
+      "sharpe": 1.096,
+      "max_drawdown": -47.73,
+      "win_rate": 58.36,
+      "in_market_pct": 80.9,
+      "n_trades": 133,
+      "n_weeks": 769,
+      "bnh_total_return": 3736.84,
+      "bnh_cagr": 27.97,
+      "bnh_sharpe": 0.897,
+      "bnh_max_drawdown": -55.84
+    },
+    "Binary (t=opt)": {
+      "total_return": 11044.96,
+      "cagr": 37.54,
+      "sharpe": 1.141,
+      "max_drawdown": -47.73,
+      "win_rate": 57.86,
+      "in_market_pct": 91.0,
+      "n_trades": 72,
+      "n_weeks": 769,
+      "bnh_total_return": 3736.84,
+      "bnh_cagr": 27.97,
+      "bnh_sharpe": 0.897,
+      "bnh_max_drawdown": -55.84
+    },
+    "Scaled": {
+      "total_return": 2082.59,
+      "cagr": 23.18,
+      "sharpe": 1.071,
+      "max_drawdown": -35.91,
+      "win_rate": 58.36,
+      "in_market_pct": 80.9,
+      "n_trades": 664,
+      "n_weeks": 769,
+      "bnh_total_return": 3736.84,
+      "bnh_cagr": 27.97,
+      "bnh_sharpe": 0.897,
+      "bnh_max_drawdown": -55.84
+    },
+    "Adaptive": {
+      "total_return": 8805.99,
+      "cagr": 35.47,
+      "sharpe": 1.148,
+      "max_drawdown": -35.96,
+      "win_rate": 58.02,
+      "in_market_pct": 76.2,
+      "n_trades": 153,
+      "n_weeks": 769,
+      "bnh_total_return": 3736.84,
+      "bnh_cagr": 27.97,
+      "bnh_sharpe": 0.897,
+      "bnh_max_drawdown": -55.84
+    }
+  }
+}

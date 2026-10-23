@@ -1,0 +1,84 @@
+{
+  "name": "AGG",
+  "label": "US Aggregate Bond",
+  "ticker": "AGG",
+  "market": "US",
+  "data_period": "2003-10-03 to 2026-10-16",
+  "total_weeks": 1203,
+  "oos_weeks": 662,
+  "oos_period": "2014-02-14 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 0.4677,
+    "rmse": 0.6681,
+    "r2": 0.0258,
+    "dir_accuracy": 56.8
+  },
+  "optimized_threshold": 0.06,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 38.12,
+      "cagr": 2.57,
+      "sharpe": 0.571,
+      "max_drawdown": -15.97,
+      "win_rate": 56.15,
+      "in_market_pct": 93.4,
+      "n_trades": 73,
+      "n_weeks": 662,
+      "bnh_total_return": 26.48,
+      "bnh_cagr": 1.86,
+      "bnh_sharpe": 0.402,
+      "bnh_max_drawdown": -18.17
+    },
+    "Binary (t=opt)": {
+      "total_return": 33.64,
+      "cagr": 2.3,
+      "sharpe": 0.675,
+      "max_drawdown": -12.16,
+      "win_rate": 56.22,
+      "in_market_pct": 60.7,
+      "n_trades": 269,
+      "n_weeks": 662,
+      "bnh_total_return": 26.48,
+      "bnh_cagr": 1.86,
+      "bnh_sharpe": 0.402,
+      "bnh_max_drawdown": -18.17
+    },
+    "Scaled": {
+      "total_return": 10.02,
+      "cagr": 0.75,
+      "sharpe": 0.658,
+      "max_drawdown": -2.98,
+      "win_rate": 55.34,
+      "in_market_pct": 93.4,
+      "n_trades": 654,
+      "n_weeks": 662,
+      "bnh_total_return": 26.48,
+      "bnh_cagr": 1.86,
+      "bnh_sharpe": 0.402,
+      "bnh_max_drawdown": -18.17
+    },
+    "Adaptive": {
+      "total_return": 32.34,
+      "cagr": 2.23,
+      "sharpe": 0.607,
+      "max_drawdown": -6.64,
+      "win_rate": 56.86,
+      "in_market_pct": 68.3,
+      "n_trades": 125,
+      "n_weeks": 662,
+      "bnh_total_return": 26.48,
+      "bnh_cagr": 1.86,
+      "bnh_sharpe": 0.402,
+      "bnh_max_drawdown": -18.17
+    }
+  }
+}

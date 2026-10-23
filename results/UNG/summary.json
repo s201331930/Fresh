@@ -1,0 +1,85 @@
+{
+  "name": "UNG",
+  "label": "Natural Gas ETF",
+  "ticker": "UNG",
+  "market": "US",
+  "data_period": "2007-04-20 to 2026-10-16",
+  "total_weeks": 1018,
+  "oos_weeks": 560,
+  "oos_period": "2016-01-29 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_Lag3",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Sideways"
+  ],
+  "model_metrics": {
+    "mae": 5.4742,
+    "rmse": 7.264,
+    "r2": 0.0139,
+    "dir_accuracy": 54.46
+  },
+  "optimized_threshold": 0.1,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 221.72,
+      "cagr": 11.46,
+      "sharpe": 0.544,
+      "max_drawdown": -41.1,
+      "win_rate": 53.25,
+      "in_market_pct": 27.5,
+      "n_trades": 122,
+      "n_weeks": 560,
+      "bnh_total_return": -92.95,
+      "bnh_cagr": -21.83,
+      "bnh_sharpe": -0.201,
+      "bnh_max_drawdown": -93.65
+    },
+    "Binary (t=opt)": {
+      "total_return": 222.35,
+      "cagr": 11.48,
+      "sharpe": 0.564,
+      "max_drawdown": -38.91,
+      "win_rate": 55.47,
+      "in_market_pct": 22.9,
+      "n_trades": 114,
+      "n_weeks": 560,
+      "bnh_total_return": -92.95,
+      "bnh_cagr": -21.83,
+      "bnh_sharpe": -0.201,
+      "bnh_max_drawdown": -93.65
+    },
+    "Scaled": {
+      "total_return": 162.98,
+      "cagr": 9.39,
+      "sharpe": 0.603,
+      "max_drawdown": -26.49,
+      "win_rate": 53.25,
+      "in_market_pct": 27.5,
+      "n_trades": 201,
+      "n_weeks": 560,
+      "bnh_total_return": -92.95,
+      "bnh_cagr": -21.83,
+      "bnh_sharpe": -0.201,
+      "bnh_max_drawdown": -93.65
+    },
+    "Adaptive": {
+      "total_return": 10.63,
+      "cagr": 0.94,
+      "sharpe": 0.182,
+      "max_drawdown": -57.72,
+      "win_rate": 47.71,
+      "in_market_pct": 38.9,
+      "n_trades": 168,
+      "n_weeks": 560,
+      "bnh_total_return": -92.95,
+      "bnh_cagr": -21.83,
+      "bnh_sharpe": -0.201,
+      "bnh_max_drawdown": -93.65
+    }
+  }
+}

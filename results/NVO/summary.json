@@ -1,0 +1,86 @@
+{
+  "name": "NVO",
+  "label": "Novo Nordisk",
+  "ticker": "NVO",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 2.9887,
+    "rmse": 4.2489,
+    "r2": 0.0299,
+    "dir_accuracy": 57.48
+  },
+  "optimized_threshold": 0.39,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 902.87,
+      "cagr": 16.87,
+      "sharpe": 0.703,
+      "max_drawdown": -56.13,
+      "win_rate": 57.34,
+      "in_market_pct": 92.1,
+      "n_trades": 66,
+      "n_weeks": 769,
+      "bnh_total_return": 363.94,
+      "bnh_cagr": 10.93,
+      "bnh_sharpe": 0.495,
+      "bnh_max_drawdown": -73.98
+    },
+    "Binary (t=opt)": {
+      "total_return": 1021.82,
+      "cagr": 17.76,
+      "sharpe": 0.858,
+      "max_drawdown": -47.74,
+      "win_rate": 62.34,
+      "in_market_pct": 52.1,
+      "n_trades": 224,
+      "n_weeks": 769,
+      "bnh_total_return": 363.94,
+      "bnh_cagr": 10.93,
+      "bnh_sharpe": 0.495,
+      "bnh_max_drawdown": -73.98
+    },
+    "Scaled": {
+      "total_return": 769.67,
+      "cagr": 15.75,
+      "sharpe": 0.91,
+      "max_drawdown": -38.91,
+      "win_rate": 57.06,
+      "in_market_pct": 92.1,
+      "n_trades": 709,
+      "n_weeks": 769,
+      "bnh_total_return": 363.94,
+      "bnh_cagr": 10.93,
+      "bnh_sharpe": 0.495,
+      "bnh_max_drawdown": -73.98
+    },
+    "Adaptive": {
+      "total_return": 1365.1,
+      "cagr": 19.9,
+      "sharpe": 0.846,
+      "max_drawdown": -60.88,
+      "win_rate": 59.16,
+      "in_market_pct": 77.4,
+      "n_trades": 142,
+      "n_weeks": 769,
+      "bnh_total_return": 363.94,
+      "bnh_cagr": 10.93,
+      "bnh_sharpe": 0.495,
+      "bnh_max_drawdown": -73.98
+    }
+  }
+}

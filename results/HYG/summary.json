@@ -1,0 +1,82 @@
+{
+  "name": "HYG",
+  "label": "High Yield Corporate",
+  "ticker": "HYG",
+  "market": "US",
+  "data_period": "2007-04-13 to 2026-10-16",
+  "total_weeks": 1019,
+  "oos_weeks": 561,
+  "oos_period": "2016-01-22 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Sideways"
+  ],
+  "model_metrics": {
+    "mae": 0.7037,
+    "rmse": 1.2193,
+    "r2": 0.0988,
+    "dir_accuracy": 58.11
+  },
+  "optimized_threshold": -0.4,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 97.11,
+      "cagr": 6.49,
+      "sharpe": 0.928,
+      "max_drawdown": -14.83,
+      "win_rate": 58.03,
+      "in_market_pct": 94.3,
+      "n_trades": 44,
+      "n_weeks": 561,
+      "bnh_total_return": 73.05,
+      "bnh_cagr": 5.21,
+      "bnh_sharpe": 0.595,
+      "bnh_max_drawdown": -20.75
+    },
+    "Binary (t=opt)": {
+      "total_return": 120.04,
+      "cagr": 7.58,
+      "sharpe": 0.946,
+      "max_drawdown": -15.4,
+      "win_rate": 57.37,
+      "in_market_pct": 99.1,
+      "n_trades": 6,
+      "n_weeks": 561,
+      "bnh_total_return": 73.05,
+      "bnh_cagr": 5.21,
+      "bnh_sharpe": 0.595,
+      "bnh_max_drawdown": -20.75
+    },
+    "Scaled": {
+      "total_return": 35.32,
+      "cagr": 2.84,
+      "sharpe": 0.741,
+      "max_drawdown": -2.82,
+      "win_rate": 57.66,
+      "in_market_pct": 94.3,
+      "n_trades": 544,
+      "n_weeks": 561,
+      "bnh_total_return": 73.05,
+      "bnh_cagr": 5.21,
+      "bnh_sharpe": 0.595,
+      "bnh_max_drawdown": -20.75
+    },
+    "Adaptive": {
+      "total_return": 75.75,
+      "cagr": 5.37,
+      "sharpe": 0.892,
+      "max_drawdown": -8.96,
+      "win_rate": 57.62,
+      "in_market_pct": 79.5,
+      "n_trades": 78,
+      "n_weeks": 561,
+      "bnh_total_return": 73.05,
+      "bnh_cagr": 5.21,
+      "bnh_sharpe": 0.595,
+      "bnh_max_drawdown": -20.75
+    }
+  }
+}

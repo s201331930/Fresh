@@ -1,0 +1,9 @@
+[
+  {
+    "name": "AAPL",
+    "ticker": "AAPL",
+    "market": "US",
+    "label": "Apple",
+    "class": "US Stock",
+    "n_weeks": 1399,
+    "has_volume": 

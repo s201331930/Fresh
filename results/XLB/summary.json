@@ -1,0 +1,87 @@
+{
+  "name": "XLB",
+  "label": "Materials Sector",
+  "ticker": "XLB",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 1.8796,
+    "rmse": 2.6301,
+    "r2": 0.019,
+    "dir_accuracy": 55.53
+  },
+  "optimized_threshold": 0.04,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 442.39,
+      "cagr": 12.11,
+      "sharpe": 0.74,
+      "max_drawdown": -23.71,
+      "win_rate": 56.06,
+      "in_market_pct": 85.8,
+      "n_trades": 100,
+      "n_weeks": 769,
+      "bnh_total_return": 272.57,
+      "bnh_cagr": 9.3,
+      "bnh_sharpe": 0.56,
+      "bnh_max_drawdown": -33.9
+    },
+    "Binary (t=opt)": {
+      "total_return": 674.85,
+      "cagr": 14.85,
+      "sharpe": 0.904,
+      "max_drawdown": -23.71,
+      "win_rate": 57.74,
+      "in_market_pct": 78.2,
+      "n_trades": 152,
+      "n_weeks": 769,
+      "bnh_total_return": 272.57,
+      "bnh_cagr": 9.3,
+      "bnh_sharpe": 0.56,
+      "bnh_max_drawdown": -33.9
+    },
+    "Scaled": {
+      "total_return": 251.87,
+      "cagr": 8.88,
+      "sharpe": 0.843,
+      "max_drawdown": -13.24,
+      "win_rate": 55.91,
+      "in_market_pct": 85.8,
+      "n_trades": 695,
+      "n_weeks": 769,
+      "bnh_total_return": 272.57,
+      "bnh_cagr": 9.3,
+      "bnh_sharpe": 0.56,
+      "bnh_max_drawdown": -33.9
+    },
+    "Adaptive": {
+      "total_return": 326.47,
+      "cagr": 10.3,
+      "sharpe": 0.726,
+      "max_drawdown": -34.32,
+      "win_rate": 57.45,
+      "in_market_pct": 60.2,
+      "n_trades": 183,
+      "n_weeks": 769,
+      "bnh_total_return": 272.57,
+      "bnh_cagr": 9.3,
+      "bnh_sharpe": 0.56,
+      "bnh_max_drawdown": -33.9
+    }
+  }
+}

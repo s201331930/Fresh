@@ -1,0 +1,87 @@
+{
+  "name": "TSLA",
+  "label": "Tesla",
+  "ticker": "TSLA",
+  "market": "US",
+  "data_period": "2010-07-02 to 2026-10-16",
+  "total_weeks": 851,
+  "oos_weeks": 469,
+  "oos_period": "2017-10-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Regime_Lag4",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 6.319,
+    "rmse": 8.4406,
+    "r2": 0.0069,
+    "dir_accuracy": 56.5
+  },
+  "optimized_threshold": 0.0,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 5124.9,
+      "cagr": 55.06,
+      "sharpe": 1.05,
+      "max_drawdown": -70.17,
+      "win_rate": 56.17,
+      "in_market_pct": 81.2,
+      "n_trades": 53,
+      "n_weeks": 469,
+      "bnh_total_return": 1639.07,
+      "bnh_cagr": 37.25,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -72.25
+    },
+    "Binary (t=opt)": {
+      "total_return": 5124.9,
+      "cagr": 55.06,
+      "sharpe": 1.05,
+      "max_drawdown": -70.17,
+      "win_rate": 56.17,
+      "in_market_pct": 81.2,
+      "n_trades": 53,
+      "n_weeks": 469,
+      "bnh_total_return": 1639.07,
+      "bnh_cagr": 37.25,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -72.25
+    },
+    "Scaled": {
+      "total_return": 948.12,
+      "cagr": 29.76,
+      "sharpe": 0.865,
+      "max_drawdown": -58.56,
+      "win_rate": 55.91,
+      "in_market_pct": 81.2,
+      "n_trades": 378,
+      "n_weeks": 469,
+      "bnh_total_return": 1639.07,
+      "bnh_cagr": 37.25,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -72.25
+    },
+    "Adaptive": {
+      "total_return": 2394.43,
+      "cagr": 42.85,
+      "sharpe": 0.898,
+      "max_drawdown": -72.25,
+      "win_rate": 54.82,
+      "in_market_pct": 84.0,
+      "n_trades": 51,
+      "n_weeks": 469,
+      "bnh_total_return": 1639.07,
+      "bnh_cagr": 37.25,
+      "bnh_sharpe": 0.816,
+      "bnh_max_drawdown": -72.25
+    }
+  }
+}

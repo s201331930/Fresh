@@ -1,0 +1,86 @@
+{
+  "name": "EWT",
+  "label": "Taiwan ETF",
+  "ticker": "EWT",
+  "market": "US",
+  "data_period": "2000-06-23 to 2026-10-16",
+  "total_weeks": 1374,
+  "oos_weeks": 756,
+  "oos_period": "2012-04-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 2.1024,
+    "rmse": 2.7501,
+    "r2": 0.0241,
+    "dir_accuracy": 56.22
+  },
+  "optimized_threshold": -0.02,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 841.33,
+      "cagr": 16.67,
+      "sharpe": 0.991,
+      "max_drawdown": -40.46,
+      "win_rate": 59.81,
+      "in_market_pct": 68.1,
+      "n_trades": 192,
+      "n_weeks": 756,
+      "bnh_total_return": 642.66,
+      "bnh_cagr": 14.79,
+      "bnh_sharpe": 0.788,
+      "bnh_max_drawdown": -38.21
+    },
+    "Binary (t=opt)": {
+      "total_return": 1222.79,
+      "cagr": 19.44,
+      "sharpe": 1.111,
+      "max_drawdown": -38.95,
+      "win_rate": 60.07,
+      "in_market_pct": 73.5,
+      "n_trades": 176,
+      "n_weeks": 756,
+      "bnh_total_return": 642.66,
+      "bnh_cagr": 14.79,
+      "bnh_sharpe": 0.788,
+      "bnh_max_drawdown": -38.21
+    },
+    "Scaled": {
+      "total_return": 356.95,
+      "cagr": 11.02,
+      "sharpe": 1.214,
+      "max_drawdown": -13.42,
+      "win_rate": 59.42,
+      "in_market_pct": 68.1,
+      "n_trades": 605,
+      "n_weeks": 756,
+      "bnh_total_return": 642.66,
+      "bnh_cagr": 14.79,
+      "bnh_sharpe": 0.788,
+      "bnh_max_drawdown": -38.21
+    },
+    "Adaptive": {
+      "total_return": 639.75,
+      "cagr": 14.76,
+      "sharpe": 0.923,
+      "max_drawdown": -18.81,
+      "win_rate": 58.64,
+      "in_market_pct": 68.1,
+      "n_trades": 206,
+      "n_weeks": 756,
+      "bnh_total_return": 642.66,
+      "bnh_cagr": 14.79,
+      "bnh_sharpe": 0.788,
+      "bnh_max_drawdown": -38.21
+    }
+  }
+}

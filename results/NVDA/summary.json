@@ -1,0 +1,82 @@
+{
+  "name": "NVDA",
+  "label": "NVIDIA",
+  "ticker": "NVDA",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 4.2766,
+    "rmse": 5.7658,
+    "r2": 0.0059,
+    "dir_accuracy": 57.09
+  },
+  "optimized_threshold": -0.2,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 61177.58,
+      "cagr": 54.34,
+      "sharpe": 1.288,
+      "max_drawdown": -49.64,
+      "win_rate": 57.42,
+      "in_market_pct": 92.8,
+      "n_trades": 71,
+      "n_weeks": 769,
+      "bnh_total_return": 62060.05,
+      "bnh_cagr": 54.49,
+      "bnh_sharpe": 1.251,
+      "bnh_max_drawdown": -65.94
+    },
+    "Binary (t=opt)": {
+      "total_return": 107582.68,
+      "cagr": 60.34,
+      "sharpe": 1.374,
+      "max_drawdown": -50.31,
+      "win_rate": 57.7,
+      "in_market_pct": 96.2,
+      "n_trades": 44,
+      "n_weeks": 769,
+      "bnh_total_return": 62060.05,
+      "bnh_cagr": 54.49,
+      "bnh_sharpe": 1.251,
+      "bnh_max_drawdown": -65.94
+    },
+    "Scaled": {
+      "total_return": 6669.66,
+      "cagr": 32.98,
+      "sharpe": 1.216,
+      "max_drawdown": -35.13,
+      "win_rate": 57.42,
+      "in_market_pct": 92.8,
+      "n_trades": 719,
+      "n_weeks": 769,
+      "bnh_total_return": 62060.05,
+      "bnh_cagr": 54.49,
+      "bnh_sharpe": 1.251,
+      "bnh_max_drawdown": -65.94
+    },
+    "Adaptive": {
+      "total_return": 78180.67,
+      "cagr": 56.92,
+      "sharpe": 1.344,
+      "max_drawdown": -54.16,
+      "win_rate": 57.93,
+      "in_market_pct": 87.8,
+      "n_trades": 107,
+      "n_weeks": 769,
+      "bnh_total_return": 62060.05,
+      "bnh_cagr": 54.49,
+      "bnh_sharpe": 1.251,
+      "bnh_max_drawdown": -65.94
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "ARKK",
+  "label": "ARK Innovation",
+  "ticker": "ARKK",
+  "market": "US",
+  "data_period": "2014-10-31 to 2026-10-16",
+  "total_weeks": 625,
+  "oos_weeks": 344,
+  "oos_period": "2020-03-20 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 4.7936,
+    "rmse": 6.1038,
+    "r2": 0.0061,
+    "dir_accuracy": 52.62
+  },
+  "optimized_threshold": 0.2,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 169.93,
+      "cagr": 16.2,
+      "sharpe": 0.58,
+      "max_drawdown": -72.79,
+      "win_rate": 52.44,
+      "in_market_pct": 71.5,
+      "n_trades": 72,
+      "n_weeks": 344,
+      "bnh_total_return": 123.4,
+      "bnh_cagr": 12.92,
+      "bnh_sharpe": 0.493,
+      "bnh_max_drawdown": -80.06
+    },
+    "Binary (t=opt)": {
+      "total_return": 361.99,
+      "cagr": 26.03,
+      "sharpe": 0.818,
+      "max_drawdown": -65.04,
+      "win_rate": 54.81,
+      "in_market_pct": 60.5,
+      "n_trades": 92,
+      "n_weeks": 344,
+      "bnh_total_return": 123.4,
+      "bnh_cagr": 12.92,
+      "bnh_sharpe": 0.493,
+      "bnh_max_drawdown": -80.06
+    },
+    "Scaled": {
+      "total_return": 113.82,
+      "cagr": 12.17,
+      "sharpe": 0.591,
+      "max_drawdown": -41.19,
+      "win_rate": 52.44,
+      "in_market_pct": 71.5,
+      "n_trades": 257,
+      "n_weeks": 344,
+      "bnh_total_return": 123.4,
+      "bnh_cagr": 12.92,
+      "bnh_sharpe": 0.493,
+      "bnh_max_drawdown": -80.06
+    },
+    "Adaptive": {
+      "total_return": 114.67,
+      "cagr": 12.24,
+      "sharpe": 0.489,
+      "max_drawdown": -72.79,
+      "win_rate": 50.63,
+      "in_market_pct": 68.9,
+      "n_trades": 70,
+      "n_weeks": 344,
+      "bnh_total_return": 123.4,
+      "bnh_cagr": 12.92,
+      "bnh_sharpe": 0.493,
+      "bnh_max_drawdown": -80.06
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "XBI",
+  "label": "Biotech ETF",
+  "ticker": "XBI",
+  "market": "US",
+  "data_period": "2006-02-10 to 2026-10-16",
+  "total_weeks": 1080,
+  "oos_weeks": 594,
+  "oos_period": "2015-06-05 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 3.2166,
+    "rmse": 4.2648,
+    "r2": 0.0239,
+    "dir_accuracy": 54.04
+  },
+  "optimized_threshold": 0.49,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 191.52,
+      "cagr": 9.82,
+      "sharpe": 0.465,
+      "max_drawdown": -56.48,
+      "win_rate": 53.86,
+      "in_market_pct": 82.8,
+      "n_trades": 69,
+      "n_weeks": 594,
+      "bnh_total_return": 88.4,
+      "bnh_cagr": 5.7,
+      "bnh_sharpe": 0.333,
+      "bnh_max_drawdown": -61.54
+    },
+    "Binary (t=opt)": {
+      "total_return": 344.63,
+      "cagr": 13.95,
+      "sharpe": 0.827,
+      "max_drawdown": -24.99,
+      "win_rate": 58.44,
+      "in_market_pct": 25.9,
+      "n_trades": 117,
+      "n_weeks": 594,
+      "bnh_total_return": 88.4,
+      "bnh_cagr": 5.7,
+      "bnh_sharpe": 0.333,
+      "bnh_max_drawdown": -61.54
+    },
+    "Scaled": {
+      "total_return": 233.47,
+      "cagr": 11.12,
+      "sharpe": 0.677,
+      "max_drawdown": -33.9,
+      "win_rate": 53.86,
+      "in_market_pct": 82.8,
+      "n_trades": 500,
+      "n_weeks": 594,
+      "bnh_total_return": 88.4,
+      "bnh_cagr": 5.7,
+      "bnh_sharpe": 0.333,
+      "bnh_max_drawdown": -61.54
+    },
+    "Adaptive": {
+      "total_return": 289.12,
+      "cagr": 12.63,
+      "sharpe": 0.593,
+      "max_drawdown": -43.95,
+      "win_rate": 53.79,
+      "in_market_pct": 64.5,
+      "n_trades": 154,
+      "n_weeks": 594,
+      "bnh_total_return": 88.4,
+      "bnh_cagr": 5.7,
+      "bnh_sharpe": 0.333,
+      "bnh_max_drawdown": -61.54
+    }
+  }
+}

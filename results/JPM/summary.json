@@ -1,0 +1,88 @@
+{
+  "name": "JPM",
+  "label": "JP Morgan",
+  "ticker": "JPM",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 2.5396,
+    "rmse": 3.4364,
+    "r2": 0.0451,
+    "dir_accuracy": 58.26
+  },
+  "optimized_threshold": 0.31,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 3123.85,
+      "cagr": 26.47,
+      "sharpe": 1.163,
+      "max_drawdown": -32.76,
+      "win_rate": 58.88,
+      "in_market_pct": 83.5,
+      "n_trades": 108,
+      "n_weeks": 769,
+      "bnh_total_return": 1216.72,
+      "bnh_cagr": 19.04,
+      "bnh_sharpe": 0.815,
+      "bnh_max_drawdown": -39.64
+    },
+    "Binary (t=opt)": {
+      "total_return": 593.85,
+      "cagr": 14.0,
+      "sharpe": 0.871,
+      "max_drawdown": -35.6,
+      "win_rate": 61.03,
+      "in_market_pct": 27.7,
+      "n_trades": 143,
+      "n_weeks": 769,
+      "bnh_total_return": 1216.72,
+      "bnh_cagr": 19.04,
+      "bnh_sharpe": 0.815,
+      "bnh_max_drawdown": -39.64
+    },
+    "Scaled": {
+      "total_return": 754.97,
+      "cagr": 15.62,
+      "sharpe": 0.995,
+      "max_drawdown": -24.07,
+      "win_rate": 58.88,
+      "in_market_pct": 83.5,
+      "n_trades": 651,
+      "n_weeks": 769,
+      "bnh_total_return": 1216.72,
+      "bnh_cagr": 19.04,
+      "bnh_sharpe": 0.815,
+      "bnh_max_drawdown": -39.64
+    },
+    "Adaptive": {
+      "total_return": 2078.87,
+      "cagr": 23.17,
+      "sharpe": 1.085,
+      "max_drawdown": -26.33,
+      "win_rate": 59.57,
+      "in_market_pct": 72.7,
+      "n_trades": 138,
+      "n_weeks": 769,
+      "bnh_total_return": 1216.72,
+      "bnh_cagr": 19.04,
+      "bnh_sharpe": 0.815,
+      "bnh_max_drawdown": -39.64
+    }
+  }
+}

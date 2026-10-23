@@ -1,0 +1,83 @@
+{
+  "name": "MSFT",
+  "label": "Microsoft",
+  "ticker": "MSFT",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag2"
+  ],
+  "model_metrics": {
+    "mae": 2.4226,
+    "rmse": 3.3442,
+    "r2": 0.0079,
+    "dir_accuracy": 54.23
+  },
+  "optimized_threshold": -0.15,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1592.68,
+      "cagr": 21.08,
+      "sharpe": 1.036,
+      "max_drawdown": -30.95,
+      "win_rate": 58.88,
+      "in_market_pct": 67.4,
+      "n_trades": 107,
+      "n_weeks": 769,
+      "bnh_total_return": 2208.36,
+      "bnh_cagr": 23.65,
+      "bnh_sharpe": 0.998,
+      "bnh_max_drawdown": -35.05
+    },
+    "Binary (t=opt)": {
+      "total_return": 4396.18,
+      "cagr": 29.35,
+      "sharpe": 1.26,
+      "max_drawdown": -31.58,
+      "win_rate": 59.73,
+      "in_market_pct": 85.6,
+      "n_trades": 90,
+      "n_weeks": 769,
+      "bnh_total_return": 2208.36,
+      "bnh_cagr": 23.65,
+      "bnh_sharpe": 0.998,
+      "bnh_max_drawdown": -35.05
+    },
+    "Scaled": {
+      "total_return": 440.82,
+      "cagr": 12.09,
+      "sharpe": 0.94,
+      "max_drawdown": -22.15,
+      "win_rate": 58.88,
+      "in_market_pct": 67.4,
+      "n_trades": 516,
+      "n_weeks": 769,
+      "bnh_total_return": 2208.36,
+      "bnh_cagr": 23.65,
+      "bnh_sharpe": 0.998,
+      "bnh_max_drawdown": -35.05
+    },
+    "Adaptive": {
+      "total_return": 1864.87,
+      "cagr": 22.31,
+      "sharpe": 1.06,
+      "max_drawdown": -35.87,
+      "win_rate": 58.71,
+      "in_market_pct": 74.6,
+      "n_trades": 135,
+      "n_weeks": 769,
+      "bnh_total_return": 2208.36,
+      "bnh_cagr": 23.65,
+      "bnh_sharpe": 0.998,
+      "bnh_max_drawdown": -35.05
+    }
+  }
+}

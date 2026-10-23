@@ -1,0 +1,83 @@
+{
+  "name": "TAN",
+  "label": "Solar ETF",
+  "ticker": "TAN",
+  "market": "US",
+  "data_period": "2008-04-18 to 2026-10-16",
+  "total_weeks": 966,
+  "oos_weeks": 532,
+  "oos_period": "2016-08-12 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 3.9376,
+    "rmse": 5.2277,
+    "r2": 0.0026,
+    "dir_accuracy": 51.5
+  },
+  "optimized_threshold": -0.34,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 296.8,
+      "cagr": 14.42,
+      "sharpe": 0.679,
+      "max_drawdown": -43.17,
+      "win_rate": 54.88,
+      "in_market_pct": 40.4,
+      "n_trades": 148,
+      "n_weeks": 532,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 7.4,
+      "bnh_sharpe": 0.378,
+      "bnh_max_drawdown": -77.02
+    },
+    "Binary (t=opt)": {
+      "total_return": 298.33,
+      "cagr": 14.46,
+      "sharpe": 0.559,
+      "max_drawdown": -67.54,
+      "win_rate": 53.77,
+      "in_market_pct": 89.8,
+      "n_trades": 77,
+      "n_weeks": 532,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 7.4,
+      "bnh_sharpe": 0.378,
+      "bnh_max_drawdown": -77.02
+    },
+    "Scaled": {
+      "total_return": 98.02,
+      "cagr": 6.91,
+      "sharpe": 0.556,
+      "max_drawdown": -31.43,
+      "win_rate": 54.88,
+      "in_market_pct": 40.4,
+      "n_trades": 279,
+      "n_weeks": 532,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 7.4,
+      "bnh_sharpe": 0.378,
+      "bnh_max_drawdown": -77.02
+    },
+    "Adaptive": {
+      "total_return": 449.15,
+      "cagr": 18.11,
+      "sharpe": 0.699,
+      "max_drawdown": -44.2,
+      "win_rate": 57.01,
+      "in_market_pct": 60.3,
+      "n_trades": 120,
+      "n_weeks": 532,
+      "bnh_total_return": 107.58,
+      "bnh_cagr": 7.4,
+      "bnh_sharpe": 0.378,
+      "bnh_max_drawdown": -77.02
+    }
+  }
+}

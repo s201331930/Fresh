@@ -1,0 +1,84 @@
+{
+  "name": "MDY",
+  "label": "S&P MidCap 400",
+  "ticker": "MDY",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 1.7687,
+    "rmse": 2.5556,
+    "r2": 0.0312,
+    "dir_accuracy": 56.83
+  },
+  "optimized_threshold": 0.32,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 436.96,
+      "cagr": 12.04,
+      "sharpe": 0.717,
+      "max_drawdown": -39.72,
+      "win_rate": 56.47,
+      "in_market_pct": 94.4,
+      "n_trades": 54,
+      "n_weeks": 769,
+      "bnh_total_return": 361.36,
+      "bnh_cagr": 10.89,
+      "bnh_sharpe": 0.647,
+      "bnh_max_drawdown": -39.72
+    },
+    "Binary (t=opt)": {
+      "total_return": 174.67,
+      "cagr": 7.07,
+      "sharpe": 0.695,
+      "max_drawdown": -30.3,
+      "win_rate": 76.54,
+      "in_market_pct": 10.5,
+      "n_trades": 115,
+      "n_weeks": 769,
+      "bnh_total_return": 361.36,
+      "bnh_cagr": 10.89,
+      "bnh_sharpe": 0.647,
+      "bnh_max_drawdown": -39.72
+    },
+    "Scaled": {
+      "total_return": 233.23,
+      "cagr": 8.48,
+      "sharpe": 0.77,
+      "max_drawdown": -27.64,
+      "win_rate": 55.79,
+      "in_market_pct": 94.4,
+      "n_trades": 741,
+      "n_weeks": 769,
+      "bnh_total_return": 361.36,
+      "bnh_cagr": 10.89,
+      "bnh_sharpe": 0.647,
+      "bnh_max_drawdown": -39.72
+    },
+    "Adaptive": {
+      "total_return": 277.64,
+      "cagr": 9.4,
+      "sharpe": 0.664,
+      "max_drawdown": -30.85,
+      "win_rate": 56.98,
+      "in_market_pct": 67.1,
+      "n_trades": 188,
+      "n_weeks": 769,
+      "bnh_total_return": 361.36,
+      "bnh_cagr": 10.89,
+      "bnh_sharpe": 0.647,
+      "bnh_max_drawdown": -39.72
+    }
+  }
+}

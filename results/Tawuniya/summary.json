@@ -1,0 +1,79 @@
+{
+  "name": "Tawuniya",
+  "label": "Tawuniya Insurance",
+  "ticker": "8010.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 850,
+  "oos_weeks": 468,
+  "oos_period": "2017-09-07 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [],
+  "model_metrics": {
+    "mae": 3.4673,
+    "rmse": 4.5245,
+    "r2": 0.034,
+    "dir_accuracy": 55.56
+  },
+  "optimized_threshold": 0.49,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 330.13,
+      "cagr": 17.6,
+      "sharpe": 0.716,
+      "max_drawdown": -35.83,
+      "win_rate": 53.76,
+      "in_market_pct": 76.7,
+      "n_trades": 108,
+      "n_weeks": 468,
+      "bnh_total_return": 48.48,
+      "bnh_cagr": 4.49,
+      "bnh_sharpe": 0.297,
+      "bnh_max_drawdown": -50.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 684.26,
+      "cagr": 25.71,
+      "sharpe": 1.119,
+      "max_drawdown": -18.16,
+      "win_rate": 59.65,
+      "in_market_pct": 48.7,
+      "n_trades": 133,
+      "n_weeks": 468,
+      "bnh_total_return": 48.48,
+      "bnh_cagr": 4.49,
+      "bnh_sharpe": 0.297,
+      "bnh_max_drawdown": -50.58
+    },
+    "Scaled": {
+      "total_return": 368.36,
+      "cagr": 18.72,
+      "sharpe": 1.064,
+      "max_drawdown": -12.36,
+      "win_rate": 53.76,
+      "in_market_pct": 76.7,
+      "n_trades": 396,
+      "n_weeks": 468,
+      "bnh_total_return": 48.48,
+      "bnh_cagr": 4.49,
+      "bnh_sharpe": 0.297,
+      "bnh_max_drawdown": -50.58
+    },
+    "Adaptive": {
+      "total_return": 184.87,
+      "cagr": 12.34,
+      "sharpe": 0.555,
+      "max_drawdown": -34.75,
+      "win_rate": 53.5,
+      "in_market_pct": 76.3,
+      "n_trades": 114,
+      "n_weeks": 468,
+      "bnh_total_return": 48.48,
+      "bnh_cagr": 4.49,
+      "bnh_sharpe": 0.297,
+      "bnh_max_drawdown": -50.58
+    }
+  }
+}

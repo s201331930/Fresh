@@ -1,0 +1,84 @@
+{
+  "name": "UNH",
+  "label": "UnitedHealth",
+  "ticker": "UNH",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_Lag3",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 2.6237,
+    "rmse": 3.9048,
+    "r2": 0.0165,
+    "dir_accuracy": 56.96
+  },
+  "optimized_threshold": 0.3,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1118.92,
+      "cagr": 18.42,
+      "sharpe": 0.767,
+      "max_drawdown": -60.8,
+      "win_rate": 57.37,
+      "in_market_pct": 91.8,
+      "n_trades": 62,
+      "n_weeks": 769,
+      "bnh_total_return": 952.12,
+      "bnh_cagr": 17.25,
+      "bnh_sharpe": 0.706,
+      "bnh_max_drawdown": -60.8
+    },
+    "Binary (t=opt)": {
+      "total_return": 1725.22,
+      "cagr": 21.7,
+      "sharpe": 0.962,
+      "max_drawdown": -54.69,
+      "win_rate": 59.36,
+      "in_market_pct": 73.6,
+      "n_trades": 142,
+      "n_weeks": 769,
+      "bnh_total_return": 952.12,
+      "bnh_cagr": 17.25,
+      "bnh_sharpe": 0.706,
+      "bnh_max_drawdown": -60.8
+    },
+    "Scaled": {
+      "total_return": 897.68,
+      "cagr": 16.83,
+      "sharpe": 0.948,
+      "max_drawdown": -42.1,
+      "win_rate": 57.37,
+      "in_market_pct": 91.8,
+      "n_trades": 705,
+      "n_weeks": 769,
+      "bnh_total_return": 952.12,
+      "bnh_cagr": 17.25,
+      "bnh_sharpe": 0.706,
+      "bnh_max_drawdown": -60.8
+    },
+    "Adaptive": {
+      "total_return": 588.63,
+      "cagr": 13.94,
+      "sharpe": 0.66,
+      "max_drawdown": -63.35,
+      "win_rate": 58.06,
+      "in_market_pct": 79.1,
+      "n_trades": 138,
+      "n_weeks": 769,
+      "bnh_total_return": 952.12,
+      "bnh_cagr": 17.25,
+      "bnh_sharpe": 0.706,
+      "bnh_max_drawdown": -60.8
+    }
+  }
+}

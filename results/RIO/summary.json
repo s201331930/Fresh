@@ -1,0 +1,83 @@
+{
+  "name": "RIO",
+  "label": "Rio Tinto",
+  "ticker": "RIO",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 3.213,
+    "rmse": 4.2012,
+    "r2": 0.0156,
+    "dir_accuracy": 56.05
+  },
+  "optimized_threshold": 0.25,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 940.09,
+      "cagr": 17.16,
+      "sharpe": 0.701,
+      "max_drawdown": -50.17,
+      "win_rate": 55.07,
+      "in_market_pct": 83.4,
+      "n_trades": 80,
+      "n_weeks": 769,
+      "bnh_total_return": 263.53,
+      "bnh_cagr": 9.12,
+      "bnh_sharpe": 0.438,
+      "bnh_max_drawdown": -56.78
+    },
+    "Binary (t=opt)": {
+      "total_return": 412.64,
+      "cagr": 11.69,
+      "sharpe": 0.597,
+      "max_drawdown": -43.03,
+      "win_rate": 55.36,
+      "in_market_pct": 52.1,
+      "n_trades": 185,
+      "n_weeks": 769,
+      "bnh_total_return": 263.53,
+      "bnh_cagr": 9.12,
+      "bnh_sharpe": 0.438,
+      "bnh_max_drawdown": -56.78
+    },
+    "Scaled": {
+      "total_return": 519.44,
+      "cagr": 13.12,
+      "sharpe": 0.738,
+      "max_drawdown": -38.8,
+      "win_rate": 54.76,
+      "in_market_pct": 83.4,
+      "n_trades": 648,
+      "n_weeks": 769,
+      "bnh_total_return": 263.53,
+      "bnh_cagr": 9.12,
+      "bnh_sharpe": 0.438,
+      "bnh_max_drawdown": -56.78
+    },
+    "Adaptive": {
+      "total_return": 493.18,
+      "cagr": 12.79,
+      "sharpe": 0.602,
+      "max_drawdown": -40.65,
+      "win_rate": 54.66,
+      "in_market_pct": 62.8,
+      "n_trades": 196,
+      "n_weeks": 769,
+      "bnh_total_return": 263.53,
+      "bnh_cagr": 9.12,
+      "bnh_sharpe": 0.438,
+      "bnh_max_drawdown": -56.78
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "Saudi_Kayan",
+  "label": "Saudi Kayan",
+  "ticker": "2350.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 849,
+  "oos_weeks": 467,
+  "oos_period": "2017-09-14 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bull_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 3.1954,
+    "rmse": 4.2115,
+    "r2": 0.015,
+    "dir_accuracy": 50.96
+  },
+  "optimized_threshold": 0.28,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 18.77,
+      "cagr": 1.93,
+      "sharpe": 0.201,
+      "max_drawdown": -63.11,
+      "win_rate": 47.04,
+      "in_market_pct": 68.7,
+      "n_trades": 138,
+      "n_weeks": 467,
+      "bnh_total_return": -45.89,
+      "bnh_cagr": -6.61,
+      "bnh_sharpe": -0.072,
+      "bnh_max_drawdown": -79.96
+    },
+    "Binary (t=opt)": {
+      "total_return": 166.79,
+      "cagr": 11.55,
+      "sharpe": 0.702,
+      "max_drawdown": -31.32,
+      "win_rate": 52.59,
+      "in_market_pct": 24.8,
+      "n_trades": 107,
+      "n_weeks": 467,
+      "bnh_total_return": -45.89,
+      "bnh_cagr": -6.61,
+      "bnh_sharpe": -0.072,
+      "bnh_max_drawdown": -79.96
+    },
+    "Scaled": {
+      "total_return": 93.75,
+      "cagr": 7.64,
+      "sharpe": 0.529,
+      "max_drawdown": -30.78,
+      "win_rate": 46.73,
+      "in_market_pct": 68.7,
+      "n_trades": 377,
+      "n_weeks": 467,
+      "bnh_total_return": -45.89,
+      "bnh_cagr": -6.61,
+      "bnh_sharpe": -0.072,
+      "bnh_max_drawdown": -79.96
+    },
+    "Adaptive": {
+      "total_return": 63.58,
+      "cagr": 5.63,
+      "sharpe": 0.359,
+      "max_drawdown": -48.7,
+      "win_rate": 46.76,
+      "in_market_pct": 46.3,
+      "n_trades": 135,
+      "n_weeks": 467,
+      "bnh_total_return": -45.89,
+      "bnh_cagr": -6.61,
+      "bnh_sharpe": -0.072,
+      "bnh_max_drawdown": -79.96
+    }
+  }
+}

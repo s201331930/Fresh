@@ -1,0 +1,89 @@
+{
+  "name": "KWEB",
+  "label": "China Internet ETF",
+  "ticker": "KWEB",
+  "market": "US",
+  "data_period": "2013-08-02 to 2026-10-16",
+  "total_weeks": 690,
+  "oos_weeks": 380,
+  "oos_period": "2019-07-12 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Sideways"
+  ],
+  "model_metrics": {
+    "mae": 4.0266,
+    "rmse": 5.4248,
+    "r2": 0.0654,
+    "dir_accuracy": 56.32
+  },
+  "optimized_threshold": 0.32,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 503.11,
+      "cagr": 27.88,
+      "sharpe": 0.884,
+      "max_drawdown": -42.42,
+      "win_rate": 52.31,
+      "in_market_pct": 73.9,
+      "n_trades": 98,
+      "n_weeks": 380,
+      "bnh_total_return": -35.59,
+      "bnh_cagr": -5.84,
+      "bnh_sharpe": 0.049,
+      "bnh_max_drawdown": -79.98
+    },
+    "Binary (t=opt)": {
+      "total_return": 713.37,
+      "cagr": 33.22,
+      "sharpe": 1.179,
+      "max_drawdown": -28.22,
+      "win_rate": 57.42,
+      "in_market_pct": 40.8,
+      "n_trades": 122,
+      "n_weeks": 380,
+      "bnh_total_return": -35.59,
+      "bnh_cagr": -5.84,
+      "bnh_sharpe": 0.049,
+      "bnh_max_drawdown": -79.98
+    },
+    "Scaled": {
+      "total_return": 491.53,
+      "cagr": 27.54,
+      "sharpe": 1.126,
+      "max_drawdown": -25.77,
+      "win_rate": 52.31,
+      "in_market_pct": 73.9,
+      "n_trades": 315,
+      "n_weeks": 380,
+      "bnh_total_return": -35.59,
+      "bnh_cagr": -5.84,
+      "bnh_sharpe": 0.049,
+      "bnh_max_drawdown": -79.98
+    },
+    "Adaptive": {
+      "total_return": 917.92,
+      "cagr": 37.37,
+      "sharpe": 1.189,
+      "max_drawdown": -31.41,
+      "win_rate": 57.14,
+      "in_market_pct": 55.3,
+      "n_trades": 111,
+      "n_weeks": 380,
+      "bnh_total_return": -35.59,
+      "bnh_cagr": -5.84,
+      "bnh_sharpe": 0.049,
+      "bnh_max_drawdown": -79.98
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "name": "SHY",
+  "label": "1-3 Year Treasury",
+  "ticker": "SHY",
+  "market": "US",
+  "data_period": "2002-08-02 to 2026-10-16",
+  "total_weeks": 1264,
+  "oos_weeks": 696,
+  "oos_period": "2013-06-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 0.1254,
+    "rmse": 0.1844,
+    "r2": 0.0216,
+    "dir_accuracy": 56.03
+  },
+  "optimized_threshold": 0.02,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 21.29,
+      "cagr": 1.45,
+      "sharpe": 1.079,
+      "max_drawdown": -5.58,
+      "win_rate": 55.91,
+      "in_market_pct": 99.7,
+      "n_trades": 4,
+      "n_weeks": 696,
+      "bnh_total_return": 21.11,
+      "bnh_cagr": 1.44,
+      "bnh_sharpe": 1.07,
+      "bnh_max_drawdown": -5.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 21.71,
+      "cagr": 1.48,
+      "sharpe": 1.115,
+      "max_drawdown": -5.31,
+      "win_rate": 56.9,
+      "in_market_pct": 91.7,
+      "n_trades": 70,
+      "n_weeks": 696,
+      "bnh_total_return": 21.11,
+      "bnh_cagr": 1.44,
+      "bnh_sharpe": 1.07,
+      "bnh_max_drawdown": -5.58
+    },
+    "Scaled": {
+      "total_return": 2.14,
+      "cagr": 0.16,
+      "sharpe": 1.171,
+      "max_drawdown": -0.49,
+      "win_rate": 54.61,
+      "in_market_pct": 99.7,
+      "n_trades": 695,
+      "n_weeks": 696,
+      "bnh_total_return": 21.11,
+      "bnh_cagr": 1.44,
+      "bnh_sharpe": 1.07,
+      "bnh_max_drawdown": -5.58
+    },
+    "Adaptive": {
+      "total_return": 23.22,
+      "cagr": 1.57,
+      "sharpe": 1.388,
+      "max_drawdown": -1.4,
+      "win_rate": 57.47,
+      "in_market_pct": 76.0,
+      "n_trades": 51,
+      "n_weeks": 696,
+      "bnh_total_return": 21.11,
+      "bnh_cagr": 1.44,
+      "bnh_sharpe": 1.07,
+      "bnh_max_drawdown": -5.58
+    }
+  }
+}

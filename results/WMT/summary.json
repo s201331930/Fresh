@@ -1,0 +1,82 @@
+{
+  "name": "WMT",
+  "label": "Walmart",
+  "ticker": "WMT",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 2.0249,
+    "rmse": 2.8028,
+    "r2": 0.0111,
+    "dir_accuracy": 54.62
+  },
+  "optimized_threshold": -0.36,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 541.67,
+      "cagr": 13.39,
+      "sharpe": 0.812,
+      "max_drawdown": -31.33,
+      "win_rate": 57.69,
+      "in_market_pct": 67.6,
+      "n_trades": 236,
+      "n_weeks": 769,
+      "bnh_total_return": 689.03,
+      "bnh_cagr": 14.99,
+      "bnh_sharpe": 0.79,
+      "bnh_max_drawdown": -35.64
+    },
+    "Binary (t=opt)": {
+      "total_return": 1050.07,
+      "cagr": 17.96,
+      "sharpe": 0.936,
+      "max_drawdown": -35.64,
+      "win_rate": 56.36,
+      "in_market_pct": 97.1,
+      "n_trades": 38,
+      "n_weeks": 769,
+      "bnh_total_return": 689.03,
+      "bnh_cagr": 14.99,
+      "bnh_sharpe": 0.79,
+      "bnh_max_drawdown": -35.64
+    },
+    "Scaled": {
+      "total_return": 226.05,
+      "cagr": 8.32,
+      "sharpe": 0.845,
+      "max_drawdown": -16.24,
+      "win_rate": 57.31,
+      "in_market_pct": 67.6,
+      "n_trades": 616,
+      "n_weeks": 769,
+      "bnh_total_return": 689.03,
+      "bnh_cagr": 14.99,
+      "bnh_sharpe": 0.79,
+      "bnh_max_drawdown": -35.64
+    },
+    "Adaptive": {
+      "total_return": 323.22,
+      "cagr": 10.25,
+      "sharpe": 0.682,
+      "max_drawdown": -30.8,
+      "win_rate": 55.45,
+      "in_market_pct": 66.8,
+      "n_trades": 233,
+      "n_weeks": 769,
+      "bnh_total_return": 689.03,
+      "bnh_cagr": 14.99,
+      "bnh_sharpe": 0.79,
+      "bnh_max_drawdown": -35.64
+    }
+  }
+}

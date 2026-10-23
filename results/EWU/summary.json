@@ -1,0 +1,86 @@
+{
+  "name": "EWU",
+  "label": "UK ETF",
+  "ticker": "EWU",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.6798,
+    "rmse": 2.4049,
+    "r2": 0.0092,
+    "dir_accuracy": 54.75
+  },
+  "optimized_threshold": 0.46,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 138.99,
+      "cagr": 6.07,
+      "sharpe": 0.45,
+      "max_drawdown": -46.36,
+      "win_rate": 56.12,
+      "in_market_pct": 83.9,
+      "n_trades": 162,
+      "n_weeks": 769,
+      "bnh_total_return": 150.97,
+      "bnh_cagr": 6.42,
+      "bnh_sharpe": 0.445,
+      "bnh_max_drawdown": -42.18
+    },
+    "Binary (t=opt)": {
+      "total_return": 48.75,
+      "cagr": 2.72,
+      "sharpe": 0.562,
+      "max_drawdown": -3.45,
+      "win_rate": 85.71,
+      "in_market_pct": 1.8,
+      "n_trades": 24,
+      "n_weeks": 769,
+      "bnh_total_return": 150.97,
+      "bnh_cagr": 6.42,
+      "bnh_sharpe": 0.445,
+      "bnh_max_drawdown": -42.18
+    },
+    "Scaled": {
+      "total_return": 67.74,
+      "cagr": 3.56,
+      "sharpe": 0.523,
+      "max_drawdown": -19.1,
+      "win_rate": 55.66,
+      "in_market_pct": 83.9,
+      "n_trades": 724,
+      "n_weeks": 769,
+      "bnh_total_return": 150.97,
+      "bnh_cagr": 6.42,
+      "bnh_sharpe": 0.445,
+      "bnh_max_drawdown": -42.18
+    },
+    "Adaptive": {
+      "total_return": 43.65,
+      "cagr": 2.48,
+      "sharpe": 0.246,
+      "max_drawdown": -42.72,
+      "win_rate": 56.04,
+      "in_market_pct": 65.7,
+      "n_trades": 148,
+      "n_weeks": 769,
+      "bnh_total_return": 150.97,
+      "bnh_cagr": 6.42,
+      "bnh_sharpe": 0.445,
+      "bnh_max_drawdown": -42.18
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "CEW",
+  "label": "EM Currency ETF",
+  "ticker": "CEW",
+  "market": "US",
+  "data_period": "2009-06-05 to 2026-10-16",
+  "total_weeks": 907,
+  "oos_weeks": 499,
+  "oos_period": "2017-03-31 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 0.7107,
+    "rmse": 0.9146,
+    "r2": 0.0161,
+    "dir_accuracy": 55.11
+  },
+  "optimized_threshold": 0.04,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 45.21,
+      "cagr": 3.96,
+      "sharpe": 0.817,
+      "max_drawdown": -9.97,
+      "win_rate": 55.17,
+      "in_market_pct": 52.3,
+      "n_trades": 167,
+      "n_weeks": 499,
+      "bnh_total_return": 24.31,
+      "bnh_cagr": 2.29,
+      "bnh_sharpe": 0.374,
+      "bnh_max_drawdown": -17.3
+    },
+    "Binary (t=opt)": {
+      "total_return": 26.13,
+      "cagr": 2.45,
+      "sharpe": 0.732,
+      "max_drawdown": -6.77,
+      "win_rate": 58.41,
+      "in_market_pct": 22.6,
+      "n_trades": 119,
+      "n_weeks": 499,
+      "bnh_total_return": 24.31,
+      "bnh_cagr": 2.29,
+      "bnh_sharpe": 0.374,
+      "bnh_max_drawdown": -17.3
+    },
+    "Scaled": {
+      "total_return": 4.14,
+      "cagr": 0.42,
+      "sharpe": 0.789,
+      "max_drawdown": -1.13,
+      "win_rate": 54.02,
+      "in_market_pct": 52.3,
+      "n_trades": 344,
+      "n_weeks": 499,
+      "bnh_total_return": 24.31,
+      "bnh_cagr": 2.29,
+      "bnh_sharpe": 0.374,
+      "bnh_max_drawdown": -17.3
+    },
+    "Adaptive": {
+      "total_return": 13.48,
+      "cagr": 1.33,
+      "sharpe": 0.311,
+      "max_drawdown": -14.14,
+      "win_rate": 50.19,
+      "in_market_pct": 52.7,
+      "n_trades": 114,
+      "n_weeks": 499,
+      "bnh_total_return": 24.31,
+      "bnh_cagr": 2.29,
+      "bnh_sharpe": 0.374,
+      "bnh_max_drawdown": -17.3
+    }
+  }
+}

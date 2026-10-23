@@ -1,0 +1,87 @@
+{
+  "name": "HACK",
+  "label": "Cybersecurity ETF",
+  "ticker": "HACK",
+  "market": "US",
+  "data_period": "2014-11-14 to 2026-10-16",
+  "total_weeks": 623,
+  "oos_weeks": 343,
+  "oos_period": "2020-03-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 2.7396,
+    "rmse": 3.4559,
+    "r2": 0.028,
+    "dir_accuracy": 57.43
+  },
+  "optimized_threshold": 0.15,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 429.82,
+      "cagr": 28.76,
+      "sharpe": 1.262,
+      "max_drawdown": -35.34,
+      "win_rate": 58.15,
+      "in_market_pct": 78.7,
+      "n_trades": 52,
+      "n_weeks": 343,
+      "bnh_total_return": 262.0,
+      "bnh_cagr": 21.54,
+      "bnh_sharpe": 0.898,
+      "bnh_max_drawdown": -38.13
+    },
+    "Binary (t=opt)": {
+      "total_return": 477.13,
+      "cagr": 30.44,
+      "sharpe": 1.425,
+      "max_drawdown": -29.15,
+      "win_rate": 59.82,
+      "in_market_pct": 65.3,
+      "n_trades": 84,
+      "n_weeks": 343,
+      "bnh_total_return": 262.0,
+      "bnh_cagr": 21.54,
+      "bnh_sharpe": 0.898,
+      "bnh_max_drawdown": -38.13
+    },
+    "Scaled": {
+      "total_return": 212.72,
+      "cagr": 18.87,
+      "sharpe": 1.285,
+      "max_drawdown": -18.22,
+      "win_rate": 58.15,
+      "in_market_pct": 78.7,
+      "n_trades": 279,
+      "n_weeks": 343,
+      "bnh_total_return": 262.0,
+      "bnh_cagr": 21.54,
+      "bnh_sharpe": 0.898,
+      "bnh_max_drawdown": -38.13
+    },
+    "Adaptive": {
+      "total_return": 667.35,
+      "cagr": 36.2,
+      "sharpe": 1.648,
+      "max_drawdown": -21.71,
+      "win_rate": 60.34,
+      "in_market_pct": 69.1,
+      "n_trades": 108,
+      "n_weeks": 343,
+      "bnh_total_return": 262.0,
+      "bnh_cagr": 21.54,
+      "bnh_sharpe": 0.898,
+      "bnh_max_drawdown": -38.13
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "GOOG",
+  "label": "Alphabet",
+  "ticker": "GOOG",
+  "market": "US",
+  "data_period": "2004-08-20 to 2026-10-16",
+  "total_weeks": 1157,
+  "oos_weeks": 637,
+  "oos_period": "2014-08-08 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 2.9158,
+    "rmse": 3.9168,
+    "r2": 0.0116,
+    "dir_accuracy": 55.73
+  },
+  "optimized_threshold": 0.3,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1536.7,
+      "cagr": 25.63,
+      "sharpe": 0.975,
+      "max_drawdown": -42.18,
+      "win_rate": 55.98,
+      "in_market_pct": 94.5,
+      "n_trades": 34,
+      "n_weeks": 637,
+      "bnh_total_return": 1036.56,
+      "bnh_cagr": 21.95,
+      "bnh_sharpe": 0.839,
+      "bnh_max_drawdown": -42.18
+    },
+    "Binary (t=opt)": {
+      "total_return": 2045.98,
+      "cagr": 28.44,
+      "sharpe": 1.122,
+      "max_drawdown": -35.4,
+      "win_rate": 57.02,
+      "in_market_pct": 76.0,
+      "n_trades": 104,
+      "n_weeks": 637,
+      "bnh_total_return": 1036.56,
+      "bnh_cagr": 21.95,
+      "bnh_sharpe": 0.839,
+      "bnh_max_drawdown": -42.18
+    },
+    "Scaled": {
+      "total_return": 816.98,
+      "cagr": 19.83,
+      "sharpe": 1.014,
+      "max_drawdown": -29.57,
+      "win_rate": 55.81,
+      "in_market_pct": 94.5,
+      "n_trades": 591,
+      "n_weeks": 637,
+      "bnh_total_return": 1036.56,
+      "bnh_cagr": 21.95,
+      "bnh_sharpe": 0.839,
+      "bnh_max_drawdown": -42.18
+    },
+    "Adaptive": {
+      "total_return": 937.83,
+      "cagr": 21.05,
+      "sharpe": 0.879,
+      "max_drawdown": -34.62,
+      "win_rate": 56.26,
+      "in_market_pct": 81.5,
+      "n_trades": 108,
+      "n_weeks": 637,
+      "bnh_total_return": 1036.56,
+      "bnh_cagr": 21.95,
+      "bnh_sharpe": 0.839,
+      "bnh_max_drawdown": -42.18
+    }
+  }
+}

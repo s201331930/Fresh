@@ -1,0 +1,89 @@
+{
+  "name": "CPER",
+  "label": "Copper ETF",
+  "ticker": "CPER",
+  "market": "US",
+  "data_period": "2011-11-18 to 2026-10-16",
+  "total_weeks": 776,
+  "oos_weeks": 427,
+  "oos_period": "2018-08-17 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Regime_Change",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 2.3704,
+    "rmse": 3.2986,
+    "r2": 0.0177,
+    "dir_accuracy": 56.21
+  },
+  "optimized_threshold": 0.21,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 156.19,
+      "cagr": 12.14,
+      "sharpe": 0.808,
+      "max_drawdown": -25.11,
+      "win_rate": 59.62,
+      "in_market_pct": 48.7,
+      "n_trades": 115,
+      "n_weeks": 427,
+      "bnh_total_return": 132.22,
+      "bnh_cagr": 10.81,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -34.75
+    },
+    "Binary (t=opt)": {
+      "total_return": 125.69,
+      "cagr": 10.42,
+      "sharpe": 1.097,
+      "max_drawdown": -12.28,
+      "win_rate": 62.65,
+      "in_market_pct": 19.4,
+      "n_trades": 60,
+      "n_weeks": 427,
+      "bnh_total_return": 132.22,
+      "bnh_cagr": 10.81,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -34.75
+    },
+    "Scaled": {
+      "total_return": 80.03,
+      "cagr": 7.42,
+      "sharpe": 0.846,
+      "max_drawdown": -11.98,
+      "win_rate": 59.13,
+      "in_market_pct": 48.7,
+      "n_trades": 252,
+      "n_weeks": 427,
+      "bnh_total_return": 132.22,
+      "bnh_cagr": 10.81,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -34.75
+    },
+    "Adaptive": {
+      "total_return": 180.92,
+      "cagr": 13.4,
+      "sharpe": 0.79,
+      "max_drawdown": -26.36,
+      "win_rate": 55.04,
+      "in_market_pct": 60.4,
+      "n_trades": 96,
+      "n_weeks": 427,
+      "bnh_total_return": 132.22,
+      "bnh_cagr": 10.81,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -34.75
+    }
+  }
+}

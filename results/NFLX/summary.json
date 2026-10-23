@@ -1,0 +1,83 @@
+{
+  "name": "NFLX",
+  "label": "Netflix",
+  "ticker": "NFLX",
+  "market": "US",
+  "data_period": "2002-05-24 to 2026-10-16",
+  "total_weeks": 1274,
+  "oos_weeks": 701,
+  "oos_period": "2013-05-17 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bull_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 4.104,
+    "rmse": 5.7729,
+    "r2": 0.045,
+    "dir_accuracy": 55.49
+  },
+  "optimized_threshold": 0.4,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 6652.12,
+      "cagr": 36.68,
+      "sharpe": 0.977,
+      "max_drawdown": -73.81,
+      "win_rate": 54.43,
+      "in_market_pct": 88.6,
+      "n_trades": 67,
+      "n_weeks": 701,
+      "bnh_total_return": 1840.38,
+      "bnh_cagr": 24.6,
+      "bnh_sharpe": 0.729,
+      "bnh_max_drawdown": -74.58
+    },
+    "Binary (t=opt)": {
+      "total_return": 5646.0,
+      "cagr": 35.05,
+      "sharpe": 1.0,
+      "max_drawdown": -70.83,
+      "win_rate": 56.01,
+      "in_market_pct": 70.0,
+      "n_trades": 147,
+      "n_weeks": 701,
+      "bnh_total_return": 1840.38,
+      "bnh_cagr": 24.6,
+      "bnh_sharpe": 0.729,
+      "bnh_max_drawdown": -74.58
+    },
+    "Scaled": {
+      "total_return": 3746.99,
+      "cagr": 31.09,
+      "sharpe": 1.162,
+      "max_drawdown": -45.74,
+      "win_rate": 53.78,
+      "in_market_pct": 88.6,
+      "n_trades": 633,
+      "n_weeks": 701,
+      "bnh_total_return": 1840.38,
+      "bnh_cagr": 24.6,
+      "bnh_sharpe": 0.729,
+      "bnh_max_drawdown": -74.58
+    },
+    "Adaptive": {
+      "total_return": 2412.96,
+      "cagr": 27.02,
+      "sharpe": 0.803,
+      "max_drawdown": -73.63,
+      "win_rate": 54.15,
+      "in_market_pct": 85.9,
+      "n_trades": 103,
+      "n_weeks": 701,
+      "bnh_total_return": 1840.38,
+      "bnh_cagr": 24.6,
+      "bnh_sharpe": 0.729,
+      "bnh_max_drawdown": -74.58
+    }
+  }
+}
