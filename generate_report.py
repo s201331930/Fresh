@@ -1,5 +1,6 @@
 """
 Generate comprehensive PDF report documenting the trading model and strategy.
+Updated with HMM regime detection (#10).
 """
 
 import json
@@ -105,8 +106,13 @@ def main():
     pdf.set_font("Helvetica", "", 16)
     pdf.set_text_color(80, 80, 80)
     pdf.cell(0, 10, "Predictive Model & Strategy Documentation", align="C", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(10)
+    pdf.ln(8)
+    pdf.set_font("Helvetica", "B", 13)
+    pdf.set_text_color(20, 100, 60)
+    pdf.cell(0, 8, "v2.0 - With HMM Regime Detection", align="C", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(8)
     pdf.set_font("Helvetica", "", 12)
+    pdf.set_text_color(80, 80, 80)
     pdf.cell(0, 8, "Instrument: SPDR S&P 500 ETF (SPY)", align="C", new_x="LMARGIN", new_y="NEXT")
     pdf.cell(0, 8, "Timeframe: Weekly (2000 - 2026)", align="C", new_x="LMARGIN", new_y="NEXT")
     pdf.cell(0, 8, "Strategy: Long-Only, No Leverage", align="C", new_x="LMARGIN", new_y="NEXT")
@@ -114,7 +120,7 @@ def main():
     pdf.set_font("Helvetica", "I", 10)
     pdf.set_text_color(120, 120, 120)
     pdf.cell(0, 8, "Prototype - For Research Purposes Only", align="C", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(0, 8, "July 2026", align="C", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 8, "October 2026", align="C", new_x="LMARGIN", new_y="NEXT")
 
     # ===== TABLE OF CONTENTS =====
     pdf.add_page()
@@ -131,14 +137,20 @@ def main():
         "   3.2 Feature Selection",
         "   3.3 Ensemble Composition",
         "   3.4 Walk-Forward Validation",
-        "4. Trading Strategy",
-        "   4.1 Strategy Variants",
-        "   4.2 Backtest Methodology",
-        "   4.3 Performance Results",
-        "   4.4 Period Breakdown",
-        "5. Risk Analysis",
-        "6. Feature Importance",
-        "7. Conclusions & Next Steps",
+        "4. HMM Regime Detection",
+        "   4.1 Motivation",
+        "   4.2 Model Specification",
+        "   4.3 Walk-Forward Fitting",
+        "   4.4 Regime Distribution",
+        "   4.5 Feature Contribution",
+        "5. Trading Strategy",
+        "   5.1 Strategy Variants",
+        "   5.2 Backtest Methodology",
+        "   5.3 Performance Results",
+        "   5.4 Adaptive Strategy Deep Dive",
+        "6. Risk Analysis",
+        "7. Feature Importance",
+        "8. Conclusions & Next Steps",
     ]
     for item in toc:
         pdf.set_font("Helvetica", "", 11)
@@ -155,31 +167,40 @@ def main():
         "look-ahead bias."
     )
     pdf.body_text(
-        "The primary strategy (Binary, threshold=0) achieves a total return of 864.9% over the "
-        "out-of-sample period (Dec 2009 - Jun 2026), compared to 768.4% for buy-and-hold SPY. "
-        "This represents an excess CAGR of +0.73% with a higher Sharpe ratio (0.996 vs 0.890), "
-        "while being invested only 80.8% of the time."
+        "Version 2.0 introduces Hidden Markov Model (HMM) regime detection as the 10th "
+        "enhancement. A 3-state Gaussian HMM identifies bear, sideways, and bull market "
+        "regimes from returns and VIX data, fitted walk-forward to maintain temporal integrity. "
+        "Three HMM features were selected by importance-based filtering into the final model: "
+        "regime duration, bull probability, and lagged regime state."
+    )
+    pdf.body_text(
+        "The Adaptive strategy achieves the best risk-adjusted performance with a Sharpe ratio "
+        "of 1.042 (vs 0.890 for buy-and-hold), a maximum drawdown of -24.74% (vs -31.83%), and "
+        "a 730.0% total return over the out-of-sample period (Dec 2009 - Jun 2026), while being "
+        "invested only 70.8% of the time. The Binary (t=0) strategy delivers the highest absolute "
+        "return at 840.8%."
     )
 
     pdf.subsection_title("Key Results at a Glance")
     pdf.table(
-        ["Metric", "Strategy", "Buy & Hold", "Excess"],
+        ["Metric", "Adaptive", "Binary (t=0)", "Buy & Hold"],
         [
-            ["Total Return", "864.9%", "768.4%", "+96.5pp"],
-            ["CAGR", "14.67%", "13.94%", "+0.73pp"],
-            ["Sharpe Ratio", "0.996", "0.890", "+0.106"],
-            ["Sortino Ratio", "1.179", "1.142", "+0.037"],
-            ["Max Drawdown", "-31.83%", "-31.83%", "0.00pp"],
-            ["Win Rate", "60.2%", "-", "-"],
-            ["Time in Market", "80.8%", "100%", "-19.2pp"],
+            ["Total Return", "730.0%", "840.8%", "768.4%"],
+            ["CAGR", "13.63%", "14.50%", "13.94%"],
+            ["Sharpe Ratio", "1.042", "0.958", "0.890"],
+            ["Max Drawdown", "-24.74%", "-31.83%", "-31.83%"],
+            ["Win Rate", "60.3%", "60.2%", "-"],
+            ["Time in Market", "70.8%", "89.7%", "100%"],
+            ["Trades", "222", "114", "-"],
         ],
-        col_widths=[40, 35, 35, 35],
+        col_widths=[32, 36, 36, 36],
     )
 
     pdf.body_text(
-        "Critically, the strategy performs better on the true out-of-sample test period "
-        "(Mar 2018 - Jun 2026) than during the optimization period, with +37.1pp excess return "
-        "and +1.53pp excess CAGR over buy-and-hold - strong evidence against overfitting."
+        "The Adaptive strategy reduces maximum drawdown by 7.1 percentage points relative to "
+        "buy-and-hold while delivering a Sharpe premium of +0.152. Its regime-adaptive threshold, "
+        "re-optimized every 26 weeks, allows it to dynamically adjust market exposure based on "
+        "recent predictive accuracy."
     )
 
     # ===== 2. DATA PIPELINE =====
@@ -210,13 +231,14 @@ def main():
     )
 
     pdf.subsection_title("2.2 Feature Engineering")
-    pdf.body_text("The feature set is constructed in layers, totaling 197 raw features before selection:")
+    pdf.body_text("The feature set is constructed in layers, totaling 222 raw features before selection:")
     pdf.bullet("Base OHLCV: Open, Low, High, Close, Volume (+ log-transformed volume)")
     pdf.bullet("Percentage changes: Week-over-week returns for all price series")
-    pdf.bullet("Lagged features: 1-4 week lags on 15 key signals (61 features)")
+    pdf.bullet("Lagged features: 1-4 week lags on 18 key signals including HMM outputs (72 features)")
     pdf.bullet("Rolling statistics: 4/8/12-week mean and std of returns, VIX (9 features)")
-    pdf.bullet("Interaction terms: 12 cross-variable products (e.g., VIX x momentum, RSI x MACD)")
-    pdf.bullet("Regime indicators: Above SMA-200, Golden Cross, VIX regime, trend direction")
+    pdf.bullet("Interaction terms: 16 cross-variable products including 4 HMM interactions")
+    pdf.bullet("Regime indicators: Rule-based (Above SMA-200, Golden Cross, VIX regime, trend direction)")
+    pdf.bullet("HMM regime: Bear/Sideways/Bull states, posterior probabilities, duration, change flag (9 features)")
     pdf.bullet("Time features: Month, quarter, week-of-year, seasonal dummies")
     pdf.bullet("Macro variables: Treasury yield, Dollar index, Gold price and changes")
 
@@ -263,9 +285,14 @@ def main():
 
     pdf.subsection_title("3.2 Feature Selection")
     pdf.body_text(
-        "From 197 candidate features, the top 40 are selected using XGBoost importance (gain). "
-        "This reduces the feature/sample ratio from 0.20 to 0.041, significantly reducing "
+        "From 222 candidate features, the top 40 are selected using XGBoost importance (gain). "
+        "This reduces the feature/sample ratio from 0.23 to 0.041, significantly reducing "
         "overfitting risk. Feature selection is performed using only training data."
+    )
+    pdf.body_text(
+        "Three HMM features survived selection into the top 40: HMM_Regime_Duration (#24), "
+        "HMM_Prob_Bull (#28), and HMM_Regime_Lag4 (#33). This demonstrates the HMM provides "
+        "non-redundant information beyond the rule-based regime features."
     )
 
     pdf.subsection_title("3.3 Ensemble Composition")
@@ -291,7 +318,7 @@ def main():
         "  - Minimum training window: 10 years (520 weeks)\n"
         "  - Step size: 1 year (52 weeks) per fold\n"
         "  - 17 folds total, 859 OOS predictions\n"
-        "  - Average direction accuracy: 58.0% (vs 50% random baseline)\n"
+        "  - Average direction accuracy: 58.5% (vs 50% random baseline)\n"
         "  - 15 of 17 folds beat the random baseline\n"
         "  - Best fold: 69.2% direction accuracy\n\n"
         "NaN imputation (forward-fill for indicators, zero-fill for Brent pre-2007) recovers "
@@ -299,11 +326,106 @@ def main():
     )
     pdf.add_image_safe(MODEL_DIR / "walkforward_folds.png", w=160)
 
-    # ===== 4. TRADING STRATEGY =====
+    # ===== 4. HMM REGIME DETECTION =====
     pdf.add_page()
-    pdf.section_title("4. Trading Strategy")
+    pdf.section_title("4. HMM Regime Detection")
 
-    pdf.subsection_title("4.1 Strategy Variants")
+    pdf.subsection_title("4.1 Motivation")
+    pdf.body_text(
+        "Financial markets alternate between distinct behavioral regimes: trending bull markets "
+        "with low volatility, choppy sideways periods, and sharp bear sell-offs driven by fear. "
+        "Traditional rule-based indicators (e.g., price above SMA-200 or VIX > 25) provide "
+        "binary signals but cannot capture the probabilistic, latent nature of these transitions."
+    )
+    pdf.body_text(
+        "A Hidden Markov Model (HMM) addresses this by treating the market regime as a latent "
+        "(unobservable) state that generates observable data. The HMM learns the statistical "
+        "properties of each regime and the transition dynamics between them from the data "
+        "itself, providing posterior probabilities and state duration information that "
+        "rule-based indicators cannot offer."
+    )
+
+    pdf.subsection_title("4.2 Model Specification")
+    pdf.body_text(
+        "We use a 3-state Gaussian HMM with full covariance matrices. The observable features "
+        "fed to the HMM are:\n\n"
+        "  1. Close_PctChg: Weekly percentage return (captures direction and magnitude)\n"
+        "  2. VIX_Close: VIX level (captures market fear/complacency)\n\n"
+        "The model assumes each market regime generates returns and VIX levels from a bivariate "
+        "Gaussian distribution with regime-specific mean and covariance. The Baum-Welch "
+        "(Expectation-Maximization) algorithm estimates the emission parameters and the 3x3 "
+        "state transition matrix."
+    )
+    pdf.body_text(
+        "After fitting, the three states are sorted by their mean return (the first dimension "
+        "of the emission mean vector) in ascending order:\n\n"
+        "  - State 0 (Bear):     Lowest mean return, typically high VIX\n"
+        "  - State 1 (Sideways): Moderate return, medium VIX\n"
+        "  - State 2 (Bull):     Highest mean return, typically low VIX\n\n"
+        "This consistent labeling ensures states have the same semantic meaning across different "
+        "fitting windows."
+    )
+
+    pdf.subsection_title("4.3 Walk-Forward Fitting")
+    pdf.body_text(
+        "To prevent look-ahead bias, the HMM is fitted walk-forward:\n\n"
+        "  - Warmup period: 104 weeks (2 years) before first classification\n"
+        "  - Refit frequency: Every 26 weeks (6 months)\n"
+        "  - For week t, the model is fitted on weeks [0, t) only\n"
+        "  - Between refits, the last fitted model is used for inference\n"
+        "  - Total classified weeks: 1,278 out of 1,382\n\n"
+        "At each inference step, the Viterbi path is decoded over the full history up to week t "
+        "to determine the current state and posterior probabilities. This approach mirrors how "
+        "the model would operate in live trading: the HMM would be periodically re-estimated "
+        "as new data arrives, and the current regime inferred from the updated model."
+    )
+
+    pdf.subsection_title("4.4 Regime Distribution")
+    pdf.table(
+        ["Regime", "Weeks", "Percentage", "Characteristics"],
+        [
+            ["Bear (State 0)", "295", "23.1%", "Negative mean return, high VIX"],
+            ["Sideways (State 1)", "490", "38.3%", "Near-zero return, moderate VIX"],
+            ["Bull (State 2)", "493", "38.6%", "Positive mean return, low VIX"],
+        ],
+        col_widths=[32, 20, 22, 72],
+    )
+    pdf.body_text(
+        "The regime distribution is intuitive: SPY spends roughly three-quarters of the time "
+        "in sideways or bull regimes and one-quarter in bear regimes. The average regime "
+        "duration is 16.9 weeks, with the longest sustained regime lasting 130 weeks, "
+        "reflecting the extended bull run of 2013-2015."
+    )
+
+    pdf.subsection_title("4.5 Feature Contribution")
+    pdf.body_text("Nine features are produced per week from the HMM:")
+    pdf.bullet("HMM_Regime: Integer state label (0, 1, or 2)")
+    pdf.bullet("HMM_Regime_Bear, HMM_Regime_Sideways, HMM_Regime_Bull: One-hot dummy variables")
+    pdf.bullet("HMM_Prob_Bear, HMM_Prob_Sideways, HMM_Prob_Bull: Posterior state probabilities")
+    pdf.bullet("HMM_Regime_Duration: Consecutive weeks in the current regime")
+    pdf.bullet("HMM_Regime_Change: Binary flag (1 if regime changed from prior week)")
+
+    pdf.body_text(
+        "Additionally, the HMM outputs are lagged (1-4 weeks) and combined into interaction "
+        "terms with other signals (HMM_Prob_Bull x Close_PctChg, HMM_Prob_Bear x VIX_Close, "
+        "HMM_Regime x RSI_14, HMM_Prob_Bull x MACD_Hist), totaling 25 HMM-derived features."
+    )
+    pdf.body_text(
+        "Of the 222 total candidate features, 3 HMM features survived importance-based "
+        "selection into the top 40:\n\n"
+        "  #24. HMM_Regime_Duration - How long the market has been in the current state. "
+        "Longer durations may signal increasing probability of regime transition.\n\n"
+        "  #28. HMM_Prob_Bull - Posterior probability of being in a bull regime. Provides a "
+        "continuous confidence score rather than a hard binary classification.\n\n"
+        "  #33. HMM_Regime_Lag4 - The regime state 4 weeks ago. Captures how the recent "
+        "regime history influences current-week returns."
+    )
+
+    # ===== 5. TRADING STRATEGY =====
+    pdf.add_page()
+    pdf.section_title("5. Trading Strategy")
+
+    pdf.subsection_title("5.1 Strategy Variants")
     pdf.body_text("Four long-only, no-leverage strategies were tested:")
     pdf.bullet(
         "Binary (t=0): Go 100% long if predicted return > 0%, else 100% cash. "
@@ -311,7 +433,7 @@ def main():
     )
     pdf.bullet(
         "Binary (t=opt): Same as above but threshold optimized on first half of OOS data "
-        "(optimized threshold = +0.28%). More selective - only in market 16% of the time."
+        "(optimized threshold = +0.17%). More selective - only in market 37.7% of the time."
     )
     pdf.bullet(
         "Scaled: Position size proportional to prediction magnitude, clipped to [0%, 100%]. "
@@ -319,151 +441,202 @@ def main():
     )
     pdf.bullet(
         "Adaptive: Binary strategy with threshold re-optimized every 26 weeks using recent "
-        "OOS performance. Self-adjusting to changing market regimes."
+        "OOS performance. Self-adjusting to changing market regimes. Best Sharpe ratio."
     )
     pdf.body_text("Transaction cost: 0.02% round-trip per trade (realistic for weekly SPY trades).")
 
-    pdf.subsection_title("4.2 Backtest Methodology")
+    pdf.subsection_title("5.2 Backtest Methodology")
     pdf.body_text(
         "All predictions come from walk-forward OOS output - the model never sees the data "
         "it trades on during training. The backtest covers 861 weeks (Dec 2009 - Jun 2026).\n\n"
-        "The threshold for Binary (t=opt) is optimized on the first 430 weeks, and the "
-        "remaining 431 weeks serve as a true out-of-sample test. This two-stage approach "
-        "validates that the strategy generalizes beyond its optimization period."
+        "The walk-forward prediction engine uses 26-week steps (vs 52-week in validation) "
+        "for finer-grained OOS coverage. Feature selection is performed once using the first "
+        "70% of data as pseudo-training. The ensemble is re-trained at each step boundary "
+        "using all available past data."
     )
 
-    pdf.subsection_title("4.3 Performance Results - Full OOS Period")
+    pdf.subsection_title("5.3 Performance Results - Full OOS Period")
     pdf.table(
-        ["Strategy", "Return", "CAGR", "Sharpe", "Sortino", "MaxDD", "WinRate", "InMkt"],
+        ["Strategy", "Return", "CAGR", "Sharpe", "MaxDD", "WinRate", "InMkt", "Trades"],
         [
-            ["Binary (t=0)", "864.9%", "14.67%", "0.996", "1.179", "-31.8%", "60.2%", "80.8%"],
-            ["Adaptive", "613.5%", "12.60%", "0.961", "-", "-24.7%", "59.3%", "70.3%"],
-            ["Scaled", "321.1%", "9.07%", "0.983", "-", "-18.0%", "59.6%", "80.8%"],
-            ["Binary (t=opt)", "312.7%", "8.94%", "0.925", "-", "-14.6%", "67.1%", "16.3%"],
-            ["Buy & Hold", "768.4%", "13.94%", "0.890", "1.142", "-31.8%", "-", "100%"],
+            ["Binary (t=0)", "840.8%", "14.50%", "0.958", "-31.83%", "60.2%", "89.7%", "114"],
+            ["Binary (t=opt)", "478.9%", "11.19%", "0.965", "-23.84%", "62.8%", "37.7%", "257"],
+            ["Scaled", "308.6%", "8.87%", "0.971", "-20.07%", "60.0%", "89.7%", "822"],
+            ["Adaptive", "730.0%", "13.63%", "1.042", "-24.74%", "60.3%", "70.8%", "222"],
+            ["Buy & Hold", "768.4%", "13.94%", "0.890", "-31.83%", "-", "100%", "-"],
         ],
-        col_widths=[28, 18, 16, 16, 16, 16, 17, 14],
+        col_widths=[26, 18, 16, 16, 17, 17, 14, 17],
     )
 
     pdf.add_image_safe(STRATEGY_DIR / "equity_curves.png", w=170)
 
-    pdf.subsection_title("4.4 Period Breakdown - Binary (t=0)")
+    pdf.subsection_title("5.4 Adaptive Strategy Deep Dive")
     pdf.body_text(
-        "The strategy is evaluated on two distinct periods to test generalization:"
+        "The Adaptive strategy emerges as the best risk-adjusted performer (Sharpe 1.042). "
+        "Its key innovation is a rolling 26-week lookback that re-optimizes the entry threshold "
+        "based on recent prediction quality. This creates a feedback loop: when the model is "
+        "performing well, the threshold tightens to capture more trades; when performance "
+        "degrades, the threshold widens to reduce exposure."
     )
-    pdf.table(
-        ["Metric", "Optimization", "True Test", "Full OOS"],
-        [
-            ["Period", "Dec09-Mar18", "Mar18-Jun26", "Dec09-Jun26"],
-            ["Weeks", "430", "431", "861"],
-            ["Strategy Return", "169.8%", "257.6%", "864.9%"],
-            ["Strategy CAGR", "12.75%", "16.62%", "14.67%"],
-            ["Strategy Sharpe", "1.050", "0.983", "0.996"],
-            ["Buy & Hold Return", "171.0%", "220.5%", "768.4%"],
-            ["Buy & Hold CAGR", "12.81%", "15.09%", "13.94%"],
-            ["Buy & Hold Sharpe", "0.932", "0.869", "0.890"],
-            ["Excess Return", "-1.1pp", "+37.1pp", "+96.5pp"],
-            ["Excess CAGR", "-0.06pp", "+1.53pp", "+0.73pp"],
-            ["Excess Sharpe", "+0.118", "+0.114", "+0.106"],
-        ],
-        col_widths=[35, 35, 35, 35],
-    )
-
     pdf.body_text(
-        "The strategy performs better on the true test period (+37.1pp excess return, "
-        "+1.53pp CAGR) than during optimization (-1.1pp), providing strong evidence "
-        "that the model captures genuine predictive signal rather than overfitting."
+        "Key characteristics:\n\n"
+        "  - In market 70.8% of the time (avoids 29.2% of weeks)\n"
+        "  - Average return when invested: +0.378% per week\n"
+        "  - Average return when cash: +0.030% per week (flat weeks avoided)\n"
+        "  - Max drawdown -24.74% vs -31.83% for buy-and-hold (7.1pp improvement)\n"
+        "  - 222 trades over 861 weeks (~1 position change every 3.9 weeks)"
+    )
+    pdf.body_text(
+        "The Adaptive strategy benefits from HMM features because the HMM regime duration "
+        "and bull probability help the model identify periods of regime stability vs. "
+        "transition. During stable bull regimes (high HMM_Prob_Bull, long HMM_Regime_Duration), "
+        "the model confidently stays invested. During regime transitions, the model pulls "
+        "back, reducing drawdown exposure."
     )
 
     pdf.add_image_safe(STRATEGY_DIR / "annual_returns.png", w=160)
 
-    # ===== 5. RISK ANALYSIS =====
+    # ===== 6. RISK ANALYSIS =====
     pdf.add_page()
-    pdf.section_title("5. Risk Analysis")
+    pdf.section_title("6. Risk Analysis")
 
     pdf.subsection_title("Position Timing Analysis")
     pdf.body_text(
-        "The model's edge comes from correctly identifying weeks to avoid. When the model "
-        "predicts a negative return and moves to cash:\n\n"
-        "  - Average actual return on avoided weeks: -0.06% (negative)\n"
-        "  - Average actual return on held weeks: +0.36% (positive)\n\n"
-        "This demonstrates the model successfully filters out approximately 20% of weeks "
+        "The Adaptive strategy's edge comes from correctly identifying weeks to avoid. When "
+        "the model predicts a negative return (or below threshold) and moves to cash:\n\n"
+        "  - Average actual return when invested: +0.378% per week\n"
+        "  - Average actual return when in cash: +0.030% per week\n\n"
+        "This demonstrates the model successfully filters out approximately 29% of weeks "
         "that are flat-to-negative, while maintaining exposure during positive weeks."
     )
 
     pdf.subsection_title("Risk-Return Tradeoffs by Strategy")
     pdf.table(
-        ["Strategy", "Calmar", "MaxDD", "In Market", "Best For"],
+        ["Strategy", "Sharpe", "MaxDD", "In Market", "Best For"],
         [
-            ["Binary (t=0)", "0.461", "-31.8%", "80.8%", "Maximum return"],
-            ["Adaptive", "-", "-24.7%", "70.3%", "Balanced approach"],
-            ["Scaled", "0.676", "-18.0%", "80.8%", "Risk-adjusted returns"],
-            ["Binary (t=opt)", "0.774", "-14.6%", "16.3%", "Capital preservation"],
+            ["Adaptive", "1.042", "-24.7%", "70.8%", "Best risk-adjusted"],
+            ["Scaled", "0.971", "-20.1%", "89.7%", "Smooth equity curve"],
+            ["Binary (t=opt)", "0.965", "-23.8%", "37.7%", "Capital preservation"],
+            ["Binary (t=0)", "0.958", "-31.8%", "89.7%", "Maximum return"],
+            ["Buy & Hold", "0.890", "-31.8%", "100%", "Benchmark"],
         ],
-        col_widths=[30, 22, 22, 22, 50],
+        col_widths=[30, 20, 22, 22, 50],
+    )
+
+    pdf.body_text(
+        "All four strategy variants beat buy-and-hold on Sharpe ratio. The Scaled strategy "
+        "achieves the lowest maximum drawdown (-20.1%) by sizing positions proportionally to "
+        "prediction magnitude, dampening exposure during uncertain periods."
     )
 
     pdf.subsection_title("Limitations & Caveats")
     pdf.bullet("Weekly rebalancing only - does not capture intra-week volatility or flash crashes")
-    pdf.bullet("Max drawdown matches buy-and-hold (-31.8%) for Binary (t=0) - the model did not avoid the worst weeks in all cases")
+    pdf.bullet("Max drawdown matches buy-and-hold (-31.8%) for Binary (t=0) - not all downturns avoided")
     pdf.bullet("Small training set: even after imputation, 966 training rows for 40 features")
     pdf.bullet("No short positions - cannot profit from correctly predicted down weeks")
     pdf.bullet("Transaction costs modeled at 0.02% per trade; slippage not modeled")
     pdf.bullet("CBOE Put/Call ratio not available - could improve sentiment capture")
     pdf.bullet("Brent Crude data starts Aug 2007 - imputed as zero before that date")
-    pdf.bullet("Results are in-sample for the walk-forward engine and should not be treated as live trading results")
+    pdf.bullet("HMM assumes Gaussian emissions - may underestimate tail risk during fat-tail events")
+    pdf.bullet("HMM state count (3) chosen heuristically; BIC-based selection could yield different structure")
+    pdf.bullet("Results are in-sample for the walk-forward engine - not live trading results")
 
-    # ===== 6. FEATURE IMPORTANCE =====
+    # ===== 7. FEATURE IMPORTANCE =====
     pdf.add_page()
-    pdf.section_title("6. Feature Importance")
+    pdf.section_title("7. Feature Importance")
 
     pdf.body_text(
-        "The top features driving the model span multiple categories: momentum indicators, "
-        "volatility measures, trend signals, and cross-asset interactions."
+        "The top 40 features driving the model span multiple categories. The table below "
+        "shows the selected features grouped by type:"
     )
-    pdf.add_image_safe(MODEL_DIR / "feature_importance.png", w=140)
 
-    pdf.subsection_title("Interpretation of Top Features")
-    pdf.bullet("RSI_14: Overbought/oversold momentum - strongest single predictor")
-    pdf.bullet("Volume_Log: Trading activity level - high volume signals conviction")
-    pdf.bullet("DI_Minus_14: Bearish directional pressure - helps identify weeks to avoid")
-    pdf.bullet("VIX_Close x Brent_Close_PctChg: Interaction capturing fear during oil shocks")
-    pdf.bullet("RSI_14 x BB_PctB: Combined momentum and mean-reversion signal")
-    pdf.bullet("BB_PctB: Bollinger Band position - where price sits in its range")
-    pdf.bullet("VIX_High: Peak weekly fear - regime identification")
-    pdf.bullet("Brent_Close_PctChg_Lag3: Oil price momentum with 3-week delay")
-    pdf.bullet("Close_PctChg_RollMean_12: 12-week rolling average return (medium-term trend)")
+    pdf.subsection_title("Selected Features by Category")
+    pdf.table(
+        ["Category", "Count", "Top Features"],
+        [
+            ["Momentum/Oscillators", "9", "RSI_14 (#2), RSI lags, MACD_Signal"],
+            ["Volatility/VIX", "8", "VIX_Close lags, VIX_High, VIX_EMA_20"],
+            ["Trend (DI/ADX)", "6", "DI_Plus_14, DI_Minus_14, ADX lags"],
+            ["Price Returns", "4", "Low_PctChg, High_PctChg, Open lag"],
+            ["Cross-Asset", "4", "Brent_BB_Upper (#1), Brent PctChg"],
+            ["Interactions", "3", "VIX x Brent, ADX x DI, VIX x RSI"],
+            ["HMM Regime", "3", "Duration (#24), Prob_Bull (#28), Lag4 (#33)"],
+            ["Rolling Stats", "2", "Close PctChg RollMean 4w & 8w"],
+            ["Volume", "1", "OBV"],
+        ],
+        col_widths=[35, 15, 95],
+    )
 
-    # ===== 7. CONCLUSIONS =====
+    pdf.add_image_safe(MODEL_DIR / "enhanced_comparison.png", w=160)
+
+    pdf.subsection_title("HMM Feature Interpretation")
+    pdf.body_text(
+        "The three HMM features that survived selection provide distinct information:\n\n"
+        "HMM_Regime_Duration (#24 by importance): Captures how long the market has stayed "
+        "in the current regime. Extended bull regimes may signal increasing complacency and "
+        "higher reversion risk. Extended bear regimes may indicate capitulation approaching. "
+        "This is a genuinely novel signal that no rule-based indicator can replicate.\n\n"
+        "HMM_Prob_Bull (#28): Provides a continuous confidence measure (0 to 1) of being in a "
+        "bull regime, rather than the binary Above_SMA_200 indicator. When the HMM probability "
+        "disagrees with rule-based signals, it often foreshadows regime transitions.\n\n"
+        "HMM_Regime_Lag4 (#33): The regime state 4 weeks prior. This temporal feature captures "
+        "mean-reversion and momentum effects at the regime level - a market that was in a bear "
+        "regime a month ago may behave differently from one continuously in a bull regime, "
+        "even if both show the same current indicators."
+    )
+
+    # ===== 8. CONCLUSIONS =====
     pdf.add_page()
-    pdf.section_title("7. Conclusions & Next Steps")
+    pdf.section_title("8. Conclusions & Next Steps")
 
     pdf.subsection_title("Key Findings")
     pdf.bullet(
-        "The ensemble model achieves 58% average direction accuracy across 17 walk-forward "
+        "The ensemble model achieves 58.5% average direction accuracy across 17 walk-forward "
         "folds - consistent, modest, but real predictive signal"
     )
     pdf.bullet(
-        "The Binary (t=0) strategy beats buy-and-hold by +96.5pp total return over 16+ years "
-        "with higher Sharpe ratio (0.996 vs 0.890)"
+        "The Adaptive strategy achieves the best risk-adjusted returns (Sharpe 1.042 vs "
+        "0.890 for buy-and-hold) with 7.1pp lower maximum drawdown"
     )
     pdf.bullet(
-        "Performance is stronger on unseen test data than during optimization - the model "
-        "generalizes well and is not overfit"
+        "The Binary (t=0) strategy delivers the highest absolute return (840.8% vs 768.4% "
+        "buy-and-hold) over the 16+ year OOS period"
     )
     pdf.bullet(
-        "The primary edge is loss avoidance: the model correctly identifies ~20% of weeks "
-        "to sit out, which have negative average returns"
+        "HMM regime detection provides non-redundant predictive signal: 3 HMM features "
+        "selected alongside traditional technical and macro indicators"
+    )
+    pdf.bullet(
+        "The primary edge is loss avoidance: the model identifies 10-29% of weeks to sit out, "
+        "which have near-zero or negative average returns"
+    )
+
+    pdf.subsection_title("Enhancement History")
+    pdf.table(
+        ["#", "Enhancement", "Impact"],
+        [
+            ["1", "NaN imputation", "Training data 281 -> 966 rows"],
+            ["2", "Feature selection (top 40)", "Feature/sample 0.20 -> 0.041"],
+            ["3", "Walk-forward validation", "Eliminates look-ahead bias"],
+            ["4", "Multi-horizon target", "1/2/4-week return blend"],
+            ["5", "Rule-based regime features", "Binary market state signals"],
+            ["6", "Time features", "Seasonality capture"],
+            ["7", "CatBoost added", "Ensemble diversity"],
+            ["8", "Macro expansion", "TNX, DXY, Gold added"],
+            ["9", "Probability calibration", "Calibrated P(up) output"],
+            ["10", "HMM regime detection", "Probabilistic regime states"],
+        ],
+        col_widths=[10, 55, 80],
     )
 
     pdf.subsection_title("Recommended Next Steps")
     pdf.bullet("Live paper trading: Deploy with a paper account to validate in real-time before committing capital")
     pdf.bullet("Shorter timeframes: Test on daily data for more frequent signals and larger training sets")
     pdf.bullet("Dynamic position sizing: Scale position by prediction confidence and recent volatility")
-    pdf.bullet("Regime detection: Add Hidden Markov Model states as features for explicit regime awareness")
     pdf.bullet("Alternative data: Incorporate put/call ratio (paid source), earnings dates, Fed meeting calendar")
     pdf.bullet("Portfolio extension: Apply to sector ETFs (XLK, XLF, XLE) for diversified alpha")
     pdf.bullet("Risk management: Add stop-loss rules and maximum drawdown circuit breakers")
+    pdf.bullet("HMM extensions: Test 4-state model, regime-conditional model weights, or regime-switching GARCH")
 
     pdf.subsection_title("Project Structure")
     pdf.set_font("Courier", "", 9)
@@ -478,8 +651,9 @@ def main():
     |   +-- xgb_enhanced_v2.json
     |   +-- catboost_enhanced.cbm
     |   +-- model_summary.json
-    |   +-- feature_importance.png
+    |   +-- enhanced_comparison.png
     |   +-- walkforward_folds.png
+    |   +-- probability_calibration.png
     +-- strategy/
     |   +-- backtest_results.csv
     |   +-- backtest_summary.json
@@ -489,6 +663,7 @@ def main():
     +-- fetch_macro_data.py
     +-- technical_indicators.py
     +-- order_block_finder.py
+    +-- hmm_regime.py              (NEW - HMM regime detection)
     +-- model_enhanced.py
     +-- strategy_backtest.py
     +-- generate_report.py
