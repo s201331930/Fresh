@@ -1,0 +1,87 @@
+{
+  "name": "GLD",
+  "label": "Gold ETF",
+  "ticker": "GLD",
+  "market": "US",
+  "data_period": "2004-11-19 to 2026-10-16",
+  "total_weeks": 1144,
+  "oos_weeks": 630,
+  "oos_period": "2014-09-26 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear",
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bull_Lag4"
+  ],
+  "model_metrics": {
+    "mae": 1.5877,
+    "rmse": 2.1159,
+    "r2": 0.0161,
+    "dir_accuracy": 56.35
+  },
+  "optimized_threshold": 0.27,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 445.75,
+      "cagr": 15.04,
+      "sharpe": 1.097,
+      "max_drawdown": -17.38,
+      "win_rate": 56.26,
+      "in_market_pct": 79.8,
+      "n_trades": 58,
+      "n_weeks": 630,
+      "bnh_total_return": 213.15,
+      "bnh_cagr": 9.88,
+      "bnh_sharpe": 0.689,
+      "bnh_max_drawdown": -24.22
+    },
+    "Binary (t=opt)": {
+      "total_return": 68.82,
+      "cagr": 4.42,
+      "sharpe": 0.793,
+      "max_drawdown": -15.34,
+      "win_rate": 66.2,
+      "in_market_pct": 11.3,
+      "n_trades": 62,
+      "n_weeks": 630,
+      "bnh_total_return": 213.15,
+      "bnh_cagr": 9.88,
+      "bnh_sharpe": 0.689,
+      "bnh_max_drawdown": -24.22
+    },
+    "Scaled": {
+      "total_return": 105.12,
+      "cagr": 6.11,
+      "sharpe": 1.019,
+      "max_drawdown": -16.3,
+      "win_rate": 55.86,
+      "in_market_pct": 79.8,
+      "n_trades": 518,
+      "n_weeks": 630,
+      "bnh_total_return": 213.15,
+      "bnh_cagr": 9.88,
+      "bnh_sharpe": 0.689,
+      "bnh_max_drawdown": -24.22
+    },
+    "Adaptive": {
+      "total_return": 339.42,
+      "cagr": 13.0,
+      "sharpe": 1.019,
+      "max_drawdown": -18.14,
+      "win_rate": 57.14,
+      "in_market_pct": 64.4,
+      "n_trades": 133,
+      "n_weeks": 630,
+      "bnh_total_return": 213.15,
+      "bnh_cagr": 9.88,
+      "bnh_sharpe": 0.689,
+      "bnh_max_drawdown": -24.22
+    }
+  }
+}

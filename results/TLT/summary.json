@@ -1,0 +1,85 @@
+{
+  "name": "TLT",
+  "label": "20+ Year Treasury",
+  "ticker": "TLT",
+  "market": "US",
+  "data_period": "2002-08-02 to 2026-10-16",
+  "total_weeks": 1264,
+  "oos_weeks": 696,
+  "oos_period": "2013-06-21 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear",
+    "HMM_Prob_Bear_Lag4",
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 1.4297,
+    "rmse": 1.8478,
+    "r2": 0.0413,
+    "dir_accuracy": 55.32
+  },
+  "optimized_threshold": 0.05,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 115.72,
+      "cagr": 5.91,
+      "sharpe": 0.558,
+      "max_drawdown": -36.52,
+      "win_rate": 54.9,
+      "in_market_pct": 80.6,
+      "n_trades": 158,
+      "n_weeks": 696,
+      "bnh_total_return": 9.62,
+      "bnh_cagr": 0.69,
+      "bnh_sharpe": 0.119,
+      "bnh_max_drawdown": -47.83
+    },
+    "Binary (t=opt)": {
+      "total_return": 144.12,
+      "cagr": 6.9,
+      "sharpe": 0.675,
+      "max_drawdown": -34.55,
+      "win_rate": 56.57,
+      "in_market_pct": 71.1,
+      "n_trades": 237,
+      "n_weeks": 696,
+      "bnh_total_return": 9.62,
+      "bnh_cagr": 0.69,
+      "bnh_sharpe": 0.119,
+      "bnh_max_drawdown": -47.83
+    },
+    "Scaled": {
+      "total_return": 77.4,
+      "cagr": 4.38,
+      "sharpe": 0.953,
+      "max_drawdown": -11.19,
+      "win_rate": 54.72,
+      "in_market_pct": 80.6,
+      "n_trades": 639,
+      "n_weeks": 696,
+      "bnh_total_return": 9.62,
+      "bnh_cagr": 0.69,
+      "bnh_sharpe": 0.119,
+      "bnh_max_drawdown": -47.83
+    },
+    "Adaptive": {
+      "total_return": 167.49,
+      "cagr": 7.63,
+      "sharpe": 0.77,
+      "max_drawdown": -22.47,
+      "win_rate": 57.5,
+      "in_market_pct": 57.5,
+      "n_trades": 213,
+      "n_weeks": 696,
+      "bnh_total_return": 9.62,
+      "bnh_cagr": 0.69,
+      "bnh_sharpe": 0.119,
+      "bnh_max_drawdown": -47.83
+    }
+  }
+}

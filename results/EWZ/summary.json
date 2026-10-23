@@ -1,0 +1,85 @@
+{
+  "name": "EWZ",
+  "label": "Brazil ETF",
+  "ticker": "EWZ",
+  "market": "US",
+  "data_period": "2000-07-14 to 2026-10-16",
+  "total_weeks": 1370,
+  "oos_weeks": 754,
+  "oos_period": "2012-05-11 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag4",
+    "HMM_Regime_x_RSI_14"
+  ],
+  "model_metrics": {
+    "mae": 3.0979,
+    "rmse": 4.1929,
+    "r2": 0.0234,
+    "dir_accuracy": 57.96
+  },
+  "optimized_threshold": 0.48,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 655.94,
+      "cagr": 14.97,
+      "sharpe": 0.654,
+      "max_drawdown": -50.36,
+      "win_rate": 56.68,
+      "in_market_pct": 78.4,
+      "n_trades": 155,
+      "n_weeks": 754,
+      "bnh_total_return": 41.05,
+      "bnh_cagr": 2.4,
+      "bnh_sharpe": 0.23,
+      "bnh_max_drawdown": -65.55
+    },
+    "Binary (t=opt)": {
+      "total_return": 116.53,
+      "cagr": 5.47,
+      "sharpe": 0.502,
+      "max_drawdown": -23.3,
+      "win_rate": 69.62,
+      "in_market_pct": 10.5,
+      "n_trades": 96,
+      "n_weeks": 754,
+      "bnh_total_return": 41.05,
+      "bnh_cagr": 2.4,
+      "bnh_sharpe": 0.23,
+      "bnh_max_drawdown": -65.55
+    },
+    "Scaled": {
+      "total_return": 213.4,
+      "cagr": 8.2,
+      "sharpe": 0.57,
+      "max_drawdown": -36.56,
+      "win_rate": 56.68,
+      "in_market_pct": 78.4,
+      "n_trades": 641,
+      "n_weeks": 754,
+      "bnh_total_return": 41.05,
+      "bnh_cagr": 2.4,
+      "bnh_sharpe": 0.23,
+      "bnh_max_drawdown": -65.55
+    },
+    "Adaptive": {
+      "total_return": 296.62,
+      "cagr": 9.97,
+      "sharpe": 0.533,
+      "max_drawdown": -48.56,
+      "win_rate": 57.08,
+      "in_market_pct": 63.7,
+      "n_trades": 195,
+      "n_weeks": 754,
+      "bnh_total_return": 41.05,
+      "bnh_cagr": 2.4,
+      "bnh_sharpe": 0.23,
+      "bnh_max_drawdown": -65.55
+    }
+  }
+}

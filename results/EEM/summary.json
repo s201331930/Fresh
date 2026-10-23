@@ -1,0 +1,85 @@
+{
+  "name": "EEM",
+  "label": "Emerging Markets",
+  "ticker": "EEM",
+  "market": "US",
+  "data_period": "2003-04-18 to 2026-10-16",
+  "total_weeks": 1227,
+  "oos_weeks": 675,
+  "oos_period": "2013-11-15 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime",
+    "HMM_Prob_Bear_Lag1"
+  ],
+  "model_metrics": {
+    "mae": 1.9926,
+    "rmse": 2.6187,
+    "r2": 0.0186,
+    "dir_accuracy": 57.04
+  },
+  "optimized_threshold": 0.48,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 331.91,
+      "cagr": 11.93,
+      "sharpe": 0.772,
+      "max_drawdown": -29.63,
+      "win_rate": 58.1,
+      "in_market_pct": 73.2,
+      "n_trades": 103,
+      "n_weeks": 675,
+      "bnh_total_return": 94.03,
+      "bnh_cagr": 5.24,
+      "bnh_sharpe": 0.364,
+      "bnh_max_drawdown": -39.16
+    },
+    "Binary (t=opt)": {
+      "total_return": 58.89,
+      "cagr": 3.63,
+      "sharpe": 0.586,
+      "max_drawdown": -13.26,
+      "win_rate": 75.0,
+      "in_market_pct": 3.6,
+      "n_trades": 28,
+      "n_weeks": 675,
+      "bnh_total_return": 94.03,
+      "bnh_cagr": 5.24,
+      "bnh_sharpe": 0.364,
+      "bnh_max_drawdown": -39.16
+    },
+    "Scaled": {
+      "total_return": 111.43,
+      "cagr": 5.94,
+      "sharpe": 0.682,
+      "max_drawdown": -17.69,
+      "win_rate": 58.1,
+      "in_market_pct": 73.2,
+      "n_trades": 535,
+      "n_weeks": 675,
+      "bnh_total_return": 94.03,
+      "bnh_cagr": 5.24,
+      "bnh_sharpe": 0.364,
+      "bnh_max_drawdown": -39.16
+    },
+    "Adaptive": {
+      "total_return": 165.79,
+      "cagr": 7.82,
+      "sharpe": 0.593,
+      "max_drawdown": -34.79,
+      "win_rate": 57.14,
+      "in_market_pct": 58.1,
+      "n_trades": 199,
+      "n_weeks": 675,
+      "bnh_total_return": 94.03,
+      "bnh_cagr": 5.24,
+      "bnh_sharpe": 0.364,
+      "bnh_max_drawdown": -39.16
+    }
+  }
+}

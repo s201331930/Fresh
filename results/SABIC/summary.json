@@ -1,0 +1,85 @@
+{
+  "name": "SABIC",
+  "label": "SABIC (Chemicals)",
+  "ticker": "2010.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 838,
+  "oos_weeks": 461,
+  "oos_period": "2017-10-26 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag2",
+    "HMM_Prob_Bull_x_Close_PctChg",
+    "HMM_Regime_x_RSI_14",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear_Lag3"
+  ],
+  "model_metrics": {
+    "mae": 2.2641,
+    "rmse": 3.1009,
+    "r2": 0.0195,
+    "dir_accuracy": 50.54
+  },
+  "optimized_threshold": 0.26,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 0.75,
+      "cagr": 0.08,
+      "sharpe": 0.093,
+      "max_drawdown": -54.28,
+      "win_rate": 47.18,
+      "in_market_pct": 65.3,
+      "n_trades": 125,
+      "n_weeks": 461,
+      "bnh_total_return": -35.34,
+      "bnh_cagr": -4.8,
+      "bnh_sharpe": -0.105,
+      "bnh_max_drawdown": -59.5
+    },
+    "Binary (t=opt)": {
+      "total_return": 46.8,
+      "cagr": 4.43,
+      "sharpe": 0.44,
+      "max_drawdown": -30.01,
+      "win_rate": 51.81,
+      "in_market_pct": 18.0,
+      "n_trades": 92,
+      "n_weeks": 461,
+      "bnh_total_return": -35.34,
+      "bnh_cagr": -4.8,
+      "bnh_sharpe": -0.105,
+      "bnh_max_drawdown": -59.5
+    },
+    "Scaled": {
+      "total_return": 18.23,
+      "cagr": 1.91,
+      "sharpe": 0.239,
+      "max_drawdown": -32.54,
+      "win_rate": 47.18,
+      "in_market_pct": 65.3,
+      "n_trades": 360,
+      "n_weeks": 461,
+      "bnh_total_return": -35.34,
+      "bnh_cagr": -4.8,
+      "bnh_sharpe": -0.105,
+      "bnh_max_drawdown": -59.5
+    },
+    "Adaptive": {
+      "total_return": 42.51,
+      "cagr": 4.08,
+      "sharpe": 0.33,
+      "max_drawdown": -42.95,
+      "win_rate": 49.24,
+      "in_market_pct": 42.7,
+      "n_trades": 114,
+      "n_weeks": 461,
+      "bnh_total_return": -35.34,
+      "bnh_cagr": -4.8,
+      "bnh_sharpe": -0.105,
+      "bnh_max_drawdown": -59.5
+    }
+  }
+}

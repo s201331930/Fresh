@@ -1,0 +1,82 @@
+{
+  "name": "Maaden",
+  "label": "Saudi Mining",
+  "ticker": "1211.SR",
+  "market": "TASI",
+  "data_period": "2010-03-04 to 2026-10-15",
+  "total_weeks": 848,
+  "oos_weeks": 467,
+  "oos_period": "2017-09-14 to 2026-10-15",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Regime_Duration",
+    "HMM_Prob_Bear_x_Close_PctChg"
+  ],
+  "model_metrics": {
+    "mae": 3.6807,
+    "rmse": 5.43,
+    "r2": 0.0986,
+    "dir_accuracy": 50.32
+  },
+  "optimized_threshold": 0.48,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 532.97,
+      "cagr": 22.81,
+      "sharpe": 0.715,
+      "max_drawdown": -38.11,
+      "win_rate": 49.41,
+      "in_market_pct": 90.6,
+      "n_trades": 45,
+      "n_weeks": 467,
+      "bnh_total_return": 214.04,
+      "bnh_cagr": 13.59,
+      "bnh_sharpe": 0.505,
+      "bnh_max_drawdown": -50.93
+    },
+    "Binary (t=opt)": {
+      "total_return": 716.6,
+      "cagr": 26.34,
+      "sharpe": 0.824,
+      "max_drawdown": -38.11,
+      "win_rate": 50.97,
+      "in_market_pct": 77.3,
+      "n_trades": 97,
+      "n_weeks": 467,
+      "bnh_total_return": 214.04,
+      "bnh_cagr": 13.59,
+      "bnh_sharpe": 0.505,
+      "bnh_max_drawdown": -50.93
+    },
+    "Scaled": {
+      "total_return": 464.07,
+      "cagr": 21.24,
+      "sharpe": 0.786,
+      "max_drawdown": -35.08,
+      "win_rate": 49.41,
+      "in_market_pct": 90.6,
+      "n_trades": 431,
+      "n_weeks": 467,
+      "bnh_total_return": 214.04,
+      "bnh_cagr": 13.59,
+      "bnh_sharpe": 0.505,
+      "bnh_max_drawdown": -50.93
+    },
+    "Adaptive": {
+      "total_return": 453.58,
+      "cagr": 20.99,
+      "sharpe": 0.676,
+      "max_drawdown": -38.11,
+      "win_rate": 49.04,
+      "in_market_pct": 89.1,
+      "n_trades": 63,
+      "n_weeks": 467,
+      "bnh_total_return": 214.04,
+      "bnh_cagr": 13.59,
+      "bnh_sharpe": 0.505,
+      "bnh_max_drawdown": -50.93
+    }
+  }
+}

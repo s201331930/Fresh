@@ -1,0 +1,83 @@
+{
+  "name": "EWJ",
+  "label": "Japan ETF",
+  "ticker": "EWJ",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Regime_x_RSI_14"
+  ],
+  "model_metrics": {
+    "mae": 1.7239,
+    "rmse": 2.3173,
+    "r2": 0.0286,
+    "dir_accuracy": 56.96
+  },
+  "optimized_threshold": 0.12,
+  "best_strategy": "Binary (t=0)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 614.37,
+      "cagr": 14.22,
+      "sharpe": 1.071,
+      "max_drawdown": -22.17,
+      "win_rate": 60.28,
+      "in_market_pct": 56.3,
+      "n_trades": 263,
+      "n_weeks": 769,
+      "bnh_total_return": 220.39,
+      "bnh_cagr": 8.19,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -32.49
+    },
+    "Binary (t=opt)": {
+      "total_return": 246.78,
+      "cagr": 8.77,
+      "sharpe": 0.961,
+      "max_drawdown": -20.38,
+      "win_rate": 69.23,
+      "in_market_pct": 16.9,
+      "n_trades": 123,
+      "n_weeks": 769,
+      "bnh_total_return": 220.39,
+      "bnh_cagr": 8.19,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -32.49
+    },
+    "Scaled": {
+      "total_return": 156.26,
+      "cagr": 6.57,
+      "sharpe": 1.023,
+      "max_drawdown": -13.44,
+      "win_rate": 60.28,
+      "in_market_pct": 56.3,
+      "n_trades": 554,
+      "n_weeks": 769,
+      "bnh_total_return": 220.39,
+      "bnh_cagr": 8.19,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -32.49
+    },
+    "Adaptive": {
+      "total_return": 541.0,
+      "cagr": 13.39,
+      "sharpe": 1.015,
+      "max_drawdown": -24.35,
+      "win_rate": 59.74,
+      "in_market_pct": 59.4,
+      "n_trades": 199,
+      "n_weeks": 769,
+      "bnh_total_return": 220.39,
+      "bnh_cagr": 8.19,
+      "bnh_sharpe": 0.55,
+      "bnh_max_drawdown": -32.49
+    }
+  }
+}

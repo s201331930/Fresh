@@ -1,0 +1,86 @@
+{
+  "name": "IWM",
+  "label": "Russell 2000 SmallCap",
+  "ticker": "IWM",
+  "market": "US",
+  "data_period": "2000-05-26 to 2026-10-16",
+  "total_weeks": 1378,
+  "oos_weeks": 758,
+  "oos_period": "2012-04-13 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bull_Lag3",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bull_Lag1",
+    "HMM_Prob_Bear_Lag3",
+    "HMM_Prob_Bear_Lag2",
+    "HMM_Prob_Bull"
+  ],
+  "model_metrics": {
+    "mae": 2.0726,
+    "rmse": 2.8493,
+    "r2": 0.0233,
+    "dir_accuracy": 54.49
+  },
+  "optimized_threshold": 0.18,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 393.4,
+      "cagr": 11.57,
+      "sharpe": 0.681,
+      "max_drawdown": -36.43,
+      "win_rate": 56.26,
+      "in_market_pct": 83.2,
+      "n_trades": 107,
+      "n_weeks": 758,
+      "bnh_total_return": 321.09,
+      "bnh_cagr": 10.37,
+      "bnh_sharpe": 0.579,
+      "bnh_max_drawdown": -40.25
+    },
+    "Binary (t=opt)": {
+      "total_return": 358.02,
+      "cagr": 11.0,
+      "sharpe": 0.828,
+      "max_drawdown": -22.41,
+      "win_rate": 60.36,
+      "in_market_pct": 36.3,
+      "n_trades": 226,
+      "n_weeks": 758,
+      "bnh_total_return": 321.09,
+      "bnh_cagr": 10.37,
+      "bnh_sharpe": 0.579,
+      "bnh_max_drawdown": -40.25
+    },
+    "Scaled": {
+      "total_return": 206.62,
+      "cagr": 7.99,
+      "sharpe": 0.76,
+      "max_drawdown": -18.75,
+      "win_rate": 55.78,
+      "in_market_pct": 83.2,
+      "n_trades": 671,
+      "n_weeks": 758,
+      "bnh_total_return": 321.09,
+      "bnh_cagr": 10.37,
+      "bnh_sharpe": 0.579,
+      "bnh_max_drawdown": -40.25
+    },
+    "Adaptive": {
+      "total_return": 241.83,
+      "cagr": 8.8,
+      "sharpe": 0.586,
+      "max_drawdown": -29.48,
+      "win_rate": 55.19,
+      "in_market_pct": 63.6,
+      "n_trades": 224,
+      "n_weeks": 758,
+      "bnh_total_return": 321.09,
+      "bnh_cagr": 10.37,
+      "bnh_sharpe": 0.579,
+      "bnh_max_drawdown": -40.25
+    }
+  }
+}

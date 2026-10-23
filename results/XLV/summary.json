@@ -1,0 +1,84 @@
+{
+  "name": "XLV",
+  "label": "Healthcare Sector",
+  "ticker": "XLV",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Prob_Bear"
+  ],
+  "model_metrics": {
+    "mae": 1.5743,
+    "rmse": 2.1346,
+    "r2": 0.0442,
+    "dir_accuracy": 59.82
+  },
+  "optimized_threshold": 0.0,
+  "best_strategy": "Scaled",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 916.72,
+      "cagr": 16.98,
+      "sharpe": 1.17,
+      "max_drawdown": -24.31,
+      "win_rate": 61.75,
+      "in_market_pct": 78.5,
+      "n_trades": 110,
+      "n_weeks": 769,
+      "bnh_total_return": 540.3,
+      "bnh_cagr": 13.38,
+      "bnh_sharpe": 0.877,
+      "bnh_max_drawdown": -24.31
+    },
+    "Binary (t=opt)": {
+      "total_return": 916.72,
+      "cagr": 16.98,
+      "sharpe": 1.17,
+      "max_drawdown": -24.31,
+      "win_rate": 61.75,
+      "in_market_pct": 78.5,
+      "n_trades": 110,
+      "n_weeks": 769,
+      "bnh_total_return": 540.3,
+      "bnh_cagr": 13.38,
+      "bnh_sharpe": 0.877,
+      "bnh_max_drawdown": -24.31
+    },
+    "Scaled": {
+      "total_return": 360.37,
+      "cagr": 10.88,
+      "sharpe": 1.201,
+      "max_drawdown": -15.14,
+      "win_rate": 61.42,
+      "in_market_pct": 78.5,
+      "n_trades": 643,
+      "n_weeks": 769,
+      "bnh_total_return": 540.3,
+      "bnh_cagr": 13.38,
+      "bnh_sharpe": 0.877,
+      "bnh_max_drawdown": -24.31
+    },
+    "Adaptive": {
+      "total_return": 497.15,
+      "cagr": 12.84,
+      "sharpe": 1.021,
+      "max_drawdown": -24.31,
+      "win_rate": 62.96,
+      "in_market_pct": 64.2,
+      "n_trades": 162,
+      "n_weeks": 769,
+      "bnh_total_return": 540.3,
+      "bnh_cagr": 13.38,
+      "bnh_sharpe": 0.877,
+      "bnh_max_drawdown": -24.31
+    }
+  }
+}

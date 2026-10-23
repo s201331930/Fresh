@@ -1,0 +1,84 @@
+{
+  "name": "XLP",
+  "label": "Consumer Staples",
+  "ticker": "XLP",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [
+    "HMM_Prob_Bear_Lag1",
+    "HMM_Prob_Sideways",
+    "HMM_Prob_Bear_x_Close_PctChg",
+    "HMM_Regime_Duration"
+  ],
+  "model_metrics": {
+    "mae": 1.3055,
+    "rmse": 1.8039,
+    "r2": 0.0288,
+    "dir_accuracy": 60.34
+  },
+  "optimized_threshold": 0.13,
+  "best_strategy": "Binary (t=opt)",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 415.77,
+      "cagr": 11.73,
+      "sharpe": 0.947,
+      "max_drawdown": -22.21,
+      "win_rate": 60.34,
+      "in_market_pct": 91.2,
+      "n_trades": 88,
+      "n_weeks": 769,
+      "bnh_total_return": 305.58,
+      "bnh_cagr": 9.93,
+      "bnh_sharpe": 0.784,
+      "bnh_max_drawdown": -22.21
+    },
+    "Binary (t=opt)": {
+      "total_return": 461.37,
+      "cagr": 12.37,
+      "sharpe": 1.145,
+      "max_drawdown": -15.32,
+      "win_rate": 64.5,
+      "in_market_pct": 56.0,
+      "n_trades": 266,
+      "n_weeks": 769,
+      "bnh_total_return": 305.58,
+      "bnh_cagr": 9.93,
+      "bnh_sharpe": 0.784,
+      "bnh_max_drawdown": -22.21
+    },
+    "Scaled": {
+      "total_return": 190.35,
+      "cagr": 7.47,
+      "sharpe": 1.108,
+      "max_drawdown": -9.14,
+      "win_rate": 59.91,
+      "in_market_pct": 91.2,
+      "n_trades": 743,
+      "n_weeks": 769,
+      "bnh_total_return": 305.58,
+      "bnh_cagr": 9.93,
+      "bnh_sharpe": 0.784,
+      "bnh_max_drawdown": -22.21
+    },
+    "Adaptive": {
+      "total_return": 170.71,
+      "cagr": 6.97,
+      "sharpe": 0.677,
+      "max_drawdown": -15.47,
+      "win_rate": 59.69,
+      "in_market_pct": 67.8,
+      "n_trades": 200,
+      "n_weeks": 769,
+      "bnh_total_return": 305.58,
+      "bnh_cagr": 9.93,
+      "bnh_sharpe": 0.784,
+      "bnh_max_drawdown": -22.21
+    }
+  }
+}

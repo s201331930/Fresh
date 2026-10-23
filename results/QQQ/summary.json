@@ -1,0 +1,79 @@
+{
+  "name": "QQQ",
+  "label": "Nasdaq 100 ETF",
+  "ticker": "QQQ",
+  "market": "US",
+  "data_period": "2000-01-07 to 2026-10-16",
+  "total_weeks": 1398,
+  "oos_weeks": 769,
+  "oos_period": "2012-01-27 to 2026-10-16",
+  "total_features": 122,
+  "selected_features": 40,
+  "hmm_features_selected": [],
+  "model_metrics": {
+    "mae": 1.9403,
+    "rmse": 2.5816,
+    "r2": 0.0153,
+    "dir_accuracy": 58.65
+  },
+  "optimized_threshold": 0.05,
+  "best_strategy": "Adaptive",
+  "strategies": {
+    "Binary (t=0)": {
+      "total_return": 1611.53,
+      "cagr": 21.17,
+      "sharpe": 1.19,
+      "max_drawdown": -31.83,
+      "win_rate": 60.09,
+      "in_market_pct": 86.3,
+      "n_trades": 92,
+      "n_weeks": 769,
+      "bnh_total_return": 1225.46,
+      "bnh_cagr": 19.1,
+      "bnh_sharpe": 1.026,
+      "bnh_max_drawdown": -35.06
+    },
+    "Binary (t=opt)": {
+      "total_return": 1508.61,
+      "cagr": 20.66,
+      "sharpe": 1.213,
+      "max_drawdown": -28.39,
+      "win_rate": 61.51,
+      "in_market_pct": 77.4,
+      "n_trades": 134,
+      "n_weeks": 769,
+      "bnh_total_return": 1225.46,
+      "bnh_cagr": 19.1,
+      "bnh_sharpe": 1.026,
+      "bnh_max_drawdown": -35.06
+    },
+    "Scaled": {
+      "total_return": 450.55,
+      "cagr": 12.23,
+      "sharpe": 1.154,
+      "max_drawdown": -19.88,
+      "win_rate": 59.94,
+      "in_market_pct": 86.3,
+      "n_trades": 697,
+      "n_weeks": 769,
+      "bnh_total_return": 1225.46,
+      "bnh_cagr": 19.1,
+      "bnh_sharpe": 1.026,
+      "bnh_max_drawdown": -35.06
+    },
+    "Adaptive": {
+      "total_return": 1486.05,
+      "cagr": 20.55,
+      "sharpe": 1.281,
+      "max_drawdown": -21.77,
+      "win_rate": 61.55,
+      "in_market_pct": 73.7,
+      "n_trades": 168,
+      "n_weeks": 769,
+      "bnh_total_return": 1225.46,
+      "bnh_cagr": 19.1,
+      "bnh_sharpe": 1.026,
+      "bnh_max_drawdown": -35.06
+    }
+  }
+}
