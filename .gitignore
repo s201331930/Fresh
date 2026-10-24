@@ -6,3 +6,5 @@ dist/
 build/
 .ipynb_checkpoints/
 catboost_info/
+
+daily_study/cache/
