@@ -1,0 +1,801 @@
+{
+  "name": "QQQ",
+  "ticker": "QQQ",
+  "market": "US",
+  "label": "Nasdaq 100 ETF",
+  "asset_class": "Broad ETF",
+  "status": "ok",
+  "schedule": "fixed_2013",
+  "oos_start": "2010-01-01",
+  "calib_end": "2013-01-01",
+  "eval_start": "2013-01-01",
+  "modes": {
+    "weekly": {
+      "mode": "weekly",
+      "model": {
+        "mae": 1.9919,
+        "rmse": 2.6512,
+        "r2": -0.0106,
+        "dir_accuracy": 55.83,
+        "corr": 0.0123
+      },
+      "threshold": -0.305,
+      "scale": 0.7118,
+      "strategies": {
+        "Binary (t=0)": {
+          "total_return": 585.95,
+          "cagr": 15.0,
+          "sharpe": 0.883,
+          "max_drawdown": -35.46,
+          "win_rate": 58.4,
+          "in_market_pct": 86.8,
+          "n_trades": 80,
+          "turnover_per_year": 5.81,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "bnh_total_return": 1083.4,
+          "bnh_cagr": 19.64,
+          "bnh_sharpe": 1.035,
+          "bnh_max_drawdown": -35.06,
+          "cost_bps": 2.0
+        },
+        "Binary (t=opt)": {
+          "total_return": 938.06,
+          "cagr": 18.51,
+          "sharpe": 0.992,
+          "max_drawdown": -35.06,
+          "win_rate": 58.67,
+          "in_market_pct": 98.5,
+          "n_trades": 16,
+          "turnover_per_year": 1.16,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "bnh_total_return": 1083.4,
+          "bnh_cagr": 19.64,
+          "bnh_sharpe": 1.035,
+          "bnh_max_drawdown": -35.06,
+          "cost_bps": 2.0
+        },
+        "Scaled": {
+          "total_return": 108.83,
+          "cagr": 5.49,
+          "sharpe": 0.663,
+          "max_drawdown": -15.22,
+          "win_rate": 58.08,
+          "in_market_pct": 86.8,
+          "n_trades": 663,
+          "turnover_per_year": 6.78,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "bnh_total_return": 1083.4,
+          "bnh_cagr": 19.64,
+          "bnh_sharpe": 1.035,
+          "bnh_max_drawdown": -35.06,
+          "cost_bps": 2.0
+        },
+        "Adaptive": {
+          "total_return": 305.69,
+          "cagr": 10.7,
+          "sharpe": 0.715,
+          "max_drawdown": -30.96,
+          "win_rate": 56.78,
+          "in_market_pct": 76.8,
+          "n_trades": 130,
+          "turnover_per_year": 9.43,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "bnh_total_return": 1083.4,
+          "bnh_cagr": 19.64,
+          "bnh_sharpe": 1.035,
+          "bnh_max_drawdown": -35.06,
+          "cost_bps": 2.0
+        }
+      },
+      "cost_sensitivity": {
+        "Binary (t=0)": {
+          "1.0": {
+            "sharpe": 0.886,
+            "cagr": 15.06,
+            "max_drawdown": -35.45
+          },
+          "2.0": {
+            "sharpe": 0.883,
+            "cagr": 15.0,
+            "max_drawdown": -35.46
+          },
+          "5.0": {
+            "sharpe": 0.873,
+            "cagr": 14.8,
+            "max_drawdown": -35.5
+          }
+        },
+        "Binary (t=opt)": {
+          "1.0": {
+            "sharpe": 0.992,
+            "cagr": 18.52,
+            "max_drawdown": -35.06
+          },
+          "2.0": {
+            "sharpe": 0.992,
+            "cagr": 18.51,
+            "max_drawdown": -35.06
+          },
+          "5.0": {
+            "sharpe": 0.99,
+            "cagr": 18.47,
+            "max_drawdown": -35.06
+          }
+        },
+        "Scaled": {
+          "1.0": {
+            "sharpe": 0.671,
+            "cagr": 5.56,
+            "max_drawdown": -15.2
+          },
+          "2.0": {
+            "sharpe": 0.663,
+            "cagr": 5.49,
+            "max_drawdown": -15.22
+          },
+          "5.0": {
+            "sharpe": 0.64,
+            "cagr": 5.27,
+            "max_drawdown": -15.27
+          }
+        },
+        "Adaptive": {
+          "1.0": {
+            "sharpe": 0.721,
+            "cagr": 10.8,
+            "max_drawdown": -30.87
+          },
+          "2.0": {
+            "sharpe": 0.715,
+            "cagr": 10.7,
+            "max_drawdown": -30.96
+          },
+          "5.0": {
+            "sharpe": 0.698,
+            "cagr": 10.38,
+            "max_drawdown": -31.23
+          }
+        }
+      },
+      "top_features": [
+        {
+          "feature": "BB_PctB_Lag3",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_RollMean_8",
+          "folds": 34
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag1",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_RollStd_12",
+          "folds": 33
+        },
+        {
+          "feature": "Dist_SMA_50",
+          "folds": 33
+        },
+        {
+          "feature": "Brent_PctChg",
+          "folds": 33
+        },
+        {
+          "feature": "VIX_RollMean_4",
+          "folds": 32
+        },
+        {
+          "feature": "Close_PctChg_RollStd_8",
+          "folds": 32
+        },
+        {
+          "feature": "TNX_Close",
+          "folds": 30
+        },
+        {
+          "feature": "Close_PctChg_RollMean_4",
+          "folds": 28
+        },
+        {
+          "feature": "Close_PctChg_RollStd_4",
+          "folds": 28
+        },
+        {
+          "feature": "Close_PctChg_Lag2",
+          "folds": 28
+        },
+        {
+          "feature": "Low_PctChg",
+          "folds": 27
+        },
+        {
+          "feature": "BB_PctB_Lag1",
+          "folds": 27
+        },
+        {
+          "feature": "BB_Width",
+          "folds": 27
+        },
+        {
+          "feature": "HMM_Prob_Bull",
+          "folds": 27
+        },
+        {
+          "feature": "Dist_SMA_200",
+          "folds": 27
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag4",
+          "folds": 25
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag3",
+          "folds": 25
+        },
+        {
+          "feature": "MACD_Hist_Lag4",
+          "folds": 24
+        },
+        {
+          "feature": "Close_PctChg_RollMean_12",
+          "folds": 24
+        },
+        {
+          "feature": "RSI_14",
+          "folds": 24
+        },
+        {
+          "feature": "RSI_14_Lag4",
+          "folds": 24
+        },
+        {
+          "feature": "BB_PctB_Lag2",
+          "folds": 24
+        },
+        {
+          "feature": "Close_PctChg_x_Volume_Log_Chg",
+          "folds": 23
+        }
+      ],
+      "weekly_feature_share": 0.0,
+      "n_candidates": 102,
+      "folds_feature_count": 91,
+      "oos_start": "2010-01-01",
+      "calib_end": "2013-01-01",
+      "eval_start": "2013-01-04",
+      "eval_end": "2026-10-16",
+      "seconds": 7.5
+    },
+    "daily": {
+      "mode": "daily",
+      "model": {
+        "mae": 0.9014,
+        "rmse": 1.3035,
+        "r2": 0.0119,
+        "dir_accuracy": 55.6,
+        "corr": 0.1292
+      },
+      "threshold": -0.04,
+      "scale": 0.0928,
+      "strategies": {
+        "Binary (t=0)": {
+          "total_return": 1207.79,
+          "cagr": 20.48,
+          "sharpe": 1.142,
+          "max_drawdown": -23.53,
+          "win_rate": 56.75,
+          "in_market_pct": 86.6,
+          "n_trades": 397,
+          "turnover_per_year": 28.76,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Binary (t=opt)": {
+          "total_return": 1212.17,
+          "cagr": 20.5,
+          "sharpe": 1.074,
+          "max_drawdown": -25.4,
+          "win_rate": 56.55,
+          "in_market_pct": 95.0,
+          "n_trades": 158,
+          "turnover_per_year": 11.45,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Scaled": {
+          "total_return": 352.71,
+          "cagr": 11.56,
+          "sharpe": 0.955,
+          "max_drawdown": -14.16,
+          "win_rate": 56.02,
+          "in_market_pct": 86.6,
+          "n_trades": 3108,
+          "turnover_per_year": 45.58,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Adaptive": {
+          "total_return": 623.14,
+          "cagr": 15.41,
+          "sharpe": 0.947,
+          "max_drawdown": -21.66,
+          "win_rate": 56.55,
+          "in_market_pct": 78.0,
+          "n_trades": 322,
+          "turnover_per_year": 23.33,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        }
+      },
+      "cost_sensitivity": {
+        "Binary (t=0)": {
+          "1.0": {
+            "sharpe": 1.158,
+            "cagr": 20.82,
+            "max_drawdown": -23.49
+          },
+          "2.0": {
+            "sharpe": 1.142,
+            "cagr": 20.48,
+            "max_drawdown": -23.53
+          },
+          "5.0": {
+            "sharpe": 1.093,
+            "cagr": 19.44,
+            "max_drawdown": -23.67
+          }
+        },
+        "Binary (t=opt)": {
+          "1.0": {
+            "sharpe": 1.08,
+            "cagr": 20.64,
+            "max_drawdown": -24.86
+          },
+          "2.0": {
+            "sharpe": 1.074,
+            "cagr": 20.5,
+            "max_drawdown": -25.4
+          },
+          "5.0": {
+            "sharpe": 1.056,
+            "cagr": 20.09,
+            "max_drawdown": -27.0
+          }
+        },
+        "Scaled": {
+          "1.0": {
+            "sharpe": 0.992,
+            "cagr": 12.07,
+            "max_drawdown": -14.04
+          },
+          "2.0": {
+            "sharpe": 0.955,
+            "cagr": 11.56,
+            "max_drawdown": -14.16
+          },
+          "5.0": {
+            "sharpe": 0.843,
+            "cagr": 10.05,
+            "max_drawdown": -14.53
+          }
+        },
+        "Adaptive": {
+          "1.0": {
+            "sharpe": 0.961,
+            "cagr": 15.68,
+            "max_drawdown": -21.58
+          },
+          "2.0": {
+            "sharpe": 0.947,
+            "cagr": 15.41,
+            "max_drawdown": -21.66
+          },
+          "5.0": {
+            "sharpe": 0.905,
+            "cagr": 14.61,
+            "max_drawdown": -21.9
+          }
+        }
+      },
+      "top_features": [
+        {
+          "feature": "Dist_SMA_200",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_RollMean_5",
+          "folds": 34
+        },
+        {
+          "feature": "VIX_Close",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_RollMean_10",
+          "folds": 34
+        },
+        {
+          "feature": "RSI_14",
+          "folds": 33
+        },
+        {
+          "feature": "VIX_RollMean_10",
+          "folds": 33
+        },
+        {
+          "feature": "DXY_PctChg",
+          "folds": 32
+        },
+        {
+          "feature": "Close_PctChg_RollStd_10",
+          "folds": 32
+        },
+        {
+          "feature": "BB_Width",
+          "folds": 31
+        },
+        {
+          "feature": "RSI_14_Lag10",
+          "folds": 30
+        },
+        {
+          "feature": "Close_PctChg_x_Close_PctChg_Lag1",
+          "folds": 30
+        },
+        {
+          "feature": "Close_PctChg_Lag2",
+          "folds": 29
+        },
+        {
+          "feature": "ADX_14_Lag5",
+          "folds": 29
+        },
+        {
+          "feature": "Close_PctChg_Lag1",
+          "folds": 29
+        },
+        {
+          "feature": "TNX_PctChg",
+          "folds": 29
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag10",
+          "folds": 28
+        },
+        {
+          "feature": "VIX_PctChg",
+          "folds": 28
+        },
+        {
+          "feature": "DI_Minus_14_Lag2",
+          "folds": 28
+        },
+        {
+          "feature": "VIX_RollMean_5",
+          "folds": 28
+        },
+        {
+          "feature": "DI_Minus_14_Lag1",
+          "folds": 28
+        },
+        {
+          "feature": "Close_PctChg_Lag10",
+          "folds": 28
+        },
+        {
+          "feature": "Close_PctChg_RollStd_5",
+          "folds": 27
+        },
+        {
+          "feature": "Close_PctChg_Lag3",
+          "folds": 27
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag1",
+          "folds": 27
+        },
+        {
+          "feature": "RSI_14_Lag5",
+          "folds": 26
+        }
+      ],
+      "weekly_feature_share": 0.0,
+      "n_candidates": 116,
+      "folds_feature_count": 97,
+      "oos_start": "2010-01-01",
+      "calib_end": "2013-01-01",
+      "eval_start": "2013-01-02",
+      "eval_end": "2026-10-22",
+      "seconds": 18.0
+    },
+    "mixed": {
+      "mode": "mixed",
+      "model": {
+        "mae": 0.9022,
+        "rmse": 1.3035,
+        "r2": 0.0119,
+        "dir_accuracy": 55.2,
+        "corr": 0.12
+      },
+      "threshold": -0.03,
+      "scale": 0.107,
+      "strategies": {
+        "Binary (t=0)": {
+          "total_return": 1006.72,
+          "cagr": 19.03,
+          "sharpe": 1.063,
+          "max_drawdown": -25.58,
+          "win_rate": 57.0,
+          "in_market_pct": 79.8,
+          "n_trades": 536,
+          "turnover_per_year": 38.84,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Binary (t=opt)": {
+          "total_return": 1161.2,
+          "cagr": 20.16,
+          "sharpe": 1.059,
+          "max_drawdown": -26.16,
+          "win_rate": 56.52,
+          "in_market_pct": 92.9,
+          "n_trades": 227,
+          "turnover_per_year": 16.45,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Scaled": {
+          "total_return": 251.86,
+          "cagr": 9.54,
+          "sharpe": 0.853,
+          "max_drawdown": -14.73,
+          "win_rate": 56.43,
+          "in_market_pct": 79.8,
+          "n_trades": 2937,
+          "turnover_per_year": 38.1,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        },
+        "Adaptive": {
+          "total_return": 577.47,
+          "cagr": 14.87,
+          "sharpe": 0.912,
+          "max_drawdown": -19.58,
+          "win_rate": 56.59,
+          "in_market_pct": 78.0,
+          "n_trades": 375,
+          "turnover_per_year": 27.17,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "bnh_total_return": 1073.36,
+          "bnh_cagr": 19.53,
+          "bnh_sharpe": 0.963,
+          "bnh_max_drawdown": -35.12,
+          "cost_bps": 2.0
+        }
+      },
+      "cost_sensitivity": {
+        "Binary (t=0)": {
+          "1.0": {
+            "sharpe": 1.085,
+            "cagr": 19.49,
+            "max_drawdown": -25.54
+          },
+          "2.0": {
+            "sharpe": 1.063,
+            "cagr": 19.03,
+            "max_drawdown": -25.58
+          },
+          "5.0": {
+            "sharpe": 0.998,
+            "cagr": 17.65,
+            "max_drawdown": -25.72
+          }
+        },
+        "Binary (t=opt)": {
+          "1.0": {
+            "sharpe": 1.067,
+            "cagr": 20.36,
+            "max_drawdown": -25.86
+          },
+          "2.0": {
+            "sharpe": 1.059,
+            "cagr": 20.16,
+            "max_drawdown": -26.16
+          },
+          "5.0": {
+            "sharpe": 1.033,
+            "cagr": 19.57,
+            "max_drawdown": -27.04
+          }
+        },
+        "Scaled": {
+          "1.0": {
+            "sharpe": 0.886,
+            "cagr": 9.96,
+            "max_drawdown": -14.56
+          },
+          "2.0": {
+            "sharpe": 0.853,
+            "cagr": 9.54,
+            "max_drawdown": -14.73
+          },
+          "5.0": {
+            "sharpe": 0.753,
+            "cagr": 8.3,
+            "max_drawdown": -15.22
+          }
+        },
+        "Adaptive": {
+          "1.0": {
+            "sharpe": 0.929,
+            "cagr": 15.18,
+            "max_drawdown": -19.43
+          },
+          "2.0": {
+            "sharpe": 0.912,
+            "cagr": 14.87,
+            "max_drawdown": -19.58
+          },
+          "5.0": {
+            "sharpe": 0.863,
+            "cagr": 13.94,
+            "max_drawdown": -20.01
+          }
+        }
+      },
+      "top_features": [
+        {
+          "feature": "Close_PctChg_RollMean_5",
+          "folds": 34
+        },
+        {
+          "feature": "Dist_SMA_200",
+          "folds": 34
+        },
+        {
+          "feature": "W_RSI_14",
+          "folds": 34
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag1",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_RollMean_10",
+          "folds": 34
+        },
+        {
+          "feature": "Close_PctChg_x_Close_PctChg_Lag1",
+          "folds": 34
+        },
+        {
+          "feature": "DXY_PctChg",
+          "folds": 33
+        },
+        {
+          "feature": "VIX_Close",
+          "folds": 32
+        },
+        {
+          "feature": "Close_PctChg_Lag3",
+          "folds": 31
+        },
+        {
+          "feature": "RSI_14",
+          "folds": 31
+        },
+        {
+          "feature": "Close_PctChg_Lag1",
+          "folds": 31
+        },
+        {
+          "feature": "W_BB_Width",
+          "folds": 30
+        },
+        {
+          "feature": "BB_Width",
+          "folds": 30
+        },
+        {
+          "feature": "Brent_PctChg",
+          "folds": 30
+        },
+        {
+          "feature": "ADX_14_Lag5",
+          "folds": 29
+        },
+        {
+          "feature": "Close_PctChg_RollMean_20",
+          "folds": 29
+        },
+        {
+          "feature": "W_Dist_SMA_200",
+          "folds": 29
+        },
+        {
+          "feature": "Close_PctChg_Lag2",
+          "folds": 28
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag5",
+          "folds": 28
+        },
+        {
+          "feature": "W_High_PctChg",
+          "folds": 28
+        },
+        {
+          "feature": "DI_Minus_14_Lag2",
+          "folds": 27
+        },
+        {
+          "feature": "Volume_Log_Chg_Lag2",
+          "folds": 27
+        },
+        {
+          "feature": "Close_PctChg_x_Volume_Log_Chg",
+          "folds": 27
+        },
+        {
+          "feature": "HMM_Prob_Bull",
+          "folds": 27
+        },
+        {
+          "feature": "Close_PctChg_RollStd_10",
+          "folds": 27
+        }
+      ],
+      "weekly_feature_share": 0.1863,
+      "n_candidates": 158,
+      "folds_feature_count": 123,
+      "oos_start": "2010-01-01",
+      "calib_end": "2013-01-01",
+      "eval_start": "2013-01-02",
+      "eval_end": "2026-10-22",
+      "seconds": 19.3
+    }
+  },
+  "seconds": 53.8
+}

@@ -35,8 +35,8 @@ import pandas as pd
 import xgboost as xgb
 import yfinance as yf
 from catboost import CatBoostRegressor
+from hmmlearn import _hmmc
 from hmmlearn.hmm import GaussianHMM
-from scipy.special import logsumexp
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler
@@ -52,6 +52,7 @@ CACHE_DIR.mkdir(exist_ok=True)
 
 COST_BPS = 2.0  # headline round-trip cost, in basis points of traded notional
 COST_GRID = (1.0, 2.0, 5.0)
+N_JOBS = 4
 
 OOS_START = pd.Timestamp("2010-01-01")
 CALIB_END = pd.Timestamp("2013-01-01")  # threshold fit on [OOS_START, CALIB_END)
@@ -99,15 +100,16 @@ def normalize_index(df):
 # DATA
 # =========================================================================
 
-def fetch_daily_spy():
-    cache = CACHE_DIR / "spy_daily_ohlcv.csv"
+def fetch_ohlcv(ticker, cache_name=None):
+    cache_name = cache_name or f"{ticker.replace('=', '_').replace('.', '_')}_ohlcv.csv"
+    cache = CACHE_DIR / cache_name
     if cache.exists():
         df = pd.read_csv(cache, index_col=0, parse_dates=True)
         return normalize_index(df)
 
-    raw = yf.Ticker("SPY").history(start="2000-01-01", auto_adjust=False)
+    raw = yf.Ticker(ticker).history(start="2000-01-01", auto_adjust=False)
     if raw.empty:
-        raise RuntimeError("No SPY daily data returned")
+        raise RuntimeError(f"No daily data returned for {ticker}")
     df = pd.DataFrame(index=raw.index)
     df["Open"] = raw["Open"]
     df["High"] = raw["High"]
@@ -125,6 +127,10 @@ def fetch_daily_spy():
     df = df[df["Volume"] > 0]
     df.to_csv(cache)
     return df
+
+
+def fetch_daily_spy():
+    return fetch_ohlcv("SPY", "spy_daily_ohlcv.csv")
 
 
 def fetch_macro_daily():
@@ -161,20 +167,20 @@ def fetch_macro_daily():
     return df
 
 
-def to_weekly(daily):
+def to_weekly(daily, rule="W-FRI"):
     weekly = pd.DataFrame({
-        "Open": daily["Open"].resample("W-FRI").first(),
-        "High": daily["High"].resample("W-FRI").max(),
-        "Low": daily["Low"].resample("W-FRI").min(),
-        "Close": daily["Close"].resample("W-FRI").last(),
-        "Volume": daily["Volume"].resample("W-FRI").sum(),
+        "Open": daily["Open"].resample(rule).first(),
+        "High": daily["High"].resample(rule).max(),
+        "Low": daily["Low"].resample(rule).min(),
+        "Close": daily["Close"].resample(rule).last(),
+        "Volume": daily["Volume"].resample(rule).sum(),
     }).dropna(subset=["Close"])
     weekly = weekly[weekly["Volume"] > 0]
     return weekly
 
 
-def to_weekly_macro(macro_daily):
-    return macro_daily.resample("W-FRI").last().dropna(how="all")
+def to_weekly_macro(macro_daily, rule="W-FRI"):
+    return macro_daily.resample(rule).last().dropna(how="all")
 
 
 # =========================================================================
@@ -189,14 +195,23 @@ def _log_emit_diag(obs, means, covars):
     return -0.5 * (quad + logdet)
 
 
-def _forward_posteriors(log_start, log_trans, log_emit):
-    n, k = log_emit.shape
-    log_alpha = np.empty((n, k))
-    log_alpha[0] = log_start + log_emit[0]
-    for i in range(1, n):
-        log_alpha[i] = log_emit[i] + logsumexp(log_alpha[i - 1][:, None] + log_trans, axis=0)
-    log_norm = logsumexp(log_alpha, axis=1, keepdims=True)
-    return np.exp(log_alpha - log_norm)
+def _forward_posteriors(startprob, transmat, log_emit):
+    """Filtered P(state_t | observations through t).
+
+    hmmlearn's forward lattice is causal. The backward lattice is not used,
+    because it would let a later bar inside the segment change this bar.
+    """
+    _, fwd = _hmmc.forward_log(
+        np.ascontiguousarray(startprob, dtype=np.float64),
+        np.ascontiguousarray(transmat, dtype=np.float64),
+        np.ascontiguousarray(log_emit, dtype=np.float64),
+    )
+    row_max = np.max(fwd, axis=1, keepdims=True)
+    row_max = np.where(np.isfinite(row_max), row_max, 0.0)
+    post = np.exp(fwd - row_max)
+    denom = post.sum(axis=1, keepdims=True)
+    denom = np.where(denom > 0.0, denom, 1.0)
+    return post / denom
 
 
 def hmm_walk_forward(returns, volatility, min_fit, refit_every, n_states=3):
@@ -244,9 +259,7 @@ def hmm_walk_forward(returns, volatility, min_fit, refit_every, n_states=3):
             covars = np.diagonal(covars, axis1=1, axis2=2)
         seg = (obs[:t_end] - mu) / sd
         log_emit = _log_emit_diag(seg, model.means_, covars)
-        log_start = np.log(np.clip(model.startprob_, 1e-12, None))
-        log_trans = np.log(np.clip(model.transmat_, 1e-12, None))
-        post = _forward_posteriors(log_start, log_trans, log_emit)
+        post = _forward_posteriors(model.startprob_, model.transmat_, log_emit)
         for i in range(t, t_end):
             mapped = np.zeros(n_states)
             for raw, rank in mapping.items():
@@ -429,49 +442,32 @@ def _finalize(df, is_daily, lags):
     return X, y, cols
 
 
-def build_weekly():
-    psection("BUILD WEEKLY")
-    daily = fetch_daily_spy()
-    macro = to_weekly_macro(fetch_macro_daily())
-    df = to_weekly(daily)
+def _weekly_table(daily, macro_daily, week_rule):
+    macro = to_weekly_macro(macro_daily, week_rule)
+    df = to_weekly(daily, week_rule)
     print(f"    weekly bars: {len(df)}", flush=True)
     df = add_macro(df, macro)
     df = build_base_features(df)
     df = add_hmm(df, is_daily=False)
     df = add_calendar(df, is_daily=False)
-    return _finalize(df, False, LAGS_WEEKLY)
+    return df
 
 
-def build_daily():
-    psection("BUILD DAILY")
-    df = fetch_daily_spy()
-    macro = fetch_macro_daily()
-    print(f"    daily bars: {len(df)}", flush=True)
-    df = add_macro(df, macro)
+def _daily_table(daily, macro_daily):
+    print(f"    daily bars: {len(daily)}", flush=True)
+    df = add_macro(daily, macro_daily)
     df = build_base_features(df)
     df = add_hmm(df, is_daily=True)
     df = add_calendar(df, is_daily=True)
-    return _finalize(df, True, LAGS_DAILY)
+    return df
 
 
-def build_mixed():
-    psection("BUILD MIXED")
-    daily = fetch_daily_spy()
-    macro_d = fetch_macro_daily()
-    weekly = to_weekly(daily)
-    macro_w = to_weekly_macro(macro_d)
-
-    daily = add_macro(daily, macro_d)
-    daily = build_base_features(daily)
-    daily = add_hmm(daily, is_daily=True)
-    daily = add_calendar(daily, is_daily=True)
-
-    weekly = add_macro(weekly, macro_w)
-    weekly = build_base_features(weekly)
-    weekly = add_hmm(weekly, is_daily=False)
+def _attach_weekly(daily_df, weekly_df):
+    """Last completed week only. The label day itself still sees the prior week."""
+    daily = daily_df.copy()
+    weekly = weekly_df
     week_close = weekly[["Close"]].copy()
     week_close.columns = ["_WeekCloseAudit"]
-
     drop_cols = [c for c in ["Open", "High", "Low", "Close", "Volume"] if c in weekly.columns]
     weekly_feats = weekly.drop(columns=drop_cols)
     weekly_feats.columns = [f"W_{c}" for c in weekly_feats.columns]
@@ -480,16 +476,54 @@ def build_mixed():
     daily = daily.join(released, how="left")
     daily = daily.join(audit, how="left")
     _assert_weekly_release(daily, weekly)
-
     if "RSI_14" in daily.columns and "W_RSI_14" in daily.columns:
         daily["RSI_minus_Weekly"] = daily["RSI_14"] - daily["W_RSI_14"]
     if "Close_PctChg" in daily.columns and "W_Close_PctChg" in daily.columns:
         daily["Ret_minus_Weekly"] = daily["Close_PctChg"] - daily["W_Close_PctChg"]
     if "HMM_Prob_Bull" in daily.columns and "W_HMM_Prob_Bull" in daily.columns:
         daily["BullProb_minus_Weekly"] = daily["HMM_Prob_Bull"] - daily["W_HMM_Prob_Bull"]
+    return daily.drop(columns=["_WeekCloseAudit"])
 
-    daily = daily.drop(columns=["_WeekCloseAudit"])
-    return _finalize(daily, True, LAGS_DAILY)
+
+def build_weekly_frame(daily, macro_daily, week_rule="W-FRI"):
+    return _finalize(_weekly_table(daily, macro_daily, week_rule), False, LAGS_WEEKLY)
+
+
+def build_daily_frame(daily, macro_daily):
+    return _finalize(_daily_table(daily, macro_daily), True, LAGS_DAILY)
+
+
+def build_mixed_frame(daily, macro_daily, week_rule="W-FRI"):
+    weekly = _weekly_table(daily, macro_daily, week_rule)
+    daily_df = _daily_table(daily, macro_daily)
+    return _finalize(_attach_weekly(daily_df, weekly), True, LAGS_DAILY)
+
+
+def build_study_frames(daily, macro_daily, week_rule="W-FRI"):
+    """Weekly, daily, and mixed matrices. The daily HMM is fit once and reused."""
+    weekly = _weekly_table(daily, macro_daily, week_rule)
+    daily_df = _daily_table(daily, macro_daily)
+    mixed = _attach_weekly(daily_df, weekly)
+    return (
+        _finalize(weekly, False, LAGS_WEEKLY),
+        _finalize(daily_df, True, LAGS_DAILY),
+        _finalize(mixed, True, LAGS_DAILY),
+    )
+
+
+def build_weekly():
+    psection("BUILD WEEKLY")
+    return build_weekly_frame(fetch_daily_spy(), fetch_macro_daily(), "W-FRI")
+
+
+def build_daily():
+    psection("BUILD DAILY")
+    return build_daily_frame(fetch_daily_spy(), fetch_macro_daily())
+
+
+def build_mixed():
+    psection("BUILD MIXED")
+    return build_mixed_frame(fetch_daily_spy(), fetch_macro_daily(), "W-FRI")
 
 
 def _assert_weekly_release(daily, weekly):
@@ -550,7 +584,7 @@ def select_features(X_fit, y_fit, X_val, y_val, candidates, top_n):
         n_estimators=200, max_depth=3, learning_rate=0.05,
         subsample=0.8, colsample_bytree=0.7, min_child_weight=5,
         reg_lambda=2.0, eval_metric="rmse", early_stopping_rounds=20,
-        random_state=42, n_jobs=4, verbosity=0,
+        random_state=42, n_jobs=N_JOBS, verbosity=0,
     )
     model.fit(X_fit[candidates], y_fit, eval_set=[(X_val[candidates], y_val)], verbose=False)
     gain = model.get_booster().get_score(importance_type="gain")
@@ -570,16 +604,16 @@ def _fit_ensemble(X_fit, y_fit, X_val, y_val, X_te, cols):
     xgb_m = xgb.XGBRegressor(
         n_estimators=300, max_depth=3, learning_rate=0.04,
         subsample=0.8, colsample_bytree=0.6, min_child_weight=10,
-        gamma=0.5, reg_alpha=0.5, reg_lambda=5.0,
+        gamma=0.5,         reg_alpha=0.5, reg_lambda=5.0,
         eval_metric="rmse", early_stopping_rounds=25,
-        random_state=42, n_jobs=4, verbosity=0,
+        random_state=42, n_jobs=N_JOBS, verbosity=0,
     )
     xgb_m.fit(X_fit[cols], y_fit, eval_set=[(X_val[cols], y_val)], verbose=False)
 
     lgb_m = lgb.LGBMRegressor(
         n_estimators=300, max_depth=3, learning_rate=0.04,
         subsample=0.8, colsample_bytree=0.6, min_child_samples=20,
-        reg_alpha=0.5, reg_lambda=5.0, random_state=42, verbose=-1, n_jobs=4,
+        reg_alpha=0.5, reg_lambda=5.0, random_state=42, verbose=-1, n_jobs=N_JOBS,
     )
     lgb_m.fit(
         X_fit[cols], y_fit, eval_set=[(X_val[cols], y_val)],
@@ -589,7 +623,7 @@ def _fit_ensemble(X_fit, y_fit, X_val, y_val, X_te, cols):
     cat_m = CatBoostRegressor(
         iterations=300, depth=4, learning_rate=0.04,
         l2_leaf_reg=5.0, random_seed=42, verbose=0,
-        allow_writing_files=False,
+        allow_writing_files=False, thread_count=max(1, N_JOBS),
     )
     cat_m.fit(X_fit[cols], y_fit, eval_set=(X_val[cols], y_val), early_stopping_rounds=25)
 
@@ -605,12 +639,13 @@ def _fit_ensemble(X_fit, y_fit, X_val, y_val, X_te, cols):
     return pred
 
 
-def walk_forward(X, y, candidates, step, top_n):
+def walk_forward(X, y, candidates, step, top_n, oos_start=None, quiet=False):
     idx = X.index
-    start = int(idx.searchsorted(OOS_START))
+    oos_start = pd.Timestamp(oos_start) if oos_start is not None else OOS_START
+    start = int(idx.searchsorted(oos_start))
     n = len(X)
-    if start < 200 or start >= n - 50:
-        raise RuntimeError(f"Bad OOS start location {start} of {n}")
+    if start < 80 or start >= n - 40:
+        raise RuntimeError(f"Bad OOS start location {start} of {n} for {oos_start.date()}")
 
     parts = []
     picked = Counter()
@@ -620,7 +655,7 @@ def walk_forward(X, y, candidates, step, top_n):
         end = min(cursor + step, n)
         n_val = max(40, int(cursor * 0.12))
         fit_end = cursor - n_val
-        if fit_end < 150:
+        if fit_end < 60:
             raise RuntimeError("Training window too short for a validation tail")
 
         chosen = select_features(
@@ -636,8 +671,9 @@ def walk_forward(X, y, candidates, step, top_n):
         )
         parts.append(pd.Series(pred, index=idx[cursor:end], name="prediction"))
         fold += 1
-        print(f"    fold {fold:02d}  test {idx[cursor].date()} -> {idx[end - 1].date()}  "
-              f"bars={end - cursor}  features={len(chosen)}", flush=True)
+        if not quiet or fold == 1 or end >= n:
+            print(f"    fold {fold:02d}  test {idx[cursor].date()} -> {idx[end - 1].date()}  "
+                  f"bars={end - cursor}  features={len(chosen)}", flush=True)
         cursor = end
 
     predictions = pd.concat(parts)
@@ -750,14 +786,22 @@ def score_window(positions, actuals, bars_per_year, cost_bps, start, end):
 # RUN
 # =========================================================================
 
-def run_mode(name, X, y, candidates, step, top_n, bars_per_year, lookback):
+def run_mode(name, X, y, candidates, step, top_n, bars_per_year, lookback,
+             oos_start=None, calib_end=None, eval_start=None, out_dir=None,
+             persist=True, quiet=False):
     psection(f"WALK-FORWARD {name.upper()}")
     t0 = time.time()
-    predictions, picked = walk_forward(X, y, candidates, step, top_n)
+    oos_start = pd.Timestamp(oos_start) if oos_start is not None else OOS_START
+    calib_end = pd.Timestamp(calib_end) if calib_end is not None else CALIB_END
+    eval_start = pd.Timestamp(eval_start) if eval_start is not None else EVAL_START
+    dest = Path(out_dir) if out_dir is not None else OUTPUT_DIR
+    predictions, picked = walk_forward(
+        X, y, candidates, step, top_n, oos_start=oos_start, quiet=quiet,
+    )
     frame = pd.DataFrame({"prediction": predictions, "actual": y}).dropna().sort_index()
-    frame = frame[frame.index >= OOS_START]
-    calib = frame[(frame.index >= OOS_START) & (frame.index < CALIB_END)]
-    eval_frame = frame[frame.index >= EVAL_START]
+    frame = frame[frame.index >= oos_start]
+    calib = frame[(frame.index >= oos_start) & (frame.index < calib_end)]
+    eval_frame = frame[frame.index >= eval_start]
     print(f"    calib bars={len(calib)}  eval bars={len(eval_frame)}  "
           f"{eval_frame.index.min().date()} -> {eval_frame.index.max().date()}", flush=True)
     if len(calib) < 30 or len(eval_frame) < 50:
@@ -787,7 +831,7 @@ def run_mode(name, X, y, candidates, step, top_n, bars_per_year, lookback):
     cost_sensitivity = {}
     for sname, pos in strategies.items():
         metrics, equity, bnh = score_window(
-            pos, frame["actual"], bars_per_year, COST_BPS, EVAL_START, frame.index.max()
+            pos, frame["actual"], bars_per_year, COST_BPS, eval_start, frame.index.max()
         )
         scored[sname] = metrics
         equities[sname] = equity
@@ -798,7 +842,7 @@ def run_mode(name, X, y, candidates, step, top_n, bars_per_year, lookback):
         cost_sensitivity[sname] = {}
         for bps in COST_GRID:
             m_bps, _, _ = score_window(
-                pos, frame["actual"], bars_per_year, bps, EVAL_START, frame.index.max()
+                pos, frame["actual"], bars_per_year, bps, eval_start, frame.index.max()
             )
             cost_sensitivity[sname][str(bps)] = {
                 "sharpe": m_bps["sharpe"],
@@ -824,16 +868,20 @@ def run_mode(name, X, y, candidates, step, top_n, bars_per_year, lookback):
         "weekly_feature_share": round(weekly_picks / max(total_picks, 1), 4),
         "n_candidates": len(candidates),
         "folds_feature_count": len(picked),
+        "oos_start": str(oos_start.date()),
+        "calib_end": str(calib_end.date()),
         "eval_start": str(eval_frame.index.min().date()),
         "eval_end": str(eval_frame.index.max().date()),
         "seconds": round(time.time() - t0, 1),
     }
-    frame.to_csv(OUTPUT_DIR / f"{name}_predictions.csv")
-    eq_df = pd.DataFrame({s: equities[s] for s in equities})
-    eq_df["BuyHold"] = bnh_equity
-    eq_df.to_csv(OUTPUT_DIR / f"{name}_equity.csv")
-    with open(OUTPUT_DIR / f"{name}_summary.json", "w") as fh:
-        json.dump(result, fh, indent=2)
+    if persist:
+        dest.mkdir(parents=True, exist_ok=True)
+        frame.to_csv(dest / f"{name}_predictions.csv")
+        eq_df = pd.DataFrame({s: equities[s] for s in equities})
+        eq_df["BuyHold"] = bnh_equity
+        eq_df.to_csv(dest / f"{name}_equity.csv")
+        with open(dest / f"{name}_summary.json", "w") as fh:
+            json.dump(result, fh, indent=2)
     print(f"    {name} done in {result['seconds'] / 60:.1f} min", flush=True)
     return result
 
