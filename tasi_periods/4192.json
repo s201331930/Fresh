@@ -1,0 +1,10 @@
+{
+  "ticker": "4192",
+  "yahoo": "4192.SR",
+  "name": "Al-Saif Stores for Development & Investment Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 196,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

@@ -1,0 +1,10 @@
+{
+  "ticker": "7201",
+  "yahoo": "7201.SR",
+  "name": "Arab Sea Information Systems Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 334,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

@@ -1,0 +1,10 @@
+{
+  "ticker": "4191",
+  "yahoo": "4191.SR",
+  "name": "Abdullah Saad Mohammed Abo Moati for Bookstores Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 356,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

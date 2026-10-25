@@ -1,0 +1,10 @@
+{
+  "ticker": "6015",
+  "yahoo": "6015.SR",
+  "name": "Americana Restaurants International PLC",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 197,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

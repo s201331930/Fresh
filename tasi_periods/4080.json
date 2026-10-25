@@ -1,0 +1,346 @@
+{
+  "ticker": "4080",
+  "yahoo": "4080.SR",
+  "name": "Sinad Holding Company",
+  "status": "ok",
+  "in_original_12": false,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "n_daily_bars": 3886,
+  "n_weekly_bars": 850,
+  "week_rule": "W-THU",
+  "frozen_threshold": 0.42,
+  "frozen_scale": 0.7667,
+  "model": {
+    "mae": 1.3373,
+    "rmse": 1.9961,
+    "r2": -0.0014,
+    "dir_accuracy": 50.11,
+    "corr": 0.0358
+  },
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-21",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.142,
+        "cagr": -6.0,
+        "max_drawdown": -56.47,
+        "in_market_pct": 62.2,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 77.7
+      },
+      "Binary (t=opt)": {
+        "sharpe": 0.482,
+        "cagr": 3.22,
+        "max_drawdown": -15.64,
+        "in_market_pct": 2.2,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 5.19
+      },
+      "Binary (t=opt frozen)": {
+        "sharpe": 0.482,
+        "cagr": 3.22,
+        "max_drawdown": -15.64,
+        "in_market_pct": 2.2,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 5.19
+      },
+      "Scaled": {
+        "sharpe": 0.398,
+        "cagr": 2.5,
+        "max_drawdown": -13.6,
+        "in_market_pct": 62.2,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 17.2
+      },
+      "Scaled (frozen)": {
+        "sharpe": 0.398,
+        "cagr": 2.5,
+        "max_drawdown": -13.6,
+        "in_market_pct": 62.2,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 17.2
+      },
+      "Adaptive": {
+        "sharpe": 0.188,
+        "cagr": 1.67,
+        "max_drawdown": -60.04,
+        "in_market_pct": 46.0,
+        "n_bars": 2626,
+        "n_years": 10.8,
+        "bnh_sharpe": -0.195,
+        "bnh_cagr": -10.23,
+        "bnh_max_drawdown": -75.49,
+        "turnover_per_year": 44.73
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "refit_threshold": 0.42,
+      "refit_scale": 0.7667,
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.523,
+          "cagr": -16.21,
+          "max_drawdown": -49.02,
+          "in_market_pct": 79.8,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 51.8
+        },
+        "Binary (t=opt)": {
+          "sharpe": 0.59,
+          "cagr": 6.04,
+          "max_drawdown": -15.64,
+          "in_market_pct": 3.0,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 6.02
+        },
+        "Binary (t=opt frozen)": {
+          "sharpe": 0.59,
+          "cagr": 6.04,
+          "max_drawdown": -15.64,
+          "in_market_pct": 3.0,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 6.02
+        },
+        "Scaled": {
+          "sharpe": 0.656,
+          "cagr": 6.04,
+          "max_drawdown": -11.35,
+          "in_market_pct": 79.8,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 21.78
+        },
+        "Scaled (frozen)": {
+          "sharpe": 0.656,
+          "cagr": 6.04,
+          "max_drawdown": -11.35,
+          "in_market_pct": 79.8,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 21.78
+        },
+        "Adaptive": {
+          "sharpe": 0.531,
+          "cagr": 7.3,
+          "max_drawdown": -15.64,
+          "in_market_pct": 22.6,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.754,
+          "bnh_cagr": -23.94,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 39.77
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "refit_threshold": 0.22,
+      "refit_scale": 0.2781,
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.744,
+          "cagr": 16.59,
+          "max_drawdown": -29.17,
+          "in_market_pct": 57.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 81.46
+        },
+        "Binary (t=opt)": {
+          "sharpe": -0.242,
+          "cagr": -3.12,
+          "max_drawdown": -19.55,
+          "in_market_pct": 5.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 11.35
+        },
+        "Binary (t=opt frozen)": {
+          "sharpe": 1.578,
+          "cagr": 9.0,
+          "max_drawdown": -0.9,
+          "in_market_pct": 1.6,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 4.01
+        },
+        "Scaled": {
+          "sharpe": 0.486,
+          "cagr": 5.84,
+          "max_drawdown": -19.3,
+          "in_market_pct": 57.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 38.15
+        },
+        "Scaled (frozen)": {
+          "sharpe": 0.838,
+          "cagr": 5.29,
+          "max_drawdown": -7.37,
+          "in_market_pct": 57.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 15.99
+        },
+        "Adaptive": {
+          "sharpe": 0.907,
+          "cagr": 25.21,
+          "max_drawdown": -37.47,
+          "in_market_pct": 67.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.85,
+          "bnh_cagr": 26.49,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 50.08
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-21",
+      "refit_threshold": 0.385,
+      "refit_scale": 0.2101,
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.506,
+          "cagr": -11.73,
+          "max_drawdown": -53.12,
+          "in_market_pct": 54.3,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 91.68
+        },
+        "Binary (t=opt)": {
+          "sharpe": -0.461,
+          "cagr": -2.23,
+          "max_drawdown": -13.79,
+          "in_market_pct": 3.1,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 7.08
+        },
+        "Binary (t=opt frozen)": {
+          "sharpe": -0.41,
+          "cagr": -1.89,
+          "max_drawdown": -13.5,
+          "in_market_pct": 2.2,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 5.42
+        },
+        "Scaled": {
+          "sharpe": -0.181,
+          "cagr": -2.57,
+          "max_drawdown": -29.48,
+          "in_market_pct": 54.3,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 41.43
+        },
+        "Scaled (frozen)": {
+          "sharpe": -0.268,
+          "cagr": -1.32,
+          "max_drawdown": -13.6,
+          "in_market_pct": 54.3,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 15.15
+        },
+        "Adaptive": {
+          "sharpe": -0.726,
+          "cagr": -13.67,
+          "max_drawdown": -60.04,
+          "in_market_pct": 47.2,
+          "n_bars": 1149,
+          "n_years": 4.8,
+          "bnh_sharpe": -0.632,
+          "bnh_cagr": -19.64,
+          "bnh_max_drawdown": -69.92,
+          "turnover_per_year": 44.59
+        }
+      }
+    }
+  ],
+  "seconds": 11.3
+}

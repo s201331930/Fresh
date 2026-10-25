@@ -1,0 +1,10 @@
+{
+  "ticker": "4261",
+  "yahoo": "4261.SR",
+  "name": "Theeb Rent A Car Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 285,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

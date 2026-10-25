@@ -1,0 +1,10 @@
+{
+  "ticker": "4148",
+  "yahoo": "4148.SR",
+  "name": "Alwasail Industrial Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 236,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

@@ -1,0 +1,2036 @@
+{
+  "n_universe": 252,
+  "n_ok": 155,
+  "n_skipped": 97,
+  "n_error": 0,
+  "skipped": [
+    {
+      "ticker": "1111",
+      "name": "Saudi Tadawul Group Holding Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1182",
+      "name": "Amlak International Finance Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1183",
+      "name": "SHL Finance Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1321",
+      "name": "East Pipes Integrated Company for Industry",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1322",
+      "name": "Al Masane Al Kobra Mining Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1323",
+      "name": "United Carton Industries Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "1324",
+      "name": "Saleh Abdulaziz Al Rashed & Sons Co.",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "1325",
+      "name": "Watani Iron Steel Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1830",
+      "name": "Leejam Sports Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1831",
+      "name": "Maharah for Human Resources Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1832",
+      "name": "Sadr Logistics Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "1833",
+      "name": "Almawarid Manpower Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "1834",
+      "name": "Saudi Manpower Solutions Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "1835",
+      "name": "Tamkeen Human Resources Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2081",
+      "name": "Alkhorayef Water and Power Technologies Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "2082",
+      "name": "ACWA Power Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "2083",
+      "name": "Power and Water Utility Company for Jubail and Yanbu",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2084",
+      "name": "Miahona Company Limited",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2222",
+      "name": "Saudi Arabian Oil Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "2223",
+      "name": "Saudi Aramco Base Oil Company - Luberef",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2281",
+      "name": "Tanmiah Food Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "2282",
+      "name": "Naqi Water Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "2283",
+      "name": "The First Milling Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2284",
+      "name": "Modern Mills Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2285",
+      "name": "Arabian Mills for Food Products Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2286",
+      "name": "Fourth Milling Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2287",
+      "name": "Arabian Company for Agricultural and Industrial Investment",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2288",
+      "name": "Nofoth Food Products Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2381",
+      "name": "Arabian Drilling Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "2382",
+      "name": "ADES Holding Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "3008",
+      "name": "Al Kathiri Holding Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "3092",
+      "name": "Riyadh Cement Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4012",
+      "name": "Thob Al Aseel Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4013",
+      "name": "Dr. Sulaiman Al Habib Medical Services Group Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4014",
+      "name": "Scientific and Medical Equipment House Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4015",
+      "name": "Jamjoom Pharmaceuticals Factory Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4016",
+      "name": "Middle East Pharmaceutical Industries Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4017",
+      "name": "Dr. Soliman Abdel Kader Fakeeh Hospital Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4018",
+      "name": "Almoosa Health Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4019",
+      "name": "Specialized Medical Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4021",
+      "name": "Canadian General Medical Center Complex Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4051",
+      "name": "Baazeem Trading Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4071",
+      "name": "Arabian Contracting Services Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4072",
+      "name": "MBC Group",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4081",
+      "name": "Nayifat Finance Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4082",
+      "name": "Morabaha Marina Financing Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4083",
+      "name": "United International Holding Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4084",
+      "name": "Derayah Financial Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4141",
+      "name": "Al-Omran Industrial Trading Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4142",
+      "name": "Riyadh Cables Group Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4143",
+      "name": "Al Taiseer Group TALCO Industrial Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4144",
+      "name": "Raoom trading Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4145",
+      "name": "Al Obeikan Glass Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4146",
+      "name": "Gas Arabian Services Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4147",
+      "name": "Consolidated Grunenfelder Saady Holding Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4148",
+      "name": "Alwasail Industrial Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4161",
+      "name": "BinDawood Holding Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4162",
+      "name": "Almunajem Foods Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4163",
+      "name": "Al-Dawaa Medical Services Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4164",
+      "name": "Nahdi Medical Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4165",
+      "name": "Al Majed for Oud Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4191",
+      "name": "Abdullah Saad Mohammed Abo Moati for Bookstores Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4192",
+      "name": "Al-Saif Stores for Development & Investment Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4193",
+      "name": "Nice One Beauty Digital Marketing Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4194",
+      "name": "Marketing Home Group Company for Trading Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4261",
+      "name": "Theeb Rent A Car Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4262",
+      "name": "Lumi Rental Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4263",
+      "name": "SAL Saudi Logistics Services Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4264",
+      "name": "Flynas Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4265",
+      "name": "Cherry Trading Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4291",
+      "name": "National Company for Learning and Education",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4292",
+      "name": "Ataa Educational Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4321",
+      "name": "Arabian Centres Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4322",
+      "name": "Retal Urban Development Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4323",
+      "name": "Sumou Real Estate Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4324",
+      "name": "Banan Real Estate Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "4325",
+      "name": "Umm Al Qura for Development and Construction Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4326",
+      "name": "Dar Al Majed Real Estate Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4327",
+      "name": "Al Ramz Real Estate Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "4328",
+      "name": "Ladun Investment Co.",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "6012",
+      "name": "Raydan Food Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "6013",
+      "name": "Development Works Food Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "6014",
+      "name": "Alamar Foods Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "6015",
+      "name": "Americana Restaurants International PLC",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "6016",
+      "name": "Shatirah House Restaurant Co.",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "6017",
+      "name": "Jahez International Company for Information Systems Technology",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "6018",
+      "name": "Sport Clubs Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "6019",
+      "name": "Almasar Alshamil Education Company JSC",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "6022",
+      "name": "Armah Sports Co.",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "7200",
+      "name": "Al Moammar Information Systems Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "7201",
+      "name": "Arab Sea Information Systems Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "7202",
+      "name": "Arabian Internet and Communication Services Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "7203",
+      "name": "Elm Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "7204",
+      "name": "Perfect Presentation for Commercial Services Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "7205",
+      "name": "Dar AlBalad for Business Solutions Company",
+      "reason": "fewer than 1000 sessions"
+    },
+    {
+      "ticker": "7211",
+      "name": "Saudi Azm for Communication and Information Technology Company",
+      "reason": "not enough history for training and two evaluation periods"
+    },
+    {
+      "ticker": "8313",
+      "name": "Rasan Information Technology Company",
+      "reason": "fewer than 1000 sessions"
+    }
+  ],
+  "errors": [],
+  "grid": {
+    "3y": 142,
+    "2y": 13,
+    "fixed_2010": 0,
+    "shifted": 155
+  },
+  "all": {
+    "section": "all",
+    "n": 155,
+    "periods": {
+      "Binary (t=0)": {
+        "ticker_periods": 438,
+        "beat_bnh": 290,
+        "median_sharpe": 0.404,
+        "median_bnh": 0.244,
+        "median_gap": 0.187,
+        "median_cagr": 6.4,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -32.69,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 58.3,
+        "cash_lt_20": 10,
+        "names": 155,
+        "names_majority": 103,
+        "names_all_periods": 50,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 93,
+            "median_sharpe": 0.377,
+            "median_bnh": 0.071,
+            "median_gap": 0.324,
+            "median_in_market": 55.5
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 77,
+            "median_sharpe": 0.754,
+            "median_bnh": 0.726,
+            "median_gap": 0.058,
+            "median_in_market": 56.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.651,
+            "median_bnh": 0.9,
+            "median_gap": -0.249,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.09,
+            "median_bnh": -0.227,
+            "median_gap": -0.05,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 109,
+            "median_sharpe": 0.165,
+            "median_bnh": -0.192,
+            "median_gap": 0.232,
+            "median_in_market": 61.9
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.349,
+            "median_bnh": -0.444,
+            "median_gap": -0.03,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 438,
+        "beat_bnh": 233,
+        "median_sharpe": 0.272,
+        "median_bnh": 0.244,
+        "median_gap": 0.019,
+        "median_cagr": 1.9,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -22.71,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 18.8,
+        "cash_lt_20": 224,
+        "names": 155,
+        "names_majority": 76,
+        "names_all_periods": 26,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 67,
+            "median_sharpe": 0.213,
+            "median_bnh": 0.071,
+            "median_gap": 0.054,
+            "median_in_market": 5.0
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 60,
+            "median_sharpe": 0.583,
+            "median_bnh": 0.726,
+            "median_gap": -0.06,
+            "median_in_market": 17.4
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": -0.052,
+            "median_bnh": 0.9,
+            "median_gap": -0.952,
+            "median_in_market": 23.7
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 7,
+            "median_sharpe": 0.254,
+            "median_bnh": -0.227,
+            "median_gap": 0.002,
+            "median_in_market": 29.7
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 95,
+            "median_sharpe": 0.134,
+            "median_bnh": -0.192,
+            "median_gap": 0.09,
+            "median_in_market": 56.5
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 4,
+            "median_sharpe": -0.647,
+            "median_bnh": -0.444,
+            "median_gap": -0.229,
+            "median_in_market": 1.9
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 438,
+        "beat_bnh": 214,
+        "median_sharpe": 0.196,
+        "median_bnh": 0.244,
+        "median_gap": 0.0,
+        "median_cagr": 0.71,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -12.86,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 3.7,
+        "cash_lt_20": 360,
+        "names": 155,
+        "names_majority": 65,
+        "names_all_periods": 23,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 67,
+            "median_sharpe": 0.213,
+            "median_bnh": 0.071,
+            "median_gap": 0.054,
+            "median_in_market": 5.0
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 35,
+            "median_sharpe": 0.327,
+            "median_bnh": 0.726,
+            "median_gap": -0.489,
+            "median_in_market": 3.2
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": -0.052,
+            "median_bnh": 0.9,
+            "median_gap": -0.952,
+            "median_in_market": 23.7
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 7,
+            "median_sharpe": 0.254,
+            "median_bnh": -0.227,
+            "median_gap": 0.002,
+            "median_in_market": 29.7
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 100,
+            "median_sharpe": 0.128,
+            "median_bnh": -0.192,
+            "median_gap": 0.239,
+            "median_in_market": 2.2
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.508,
+            "median_bnh": -0.444,
+            "median_gap": -0.025,
+            "median_in_market": 47.3
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 438,
+        "beat_bnh": 275,
+        "median_sharpe": 0.418,
+        "median_bnh": 0.244,
+        "median_gap": 0.191,
+        "median_cagr": 3.55,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -16.71,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 58.3,
+        "cash_lt_20": 10,
+        "names": 155,
+        "names_majority": 100,
+        "names_all_periods": 32,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 87,
+            "median_sharpe": 0.401,
+            "median_bnh": 0.071,
+            "median_gap": 0.27,
+            "median_in_market": 55.5
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 57,
+            "median_sharpe": 0.632,
+            "median_bnh": 0.726,
+            "median_gap": -0.17,
+            "median_in_market": 56.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.198,
+            "median_bnh": 0.9,
+            "median_gap": -0.702,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.319,
+            "median_bnh": -0.227,
+            "median_gap": -0.259,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 120,
+            "median_sharpe": 0.3,
+            "median_bnh": -0.192,
+            "median_gap": 0.337,
+            "median_in_market": 61.9
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.154,
+            "median_bnh": -0.444,
+            "median_gap": -0.019,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 438,
+        "beat_bnh": 264,
+        "median_sharpe": 0.386,
+        "median_bnh": 0.244,
+        "median_gap": 0.17,
+        "median_cagr": 2.45,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -12.48,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 58.3,
+        "cash_lt_20": 10,
+        "names": 155,
+        "names_majority": 94,
+        "names_all_periods": 29,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 87,
+            "median_sharpe": 0.401,
+            "median_bnh": 0.071,
+            "median_gap": 0.27,
+            "median_in_market": 55.5
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 51,
+            "median_sharpe": 0.516,
+            "median_bnh": 0.726,
+            "median_gap": -0.251,
+            "median_in_market": 56.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.198,
+            "median_bnh": 0.9,
+            "median_gap": -0.702,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.319,
+            "median_bnh": -0.227,
+            "median_gap": -0.259,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 115,
+            "median_sharpe": 0.29,
+            "median_bnh": -0.192,
+            "median_gap": 0.33,
+            "median_in_market": 61.9
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.202,
+            "median_bnh": -0.444,
+            "median_gap": -0.03,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 438,
+        "beat_bnh": 285,
+        "median_sharpe": 0.379,
+        "median_bnh": 0.244,
+        "median_gap": 0.144,
+        "median_cagr": 5.88,
+        "median_bnh_cagr": 1.81,
+        "median_dd": -32.45,
+        "median_bnh_dd": -46.94,
+        "median_in_market": 53.2,
+        "cash_lt_20": 3,
+        "names": 155,
+        "names_majority": 98,
+        "names_all_periods": 44,
+        "by_period": {
+          "2016-2018": {
+            "n": 126,
+            "beat_bnh": 87,
+            "median_sharpe": 0.322,
+            "median_bnh": 0.071,
+            "median_gap": 0.202,
+            "median_in_market": 50.0
+          },
+          "2019-2021": {
+            "n": 142,
+            "beat_bnh": 74,
+            "median_sharpe": 0.768,
+            "median_bnh": 0.726,
+            "median_gap": 0.021,
+            "median_in_market": 61.8
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 1,
+            "median_sharpe": 0.736,
+            "median_bnh": 0.9,
+            "median_gap": -0.164,
+            "median_in_market": 57.1
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 9,
+            "median_sharpe": 0.122,
+            "median_bnh": -0.227,
+            "median_gap": 0.285,
+            "median_in_market": 41.4
+          },
+          "2022-2026": {
+            "n": 142,
+            "beat_bnh": 106,
+            "median_sharpe": 0.111,
+            "median_bnh": -0.192,
+            "median_gap": 0.223,
+            "median_in_market": 47.1
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 8,
+            "median_sharpe": -0.224,
+            "median_bnh": -0.444,
+            "median_gap": 0.061,
+            "median_in_market": 46.5
+          }
+        }
+      }
+    },
+    "full": {
+      "Binary (t=0)": {
+        "ticker_periods": 155,
+        "beat_bnh": 114,
+        "median_sharpe": 0.361,
+        "median_bnh": 0.165,
+        "median_gap": 0.177,
+        "median_cagr": 5.96,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -47.6,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 58.0,
+        "cash_lt_20": 0,
+        "names": 155,
+        "names_majority": 114,
+        "names_all_periods": 114,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 114,
+            "median_sharpe": 0.361,
+            "median_bnh": 0.165,
+            "median_gap": 0.177,
+            "median_in_market": 58.0
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 155,
+        "beat_bnh": 74,
+        "median_sharpe": 0.153,
+        "median_bnh": 0.165,
+        "median_gap": -0.012,
+        "median_cagr": 0.66,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -23.11,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 4.7,
+        "cash_lt_20": 126,
+        "names": 155,
+        "names_majority": 74,
+        "names_all_periods": 74,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 74,
+            "median_sharpe": 0.153,
+            "median_bnh": 0.165,
+            "median_gap": -0.012,
+            "median_in_market": 4.7
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 155,
+        "beat_bnh": 74,
+        "median_sharpe": 0.153,
+        "median_bnh": 0.165,
+        "median_gap": -0.012,
+        "median_cagr": 0.66,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -23.11,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 4.7,
+        "cash_lt_20": 126,
+        "names": 155,
+        "names_majority": 74,
+        "names_all_periods": 74,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 74,
+            "median_sharpe": 0.153,
+            "median_bnh": 0.165,
+            "median_gap": -0.012,
+            "median_in_market": 4.7
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 155,
+        "beat_bnh": 110,
+        "median_sharpe": 0.38,
+        "median_bnh": 0.165,
+        "median_gap": 0.167,
+        "median_cagr": 2.59,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -20.33,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 58.0,
+        "cash_lt_20": 0,
+        "names": 155,
+        "names_majority": 110,
+        "names_all_periods": 110,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 110,
+            "median_sharpe": 0.38,
+            "median_bnh": 0.165,
+            "median_gap": 0.167,
+            "median_in_market": 58.0
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 155,
+        "beat_bnh": 110,
+        "median_sharpe": 0.38,
+        "median_bnh": 0.165,
+        "median_gap": 0.167,
+        "median_cagr": 2.59,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -20.33,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 58.0,
+        "cash_lt_20": 0,
+        "names": 155,
+        "names_majority": 110,
+        "names_all_periods": 110,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 110,
+            "median_sharpe": 0.38,
+            "median_bnh": 0.165,
+            "median_gap": 0.167,
+            "median_in_market": 58.0
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 155,
+        "beat_bnh": 118,
+        "median_sharpe": 0.355,
+        "median_bnh": 0.165,
+        "median_gap": 0.21,
+        "median_cagr": 5.37,
+        "median_bnh_cagr": -0.06,
+        "median_dd": -45.59,
+        "median_bnh_dd": -66.74,
+        "median_in_market": 52.1,
+        "cash_lt_20": 0,
+        "names": 155,
+        "names_majority": 118,
+        "names_all_periods": 118,
+        "by_period": {
+          "full": {
+            "n": 155,
+            "beat_bnh": 118,
+            "median_sharpe": 0.355,
+            "median_bnh": 0.165,
+            "median_gap": 0.21,
+            "median_in_market": 52.1
+          }
+        }
+      }
+    }
+  },
+  "original_12": {
+    "section": "original_12",
+    "n": 12,
+    "periods": {
+      "Binary (t=0)": {
+        "ticker_periods": 35,
+        "beat_bnh": 28,
+        "median_sharpe": 0.779,
+        "median_bnh": 0.543,
+        "median_gap": 0.279,
+        "median_cagr": 15.14,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -22.75,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 70.0,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 11,
+        "names_all_periods": 6,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 7,
+            "median_sharpe": 0.923,
+            "median_bnh": 0.676,
+            "median_gap": 0.117,
+            "median_in_market": 60.3
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 10,
+            "median_sharpe": 0.992,
+            "median_bnh": 0.657,
+            "median_gap": 0.412,
+            "median_in_market": 70.3
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 11,
+            "median_sharpe": 0.597,
+            "median_bnh": 0.318,
+            "median_gap": 0.263,
+            "median_in_market": 72.2
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 35,
+        "beat_bnh": 16,
+        "median_sharpe": 0.494,
+        "median_bnh": 0.543,
+        "median_gap": -0.033,
+        "median_cagr": 5.79,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -18.27,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 28.3,
+        "cash_lt_20": 14,
+        "names": 12,
+        "names_majority": 6,
+        "names_all_periods": 0,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 1,
+            "median_sharpe": 0.182,
+            "median_bnh": 0.676,
+            "median_gap": -0.451,
+            "median_in_market": 3.4
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 8,
+            "median_sharpe": 0.763,
+            "median_bnh": 0.657,
+            "median_gap": 0.199,
+            "median_in_market": 80.3
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 7,
+            "median_sharpe": 0.5,
+            "median_bnh": 0.318,
+            "median_gap": 0.088,
+            "median_in_market": 50.0
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 35,
+        "beat_bnh": 9,
+        "median_sharpe": 0.267,
+        "median_bnh": 0.543,
+        "median_gap": -0.298,
+        "median_cagr": 1.06,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -7.62,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 3.0,
+        "cash_lt_20": 31,
+        "names": 12,
+        "names_majority": 0,
+        "names_all_periods": 0,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 1,
+            "median_sharpe": 0.182,
+            "median_bnh": 0.676,
+            "median_gap": -0.451,
+            "median_in_market": 3.4
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 3,
+            "median_sharpe": 0.249,
+            "median_bnh": 0.657,
+            "median_gap": -0.455,
+            "median_in_market": 3.9
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 5,
+            "median_sharpe": 0.277,
+            "median_bnh": 0.318,
+            "median_gap": -0.096,
+            "median_in_market": 1.6
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 35,
+        "beat_bnh": 21,
+        "median_sharpe": 0.682,
+        "median_bnh": 0.543,
+        "median_gap": 0.234,
+        "median_cagr": 6.38,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -14.53,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 70.0,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 8,
+        "names_all_periods": 1,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 3,
+            "median_sharpe": 0.501,
+            "median_bnh": 0.676,
+            "median_gap": -0.175,
+            "median_in_market": 60.3
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 8,
+            "median_sharpe": 0.726,
+            "median_bnh": 0.657,
+            "median_gap": 0.327,
+            "median_in_market": 70.3
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 10,
+            "median_sharpe": 0.595,
+            "median_bnh": 0.318,
+            "median_gap": 0.28,
+            "median_in_market": 72.2
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 35,
+        "beat_bnh": 20,
+        "median_sharpe": 0.648,
+        "median_bnh": 0.543,
+        "median_gap": 0.166,
+        "median_cagr": 3.28,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -9.02,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 70.0,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 7,
+        "names_all_periods": 1,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 3,
+            "median_sharpe": 0.501,
+            "median_bnh": 0.676,
+            "median_gap": -0.175,
+            "median_in_market": 60.3
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 7,
+            "median_sharpe": 0.732,
+            "median_bnh": 0.657,
+            "median_gap": 0.209,
+            "median_in_market": 70.3
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 10,
+            "median_sharpe": 0.584,
+            "median_bnh": 0.318,
+            "median_gap": 0.32,
+            "median_in_market": 72.2
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 35,
+        "beat_bnh": 21,
+        "median_sharpe": 0.632,
+        "median_bnh": 0.543,
+        "median_gap": 0.145,
+        "median_cagr": 11.42,
+        "median_bnh_cagr": 13.06,
+        "median_dd": -25.89,
+        "median_bnh_dd": -37.53,
+        "median_in_market": 64.4,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 7,
+        "names_all_periods": 3,
+        "by_period": {
+          "2016-2018": {
+            "n": 11,
+            "beat_bnh": 6,
+            "median_sharpe": 0.526,
+            "median_bnh": 0.676,
+            "median_gap": 0.053,
+            "median_in_market": 65.5
+          },
+          "2019-2021": {
+            "n": 12,
+            "beat_bnh": 8,
+            "median_sharpe": 0.787,
+            "median_bnh": 0.657,
+            "median_gap": 0.178,
+            "median_in_market": 62.5
+          },
+          "2022-2026": {
+            "n": 12,
+            "beat_bnh": 7,
+            "median_sharpe": 0.4,
+            "median_bnh": 0.318,
+            "median_gap": 0.196,
+            "median_in_market": 64.3
+          }
+        }
+      }
+    },
+    "full": {
+      "Binary (t=0)": {
+        "ticker_periods": 12,
+        "beat_bnh": 11,
+        "median_sharpe": 0.748,
+        "median_bnh": 0.453,
+        "median_gap": 0.333,
+        "median_cagr": 16.48,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -35.44,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 64.5,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 11,
+        "names_all_periods": 11,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 11,
+            "median_sharpe": 0.748,
+            "median_bnh": 0.453,
+            "median_gap": 0.333,
+            "median_in_market": 64.5
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 12,
+        "beat_bnh": 3,
+        "median_sharpe": 0.288,
+        "median_bnh": 0.453,
+        "median_gap": -0.217,
+        "median_cagr": 1.39,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -10.39,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 2.4,
+        "cash_lt_20": 10,
+        "names": 12,
+        "names_majority": 3,
+        "names_all_periods": 3,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 3,
+            "median_sharpe": 0.288,
+            "median_bnh": 0.453,
+            "median_gap": -0.217,
+            "median_in_market": 2.4
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 12,
+        "beat_bnh": 3,
+        "median_sharpe": 0.288,
+        "median_bnh": 0.453,
+        "median_gap": -0.217,
+        "median_cagr": 1.39,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -10.39,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 2.4,
+        "cash_lt_20": 10,
+        "names": 12,
+        "names_majority": 3,
+        "names_all_periods": 3,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 3,
+            "median_sharpe": 0.288,
+            "median_bnh": 0.453,
+            "median_gap": -0.217,
+            "median_in_market": 2.4
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 12,
+        "beat_bnh": 9,
+        "median_sharpe": 0.617,
+        "median_bnh": 0.453,
+        "median_gap": 0.195,
+        "median_cagr": 5.82,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -16.39,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 64.5,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 9,
+        "names_all_periods": 9,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 9,
+            "median_sharpe": 0.617,
+            "median_bnh": 0.453,
+            "median_gap": 0.195,
+            "median_in_market": 64.5
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 12,
+        "beat_bnh": 9,
+        "median_sharpe": 0.617,
+        "median_bnh": 0.453,
+        "median_gap": 0.195,
+        "median_cagr": 5.82,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -16.39,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 64.5,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 9,
+        "names_all_periods": 9,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 9,
+            "median_sharpe": 0.617,
+            "median_bnh": 0.453,
+            "median_gap": 0.195,
+            "median_in_market": 64.5
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 12,
+        "beat_bnh": 6,
+        "median_sharpe": 0.53,
+        "median_bnh": 0.453,
+        "median_gap": 0.031,
+        "median_cagr": 10.1,
+        "median_bnh_cagr": 8.68,
+        "median_dd": -36.9,
+        "median_bnh_dd": -53.08,
+        "median_in_market": 63.3,
+        "cash_lt_20": 0,
+        "names": 12,
+        "names_majority": 6,
+        "names_all_periods": 6,
+        "by_period": {
+          "full": {
+            "n": 12,
+            "beat_bnh": 6,
+            "median_sharpe": 0.53,
+            "median_bnh": 0.453,
+            "median_gap": 0.031,
+            "median_in_market": 63.3
+          }
+        }
+      }
+    }
+  },
+  "rest": {
+    "section": "rest",
+    "n": 143,
+    "periods": {
+      "Binary (t=0)": {
+        "ticker_periods": 403,
+        "beat_bnh": 262,
+        "median_sharpe": 0.372,
+        "median_bnh": 0.191,
+        "median_gap": 0.181,
+        "median_cagr": 6.02,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -33.6,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 57.6,
+        "cash_lt_20": 10,
+        "names": 143,
+        "names_majority": 92,
+        "names_all_periods": 44,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 86,
+            "median_sharpe": 0.357,
+            "median_bnh": 0.003,
+            "median_gap": 0.334,
+            "median_in_market": 54.5
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 67,
+            "median_sharpe": 0.746,
+            "median_bnh": 0.729,
+            "median_gap": 0.029,
+            "median_in_market": 54.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.651,
+            "median_bnh": 0.9,
+            "median_gap": -0.249,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.09,
+            "median_bnh": -0.227,
+            "median_gap": -0.05,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 98,
+            "median_sharpe": 0.087,
+            "median_bnh": -0.258,
+            "median_gap": 0.232,
+            "median_in_market": 60.6
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.349,
+            "median_bnh": -0.444,
+            "median_gap": -0.03,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 403,
+        "beat_bnh": 217,
+        "median_sharpe": 0.234,
+        "median_bnh": 0.191,
+        "median_gap": 0.021,
+        "median_cagr": 1.41,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -23.02,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 18.3,
+        "cash_lt_20": 210,
+        "names": 143,
+        "names_majority": 70,
+        "names_all_periods": 26,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 66,
+            "median_sharpe": 0.218,
+            "median_bnh": 0.003,
+            "median_gap": 0.137,
+            "median_in_market": 5.2
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 52,
+            "median_sharpe": 0.573,
+            "median_bnh": 0.729,
+            "median_gap": -0.086,
+            "median_in_market": 12.1
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": -0.052,
+            "median_bnh": 0.9,
+            "median_gap": -0.952,
+            "median_in_market": 23.7
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 7,
+            "median_sharpe": 0.254,
+            "median_bnh": -0.227,
+            "median_gap": 0.002,
+            "median_in_market": 29.7
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 88,
+            "median_sharpe": 0.069,
+            "median_bnh": -0.258,
+            "median_gap": 0.09,
+            "median_in_market": 58.6
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 4,
+            "median_sharpe": -0.647,
+            "median_bnh": -0.444,
+            "median_gap": -0.229,
+            "median_in_market": 1.9
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 403,
+        "beat_bnh": 205,
+        "median_sharpe": 0.191,
+        "median_bnh": 0.191,
+        "median_gap": 0.005,
+        "median_cagr": 0.71,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -13.37,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 3.8,
+        "cash_lt_20": 329,
+        "names": 143,
+        "names_majority": 65,
+        "names_all_periods": 23,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 66,
+            "median_sharpe": 0.218,
+            "median_bnh": 0.003,
+            "median_gap": 0.137,
+            "median_in_market": 5.2
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 32,
+            "median_sharpe": 0.361,
+            "median_bnh": 0.729,
+            "median_gap": -0.489,
+            "median_in_market": 3.2
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": -0.052,
+            "median_bnh": 0.9,
+            "median_gap": -0.952,
+            "median_in_market": 23.7
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 7,
+            "median_sharpe": 0.254,
+            "median_bnh": -0.227,
+            "median_gap": 0.002,
+            "median_in_market": 29.7
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 95,
+            "median_sharpe": 0.119,
+            "median_bnh": -0.258,
+            "median_gap": 0.254,
+            "median_in_market": 2.2
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.508,
+            "median_bnh": -0.444,
+            "median_gap": -0.025,
+            "median_in_market": 47.3
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 403,
+        "beat_bnh": 254,
+        "median_sharpe": 0.382,
+        "median_bnh": 0.191,
+        "median_gap": 0.188,
+        "median_cagr": 3.36,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -16.84,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 57.6,
+        "cash_lt_20": 10,
+        "names": 143,
+        "names_majority": 92,
+        "names_all_periods": 31,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 84,
+            "median_sharpe": 0.392,
+            "median_bnh": 0.003,
+            "median_gap": 0.323,
+            "median_in_market": 54.5
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 49,
+            "median_sharpe": 0.56,
+            "median_bnh": 0.729,
+            "median_gap": -0.222,
+            "median_in_market": 54.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.198,
+            "median_bnh": 0.9,
+            "median_gap": -0.702,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.319,
+            "median_bnh": -0.227,
+            "median_gap": -0.259,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 110,
+            "median_sharpe": 0.268,
+            "median_bnh": -0.258,
+            "median_gap": 0.353,
+            "median_in_market": 60.6
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.154,
+            "median_bnh": -0.444,
+            "median_gap": -0.019,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 403,
+        "beat_bnh": 244,
+        "median_sharpe": 0.368,
+        "median_bnh": 0.191,
+        "median_gap": 0.172,
+        "median_cagr": 2.15,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -12.73,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 57.6,
+        "cash_lt_20": 10,
+        "names": 143,
+        "names_majority": 87,
+        "names_all_periods": 28,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 84,
+            "median_sharpe": 0.392,
+            "median_bnh": 0.003,
+            "median_gap": 0.323,
+            "median_in_market": 54.5
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 44,
+            "median_sharpe": 0.506,
+            "median_bnh": 0.729,
+            "median_gap": -0.282,
+            "median_in_market": 54.9
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 0,
+            "median_sharpe": 0.198,
+            "median_bnh": 0.9,
+            "median_gap": -0.702,
+            "median_in_market": 56.5
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 5,
+            "median_sharpe": -0.319,
+            "median_bnh": -0.227,
+            "median_gap": -0.259,
+            "median_in_market": 55.8
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 105,
+            "median_sharpe": 0.229,
+            "median_bnh": -0.258,
+            "median_gap": 0.34,
+            "median_in_market": 60.6
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 6,
+            "median_sharpe": -0.202,
+            "median_bnh": -0.444,
+            "median_gap": -0.03,
+            "median_in_market": 57.6
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 403,
+        "beat_bnh": 264,
+        "median_sharpe": 0.35,
+        "median_bnh": 0.191,
+        "median_gap": 0.143,
+        "median_cagr": 4.95,
+        "median_bnh_cagr": 0.54,
+        "median_dd": -32.86,
+        "median_bnh_dd": -47.61,
+        "median_in_market": 52.1,
+        "cash_lt_20": 3,
+        "names": 143,
+        "names_majority": 91,
+        "names_all_periods": 41,
+        "by_period": {
+          "2016-2018": {
+            "n": 115,
+            "beat_bnh": 81,
+            "median_sharpe": 0.269,
+            "median_bnh": 0.003,
+            "median_gap": 0.224,
+            "median_in_market": 49.0
+          },
+          "2019-2021": {
+            "n": 130,
+            "beat_bnh": 66,
+            "median_sharpe": 0.768,
+            "median_bnh": 0.729,
+            "median_gap": 0.01,
+            "median_in_market": 61.5
+          },
+          "2020-2021": {
+            "n": 2,
+            "beat_bnh": 1,
+            "median_sharpe": 0.736,
+            "median_bnh": 0.9,
+            "median_gap": -0.164,
+            "median_in_market": 57.1
+          },
+          "2022-2023": {
+            "n": 13,
+            "beat_bnh": 9,
+            "median_sharpe": 0.122,
+            "median_bnh": -0.227,
+            "median_gap": 0.285,
+            "median_in_market": 41.4
+          },
+          "2022-2026": {
+            "n": 130,
+            "beat_bnh": 99,
+            "median_sharpe": 0.08,
+            "median_bnh": -0.258,
+            "median_gap": 0.246,
+            "median_in_market": 46.5
+          },
+          "2024-2026": {
+            "n": 13,
+            "beat_bnh": 8,
+            "median_sharpe": -0.224,
+            "median_bnh": -0.444,
+            "median_gap": 0.061,
+            "median_in_market": 46.5
+          }
+        }
+      }
+    },
+    "full": {
+      "Binary (t=0)": {
+        "ticker_periods": 143,
+        "beat_bnh": 103,
+        "median_sharpe": 0.351,
+        "median_bnh": 0.15,
+        "median_gap": 0.168,
+        "median_cagr": 5.61,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -48.54,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 57.1,
+        "cash_lt_20": 0,
+        "names": 143,
+        "names_majority": 103,
+        "names_all_periods": 103,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 103,
+            "median_sharpe": 0.351,
+            "median_bnh": 0.15,
+            "median_gap": 0.168,
+            "median_in_market": 57.1
+          }
+        }
+      },
+      "Binary (t=opt)": {
+        "ticker_periods": 143,
+        "beat_bnh": 71,
+        "median_sharpe": 0.134,
+        "median_bnh": 0.15,
+        "median_gap": 0.0,
+        "median_cagr": 0.46,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -23.69,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 4.7,
+        "cash_lt_20": 116,
+        "names": 143,
+        "names_majority": 71,
+        "names_all_periods": 71,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 71,
+            "median_sharpe": 0.134,
+            "median_bnh": 0.15,
+            "median_gap": 0.0,
+            "median_in_market": 4.7
+          }
+        }
+      },
+      "Binary (t=opt frozen)": {
+        "ticker_periods": 143,
+        "beat_bnh": 71,
+        "median_sharpe": 0.134,
+        "median_bnh": 0.15,
+        "median_gap": 0.0,
+        "median_cagr": 0.46,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -23.69,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 4.7,
+        "cash_lt_20": 116,
+        "names": 143,
+        "names_majority": 71,
+        "names_all_periods": 71,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 71,
+            "median_sharpe": 0.134,
+            "median_bnh": 0.15,
+            "median_gap": 0.0,
+            "median_in_market": 4.7
+          }
+        }
+      },
+      "Scaled": {
+        "ticker_periods": 143,
+        "beat_bnh": 101,
+        "median_sharpe": 0.357,
+        "median_bnh": 0.15,
+        "median_gap": 0.166,
+        "median_cagr": 2.45,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -21.08,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 57.1,
+        "cash_lt_20": 0,
+        "names": 143,
+        "names_majority": 101,
+        "names_all_periods": 101,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 101,
+            "median_sharpe": 0.357,
+            "median_bnh": 0.15,
+            "median_gap": 0.166,
+            "median_in_market": 57.1
+          }
+        }
+      },
+      "Scaled (frozen)": {
+        "ticker_periods": 143,
+        "beat_bnh": 101,
+        "median_sharpe": 0.357,
+        "median_bnh": 0.15,
+        "median_gap": 0.166,
+        "median_cagr": 2.45,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -21.08,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 57.1,
+        "cash_lt_20": 0,
+        "names": 143,
+        "names_majority": 101,
+        "names_all_periods": 101,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 101,
+            "median_sharpe": 0.357,
+            "median_bnh": 0.15,
+            "median_gap": 0.166,
+            "median_in_market": 57.1
+          }
+        }
+      },
+      "Adaptive": {
+        "ticker_periods": 143,
+        "beat_bnh": 112,
+        "median_sharpe": 0.333,
+        "median_bnh": 0.15,
+        "median_gap": 0.213,
+        "median_cagr": 5.19,
+        "median_bnh_cagr": -1.34,
+        "median_dd": -46.15,
+        "median_bnh_dd": -68.07,
+        "median_in_market": 51.7,
+        "cash_lt_20": 0,
+        "names": 143,
+        "names_majority": 112,
+        "names_all_periods": 112,
+        "by_period": {
+          "full": {
+            "n": 143,
+            "beat_bnh": 112,
+            "median_sharpe": 0.333,
+            "median_bnh": 0.15,
+            "median_gap": 0.213,
+            "median_in_market": 51.7
+          }
+        }
+      }
+    }
+  }
+}

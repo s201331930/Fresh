@@ -1,0 +1,10 @@
+{
+  "ticker": "2223",
+  "yahoo": "2223.SR",
+  "name": "Saudi Aramco Base Oil Company - Luberef",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 196,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

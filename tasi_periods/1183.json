@@ -1,0 +1,10 @@
+{
+  "ticker": "1183",
+  "yahoo": "1183.SR",
+  "name": "SHL Finance Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 230,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

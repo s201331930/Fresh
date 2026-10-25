@@ -1,0 +1,10 @@
+{
+  "ticker": "1321",
+  "yahoo": "1321.SR",
+  "name": "East Pipes Integrated Company for Industry",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 240,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

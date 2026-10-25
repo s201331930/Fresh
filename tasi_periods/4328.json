@@ -1,0 +1,10 @@
+{
+  "ticker": "4328",
+  "yahoo": "4328.SR",
+  "name": "Ladun Investment Co.",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 223,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

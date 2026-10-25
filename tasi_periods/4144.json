@@ -1,0 +1,10 @@
+{
+  "ticker": "4144",
+  "yahoo": "4144.SR",
+  "name": "Raoom trading Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 227,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

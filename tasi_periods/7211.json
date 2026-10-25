@@ -1,0 +1,10 @@
+{
+  "ticker": "7211",
+  "yahoo": "7211.SR",
+  "name": "Saudi Azm for Communication and Information Technology Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 226,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

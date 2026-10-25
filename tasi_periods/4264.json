@@ -1,0 +1,10 @@
+{
+  "ticker": "4264",
+  "yahoo": "4264.SR",
+  "name": "Flynas Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 70,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

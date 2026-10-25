@@ -1,0 +1,10 @@
+{
+  "ticker": "4081",
+  "yahoo": "4081.SR",
+  "name": "Nayifat Finance Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 250,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

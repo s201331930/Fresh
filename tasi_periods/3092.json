@@ -1,0 +1,10 @@
+{
+  "ticker": "3092",
+  "yahoo": "3092.SR",
+  "name": "Riyadh Cement Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 311,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

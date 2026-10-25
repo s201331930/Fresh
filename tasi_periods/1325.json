@@ -1,0 +1,10 @@
+{
+  "ticker": "1325",
+  "yahoo": "1325.SR",
+  "name": "Watani Iron Steel Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 272,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

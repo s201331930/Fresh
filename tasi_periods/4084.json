@@ -1,0 +1,10 @@
+{
+  "ticker": "4084",
+  "yahoo": "4084.SR",
+  "name": "Derayah Financial Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 84,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

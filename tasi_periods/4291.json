@@ -1,0 +1,10 @@
+{
+  "ticker": "4291",
+  "yahoo": "4291.SR",
+  "name": "National Company for Learning and Education",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 406,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

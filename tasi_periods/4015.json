@@ -1,0 +1,10 @@
+{
+  "ticker": "4015",
+  "yahoo": "4015.SR",
+  "name": "Jamjoom Pharmaceuticals Factory Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 167,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

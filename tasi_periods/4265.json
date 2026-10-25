@@ -1,0 +1,10 @@
+{
+  "ticker": "4265",
+  "yahoo": "4265.SR",
+  "name": "Cherry Trading Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 46,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

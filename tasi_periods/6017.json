@@ -1,0 +1,10 @@
+{
+  "ticker": "6017",
+  "yahoo": "6017.SR",
+  "name": "Jahez International Company for Information Systems Technology",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 212,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

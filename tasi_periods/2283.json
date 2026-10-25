@@ -1,0 +1,10 @@
+{
+  "ticker": "2283",
+  "yahoo": "2283.SR",
+  "name": "The First Milling Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 171,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

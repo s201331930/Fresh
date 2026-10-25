@@ -1,0 +1,10 @@
+{
+  "ticker": "4193",
+  "yahoo": "4193.SR",
+  "name": "Nice One Beauty Digital Marketing Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 93,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

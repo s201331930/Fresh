@@ -1,0 +1,10 @@
+{
+  "ticker": "2082",
+  "yahoo": "2082.SR",
+  "name": "ACWA Power Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 248,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

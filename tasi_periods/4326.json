@@ -1,0 +1,10 @@
+{
+  "ticker": "4326",
+  "yahoo": "4326.SR",
+  "name": "Dar Al Majed Real Estate Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 58,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

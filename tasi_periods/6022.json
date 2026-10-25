@@ -1,0 +1,10 @@
+{
+  "ticker": "6022",
+  "yahoo": "6022.SR",
+  "name": "Armah Sports Co.",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 9,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

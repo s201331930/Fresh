@@ -1,0 +1,10 @@
+{
+  "ticker": "2281",
+  "yahoo": "2281.SR",
+  "name": "Tanmiah Food Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 251,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

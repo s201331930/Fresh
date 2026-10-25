@@ -1,0 +1,10 @@
+{
+  "ticker": "7203",
+  "yahoo": "7203.SR",
+  "name": "Elm Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 240,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}

@@ -1,0 +1,10 @@
+{
+  "ticker": "2084",
+  "yahoo": "2084.SR",
+  "name": "Miahona Company Limited",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 122,
+  "week_rule": "W-THU",
+  "reason": "fewer than 1000 sessions"
+}

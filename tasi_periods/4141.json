@@ -1,0 +1,10 @@
+{
+  "ticker": "4141",
+  "yahoo": "4141.SR",
+  "name": "Al-Omran Industrial Trading Company",
+  "status": "skipped",
+  "in_original_12": false,
+  "n_weekly_bars": 321,
+  "week_rule": "W-THU",
+  "reason": "not enough history for training and two evaluation periods"
+}
