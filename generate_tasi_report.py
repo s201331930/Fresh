@@ -69,22 +69,30 @@ class Report(FPDF):
         self.multi_cell(0, 5.3, "- " + text)
         self.ln(0.3)
 
-    def table(self, headers, rows, widths, size=7.5):
-        self.set_font("Helvetica", "B", size)
-        self.set_fill_color(20, 60, 120)
-        self.set_text_color(255, 255, 255)
-        for h, w in zip(headers, widths):
-            self.cell(w, 7, str(h), border=1, fill=True, align="C")
-        self.ln()
+    def table(self, headers, rows, widths, size=7.5, row_h=5.4, align=None):
+        if align is None:
+            align = "L" + "C" * (len(headers) - 1)
+        def paint_header():
+            self.set_font("Helvetica", "B", size)
+            self.set_fill_color(20, 60, 120)
+            self.set_text_color(255, 255, 255)
+            for h, w in zip(headers, widths):
+                self.cell(w, 7, str(h), border=1, fill=True, align="C")
+            self.ln()
+
+        paint_header()
         fill = False
         for row in rows:
-            if self.get_y() > 265:
-                self.add_page()
+            # Stay above the footer and above the auto page-break line.
+            limit = self.h - max(self.b_margin, 16) - 1
+            if self.get_y() + row_h > limit:
+                self.add_page(orientation=self.cur_orientation)
+                paint_header()
             self.set_fill_color(235, 241, 248) if fill else self.set_fill_color(255, 255, 255)
             self.set_text_color(30, 30, 30)
             self.set_font("Helvetica", "", size)
             for i, (val, w) in enumerate(zip(row, widths)):
-                self.cell(w, 5.4, str(val), border=1, fill=True, align="L" if i == 0 else "C")
+                self.cell(w, row_h, str(val), border=1, fill=True, align=align[i])
             self.ln()
             fill = not fill
         self.ln(2)
@@ -92,6 +100,120 @@ class Report(FPDF):
 
 def _pct(n, d):
     return 100.0 * n / d if d else 0.0
+
+
+def _median(values):
+    vals = sorted(values)
+    n = len(vals)
+    if not n:
+        return None
+    mid = n // 2
+    if n % 2:
+        return vals[mid]
+    return (vals[mid - 1] + vals[mid]) / 2
+
+
+def _fmt(value, digits=2):
+    return "-" if value is None else f"{value:.{digits}f}"
+
+
+def _clip(text, n=28):
+    text = str(text)
+    return text if len(text) <= n else text[: n - 1] + "."
+
+
+PERIOD_ORDER = [
+    "2013-2015", "2014-2015", "2016-2017", "2016-2018", "2018-2019",
+    "2019-2021", "2020-2021", "2022-2023", "2022-2026", "2024-2026",
+]
+
+
+def _load_ok():
+    records = []
+    for path in sorted(OUT.glob("*.json")):
+        if path.name == "summary.json":
+            continue
+        rec = json.loads(path.read_text())
+        if rec.get("status") == "ok":
+            records.append(rec)
+    return records
+
+
+def _cagr_rows(records):
+    """One row per name and period, plus the full window, for every strategy."""
+    period_rows = []
+    full_rows = []
+    for rec in records:
+        for period in rec["periods"]:
+            bnh = period["strategies"]["Binary (t=0)"]["bnh_cagr"]
+            period_rows.append({
+                "ticker": rec["ticker"],
+                "name": rec["name"],
+                "period": period["label"],
+                "bnh": bnh,
+                "cagr": {k: v["cagr"] for k, v in period["strategies"].items()},
+            })
+        full = rec["full"]["strategies"]
+        full_rows.append({
+            "ticker": rec["ticker"],
+            "name": rec["name"],
+            "period": "full",
+            "bnh": full["Binary (t=0)"]["bnh_cagr"],
+            "cagr": {k: v["cagr"] for k, v in full.items()},
+        })
+    return period_rows, full_rows
+
+
+def _period_key(label):
+    try:
+        return (PERIOD_ORDER.index(label), label)
+    except ValueError:
+        return (len(PERIOD_ORDER), label)
+
+
+def _ticker_key(ticker):
+    text = str(ticker)
+    return (0, int(text)) if text.isdigit() else (1, text)
+
+
+def _cagr_summary(rows):
+    bnh = [r["bnh"] for r in rows]
+    strategies = {}
+    for name in ORDER:
+        vals = [r["cagr"][name] for r in rows]
+        gaps = [c - b for c, b in zip(vals, bnh)]
+        strategies[name] = {
+            "median": _median(vals),
+            "gap": _median(gaps),
+            "beat": sum(c > b for c, b in zip(vals, bnh)),
+        }
+    return {"n": len(rows), "bnh": _median(bnh), "strategies": strategies}
+
+
+def _fit(pdf, text, width, size):
+    pdf.set_font("Helvetica", "", size)
+    text = str(text)
+    if pdf.get_string_width(text) <= width - 1.6:
+        return text
+    while text and pdf.get_string_width(text + ".") > width - 1.6:
+        text = text[:-1]
+    return (text + ".") if text else "."
+
+
+def _listing(pdf, rows, size=6.0):
+    headers = ["Ticker", "Name", "Period", "BnH", "t=0", "t=opt r", "t=opt f", "Scaled r", "Scaled f", "Adaptive"]
+    widths = [16, 52, 22, 18, 16, 18, 18, 18, 18, 20]
+    align = "LLC" + "C" * 7
+    display = []
+    for row in rows:
+        display.append([
+            row["ticker"],
+            _fit(pdf, row["name"], widths[1], size),
+            row["period"],
+            _fmt(row["bnh"]),
+            *[_fmt(row["cagr"][name]) for name in ORDER],
+        ])
+    pdf.table(headers, display, widths, size=size, row_h=4.4, align=align)
 
 
 def _era_count(stats, floor=0.55, min_n=15):
@@ -108,6 +230,21 @@ def _era_count(stats, floor=0.55, min_n=15):
 
 def main():
     summary = json.loads((OUT / "summary.json").read_text())
+    records = _load_ok()
+    period_cagr, full_cagr = _cagr_rows(records)
+    cagr_all = _cagr_summary(period_cagr)
+    cagr_full = _cagr_summary(full_cagr)
+    for scope, stats in (("periods", cagr_all), ("full", cagr_full)):
+        published = summary["all"][scope]
+        for name in ORDER:
+            got = round(stats["strategies"][name]["median"], 2)
+            expect = published[name]["median_cagr"]
+            if abs(got - expect) > 0.011:
+                raise SystemExit(f"CAGR median mismatch {scope} {name}: {got} vs {expect}")
+        got_bnh = round(stats["bnh"], 2)
+        expect_bnh = published["Binary (t=0)"]["median_bnh_cagr"]
+        if abs(got_bnh - expect_bnh) > 0.011:
+            raise SystemExit(f"BnH CAGR median mismatch {scope}: {got_bnh} vs {expect_bnh}")
     block = summary["all"]["periods"]["Binary (t=0)"]
     full = summary["all"]["full"]["Binary (t=0)"]
     n = summary["n_ok"]
@@ -151,7 +288,7 @@ def main():
     pdf.cell(0, 12, "TASI daily strategies, period by period", align="C", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Helvetica", "", 12)
     pdf.set_text_color(70, 70, 70)
-    pdf.cell(0, 8, "All Tadawul All Share names. Daily frame. Every variant.", align="C", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 8, "All Tadawul All Share names. Daily frame. Every variant. CAGR for every name.", align="C", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(4)
     pdf.set_font("Helvetica", "", 11)
     pdf.cell(0, 7, f"{summary['n_universe']} listed names, {n} scored, {summary['n_skipped']} skipped, {summary['n_error']} failed", align="C", new_x="LMARGIN", new_y="NEXT")
@@ -251,6 +388,40 @@ def main():
         f"below 20% in {opt_f['cash_lt_20']} name-periods. A threshold that looked good before the period "
         "still goes to cash often. Binary (t=0) does not have that free parameter."
     )
+    pdf.h2("Compound growth, same windows")
+    pdf.body(
+        "CAGR is the compound growth rate over the calendar length of that window, in percent per year. "
+        "Buy-and-hold uses the same start and end dates. A beat here means the strategy CAGR is higher "
+        "than buy-and-hold CAGR on that name-period. Sections 7 and 8 list every name."
+    )
+    cagr_rows = []
+    for name in ORDER:
+        st = cagr_all["strategies"][name]
+        cagr_rows.append([
+            SHORT[name],
+            _fmt(st["median"]),
+            _fmt(cagr_all["bnh"]),
+            _fmt(st["gap"]),
+            f"{st['beat']}/{cagr_all['n']}",
+            f"{_pct(st['beat'], cagr_all['n']):.0f}%",
+        ])
+    pdf.table(
+        ["Variant", "Med CAGR", "Med BnH", "Med gap", "CAGR beat", "Share"],
+        cagr_rows,
+        [32, 24, 22, 22, 26, 18],
+        size=7.5,
+    )
+    t0 = cagr_all["strategies"]["Binary (t=0)"]
+    pdf.body(
+        f"Pooled across every name and period, Binary (t=0) median CAGR is {t0['median']:.2f}% "
+        f"against buy-and-hold {cagr_all['bnh']:.2f}%. It is ahead on CAGR in {t0['beat']} of "
+        f"{cagr_all['n']} name-periods. Scaled keeps a positive median gap and gives up more of the "
+        f"growth rate (refit {cagr_all['strategies']['Scaled']['median']:.2f}%, "
+        f"frozen {cagr_all['strategies']['Scaled (frozen)']['median']:.2f}%). "
+        f"The refit threshold median CAGR is {cagr_all['strategies']['Binary (t=opt)']['median']:.2f}% "
+        f"and the frozen threshold is {cagr_all['strategies']['Binary (t=opt frozen)']['median']:.2f}%, "
+        f"close to cash. Adaptive median CAGR is {cagr_all['strategies']['Adaptive']['median']:.2f}%."
+    )
 
     pdf.h1("4. Does any one period carry the result?")
     pdf.body(
@@ -307,6 +478,48 @@ def main():
             f"{e2['median_gap']:+.2f}, with t=0 ahead on {e2['beat_bnh']} of {e2['n']} names. "
             "The class result is still there in that bull window. It is much thinner."
         )
+    pdf.h2("CAGR in each period")
+    pdf.body(
+        "Median CAGR, percent per year, for every strategy and for buy-and-hold. "
+        "Each column uses the same names and the same dates inside that block."
+    )
+    by_period = {}
+    for row in period_cagr:
+        by_period.setdefault(row["period"], []).append(row)
+    cagr_period_rows = []
+    for label in sorted(by_period, key=_period_key):
+        rows_p = by_period[label]
+        stats_p = _cagr_summary(rows_p)
+        cagr_period_rows.append([
+            label,
+            str(stats_p["n"]),
+            _fmt(stats_p["bnh"]),
+            *[_fmt(stats_p["strategies"][name]["median"]) for name in ORDER],
+        ])
+    pdf.table(
+        ["Period", "N", "BnH", "t=0", "t=opt r", "t=opt f", "Scaled r", "Scaled f", "Adaptive"],
+        cagr_period_rows,
+        [24, 12, 18, 16, 20, 20, 20, 20, 22],
+        size=6.5,
+        row_h=5.2,
+    )
+    full_line = [
+        "full window",
+        str(cagr_full["n"]),
+        _fmt(cagr_full["bnh"]),
+        *[_fmt(cagr_full["strategies"][name]["median"]) for name in ORDER],
+    ]
+    pdf.table(
+        ["Window", "N", "BnH", "t=0", "t=opt r", "t=opt f", "Scaled r", "Scaled f", "Adaptive"],
+        [full_line],
+        [24, 12, 18, 16, 20, 20, 20, 20, 22],
+        size=6.5,
+        row_h=5.2,
+    )
+    pdf.body(
+        "The full-window row is one frozen rule from the first period through the last session. "
+        "It is not an average of the period rows. N there is the number of names."
+    )
 
     pdf.add_page()
     pdf.h1("5. The original 12 against the rest of the market")
@@ -342,9 +555,11 @@ def main():
     pdf.body(verdict)
     pdf.bullet(
         f"Judge the class on Binary (t=0) first. It beats buy-and-hold in {beat_share:.0f}% of "
-        f"name-periods, median gap {block['median_gap']:+.3f}. The full-window median CAGR is "
-        f"{full['median_cagr']:.1f}% against {full['median_bnh_cagr']:.1f}% for buy-and-hold, and the "
-        f"median max drawdown is {full['median_dd']:.1f}% against {full['median_bnh_dd']:.1f}%."
+        f"name-periods, median Sharpe gap {block['median_gap']:+.3f}. Median CAGR on those same "
+        f"name-periods is {t0['median']:.2f}% against buy-and-hold {cagr_all['bnh']:.2f}%. "
+        f"The full-window median CAGR is {full['median_cagr']:.2f}% against "
+        f"{full['median_bnh_cagr']:.2f}% for buy-and-hold, and the median max drawdown is "
+        f"{full['median_dd']:.1f}% against {full['median_bnh_dd']:.1f}%."
     )
     pdf.bullet(
         f"Median gap for the refit threshold is {opt['median_gap']:+.3f}. "
@@ -371,6 +586,24 @@ def main():
             pdf.bullet(f"{rec.get('ticker')} {rec.get('name')}: {rec.get('reason')}")
         if len(summary["errors"]) > 12:
             pdf.bullet(f"{len(summary['errors']) - 12} further failures are listed in tasi_periods/summary.json.")
+
+    period_cagr.sort(key=lambda r: (_ticker_key(r["ticker"]), _period_key(r["period"])))
+    full_cagr.sort(key=lambda r: _ticker_key(r["ticker"]))
+    pdf.add_page(orientation="L")
+    pdf.h1("7. CAGR for every ticker and period")
+    pdf.body(
+        "Percent per calendar year. BnH is buy-and-hold on the same dates. "
+        "t=opt r refits the threshold before the period. t=opt f keeps the threshold from before the first period. "
+        "Scaled r and Scaled f are the same split for the scale. Adaptive uses the past 126 predictions only."
+    )
+    _listing(pdf, period_cagr)
+    pdf.add_page(orientation="L")
+    pdf.h1("8. CAGR for every ticker on the full window")
+    pdf.body(
+        "One row per scored name. The window runs from that name's first scored period to the last session. "
+        "Binary (t=opt) and Scaled on this window are the frozen rule, so those two pairs match."
+    )
+    _listing(pdf, full_cagr)
 
     pdf.output(str(PDF_PATH))
     print(f"Wrote {PDF_PATH}")
