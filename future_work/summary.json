@@ -1,0 +1,1781 @@
+{
+  "spy": {
+    "daily": {
+      "static": {
+        "Binary (t=0)": {
+          "sharpe": 0.915,
+          "cagr": 13.16,
+          "max_drawdown": -19.52,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 451.18
+        },
+        "Binary (t=opt)": {
+          "sharpe": 1.041,
+          "cagr": 15.99,
+          "max_drawdown": -24.39,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 674.57
+        },
+        "Scaled": {
+          "sharpe": 0.694,
+          "cagr": 6.53,
+          "max_drawdown": -15.47,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 139.27
+        },
+        "Adaptive": {
+          "sharpe": 0.712,
+          "cagr": 8.62,
+          "max_drawdown": -22.57,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 213.02
+        },
+        "BuyHold": {
+          "sharpe": 0.901,
+          "cagr": 14.61,
+          "max_drawdown": -33.72,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 556.81
+        }
+      },
+      "rolling": {
+        "sharpe": 0.954,
+        "cagr": 13.07,
+        "max_drawdown": -17.62,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 444.79
+      },
+      "oracle": {
+        "sharpe": 1.405,
+        "cagr": 18.57,
+        "max_drawdown": -17.62,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 949.98
+      },
+      "frozen": {
+        "sharpe": 1.041,
+        "cagr": 15.99,
+        "max_drawdown": -24.39,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 674.41
+      },
+      "frozen_strategy": "Binary (t=opt)",
+      "rolling_switches": 18,
+      "rolling_share": {
+        "Binary (t=opt)": 0.601,
+        "Adaptive": 0.145,
+        "Scaled": 0.145,
+        "Binary (t=0)": 0.109
+      },
+      "rolling_log": [
+        {
+          "start": "2013-01-02",
+          "end": "2013-04-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.35,
+          "n_past": 252
+        },
+        {
+          "start": "2013-04-04",
+          "end": "2013-07-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.005,
+          "n_past": 252
+        },
+        {
+          "start": "2013-07-03",
+          "end": "2013-10-01",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.649,
+          "n_past": 252
+        },
+        {
+          "start": "2013-10-02",
+          "end": "2013-12-31",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.639,
+          "n_past": 252
+        },
+        {
+          "start": "2014-01-02",
+          "end": "2014-04-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.318,
+          "n_past": 252
+        },
+        {
+          "start": "2014-04-03",
+          "end": "2014-07-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.806,
+          "n_past": 252
+        },
+        {
+          "start": "2014-07-03",
+          "end": "2014-10-01",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.183,
+          "n_past": 252
+        },
+        {
+          "start": "2014-10-02",
+          "end": "2014-12-31",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.595,
+          "n_past": 252
+        },
+        {
+          "start": "2015-01-02",
+          "end": "2015-04-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.339,
+          "n_past": 252
+        },
+        {
+          "start": "2015-04-06",
+          "end": "2015-07-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.253,
+          "n_past": 252
+        },
+        {
+          "start": "2015-07-06",
+          "end": "2015-10-01",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.607,
+          "n_past": 252
+        },
+        {
+          "start": "2015-10-02",
+          "end": "2015-12-31",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.526,
+          "n_past": 252
+        },
+        {
+          "start": "2016-01-04",
+          "end": "2016-04-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.359,
+          "n_past": 252
+        },
+        {
+          "start": "2016-04-05",
+          "end": "2016-07-01",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.526,
+          "n_past": 252
+        },
+        {
+          "start": "2016-07-05",
+          "end": "2016-09-30",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.63,
+          "n_past": 252
+        },
+        {
+          "start": "2016-10-03",
+          "end": "2016-12-30",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.066,
+          "n_past": 252
+        },
+        {
+          "start": "2017-01-03",
+          "end": "2017-04-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.263,
+          "n_past": 252
+        },
+        {
+          "start": "2017-04-04",
+          "end": "2017-07-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.643,
+          "n_past": 252
+        },
+        {
+          "start": "2017-07-05",
+          "end": "2017-10-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.168,
+          "n_past": 252
+        },
+        {
+          "start": "2017-10-03",
+          "end": "2018-01-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.434,
+          "n_past": 252
+        },
+        {
+          "start": "2018-01-03",
+          "end": "2018-04-04",
+          "strategy": "Adaptive",
+          "past_sharpe": 3.05,
+          "n_past": 252
+        },
+        {
+          "start": "2018-04-05",
+          "end": "2018-07-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.248,
+          "n_past": 252
+        },
+        {
+          "start": "2018-07-05",
+          "end": "2018-10-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.159,
+          "n_past": 252
+        },
+        {
+          "start": "2018-10-03",
+          "end": "2019-01-03",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.393,
+          "n_past": 252
+        },
+        {
+          "start": "2019-01-04",
+          "end": "2019-04-04",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.215,
+          "n_past": 252
+        },
+        {
+          "start": "2019-04-05",
+          "end": "2019-07-05",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.259,
+          "n_past": 252
+        },
+        {
+          "start": "2019-07-08",
+          "end": "2019-10-03",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.204,
+          "n_past": 252
+        },
+        {
+          "start": "2019-10-04",
+          "end": "2020-01-03",
+          "strategy": "Scaled",
+          "past_sharpe": 0.54,
+          "n_past": 252
+        },
+        {
+          "start": "2020-01-06",
+          "end": "2020-04-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.314,
+          "n_past": 252
+        },
+        {
+          "start": "2020-04-06",
+          "end": "2020-07-06",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.455,
+          "n_past": 252
+        },
+        {
+          "start": "2020-07-07",
+          "end": "2020-10-02",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.898,
+          "n_past": 252
+        },
+        {
+          "start": "2020-10-05",
+          "end": "2021-01-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.256,
+          "n_past": 252
+        },
+        {
+          "start": "2021-01-05",
+          "end": "2021-04-06",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.19,
+          "n_past": 252
+        },
+        {
+          "start": "2021-04-07",
+          "end": "2021-07-06",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.411,
+          "n_past": 252
+        },
+        {
+          "start": "2021-07-07",
+          "end": "2021-10-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.366,
+          "n_past": 252
+        },
+        {
+          "start": "2021-10-05",
+          "end": "2022-01-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.956,
+          "n_past": 252
+        },
+        {
+          "start": "2022-01-04",
+          "end": "2022-04-04",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 2.209,
+          "n_past": 252
+        },
+        {
+          "start": "2022-04-05",
+          "end": "2022-07-06",
+          "strategy": "Scaled",
+          "past_sharpe": 1.442,
+          "n_past": 252
+        },
+        {
+          "start": "2022-07-07",
+          "end": "2022-10-04",
+          "strategy": "Scaled",
+          "past_sharpe": 0.536,
+          "n_past": 252
+        },
+        {
+          "start": "2022-10-05",
+          "end": "2023-01-04",
+          "strategy": "Scaled",
+          "past_sharpe": 0.151,
+          "n_past": 252
+        },
+        {
+          "start": "2023-01-05",
+          "end": "2023-04-05",
+          "strategy": "Scaled",
+          "past_sharpe": -0.38,
+          "n_past": 252
+        },
+        {
+          "start": "2023-04-06",
+          "end": "2023-07-07",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": -0.224,
+          "n_past": 252
+        },
+        {
+          "start": "2023-07-10",
+          "end": "2023-10-05",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.816,
+          "n_past": 252
+        },
+        {
+          "start": "2023-10-06",
+          "end": "2024-01-05",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.962,
+          "n_past": 252
+        },
+        {
+          "start": "2024-01-08",
+          "end": "2024-04-08",
+          "strategy": "Scaled",
+          "past_sharpe": 1.95,
+          "n_past": 252
+        },
+        {
+          "start": "2024-04-09",
+          "end": "2024-07-09",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.263,
+          "n_past": 252
+        },
+        {
+          "start": "2024-07-10",
+          "end": "2024-10-07",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.387,
+          "n_past": 252
+        },
+        {
+          "start": "2024-10-08",
+          "end": "2025-01-07",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.5,
+          "n_past": 252
+        },
+        {
+          "start": "2025-01-08",
+          "end": "2025-04-09",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.008,
+          "n_past": 252
+        },
+        {
+          "start": "2025-04-10",
+          "end": "2025-07-11",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.666,
+          "n_past": 252
+        },
+        {
+          "start": "2025-07-14",
+          "end": "2025-10-09",
+          "strategy": "Scaled",
+          "past_sharpe": 0.843,
+          "n_past": 252
+        },
+        {
+          "start": "2025-10-10",
+          "end": "2026-01-09",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.962,
+          "n_past": 252
+        },
+        {
+          "start": "2026-01-12",
+          "end": "2026-04-13",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.085,
+          "n_past": 252
+        },
+        {
+          "start": "2026-04-14",
+          "end": "2026-07-14",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 2.104,
+          "n_past": 252
+        },
+        {
+          "start": "2026-07-15",
+          "end": "2026-10-12",
+          "strategy": "Scaled",
+          "past_sharpe": 1.717,
+          "n_past": 252
+        },
+        {
+          "start": "2026-10-13",
+          "end": "2026-10-22",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.529,
+          "n_past": 252
+        }
+      ],
+      "regime": {
+        "sharpe": 0.948,
+        "cagr": 14.15,
+        "max_drawdown": -24.39,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 520.88
+      },
+      "regime_share": {
+        "Binary (t=opt)": 0.961,
+        "Scaled": 0.033,
+        "Binary (t=0)": 0.006
+      },
+      "regime_maps_that_differ": 16,
+      "regime_n_maps": 56,
+      "regime_last_map": {
+        "0": "Binary (t=opt)",
+        "1": "Binary (t=opt)",
+        "2": "Binary (t=opt)"
+      },
+      "regime_insample": [
+        {
+          "regime": "Bear",
+          "n": 1050,
+          "Binary (t=0)": 1.143,
+          "Binary (t=opt)": 1.271,
+          "Scaled": 1.03,
+          "Adaptive": 0.771
+        },
+        {
+          "regime": "Sideways",
+          "n": 892,
+          "Binary (t=0)": 0.677,
+          "Binary (t=opt)": 0.677,
+          "Scaled": 0.176,
+          "Adaptive": 0.211
+        },
+        {
+          "regime": "Bull",
+          "n": 1531,
+          "Binary (t=0)": 0.946,
+          "Binary (t=opt)": 1.19,
+          "Scaled": 0.796,
+          "Adaptive": 1.102
+        }
+      ],
+      "step_bars": 63,
+      "choice_lookback": 252
+    },
+    "weekly": {
+      "static": {
+        "Binary (t=0)": {
+          "sharpe": 0.911,
+          "cagr": 13.64,
+          "max_drawdown": -31.83,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "total_return": 482.52
+        },
+        "Binary (t=opt)": {
+          "sharpe": 0.202,
+          "cagr": 1.38,
+          "max_drawdown": -22.63,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "total_return": 20.85
+        },
+        "Scaled": {
+          "sharpe": 0.549,
+          "cagr": 5.11,
+          "max_drawdown": -28.09,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "total_return": 98.63
+        },
+        "Adaptive": {
+          "sharpe": 0.909,
+          "cagr": 12.6,
+          "max_drawdown": -31.83,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "total_return": 412.84
+        },
+        "BuyHold": {
+          "sharpe": 0.942,
+          "cagr": 14.62,
+          "max_drawdown": -31.83,
+          "n_bars": 720,
+          "n_years": 13.78,
+          "total_return": 555.42
+        }
+      },
+      "rolling": {
+        "sharpe": 0.695,
+        "cagr": 8.77,
+        "max_drawdown": -28.09,
+        "n_bars": 720,
+        "n_years": 13.78,
+        "total_return": 218.66
+      },
+      "oracle": {
+        "sharpe": 1.338,
+        "cagr": 16.49,
+        "max_drawdown": -22.63,
+        "n_bars": 720,
+        "n_years": 13.78,
+        "total_return": 718.82
+      },
+      "frozen": {
+        "sharpe": 0.202,
+        "cagr": 1.38,
+        "max_drawdown": -22.63,
+        "n_bars": 720,
+        "n_years": 13.78,
+        "total_return": 20.85
+      },
+      "frozen_strategy": "Binary (t=opt)",
+      "rolling_switches": 14,
+      "rolling_share": {
+        "Adaptive": 0.422,
+        "Binary (t=0)": 0.307,
+        "Scaled": 0.144,
+        "Binary (t=opt)": 0.126
+      },
+      "rolling_log": [
+        {
+          "start": "2013-01-04",
+          "end": "2013-03-29",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.477,
+          "n_past": 104
+        },
+        {
+          "start": "2013-04-05",
+          "end": "2013-06-28",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.249,
+          "n_past": 104
+        },
+        {
+          "start": "2013-07-05",
+          "end": "2013-09-27",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.245,
+          "n_past": 104
+        },
+        {
+          "start": "2013-10-04",
+          "end": "2013-12-27",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.66,
+          "n_past": 104
+        },
+        {
+          "start": "2014-01-03",
+          "end": "2014-03-28",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.665,
+          "n_past": 104
+        },
+        {
+          "start": "2014-04-04",
+          "end": "2014-06-27",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.73,
+          "n_past": 104
+        },
+        {
+          "start": "2014-07-04",
+          "end": "2014-09-26",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.536,
+          "n_past": 104
+        },
+        {
+          "start": "2014-10-03",
+          "end": "2014-12-26",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.299,
+          "n_past": 104
+        },
+        {
+          "start": "2015-01-02",
+          "end": "2015-03-27",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.136,
+          "n_past": 104
+        },
+        {
+          "start": "2015-04-03",
+          "end": "2015-06-26",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.632,
+          "n_past": 104
+        },
+        {
+          "start": "2015-07-03",
+          "end": "2015-09-25",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.479,
+          "n_past": 104
+        },
+        {
+          "start": "2015-10-02",
+          "end": "2015-12-25",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.216,
+          "n_past": 104
+        },
+        {
+          "start": "2016-01-01",
+          "end": "2016-03-25",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.039,
+          "n_past": 104
+        },
+        {
+          "start": "2016-04-01",
+          "end": "2016-06-24",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.874,
+          "n_past": 104
+        },
+        {
+          "start": "2016-07-01",
+          "end": "2016-09-23",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.564,
+          "n_past": 104
+        },
+        {
+          "start": "2016-09-30",
+          "end": "2016-12-23",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.703,
+          "n_past": 104
+        },
+        {
+          "start": "2016-12-30",
+          "end": "2017-03-24",
+          "strategy": "Scaled",
+          "past_sharpe": 0.714,
+          "n_past": 104
+        },
+        {
+          "start": "2017-03-31",
+          "end": "2017-06-23",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.176,
+          "n_past": 104
+        },
+        {
+          "start": "2017-06-30",
+          "end": "2017-09-22",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.361,
+          "n_past": 104
+        },
+        {
+          "start": "2017-09-29",
+          "end": "2017-12-22",
+          "strategy": "Scaled",
+          "past_sharpe": 1.743,
+          "n_past": 104
+        },
+        {
+          "start": "2017-12-29",
+          "end": "2018-03-23",
+          "strategy": "Scaled",
+          "past_sharpe": 1.992,
+          "n_past": 104
+        },
+        {
+          "start": "2018-03-30",
+          "end": "2018-06-22",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.385,
+          "n_past": 104
+        },
+        {
+          "start": "2018-06-29",
+          "end": "2018-09-21",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.482,
+          "n_past": 104
+        },
+        {
+          "start": "2018-09-28",
+          "end": "2018-12-21",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.611,
+          "n_past": 104
+        },
+        {
+          "start": "2018-12-28",
+          "end": "2019-03-22",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.562,
+          "n_past": 104
+        },
+        {
+          "start": "2019-03-29",
+          "end": "2019-06-21",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.909,
+          "n_past": 104
+        },
+        {
+          "start": "2019-06-28",
+          "end": "2019-09-20",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.873,
+          "n_past": 104
+        },
+        {
+          "start": "2019-09-27",
+          "end": "2019-12-20",
+          "strategy": "Scaled",
+          "past_sharpe": 0.841,
+          "n_past": 104
+        },
+        {
+          "start": "2019-12-27",
+          "end": "2020-03-20",
+          "strategy": "Scaled",
+          "past_sharpe": 0.88,
+          "n_past": 104
+        },
+        {
+          "start": "2020-03-27",
+          "end": "2020-06-19",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.098,
+          "n_past": 104
+        },
+        {
+          "start": "2020-06-26",
+          "end": "2020-09-18",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.464,
+          "n_past": 104
+        },
+        {
+          "start": "2020-09-25",
+          "end": "2020-12-18",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.503,
+          "n_past": 104
+        },
+        {
+          "start": "2020-12-25",
+          "end": "2021-03-19",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.109,
+          "n_past": 104
+        },
+        {
+          "start": "2021-03-26",
+          "end": "2021-06-18",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.982,
+          "n_past": 104
+        },
+        {
+          "start": "2021-06-25",
+          "end": "2021-09-17",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.07,
+          "n_past": 104
+        },
+        {
+          "start": "2021-09-24",
+          "end": "2021-12-17",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.145,
+          "n_past": 104
+        },
+        {
+          "start": "2021-12-24",
+          "end": "2022-03-18",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.058,
+          "n_past": 104
+        },
+        {
+          "start": "2022-03-25",
+          "end": "2022-06-17",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.958,
+          "n_past": 104
+        },
+        {
+          "start": "2022-06-24",
+          "end": "2022-09-16",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.954,
+          "n_past": 104
+        },
+        {
+          "start": "2022-09-23",
+          "end": "2022-12-16",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.079,
+          "n_past": 104
+        },
+        {
+          "start": "2022-12-23",
+          "end": "2023-03-17",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.864,
+          "n_past": 104
+        },
+        {
+          "start": "2023-03-24",
+          "end": "2023-06-16",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.864,
+          "n_past": 104
+        },
+        {
+          "start": "2023-06-23",
+          "end": "2023-09-15",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.864,
+          "n_past": 104
+        },
+        {
+          "start": "2023-09-22",
+          "end": "2023-12-15",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.864,
+          "n_past": 104
+        },
+        {
+          "start": "2023-12-22",
+          "end": "2024-03-15",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.89,
+          "n_past": 104
+        },
+        {
+          "start": "2024-03-22",
+          "end": "2024-06-14",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.123,
+          "n_past": 104
+        },
+        {
+          "start": "2024-06-21",
+          "end": "2024-09-13",
+          "strategy": "Scaled",
+          "past_sharpe": 2.03,
+          "n_past": 104
+        },
+        {
+          "start": "2024-09-20",
+          "end": "2024-12-13",
+          "strategy": "Scaled",
+          "past_sharpe": 2.143,
+          "n_past": 104
+        },
+        {
+          "start": "2024-12-20",
+          "end": "2025-03-14",
+          "strategy": "Scaled",
+          "past_sharpe": 2.232,
+          "n_past": 104
+        },
+        {
+          "start": "2025-03-21",
+          "end": "2025-06-13",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.843,
+          "n_past": 104
+        },
+        {
+          "start": "2025-06-20",
+          "end": "2025-09-12",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.221,
+          "n_past": 104
+        },
+        {
+          "start": "2025-09-19",
+          "end": "2025-12-12",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.51,
+          "n_past": 104
+        },
+        {
+          "start": "2025-12-19",
+          "end": "2026-03-13",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.292,
+          "n_past": 104
+        },
+        {
+          "start": "2026-03-20",
+          "end": "2026-06-12",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.849,
+          "n_past": 104
+        },
+        {
+          "start": "2026-06-19",
+          "end": "2026-09-11",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.032,
+          "n_past": 104
+        },
+        {
+          "start": "2026-09-18",
+          "end": "2026-10-16",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.887,
+          "n_past": 104
+        }
+      ],
+      "regime": {
+        "sharpe": 0.784,
+        "cagr": 10.37,
+        "max_drawdown": -31.86,
+        "n_bars": 720,
+        "n_years": 13.78,
+        "total_return": 289.64
+      },
+      "regime_share": {
+        "Adaptive": 0.74,
+        "Binary (t=opt)": 0.136,
+        "Binary (t=0)": 0.124
+      },
+      "regime_maps_that_differ": 56,
+      "regime_n_maps": 56,
+      "regime_last_map": {
+        "0": "Binary (t=0)",
+        "1": "Adaptive",
+        "2": "Adaptive"
+      },
+      "regime_insample": [
+        {
+          "regime": "Bear",
+          "n": 133,
+          "Binary (t=0)": 1.263,
+          "Binary (t=opt)": 0.283,
+          "Scaled": 0.662,
+          "Adaptive": 0.991
+        },
+        {
+          "regime": "Sideways",
+          "n": 237,
+          "Binary (t=0)": 0.849,
+          "Binary (t=opt)": 0.288,
+          "Scaled": 0.696,
+          "Adaptive": 1.079
+        },
+        {
+          "regime": "Bull",
+          "n": 350,
+          "Binary (t=0)": 0.843,
+          "Binary (t=opt)": 0.507,
+          "Scaled": 0.573,
+          "Adaptive": 0.791
+        }
+      ],
+      "step_bars": 13,
+      "choice_lookback": 104
+    },
+    "mixed": {
+      "static": {
+        "Binary (t=0)": {
+          "sharpe": 0.763,
+          "cagr": 11.29,
+          "max_drawdown": -33.47,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 337.88
+        },
+        "Binary (t=opt)": {
+          "sharpe": 0.172,
+          "cagr": 1.06,
+          "max_drawdown": -22.64,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 15.68
+        },
+        "Scaled": {
+          "sharpe": 0.475,
+          "cagr": 5.09,
+          "max_drawdown": -33.15,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 98.5
+        },
+        "Adaptive": {
+          "sharpe": 0.693,
+          "cagr": 8.82,
+          "max_drawdown": -38.3,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 220.96
+        },
+        "BuyHold": {
+          "sharpe": 0.901,
+          "cagr": 14.61,
+          "max_drawdown": -33.72,
+          "n_bars": 3473,
+          "n_years": 13.8,
+          "total_return": 556.81
+        }
+      },
+      "rolling": {
+        "sharpe": 0.51,
+        "cagr": 6.03,
+        "max_drawdown": -41.6,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 124.36
+      },
+      "oracle": {
+        "sharpe": 1.399,
+        "cagr": 17.74,
+        "max_drawdown": -21.75,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 852.06
+      },
+      "frozen": {
+        "sharpe": 0.172,
+        "cagr": 1.06,
+        "max_drawdown": -22.64,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 15.68
+      },
+      "frozen_strategy": "Binary (t=opt)",
+      "rolling_switches": 25,
+      "rolling_share": {
+        "Adaptive": 0.345,
+        "Binary (t=0)": 0.311,
+        "Binary (t=opt)": 0.218,
+        "Scaled": 0.127
+      },
+      "rolling_log": [
+        {
+          "start": "2013-01-02",
+          "end": "2013-04-03",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.934,
+          "n_past": 252
+        },
+        {
+          "start": "2013-04-04",
+          "end": "2013-07-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.838,
+          "n_past": 252
+        },
+        {
+          "start": "2013-07-03",
+          "end": "2013-10-01",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.534,
+          "n_past": 252
+        },
+        {
+          "start": "2013-10-02",
+          "end": "2013-12-31",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.718,
+          "n_past": 252
+        },
+        {
+          "start": "2014-01-02",
+          "end": "2014-04-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.322,
+          "n_past": 252
+        },
+        {
+          "start": "2014-04-03",
+          "end": "2014-07-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.914,
+          "n_past": 252
+        },
+        {
+          "start": "2014-07-03",
+          "end": "2014-10-01",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.253,
+          "n_past": 252
+        },
+        {
+          "start": "2014-10-02",
+          "end": "2014-12-31",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.445,
+          "n_past": 252
+        },
+        {
+          "start": "2015-01-02",
+          "end": "2015-04-02",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.585,
+          "n_past": 252
+        },
+        {
+          "start": "2015-04-06",
+          "end": "2015-07-02",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.312,
+          "n_past": 252
+        },
+        {
+          "start": "2015-07-06",
+          "end": "2015-10-01",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.912,
+          "n_past": 252
+        },
+        {
+          "start": "2015-10-02",
+          "end": "2015-12-31",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.374,
+          "n_past": 252
+        },
+        {
+          "start": "2016-01-04",
+          "end": "2016-04-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.374,
+          "n_past": 252
+        },
+        {
+          "start": "2016-04-05",
+          "end": "2016-07-01",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.374,
+          "n_past": 252
+        },
+        {
+          "start": "2016-07-05",
+          "end": "2016-09-30",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.374,
+          "n_past": 252
+        },
+        {
+          "start": "2016-10-03",
+          "end": "2016-12-30",
+          "strategy": "Scaled",
+          "past_sharpe": 0.978,
+          "n_past": 252
+        },
+        {
+          "start": "2017-01-03",
+          "end": "2017-04-03",
+          "strategy": "Scaled",
+          "past_sharpe": 1.272,
+          "n_past": 252
+        },
+        {
+          "start": "2017-04-04",
+          "end": "2017-07-03",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.548,
+          "n_past": 252
+        },
+        {
+          "start": "2017-07-05",
+          "end": "2017-10-02",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 2.089,
+          "n_past": 252
+        },
+        {
+          "start": "2017-10-03",
+          "end": "2018-01-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.159,
+          "n_past": 252
+        },
+        {
+          "start": "2018-01-03",
+          "end": "2018-04-04",
+          "strategy": "Adaptive",
+          "past_sharpe": 2.904,
+          "n_past": 252
+        },
+        {
+          "start": "2018-04-05",
+          "end": "2018-07-03",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.396,
+          "n_past": 252
+        },
+        {
+          "start": "2018-07-05",
+          "end": "2018-10-02",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.11,
+          "n_past": 252
+        },
+        {
+          "start": "2018-10-03",
+          "end": "2019-01-03",
+          "strategy": "Scaled",
+          "past_sharpe": 1.334,
+          "n_past": 252
+        },
+        {
+          "start": "2019-01-04",
+          "end": "2019-04-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.534,
+          "n_past": 252
+        },
+        {
+          "start": "2019-04-05",
+          "end": "2019-07-05",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.365,
+          "n_past": 252
+        },
+        {
+          "start": "2019-07-08",
+          "end": "2019-10-03",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.42,
+          "n_past": 252
+        },
+        {
+          "start": "2019-10-04",
+          "end": "2020-01-03",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 0.365,
+          "n_past": 252
+        },
+        {
+          "start": "2020-01-06",
+          "end": "2020-04-03",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.921,
+          "n_past": 252
+        },
+        {
+          "start": "2020-04-06",
+          "end": "2020-07-06",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": -0.202,
+          "n_past": 252
+        },
+        {
+          "start": "2020-07-07",
+          "end": "2020-10-02",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.169,
+          "n_past": 252
+        },
+        {
+          "start": "2020-10-05",
+          "end": "2021-01-04",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.443,
+          "n_past": 252
+        },
+        {
+          "start": "2021-01-05",
+          "end": "2021-04-06",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.32,
+          "n_past": 252
+        },
+        {
+          "start": "2021-04-07",
+          "end": "2021-07-06",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 2.172,
+          "n_past": 252
+        },
+        {
+          "start": "2021-07-07",
+          "end": "2021-10-04",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 2.144,
+          "n_past": 252
+        },
+        {
+          "start": "2021-10-05",
+          "end": "2022-01-03",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.956,
+          "n_past": 252
+        },
+        {
+          "start": "2022-01-04",
+          "end": "2022-04-04",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 2.155,
+          "n_past": 252
+        },
+        {
+          "start": "2022-04-05",
+          "end": "2022-07-06",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.494,
+          "n_past": 252
+        },
+        {
+          "start": "2022-07-07",
+          "end": "2022-10-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.235,
+          "n_past": 252
+        },
+        {
+          "start": "2022-10-05",
+          "end": "2023-01-04",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.235,
+          "n_past": 252
+        },
+        {
+          "start": "2023-01-05",
+          "end": "2023-04-05",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.235,
+          "n_past": 252
+        },
+        {
+          "start": "2023-04-06",
+          "end": "2023-07-07",
+          "strategy": "Binary (t=opt)",
+          "past_sharpe": 1.235,
+          "n_past": 252
+        },
+        {
+          "start": "2023-07-10",
+          "end": "2023-10-05",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.62,
+          "n_past": 252
+        },
+        {
+          "start": "2023-10-06",
+          "end": "2024-01-05",
+          "strategy": "Adaptive",
+          "past_sharpe": 0.936,
+          "n_past": 252
+        },
+        {
+          "start": "2024-01-08",
+          "end": "2024-04-08",
+          "strategy": "Scaled",
+          "past_sharpe": 2.202,
+          "n_past": 252
+        },
+        {
+          "start": "2024-04-09",
+          "end": "2024-07-09",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.949,
+          "n_past": 252
+        },
+        {
+          "start": "2024-07-10",
+          "end": "2024-10-07",
+          "strategy": "Scaled",
+          "past_sharpe": 2.218,
+          "n_past": 252
+        },
+        {
+          "start": "2024-10-08",
+          "end": "2025-01-07",
+          "strategy": "Scaled",
+          "past_sharpe": 2.402,
+          "n_past": 252
+        },
+        {
+          "start": "2025-01-08",
+          "end": "2025-04-09",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.736,
+          "n_past": 252
+        },
+        {
+          "start": "2025-04-10",
+          "end": "2025-07-11",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.479,
+          "n_past": 252
+        },
+        {
+          "start": "2025-07-14",
+          "end": "2025-10-09",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.737,
+          "n_past": 252
+        },
+        {
+          "start": "2025-10-10",
+          "end": "2026-01-09",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.549,
+          "n_past": 252
+        },
+        {
+          "start": "2026-01-12",
+          "end": "2026-04-13",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 0.653,
+          "n_past": 252
+        },
+        {
+          "start": "2026-04-14",
+          "end": "2026-07-14",
+          "strategy": "Scaled",
+          "past_sharpe": 1.644,
+          "n_past": 252
+        },
+        {
+          "start": "2026-07-15",
+          "end": "2026-10-12",
+          "strategy": "Adaptive",
+          "past_sharpe": 1.397,
+          "n_past": 252
+        },
+        {
+          "start": "2026-10-13",
+          "end": "2026-10-22",
+          "strategy": "Binary (t=0)",
+          "past_sharpe": 1.403,
+          "n_past": 252
+        }
+      ],
+      "regime": {
+        "sharpe": 0.46,
+        "cagr": 5.62,
+        "max_drawdown": -38.44,
+        "n_bars": 3473,
+        "n_years": 13.8,
+        "total_return": 112.75
+      },
+      "regime_share": {
+        "Binary (t=0)": 0.389,
+        "Adaptive": 0.356,
+        "Binary (t=opt)": 0.233,
+        "Scaled": 0.022
+      },
+      "regime_maps_that_differ": 44,
+      "regime_n_maps": 56,
+      "regime_last_map": {
+        "0": "Binary (t=0)",
+        "1": "Binary (t=0)",
+        "2": "Adaptive"
+      },
+      "regime_insample": [
+        {
+          "regime": "Bear",
+          "n": 1050,
+          "Binary (t=0)": 0.81,
+          "Binary (t=opt)": 0.313,
+          "Scaled": 0.612,
+          "Adaptive": 0.649
+        },
+        {
+          "regime": "Sideways",
+          "n": 892,
+          "Binary (t=0)": 0.575,
+          "Binary (t=opt)": null,
+          "Scaled": 0.367,
+          "Adaptive": 0.404
+        },
+        {
+          "regime": "Bull",
+          "n": 1531,
+          "Binary (t=0)": 1.065,
+          "Binary (t=opt)": null,
+          "Scaled": 0.65,
+          "Adaptive": 1.11
+        }
+      ],
+      "step_bars": 63,
+      "choice_lookback": 252
+    }
+  },
+  "intraweek": {
+    "by_weekday": [
+      {
+        "weekday": "Monday",
+        "n": 651,
+        "mean_bnh_bps": 9.65,
+        "mean_t0_excess_bps": -0.93,
+        "sum_t0_excess": -0.0604,
+        "mean_topt_excess_bps": -1.08,
+        "sum_topt_excess": -0.0702
+      },
+      {
+        "weekday": "Tuesday",
+        "n": 716,
+        "mean_bnh_bps": 7.85,
+        "mean_t0_excess_bps": -0.8,
+        "sum_t0_excess": -0.0571,
+        "mean_topt_excess_bps": 1.03,
+        "sum_topt_excess": 0.074
+      },
+      {
+        "weekday": "Wednesday",
+        "n": 712,
+        "mean_bnh_bps": 1.98,
+        "mean_t0_excess_bps": -1.66,
+        "sum_t0_excess": -0.1182,
+        "mean_topt_excess_bps": 0.68,
+        "sum_topt_excess": 0.0487
+      },
+      {
+        "weekday": "Thursday",
+        "n": 699,
+        "mean_bnh_bps": 5.65,
+        "mean_t0_excess_bps": -0.86,
+        "sum_t0_excess": -0.0599,
+        "mean_topt_excess_bps": 0.42,
+        "sum_topt_excess": 0.0291
+      },
+      {
+        "weekday": "Friday",
+        "n": 695,
+        "mean_bnh_bps": 5.04,
+        "mean_t0_excess_bps": 1.1,
+        "sum_t0_excess": 0.0765,
+        "mean_topt_excess_bps": 0.78,
+        "sum_topt_excess": 0.0541
+      }
+    ],
+    "week_aligned": {
+      "Binary (t=0)": {
+        "n_weeks": 720,
+        "daily_compounded_sharpe": 0.954,
+        "weekly_native_sharpe": 0.912,
+        "corr": 0.792,
+        "daily_wins": 265
+      },
+      "Binary (t=opt)": {
+        "n_weeks": 720,
+        "daily_compounded_sharpe": 1.091,
+        "weekly_native_sharpe": 0.203,
+        "corr": 0.246,
+        "daily_wins": 431
+      },
+      "Adaptive": {
+        "n_weeks": 720,
+        "daily_compounded_sharpe": 0.705,
+        "weekly_native_sharpe": 0.91,
+        "corr": 0.654,
+        "daily_wins": 270
+      }
+    },
+    "bnh_week_corr": 0.992
+  },
+  "tasi": {
+    "n_names": 155,
+    "n_hold_periods": 283,
+    "always_t0": {
+      "n": 283,
+      "median_sharpe": 0.412,
+      "median_cagr": 6.48,
+      "beat_bnh": 185,
+      "beat_t0": 0,
+      "median_gap_vs_t0": 0.0
+    },
+    "previous": {
+      "n": 283,
+      "median_sharpe": 0.398,
+      "median_cagr": 4.2,
+      "beat_bnh": 178,
+      "beat_t0": 85,
+      "median_gap_vs_t0": 0.0
+    },
+    "guarded": {
+      "n": 283,
+      "median_sharpe": 0.42,
+      "median_cagr": 4.88,
+      "beat_bnh": 178,
+      "beat_t0": 86,
+      "median_gap_vs_t0": 0.0
+    },
+    "frozen": {
+      "n": 283,
+      "median_sharpe": 0.379,
+      "median_cagr": 4.41,
+      "beat_bnh": 176,
+      "beat_t0": 79,
+      "median_gap_vs_t0": 0.0
+    },
+    "oracle": {
+      "n": 283,
+      "median_sharpe": 0.735,
+      "median_cagr": 9.94,
+      "beat_bnh": 248,
+      "beat_t0": 232,
+      "median_gap_vs_t0": 0.259
+    },
+    "buyhold": {
+      "median_sharpe": 0.286,
+      "median_cagr": 3.69
+    },
+    "previous_choice_counts": {
+      "Binary (t=0)": 83,
+      "Adaptive": 79,
+      "Binary (t=opt)": 50,
+      "Scaled": 49,
+      "Binary (t=opt frozen)": 14,
+      "Scaled (frozen)": 8
+    },
+    "guarded_choice_counts": {
+      "Adaptive": 94,
+      "Binary (t=0)": 85,
+      "Scaled": 64,
+      "Binary (t=opt)": 24,
+      "Scaled (frozen)": 10,
+      "Binary (t=opt frozen)": 6
+    }
+  },
+  "portfolio": {
+    "n_assets_priced": 102,
+    "n_rebalances": 20,
+    "first": "2007-01-05",
+    "last": "2026-01-02",
+    "books": {
+      "Equal weight": {
+        "sharpe": 0.762,
+        "cagr": 11.13,
+        "max_drawdown": -43.4,
+        "n_bars": 1015,
+        "n_years": 19.82,
+        "total_return": 709.06,
+        "median_names": 97,
+        "avg_pair_corr": 0.296,
+        "mean_turnover": 0.114
+      },
+      "Inverse vol": {
+        "sharpe": 0.746,
+        "cagr": 7.16,
+        "max_drawdown": -31.94,
+        "n_bars": 1015,
+        "n_years": 19.82,
+        "total_return": 293.53,
+        "median_names": 78,
+        "avg_pair_corr": 0.315,
+        "mean_turnover": 0.173
+      },
+      "Min variance": {
+        "sharpe": 0.606,
+        "cagr": 3.53,
+        "max_drawdown": -19.39,
+        "n_bars": 1015,
+        "n_years": 19.82,
+        "total_return": 99.04,
+        "median_names": 21,
+        "avg_pair_corr": 0.14,
+        "mean_turnover": 0.376
+      },
+      "Corr screen 0.70": {
+        "sharpe": 0.864,
+        "cagr": 11.66,
+        "max_drawdown": -41.25,
+        "n_bars": 1015,
+        "n_years": 19.82,
+        "total_return": 789.71,
+        "median_names": 46,
+        "avg_pair_corr": 0.194,
+        "mean_turnover": 0.435
+      }
+    },
+    "class_weights_last": {
+      "date": "2026-01-02",
+      "Min variance": {
+        "Bond ETF": 0.477,
+        "Currency": 0.411,
+        "Commodity": 0.053,
+        "TASI Stock": 0.027,
+        "US Stock": 0.026,
+        "Intl Stock": 0.006
+      },
+      "Corr screen 0.70": {
+        "US Stock": 0.267,
+        "TASI Stock": 0.2,
+        "Commodity": 0.117,
+        "Intl Stock": 0.1,
+        "Currency": 0.083,
+        "Intl ETF": 0.067
+      }
+    }
+  },
+  "universe": {
+    "n_ok": 102,
+    "daily_best_beats_weekly_best": 63,
+    "daily_t0_beats_weekly_t0": 58,
+    "daily_t0_beats_bnh": 53,
+    "mixed_best_beats_daily_best": 46,
+    "mixed_t0_beats_daily_t0": 49,
+    "median_daily_sharpe": 0.556,
+    "median_weekly_sharpe": 0.532,
+    "median_mixed_sharpe": 0.577,
+    "median_bnh_sharpe": 0.45,
+    "median_daily_minus_weekly": 0.066,
+    "median_mixed_minus_daily": -0.006
+  }
+}
