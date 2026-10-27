@@ -1,9 +1,12 @@
 """PDF report: TASI daily strategies across calendar periods."""
 
 import json
+import os
+import tempfile
 from pathlib import Path
 
 from fpdf import FPDF
+from PIL import Image
 
 OUT = Path(__file__).parent / "tasi_periods"
 PDF_PATH = Path(__file__).parent / "TASI_Daily_Period_Report.pdf"
@@ -278,7 +281,13 @@ def main():
             "the period split."
         )
 
-    pdf = Report(format="A4")
+    # One page size for the whole file. Mixed portrait and landscape boxes
+    # are valid PDF, and several desktop viewers still refuse to open them.
+    pdf = Report(orientation="L", format="A4")
+    pdf.set_title("TASI daily strategies across periods")
+    pdf.set_author("Research prototype")
+    pdf.set_creator("generate_tasi_report.py")
+    pdf.set_lang("en")
     pdf.alias_nb_pages()
     pdf.set_auto_page_break(auto=True, margin=18)
     pdf.add_page()
@@ -449,10 +458,20 @@ def main():
         size=8,
     )
     chart = OUT / "sharpe_by_period.png"
+    chart_jpeg = None
     if chart.exists():
-        if pdf.get_y() > 200:
+        # JPEG, not a PNG predictor image. Some readers abort the whole file
+        # when they hit that filter.
+        image = Image.open(chart).convert("RGB")
+        draw_w = 200
+        draw_h = draw_w * image.height / image.width
+        handle = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False)
+        chart_jpeg = handle.name
+        handle.close()
+        image.save(chart_jpeg, "JPEG", quality=90)
+        if pdf.get_y() + draw_h > pdf.h - 20:
             pdf.add_page()
-        pdf.image(str(chart), w=170)
+        pdf.image(chart_jpeg, w=draw_w)
         pdf.ln(3)
     strong = [r[0] for r in period_rows if r[2] != "0/0" and int(r[2].split("/")[0]) / int(r[2].split("/")[1]) >= 0.55]
     weak = [r[0] for r in period_rows if r[2] != "0/0" and int(r[2].split("/")[0]) / int(r[2].split("/")[1]) < 0.5]
@@ -606,8 +625,47 @@ def main():
     _listing(pdf, full_cagr)
 
     pdf.output(str(PDF_PATH))
+    if chart_jpeg:
+        os.unlink(chart_jpeg)
+    _normalize_pdf(PDF_PATH)
     print(f"Wrote {PDF_PATH}")
     print("VERDICT:", verdict)
+
+
+def _normalize_pdf(path):
+    """Rewrite as PDF 1.4 with a classic xref. Skip if pikepdf is absent.
+
+    fpdf2 attaches a PNG predictor to JPEG images. Readers that honor
+    DecodeParms then reject the file, so those parms are removed.
+    """
+    try:
+        import pikepdf
+    except ImportError:
+        return
+    tmp = str(path) + ".tmp"
+    with pikepdf.open(path) as doc:
+        for page in doc.pages:
+            resources = page.get("/Resources")
+            if resources is None:
+                continue
+            xobjects = resources.get("/XObject")
+            if xobjects is None:
+                continue
+            for image in xobjects.values():
+                if image.get("/Subtype") != "/Image":
+                    continue
+                filt = image.get("/Filter")
+                filt_text = " ".join(str(item) for item in filt) if isinstance(filt, list) else str(filt)
+                if filt_text == "/DCTDecode":
+                    if "/DecodeParms" in image:
+                        del image["/DecodeParms"]
+        doc.save(
+            tmp,
+            min_version="1.4",
+            object_stream_mode=pikepdf.ObjectStreamMode.disable,
+            linearize=False,
+        )
+    os.replace(tmp, path)
 
 
 if __name__ == "__main__":
