@@ -1,0 +1,79 @@
+{
+  "ticker": "6004",
+  "yahoo": "6004.SR",
+  "name": "CATRION Catering Holding Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "03e5b678baf631b9",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-09-21",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2460,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.399,
+        "cagr": -6.33,
+        "max_drawdown": -45.77,
+        "in_market_pct": 30.9,
+        "n_bars": 1895,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.021,
+        "bnh_cagr": -2.63,
+        "bnh_max_drawdown": -60.06,
+        "turnover_per_year": 55.36
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.035,
+          "cagr": -0.41,
+          "max_drawdown": -19.44,
+          "in_market_pct": 22.5,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.181,
+          "bnh_cagr": 1.54,
+          "bnh_max_drawdown": -31.78,
+          "turnover_per_year": 47.41
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.641,
+          "cagr": -9.84,
+          "max_drawdown": -44.2,
+          "in_market_pct": 36.3,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.057,
+          "bnh_cagr": -5.13,
+          "bnh_max_drawdown": -60.06,
+          "turnover_per_year": 60.39
+        }
+      }
+    }
+  ],
+  "seconds": 7.1
+}

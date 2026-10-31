@@ -1,0 +1,79 @@
+{
+  "ticker": "1810",
+  "yahoo": "1810.SR",
+  "name": "Seera Holding Group",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "a300200aab792b9f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-06-02",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2532,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.517,
+        "cagr": 6.17,
+        "max_drawdown": -23.58,
+        "in_market_pct": 22.5,
+        "n_bars": 1899,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.196,
+        "bnh_cagr": 1.25,
+        "bnh_max_drawdown": -60.33,
+        "turnover_per_year": 65.71
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.188,
+          "cagr": -2.38,
+          "max_drawdown": -21.11,
+          "in_market_pct": 8.8,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.381,
+          "bnh_cagr": 7.16,
+          "bnh_max_drawdown": -46.67,
+          "turnover_per_year": 28.71
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.824,
+          "cagr": 11.87,
+          "max_drawdown": -18.83,
+          "in_market_pct": 31.4,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.069,
+          "bnh_cagr": -2.26,
+          "bnh_max_drawdown": -60.33,
+          "turnover_per_year": 88.82
+        }
+      }
+    }
+  ],
+  "seconds": 7.7
+}

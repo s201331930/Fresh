@@ -1,0 +1,98 @@
+{
+  "ticker": "1211",
+  "yahoo": "1211.SR",
+  "name": "Saudi Arabian Mining Company (Maaden)",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "d085c85c2e839986",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-08-26",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2967,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.584,
+        "cagr": 14.62,
+        "max_drawdown": -47.09,
+        "in_market_pct": 73.2,
+        "n_bars": 2631,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.588,
+        "bnh_cagr": 16.04,
+        "bnh_max_drawdown": -52.94,
+        "turnover_per_year": 54.82
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.216,
+          "cagr": 2.26,
+          "max_drawdown": -27.0,
+          "in_market_pct": 62.9,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.572,
+          "bnh_cagr": 13.06,
+          "bnh_max_drawdown": -31.09,
+          "turnover_per_year": 69.51
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.645,
+          "cagr": 14.99,
+          "max_drawdown": -47.09,
+          "in_market_pct": 70.4,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.659,
+          "bnh_cagr": 17.31,
+          "bnh_max_drawdown": -52.54,
+          "turnover_per_year": 50.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.726,
+          "cagr": 22.81,
+          "max_drawdown": -33.38,
+          "in_market_pct": 81.6,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.584,
+          "bnh_cagr": 17.16,
+          "bnh_max_drawdown": -45.65,
+          "turnover_per_year": 48.35
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

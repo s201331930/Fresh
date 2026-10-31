@@ -1,0 +1,98 @@
+{
+  "ticker": "2300",
+  "yahoo": "2300.SR",
+  "name": "Saudi Paper Manufacturing Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "c00d427f6fe45ece",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2969,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.655,
+        "cagr": 14.2,
+        "max_drawdown": -43.04,
+        "in_market_pct": 42.2,
+        "n_bars": 2625,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.343,
+        "bnh_cagr": 5.72,
+        "bnh_max_drawdown": -79.72,
+        "turnover_per_year": 79.32
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.577,
+          "cagr": 12.31,
+          "max_drawdown": -27.38,
+          "in_market_pct": 36.3,
+          "n_bars": 728,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.54,
+          "bnh_cagr": -26.04,
+          "bnh_max_drawdown": -66.27,
+          "turnover_per_year": 75.19
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.185,
+          "cagr": 26.42,
+          "max_drawdown": -13.29,
+          "in_market_pct": 17.9,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.869,
+          "bnh_cagr": 33.07,
+          "bnh_max_drawdown": -50.2,
+          "turnover_per_year": 56.76
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.44,
+          "cagr": 8.34,
+          "max_drawdown": -43.04,
+          "in_market_pct": 61.5,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.577,
+          "bnh_cagr": 14.41,
+          "bnh_max_drawdown": -40.79,
+          "turnover_per_year": 96.09
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

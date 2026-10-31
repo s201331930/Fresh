@@ -1,0 +1,98 @@
+{
+  "ticker": "1120",
+  "yahoo": "1120.SR",
+  "name": "Al Rajhi Banking and Investment Corporation",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "affdaabf32a08d37",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-05",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3053,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 1.31,
+        "cagr": 23.22,
+        "max_drawdown": -24.55,
+        "in_market_pct": 63.5,
+        "n_bars": 2640,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.877,
+        "bnh_cagr": 17.88,
+        "bnh_max_drawdown": -42.83,
+        "turnover_per_year": 79.87
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.874,
+          "cagr": 28.01,
+          "max_drawdown": -12.44,
+          "in_market_pct": 42.9,
+          "n_bars": 743,
+          "n_years": 2.99,
+          "bnh_sharpe": 1.129,
+          "bnh_cagr": 23.07,
+          "bnh_max_drawdown": -19.48,
+          "turnover_per_year": 90.23
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 2.162,
+          "cagr": 48.0,
+          "max_drawdown": -21.84,
+          "in_market_pct": 68.5,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.641,
+          "bnh_cagr": 41.41,
+          "bnh_max_drawdown": -31.9,
+          "turnover_per_year": 68.78
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.497,
+          "cagr": 7.42,
+          "max_drawdown": -24.55,
+          "in_market_pct": 73.6,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.229,
+          "bnh_cagr": 2.53,
+          "bnh_max_drawdown": -42.83,
+          "turnover_per_year": 80.52
+        }
+      }
+    }
+  ],
+  "seconds": 13.0
+}

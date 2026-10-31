@@ -1,0 +1,98 @@
+{
+  "ticker": "7020",
+  "yahoo": "7020.SR",
+  "name": "Etihad Etisalat Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "f827cb087739c6c4",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2941,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 1.0,
+        "cagr": 18.85,
+        "max_drawdown": -19.42,
+        "in_market_pct": 55.9,
+        "n_bars": 2626,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.437,
+        "bnh_cagr": 8.51,
+        "bnh_max_drawdown": -59.25,
+        "turnover_per_year": 79.41
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.933,
+          "cagr": 13.52,
+          "max_drawdown": -13.42,
+          "in_market_pct": 32.9,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.387,
+          "bnh_cagr": -16.36,
+          "bnh_max_drawdown": -59.25,
+          "turnover_per_year": 55.14
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.34,
+          "cagr": 28.78,
+          "max_drawdown": -12.26,
+          "in_market_pct": 63.7,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.931,
+          "bnh_cagr": 23.72,
+          "bnh_max_drawdown": -30.94,
+          "turnover_per_year": 86.14
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.84,
+          "cagr": 16.37,
+          "max_drawdown": -19.42,
+          "in_market_pct": 65.6,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.764,
+          "bnh_cagr": 17.58,
+          "bnh_max_drawdown": -26.21,
+          "turnover_per_year": 90.48
+        }
+      }
+    }
+  ],
+  "seconds": 9.9
+}

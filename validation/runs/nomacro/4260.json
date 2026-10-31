@@ -1,0 +1,98 @@
+{
+  "ticker": "4260",
+  "yahoo": "4260.SR",
+  "name": "United International Transportation Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "f3470a78140c7790",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2990,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.216,
+        "cagr": 2.02,
+        "max_drawdown": -70.32,
+        "in_market_pct": 83.1,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.297,
+        "bnh_cagr": 4.31,
+        "bnh_max_drawdown": -66.53,
+        "turnover_per_year": 38.09
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.0,
+          "cagr": -4.72,
+          "max_drawdown": -41.1,
+          "in_market_pct": 77.3,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.137,
+          "bnh_cagr": -1.16,
+          "bnh_max_drawdown": -41.44,
+          "turnover_per_year": 54.14
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.181,
+          "cagr": 34.13,
+          "max_drawdown": -28.19,
+          "in_market_pct": 92.7,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.952,
+          "bnh_cagr": 26.8,
+          "bnh_max_drawdown": -37.72,
+          "turnover_per_year": 23.37
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.287,
+          "cagr": -10.19,
+          "max_drawdown": -70.32,
+          "in_market_pct": 80.5,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.013,
+          "bnh_cagr": -4.45,
+          "bnh_max_drawdown": -66.53,
+          "turnover_per_year": 37.36
+        }
+      }
+    }
+  ],
+  "seconds": 9.9
+}

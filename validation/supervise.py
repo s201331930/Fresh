@@ -110,6 +110,7 @@ def run(macro_lag, fill, limit=None, neutralize=False):
 if __name__ == "__main__":
     lag = sys.argv[1] if len(sys.argv) > 1 else "0"
     fill = sys.argv[2] if len(sys.argv) > 2 else "close"
-    limit = sys.argv[3] if len(sys.argv) > 3 else None
+    extra = [a for a in sys.argv[3:] if not a.startswith("--")]
+    limit = extra[0] if extra else None
     neutralize = "--neutralize-jumps" in sys.argv
     run(lag, fill, limit, neutralize)

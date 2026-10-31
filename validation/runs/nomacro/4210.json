@@ -1,0 +1,98 @@
+{
+  "ticker": "4210",
+  "yahoo": "4210.SR",
+  "name": "Saudi Research and Media Group",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "6b46754a9d9e3a8d",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2978,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.385,
+        "cagr": 7.52,
+        "max_drawdown": -75.7,
+        "in_market_pct": 76.4,
+        "n_bars": 2629,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.175,
+        "bnh_cagr": -1.87,
+        "bnh_max_drawdown": -87.37,
+        "turnover_per_year": 51.03
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.935,
+          "cagr": 35.96,
+          "max_drawdown": -42.84,
+          "in_market_pct": 61.9,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.496,
+          "bnh_cagr": 12.78,
+          "bnh_max_drawdown": -69.33,
+          "turnover_per_year": 52.13
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.232,
+          "cagr": 42.77,
+          "max_drawdown": -40.51,
+          "in_market_pct": 82.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.941,
+          "bnh_cagr": 32.69,
+          "bnh_max_drawdown": -50.0,
+          "turnover_per_year": 46.07
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.529,
+          "cagr": -22.06,
+          "max_drawdown": -75.7,
+          "in_market_pct": 81.9,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.546,
+          "bnh_cagr": -25.39,
+          "bnh_max_drawdown": -87.37,
+          "turnover_per_year": 53.54
+        }
+      }
+    }
+  ],
+  "seconds": 9.8
+}

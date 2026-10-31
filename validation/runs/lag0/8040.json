@@ -1,0 +1,98 @@
+{
+  "ticker": "8040",
+  "yahoo": "8040.SR",
+  "name": "Mutakamela Insurance Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "c921dd67ca4cc645",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-05",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3052,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.152,
+        "cagr": -7.14,
+        "max_drawdown": -68.91,
+        "in_market_pct": 52.5,
+        "n_bars": 2639,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.081,
+        "bnh_cagr": -8.84,
+        "bnh_max_drawdown": -75.45,
+        "turnover_per_year": 73.22
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.024,
+          "cagr": -2.76,
+          "max_drawdown": -41.64,
+          "in_market_pct": 44.1,
+          "n_bars": 741,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.113,
+          "bnh_cagr": -10.63,
+          "bnh_max_drawdown": -60.05,
+          "turnover_per_year": 70.18
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.233,
+          "cagr": 2.54,
+          "max_drawdown": -41.09,
+          "in_market_pct": 49.7,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.539,
+          "bnh_cagr": 13.94,
+          "bnh_max_drawdown": -43.94,
+          "turnover_per_year": 76.79
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.561,
+          "cagr": -15.17,
+          "max_drawdown": -61.27,
+          "in_market_pct": 59.7,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.496,
+          "bnh_cagr": -19.67,
+          "bnh_max_drawdown": -72.94,
+          "turnover_per_year": 73.05
+        }
+      }
+    }
+  ],
+  "seconds": 9.8
+}

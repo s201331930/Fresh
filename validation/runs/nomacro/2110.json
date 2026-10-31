@@ -1,0 +1,98 @@
+{
+  "ticker": "2110",
+  "yahoo": "2110.SR",
+  "name": "Saudi Cable Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "32bbf06f448924df",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2209,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.208,
+        "cagr": 0.91,
+        "max_drawdown": -64.15,
+        "in_market_pct": 59.6,
+        "n_bars": 1890,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.429,
+        "bnh_cagr": 7.35,
+        "bnh_max_drawdown": -68.8,
+        "turnover_per_year": 40.58
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.506,
+          "cagr": 6.23,
+          "max_drawdown": -22.58,
+          "in_market_pct": 27.1,
+          "n_bars": 439,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.531,
+          "bnh_cagr": 10.81,
+          "bnh_max_drawdown": -46.5,
+          "turnover_per_year": 26.73
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.15,
+          "cagr": -9.32,
+          "max_drawdown": -53.81,
+          "in_market_pct": 61.8,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.258,
+          "bnh_cagr": 1.94,
+          "bnh_max_drawdown": -61.44,
+          "turnover_per_year": 53.08
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.384,
+          "cagr": 4.45,
+          "max_drawdown": -46.58,
+          "in_market_pct": 77.4,
+          "n_bars": 708,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.543,
+          "bnh_cagr": 8.71,
+          "bnh_max_drawdown": -49.64,
+          "turnover_per_year": 41.51
+        }
+      }
+    }
+  ],
+  "seconds": 6.5
+}

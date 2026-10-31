@@ -1,0 +1,98 @@
+{
+  "ticker": "4070",
+  "yahoo": "4070.SR",
+  "name": "Tihama for Advertising, Public Relations and Marketing Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "276eabe3dd68274f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-22",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2718,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.654,
+        "cagr": 14.4,
+        "max_drawdown": -50.53,
+        "in_market_pct": 37.1,
+        "n_bars": 2372,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.157,
+        "bnh_cagr": -15.15,
+        "bnh_max_drawdown": -92.54,
+        "turnover_per_year": 73.31
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.017,
+          "cagr": 29.02,
+          "max_drawdown": -24.04,
+          "in_market_pct": 43.8,
+          "n_bars": 637,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.027,
+          "bnh_cagr": -9.99,
+          "bnh_max_drawdown": -62.27,
+          "turnover_per_year": 90.56
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.613,
+          "cagr": 15.32,
+          "max_drawdown": -50.45,
+          "in_market_pct": 33.5,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.131,
+          "bnh_cagr": -7.41,
+          "bnh_max_drawdown": -70.16,
+          "turnover_per_year": 65.44
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.396,
+          "cagr": 5.67,
+          "max_drawdown": -27.14,
+          "in_market_pct": 35.5,
+          "n_bars": 992,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.606,
+          "bnh_cagr": -22.56,
+          "bnh_max_drawdown": -81.97,
+          "turnover_per_year": 67.65
+        }
+      }
+    }
+  ],
+  "seconds": 10.3
+}

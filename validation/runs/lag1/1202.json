@@ -1,0 +1,79 @@
+{
+  "ticker": "1202",
+  "yahoo": "1202.SR",
+  "name": "Middle East Company for Manufacturing and Producing Paper",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "6cd88ca1242acb2f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "2y",
+  "oos_start": "2019-09-01",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 1735,
+  "full": {
+    "start": "2022-01-02",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.05,
+        "cagr": -1.85,
+        "max_drawdown": -47.84,
+        "in_market_pct": 64.4,
+        "n_bars": 1156,
+        "n_years": 4.82,
+        "bnh_sharpe": -0.338,
+        "bnh_cagr": -14.11,
+        "bnh_max_drawdown": -71.25,
+        "turnover_per_year": 58.32
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2022-2023",
+      "start": "2022-01-02",
+      "end": "2023-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.147,
+          "cagr": 0.15,
+          "max_drawdown": -42.05,
+          "in_market_pct": 78.9,
+          "n_bars": 473,
+          "n_years": 1.99,
+          "bnh_sharpe": 0.295,
+          "bnh_cagr": 4.19,
+          "bnh_max_drawdown": -45.37,
+          "turnover_per_year": 45.66
+        }
+      }
+    },
+    {
+      "label": "2024-2026",
+      "start": "2024-01-01",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.031,
+          "cagr": -3.23,
+          "max_drawdown": -37.42,
+          "in_market_pct": 54.5,
+          "n_bars": 683,
+          "n_years": 2.82,
+          "bnh_sharpe": -0.767,
+          "bnh_cagr": -25.07,
+          "bnh_max_drawdown": -71.25,
+          "turnover_per_year": 67.31
+        }
+      }
+    }
+  ],
+  "seconds": 5.6
+}

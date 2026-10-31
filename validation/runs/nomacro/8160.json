@@ -1,0 +1,98 @@
+{
+  "ticker": "8160",
+  "yahoo": "8160.SR",
+  "name": "Arabia Insurance Cooperative Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "640b48e15202e463",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2987,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.065,
+        "cagr": -4.43,
+        "max_drawdown": -80.25,
+        "in_market_pct": 53.6,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.181,
+        "bnh_cagr": -0.08,
+        "bnh_max_drawdown": -84.56,
+        "turnover_per_year": 72.11
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.726,
+          "cagr": 12.06,
+          "max_drawdown": -22.02,
+          "in_market_pct": 25.2,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.791,
+          "bnh_cagr": 29.04,
+          "bnh_max_drawdown": -40.39,
+          "turnover_per_year": 65.16
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.869,
+          "cagr": 22.37,
+          "max_drawdown": -41.77,
+          "in_market_pct": 46.2,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.964,
+          "bnh_cagr": 33.7,
+          "bnh_max_drawdown": -51.09,
+          "turnover_per_year": 85.14
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -1.082,
+          "cagr": -25.77,
+          "max_drawdown": -79.55,
+          "in_market_pct": 76.4,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -1.062,
+          "bnh_cagr": -28.87,
+          "bnh_max_drawdown": -83.39,
+          "turnover_per_year": 68.48
+        }
+      }
+    }
+  ],
+  "seconds": 9.1
+}

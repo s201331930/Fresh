@@ -1,0 +1,98 @@
+{
+  "ticker": "4090",
+  "yahoo": "4090.SR",
+  "name": "Taiba Investment Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "66d1e98172b1596f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-05",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 3044,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.23,
+        "cagr": 2.58,
+        "max_drawdown": -37.85,
+        "in_market_pct": 89.4,
+        "n_bars": 2635,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.21,
+        "bnh_cagr": 2.14,
+        "bnh_max_drawdown": -39.28,
+        "turnover_per_year": 30.32
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.142,
+          "cagr": 0.87,
+          "max_drawdown": -34.17,
+          "in_market_pct": 89.3,
+          "n_bars": 739,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.014,
+          "bnh_cagr": -2.5,
+          "bnh_max_drawdown": -36.99,
+          "turnover_per_year": 32.08
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.483,
+          "cagr": 7.92,
+          "max_drawdown": -28.58,
+          "in_market_pct": 96.6,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.543,
+          "bnh_cagr": 9.31,
+          "bnh_max_drawdown": -27.22,
+          "turnover_per_year": 15.36
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.136,
+          "cagr": 0.45,
+          "max_drawdown": -37.31,
+          "in_market_pct": 84.8,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.16,
+          "bnh_cagr": 0.8,
+          "bnh_max_drawdown": -39.28,
+          "turnover_per_year": 38.6
+        }
+      }
+    }
+  ],
+  "seconds": 8.9
+}

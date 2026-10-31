@@ -1,0 +1,98 @@
+{
+  "ticker": "2270",
+  "yahoo": "2270.SR",
+  "name": "Saudia Dairy & Foodstuff Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "3f08170e4c36a483",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.463,
+        "cagr": 8.31,
+        "max_drawdown": -50.66,
+        "in_market_pct": 85.1,
+        "n_bars": 2627,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.429,
+        "bnh_cagr": 7.95,
+        "bnh_max_drawdown": -56.59,
+        "turnover_per_year": 42.52
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.328,
+          "cagr": 4.84,
+          "max_drawdown": -40.45,
+          "in_market_pct": 77.0,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.082,
+          "bnh_cagr": -1.03,
+          "bnh_max_drawdown": -49.11,
+          "turnover_per_year": 54.8
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.71,
+          "cagr": 14.35,
+          "max_drawdown": -21.23,
+          "in_market_pct": 87.9,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.917,
+          "bnh_cagr": 21.23,
+          "bnh_max_drawdown": -19.56,
+          "turnover_per_year": 47.74
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.399,
+          "cagr": 6.88,
+          "max_drawdown": -50.66,
+          "in_market_pct": 88.4,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.355,
+          "bnh_cagr": 6.02,
+          "bnh_max_drawdown": -56.59,
+          "turnover_per_year": 31.75
+        }
+      }
+    }
+  ],
+  "seconds": 10.4
+}

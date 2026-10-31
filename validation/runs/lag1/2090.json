@@ -1,0 +1,98 @@
+{
+  "ticker": "2090",
+  "yahoo": "2090.SR",
+  "name": "National Gypsum Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "ecf8767ace1e47dc",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2974,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.184,
+        "cagr": -7.2,
+        "max_drawdown": -72.58,
+        "in_market_pct": 48.9,
+        "n_bars": 2620,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.09,
+        "bnh_cagr": -2.49,
+        "bnh_max_drawdown": -83.1,
+        "turnover_per_year": 69.43
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.203,
+          "cagr": 2.02,
+          "max_drawdown": -23.43,
+          "in_market_pct": 37.7,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.095,
+          "bnh_cagr": -6.91,
+          "bnh_max_drawdown": -45.51,
+          "turnover_per_year": 56.48
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.464,
+          "cagr": 8.55,
+          "max_drawdown": -32.9,
+          "in_market_pct": 37.0,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.469,
+          "bnh_cagr": 60.91,
+          "bnh_max_drawdown": -38.96,
+          "turnover_per_year": 64.1
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.739,
+          "cagr": -20.65,
+          "max_drawdown": -72.58,
+          "in_market_pct": 63.8,
+          "n_bars": 1146,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.825,
+          "bnh_cagr": -26.49,
+          "bnh_max_drawdown": -81.51,
+          "turnover_per_year": 80.94
+        }
+      }
+    }
+  ],
+  "seconds": 9.2
+}

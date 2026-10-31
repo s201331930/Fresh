@@ -1,0 +1,79 @@
+{
+  "ticker": "1010",
+  "yahoo": "1010.SR",
+  "name": "Riyad Bank",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "68488aac025b8c7a",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-04-12",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2561,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.448,
+        "cagr": 7.26,
+        "max_drawdown": -35.41,
+        "in_market_pct": 64.9,
+        "n_bars": 1897,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.43,
+        "bnh_cagr": 8.15,
+        "bnh_max_drawdown": -51.96,
+        "turnover_per_year": 70.83
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.884,
+          "cagr": 16.66,
+          "max_drawdown": -35.41,
+          "in_market_pct": 50.9,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.654,
+          "bnh_cagr": 15.02,
+          "bnh_max_drawdown": -51.96,
+          "turnover_per_year": 74.45
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.196,
+          "cagr": 1.82,
+          "max_drawdown": -28.68,
+          "in_market_pct": 73.9,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.29,
+          "bnh_cagr": 4.1,
+          "bnh_max_drawdown": -37.53,
+          "turnover_per_year": 68.69
+        }
+      }
+    }
+  ],
+  "seconds": 8.3
+}

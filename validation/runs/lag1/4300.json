@@ -1,0 +1,98 @@
+{
+  "ticker": "4300",
+  "yahoo": "4300.SR",
+  "name": "Dar Al Arkan Real Estate Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "d21fb38f57409f20",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2991,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.348,
+        "cagr": 5.63,
+        "max_drawdown": -42.56,
+        "in_market_pct": 58.5,
+        "n_bars": 2629,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.476,
+        "bnh_cagr": 10.88,
+        "bnh_max_drawdown": -53.23,
+        "turnover_per_year": 66.75
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.081,
+          "cagr": -1.39,
+          "max_drawdown": -35.03,
+          "in_market_pct": 37.0,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.543,
+          "bnh_cagr": 15.0,
+          "bnh_max_drawdown": -42.9,
+          "turnover_per_year": 54.8
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.259,
+          "cagr": 3.24,
+          "max_drawdown": -42.56,
+          "in_market_pct": 64.0,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.298,
+          "bnh_cagr": 4.39,
+          "bnh_max_drawdown": -44.44,
+          "turnover_per_year": 53.42
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.556,
+          "cagr": 11.84,
+          "max_drawdown": -32.65,
+          "in_market_pct": 68.7,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.528,
+          "bnh_cagr": 12.55,
+          "bnh_max_drawdown": -40.99,
+          "turnover_per_year": 82.6
+        }
+      }
+    }
+  ],
+  "seconds": 11.0
+}

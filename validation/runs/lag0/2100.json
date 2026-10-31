@@ -1,0 +1,98 @@
+{
+  "ticker": "2100",
+  "yahoo": "2100.SR",
+  "name": "Wafrah for Industry and Development Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "48fe051fe99e0e28",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-13",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3013,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.708,
+        "cagr": 17.97,
+        "max_drawdown": -55.27,
+        "in_market_pct": 50.0,
+        "n_bars": 2610,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.099,
+        "bnh_cagr": -4.17,
+        "bnh_max_drawdown": -81.14,
+        "turnover_per_year": 88.84
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.023,
+          "cagr": 24.14,
+          "max_drawdown": -25.39,
+          "in_market_pct": 41.8,
+          "n_bars": 715,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.206,
+          "bnh_cagr": -14.05,
+          "bnh_max_drawdown": -56.89,
+          "turnover_per_year": 81.87
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.714,
+          "cagr": 77.1,
+          "max_drawdown": -30.93,
+          "in_market_pct": 46.8,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.09,
+          "bnh_cagr": 49.55,
+          "bnh_max_drawdown": -50.99,
+          "turnover_per_year": 99.16
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.28,
+          "cagr": -11.17,
+          "max_drawdown": -49.76,
+          "in_market_pct": 57.0,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.508,
+          "bnh_cagr": -22.27,
+          "bnh_max_drawdown": -74.78,
+          "turnover_per_year": 86.95
+        }
+      }
+    }
+  ],
+  "seconds": 11.7
+}

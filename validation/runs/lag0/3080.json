@@ -1,0 +1,98 @@
+{
+  "ticker": "3080",
+  "yahoo": "3080.SR",
+  "name": "Eastern Province Cement Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "a2b572f294381833",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2985,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.04,
+        "cagr": -1.01,
+        "max_drawdown": -45.78,
+        "in_market_pct": 53.5,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.212,
+        "bnh_cagr": 2.12,
+        "bnh_max_drawdown": -50.26,
+        "turnover_per_year": 56.67
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.177,
+          "cagr": 1.51,
+          "max_drawdown": -16.12,
+          "in_market_pct": 21.2,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.255,
+          "bnh_cagr": -8.72,
+          "bnh_max_drawdown": -46.93,
+          "turnover_per_year": 39.43
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.106,
+          "cagr": -0.35,
+          "max_drawdown": -45.78,
+          "in_market_pct": 58.4,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.169,
+          "bnh_cagr": 35.41,
+          "bnh_max_drawdown": -46.24,
+          "turnover_per_year": 77.12
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.096,
+          "cagr": -2.94,
+          "max_drawdown": -38.61,
+          "in_market_pct": 70.8,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.322,
+          "bnh_cagr": -8.11,
+          "bnh_max_drawdown": -48.15,
+          "turnover_per_year": 54.79
+        }
+      }
+    }
+  ],
+  "seconds": 10.8
+}

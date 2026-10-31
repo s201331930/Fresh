@@ -1,0 +1,98 @@
+{
+  "ticker": "8150",
+  "yahoo": "8150.SR",
+  "name": "Allied Cooperative Insurance Group",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "98431ac5c7c71f34",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-08-31",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2959,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.149,
+        "cagr": 0.22,
+        "max_drawdown": -68.87,
+        "in_market_pct": 55.2,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.052,
+        "bnh_cagr": -8.38,
+        "bnh_max_drawdown": -87.91,
+        "turnover_per_year": 85.97
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.026,
+          "cagr": -4.02,
+          "max_drawdown": -40.93,
+          "in_market_pct": 44.6,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.248,
+          "bnh_cagr": 1.97,
+          "bnh_max_drawdown": -36.3,
+          "turnover_per_year": 87.22
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.392,
+          "cagr": 37.53,
+          "max_drawdown": -30.15,
+          "in_market_pct": 50.9,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.487,
+          "bnh_cagr": 11.4,
+          "bnh_max_drawdown": -53.88,
+          "turnover_per_year": 97.16
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.42,
+          "cagr": -15.44,
+          "max_drawdown": -66.39,
+          "in_market_pct": 64.8,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.56,
+          "bnh_cagr": -24.09,
+          "bnh_max_drawdown": -75.69,
+          "turnover_per_year": 78.45
+        }
+      }
+    }
+  ],
+  "seconds": 9.3
+}

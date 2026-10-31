@@ -1,0 +1,98 @@
+{
+  "ticker": "4002",
+  "yahoo": "4002.SR",
+  "name": "Mouwasat Medical Services Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "4f9be7c2c11ffb9e",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-04-10",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3075,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.281,
+        "cagr": 3.92,
+        "max_drawdown": -53.26,
+        "in_market_pct": 87.6,
+        "n_bars": 2646,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.396,
+        "bnh_cagr": 7.49,
+        "bnh_max_drawdown": -58.97,
+        "turnover_per_year": 23.3
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.307,
+          "cagr": 4.75,
+          "max_drawdown": -30.95,
+          "in_market_pct": 86.2,
+          "n_bars": 748,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.468,
+          "bnh_cagr": 9.97,
+          "bnh_max_drawdown": -30.92,
+          "turnover_per_year": 28.07
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.983,
+          "cagr": 23.63,
+          "max_drawdown": -19.7,
+          "in_market_pct": 82.7,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.133,
+          "bnh_cagr": 32.85,
+          "bnh_max_drawdown": -24.14,
+          "turnover_per_year": 21.37
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.109,
+          "cagr": -7.16,
+          "max_drawdown": -53.26,
+          "in_market_pct": 91.8,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.089,
+          "bnh_cagr": -7.08,
+          "bnh_max_drawdown": -58.97,
+          "turnover_per_year": 21.58
+        }
+      }
+    }
+  ],
+  "seconds": 10.8
+}

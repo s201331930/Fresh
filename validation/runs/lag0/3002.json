@@ -1,0 +1,79 @@
+{
+  "ticker": "3002",
+  "yahoo": "3002.SR",
+  "name": "Najran Cement Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "05fe22176988ac69",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-05-08",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2545,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.226,
+        "cagr": 2.16,
+        "max_drawdown": -28.3,
+        "in_market_pct": 26.1,
+        "n_bars": 1901,
+        "n_years": 7.82,
+        "bnh_sharpe": -0.053,
+        "bnh_cagr": -3.87,
+        "bnh_max_drawdown": -77.93,
+        "turnover_per_year": 58.55
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.34,
+          "cagr": 4.38,
+          "max_drawdown": -28.3,
+          "in_market_pct": 19.5,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.147,
+          "bnh_cagr": 33.65,
+          "bnh_max_drawdown": -38.63,
+          "turnover_per_year": 50.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.129,
+          "cagr": 0.8,
+          "max_drawdown": -17.9,
+          "in_market_pct": 30.4,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -1.233,
+          "bnh_cagr": -21.68,
+          "bnh_max_drawdown": -73.56,
+          "turnover_per_year": 63.5
+        }
+      }
+    }
+  ],
+  "seconds": 9.0
+}

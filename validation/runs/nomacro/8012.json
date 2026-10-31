@@ -1,0 +1,79 @@
+{
+  "ticker": "8012",
+  "yahoo": "8012.SR",
+  "name": "Aljazira Takaful Taawuni Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "6db1fc0f585d89f5",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2018-03-13",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2097,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.442,
+        "cagr": 6.17,
+        "max_drawdown": -26.92,
+        "in_market_pct": 33.9,
+        "n_bars": 1898,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.012,
+        "bnh_cagr": -3.21,
+        "bnh_max_drawdown": -61.88,
+        "turnover_per_year": 69.29
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.157,
+          "cagr": 1.19,
+          "max_drawdown": -26.92,
+          "in_market_pct": 20.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.483,
+          "bnh_cagr": 10.2,
+          "bnh_max_drawdown": -39.17,
+          "turnover_per_year": 56.42
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.62,
+          "cagr": 9.4,
+          "max_drawdown": -23.13,
+          "in_market_pct": 42.4,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.337,
+          "bnh_cagr": -10.71,
+          "bnh_max_drawdown": -56.81,
+          "turnover_per_year": 77.41
+        }
+      }
+    }
+  ],
+  "seconds": 6.8
+}

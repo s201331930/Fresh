@@ -1,0 +1,98 @@
+{
+  "ticker": "1213",
+  "yahoo": "1213.SR",
+  "name": "Naseej International Trading Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "bf477e43137ce2ad",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-08-03",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2973,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.353,
+        "cagr": 5.89,
+        "max_drawdown": -70.39,
+        "in_market_pct": 37.9,
+        "n_bars": 2626,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.111,
+        "bnh_cagr": -21.86,
+        "bnh_max_drawdown": -93.76,
+        "turnover_per_year": 74.51
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.492,
+          "cagr": 9.69,
+          "max_drawdown": -28.9,
+          "in_market_pct": 38.5,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.263,
+          "bnh_cagr": -17.57,
+          "bnh_max_drawdown": -63.53,
+          "turnover_per_year": 95.57
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.744,
+          "cagr": 21.32,
+          "max_drawdown": -33.13,
+          "in_market_pct": 42.0,
+          "n_bars": 740,
+          "n_years": 3.0,
+          "bnh_sharpe": -0.226,
+          "bnh_cagr": -30.13,
+          "bnh_max_drawdown": -80.12,
+          "turnover_per_year": 80.8
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.037,
+          "cagr": -4.8,
+          "max_drawdown": -70.39,
+          "in_market_pct": 34.8,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.001,
+          "bnh_cagr": -19.01,
+          "bnh_max_drawdown": -91.95,
+          "turnover_per_year": 57.69
+        }
+      }
+    }
+  ],
+  "seconds": 10.3
+}

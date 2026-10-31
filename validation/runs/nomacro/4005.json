@@ -1,0 +1,79 @@
+{
+  "ticker": "4005",
+  "yahoo": "4005.SR",
+  "name": "National Medical Care Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "bd5463ba787a72b9",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2017-01-02",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2391,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.394,
+        "cagr": 7.06,
+        "max_drawdown": -51.76,
+        "in_market_pct": 58.3,
+        "n_bars": 1898,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.507,
+        "bnh_cagr": 11.8,
+        "bnh_max_drawdown": -60.12,
+        "turnover_per_year": 78.5
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.432,
+          "cagr": 6.63,
+          "max_drawdown": -33.95,
+          "in_market_pct": 37.4,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.54,
+          "bnh_cagr": 11.7,
+          "bnh_max_drawdown": -45.25,
+          "turnover_per_year": 96.82
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.392,
+          "cagr": 7.34,
+          "max_drawdown": -51.76,
+          "in_market_pct": 71.8,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.499,
+          "bnh_cagr": 11.89,
+          "bnh_max_drawdown": -60.12,
+          "turnover_per_year": 67.24
+        }
+      }
+    }
+  ],
+  "seconds": 7.5
+}

@@ -39,9 +39,7 @@ Seed for the ensembles is the hard-coded `random_state=42` in `daily_vs_weekly.p
 
 | Task | Concern | Verdict | Key number | Evidence |
 | --- | --- | --- | --- | --- |
-| 1 | Same-day US/ICE macro on a 15:00 Riyadh decision | Pending the paired rerun. The join itself is a same-day read on overlap sessions. | VIX: Sunday 0/792 same-day; Thursday 689/710 same-day. 2026-10-01 lag 0 would use the 1 Oct print; lag 1 uses 30 Sep. | `validation/macro_clock.csv`, `validation/macro_same_day_counts.csv` |
-
-The paired Sharpe test (lag 0 vs lag 1 vs no macro, 155 names, every period, Binary t=0, cost unchanged) is the pass rule for this row. It is not filled in until that rerun finishes.
+| 1 | Same-day US/ICE macro on a 15:00 Riyadh decision | **CONFIRMED** | Period median Sharpe 0.435 → 0.327 (paired median −0.086). Beat-buy-and-hold 300/438 (68.5%) → 270/438 (61.6%), a drop of 6.8 points. Lag 1 is the new baseline. | `validation/paired_lag1_minus_lag0.csv`, `validation/macro_same_day_counts.csv` |
 
 ## 3. Task 1 — cross-timezone macro look-ahead
 
@@ -69,14 +67,49 @@ A one-row shift on the US calendar is the wrong fix. It writes Thursday's close 
 
 Al Rajhi lag 0, this download, full window from 2016-01-03: Binary (t=0) Sharpe 1.310, buy-and-hold 0.877. The published Study C file for 1120 is 1.273 and 0.879. Same cost, same code path. The gap is the fresh Yahoo pull (hash `affdaabf32a08d37`), not a scoring change. Pair every later comparison to this audit's lag 0, not to the October headline file alone.
 
-Pass rule, applied to period rows (same name, same period): median (lag 1 Sharpe − lag 0 Sharpe) inside ±0.03, and the share of periods with Sharpe above buy-and-hold falls by fewer than 5 percentage points. Otherwise the leak is confirmed and lag 1 replaces lag 0 as the baseline. Macro removed entirely is the third column.
+Pass rule, applied to period rows (same name, same period): median (lag 1 Sharpe − lag 0 Sharpe) inside ±0.03, and the share of periods with Sharpe above buy-and-hold falls by fewer than 5 percentage points. Otherwise the leak is confirmed and lag 1 replaces lag 0 as the baseline.
 
-## 4. Run log
+### Result — CONFIRMED
 
-| Config | Seed | Commit at launch | Data | Status |
+All 155 names, 438 periods, 0 errors. Same prices (buy-and-hold Sharpe and CAGR match to the stored decimal; max absolute difference 0). Same cost (2 bps), same seed (42), same commit `e3af634d8d9629f149327e74eff313bd7bb2b9a6`. Finished 31 Oct 2026, 13:22 / 13:34 / 13:49 Asia/Riyadh for lag 0, lag 1, and macro removed.
+
+| | Lag 0 (published join) | Lag 1 (new baseline) | Macro removed |
+| --- | --- | --- | --- |
+| Periods beating own buy-and-hold | 300/438 (68.5%) | 270/438 (61.6%) | 274/438 (62.6%) |
+| Median period Sharpe | 0.435 | 0.327 | 0.354 |
+| Median period gap vs buy-and-hold | +0.216 | +0.109 | +0.106 |
+| Median period CAGR | 7.28% | 4.66% | 5.34% |
+| Median period CAGR gap | +6.01 | +3.21 | +3.72 |
+| Full-window names beating buy-and-hold | 114/155 (73.5%) | 97/155 (62.6%) | 107/155 (69.0%) |
+| Full-window median Sharpe | 0.393 | 0.281 | 0.315 |
+| Full-window median gap | +0.185 | +0.078 | +0.117 |
+| Full-window median CAGR | 6.74% | 3.56% | — |
+| Full-window median CAGR gap | +5.75 | +3.11 | +4.38 |
+
+Paired median (lag 1 − lag 0) Sharpe is **−0.086**. Mean paired change −0.092. The beat rate falls **6.8 percentage points**. Both pass bars are missed. Buy-and-hold did not move, so the whole change is the strategy.
+
+The loss is not uniform. Median paired change by period: 2016–2018 −0.206 (95/126 wins → 74/126), 2019–2021 +0.027 (78 → 80), 2022–2026 −0.124 (114/142 → 102/142). The bull window is untouched. The weak-market windows, where a same-day VIX or oil print is most valuable, give the leak back.
+
+Dropping macro entirely, paired against lag 0, is a median Sharpe change of −0.054 and a beat-rate drop of 5.9 points (300 → 274). That also misses the pass bar, so the macro block is not harmless. Paired against lag 1, dropping macro **raises** the typical period Sharpe by +0.059. A stale macro print is worse than no macro print. Lag 1 is still the required baseline, because it is the join that could have been traded at 15:00 Riyadh. Later tasks use lag 1.
+
+The edge is smaller and it is not gone. Under lag 1 the strategy still beats buy-and-hold in 270 of 438 periods, median gap +0.109 Sharpe and +3.21 CAGR points.
+
+Published Study C (the October tape, same leaky join) was 290/438, median gap +0.187, median Sharpe 0.404 vs 0.244, median CAGR 6.40% vs 1.81%. This download's lag 0 is close to that (300/438, median gap +0.216) and is the right "before" for the paired test. Al Rajhi full window: lag 0 Sharpe 1.310 vs buy-and-hold 0.877; lag 1 Sharpe 0.985 vs the same 0.877. Data hash `affdaabf32a08d37`.
+
+## 4. Headline after accepted fixes
+
+Only Task 1 is accepted so far. TASI daily Binary (t=0), lag 1, fill at the close, 2 bps, seed 42:
+
+- Period pool: beat rate 61.6% (was 68.5% on this tape, 66% in the published file), median Sharpe 0.327 (was 0.435 / published 0.404), median gap +0.109 (was +0.216 / published +0.187), median CAGR 4.66% vs buy-and-hold 1.98%.
+- Full window: 97/155 beat buy-and-hold (was 114/155), median Sharpe 0.281 vs 0.172, median gap +0.078, median CAGR 3.56% vs 0.09%.
+
+## 5. Run log
+
+| Config | Seed | Commit | Data hash | Finished (Asia/Riyadh) |
 | --- | --- | --- | --- | --- |
-| TASI daily Binary (t=0), macro lag 0, fill close, 2 bps | 42 | this commit, written into each JSON | adjusted OHLC in `daily_study/cache/` (not committed), macro `macro_daily.csv` | full 155-name batch launched after this commit. Smoke on 1120 before the commit: Sharpe 1.310 vs buy-and-hold 0.877, hash `affdaabf32a08d37` |
-| macro lag 1 | 42 | same | same prices, each series' last print strictly before the session | same batch |
-| macro removed | 42 | same | same prices, no macro columns | same batch |
+| Lag 0, fill close, 2 bps, 155 names | 42 | `e3af634d8d9629f149327e74eff313bd7bb2b9a6` | per name, Al Rajhi `affdaabf32a08d37` | 31 Oct 2026, 13:22 |
+| Lag 1, same | 42 | same | same hash, different join | 31 Oct 2026, 13:34 |
+| Macro removed, same | 42 | same | same hash | 31 Oct 2026, 13:49 |
 
-Original published Study C Binary (t=0), for the side-by-side once the rerun is in: 290/438 period wins (66%), median Sharpe 0.404 vs buy-and-hold 0.244, median gap +0.187, median CAGR 6.40% vs 1.81%. Full window: 114/155, median gap +0.177, median Sharpe 0.361 vs 0.165, median CAGR 5.96% vs −0.06%. Source: `tasi_periods/summary.json`.
+Per-name JSON: `validation/runs/lag0/`, `validation/runs/lag1/`, `validation/runs/nomacro/`. Predictions are local and gitignored. Prices are in `daily_study/cache/` and are gitignored.
+

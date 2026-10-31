@@ -1,0 +1,98 @@
+{
+  "ticker": "1080",
+  "yahoo": "1080.SR",
+  "name": "Arab National Bank",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "56694013781f4d78",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.792,
+        "cagr": 15.62,
+        "max_drawdown": -39.83,
+        "in_market_pct": 73.7,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.518,
+        "bnh_cagr": 10.47,
+        "bnh_max_drawdown": -44.35,
+        "turnover_per_year": 65.64
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.164,
+          "cagr": 25.28,
+          "max_drawdown": -14.31,
+          "in_market_pct": 61.3,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.688,
+          "bnh_cagr": 16.03,
+          "bnh_max_drawdown": -34.99,
+          "turnover_per_year": 88.56
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.535,
+          "cagr": 9.39,
+          "max_drawdown": -39.83,
+          "in_market_pct": 68.7,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.394,
+          "bnh_cagr": 7.05,
+          "bnh_max_drawdown": -44.35,
+          "turnover_per_year": 71.78
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.719,
+          "cagr": 13.89,
+          "max_drawdown": -33.95,
+          "in_market_pct": 84.8,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.486,
+          "bnh_cagr": 9.29,
+          "bnh_max_drawdown": -34.0,
+          "turnover_per_year": 47.73
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

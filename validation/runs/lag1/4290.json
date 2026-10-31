@@ -1,0 +1,98 @@
+{
+  "ticker": "4290",
+  "yahoo": "4290.SR",
+  "name": "Al Khaleej Training and Education Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "5d9991e21ff0ca19",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2983,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.101,
+        "cagr": -6.98,
+        "max_drawdown": -58.24,
+        "in_market_pct": 70.3,
+        "n_bars": 2628,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.015,
+        "bnh_cagr": -6.5,
+        "bnh_max_drawdown": -76.18,
+        "turnover_per_year": 66.75
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.245,
+          "cagr": -11.24,
+          "max_drawdown": -42.98,
+          "in_market_pct": 63.0,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.51,
+          "bnh_cagr": -22.55,
+          "bnh_max_drawdown": -61.11,
+          "turnover_per_year": 67.5
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.084,
+          "cagr": -6.55,
+          "max_drawdown": -38.14,
+          "in_market_pct": 70.8,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.733,
+          "bnh_cagr": 20.86,
+          "bnh_max_drawdown": -32.31,
+          "turnover_per_year": 63.43
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.017,
+          "cagr": -4.52,
+          "max_drawdown": -58.24,
+          "in_market_pct": 74.6,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.146,
+          "bnh_cagr": -10.41,
+          "bnh_max_drawdown": -76.18,
+          "turnover_per_year": 68.48
+        }
+      }
+    }
+  ],
+  "seconds": 10.8
+}

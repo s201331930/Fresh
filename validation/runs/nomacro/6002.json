@@ -1,0 +1,98 @@
+{
+  "ticker": "6002",
+  "yahoo": "6002.SR",
+  "name": "Herfy Food Services Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "cabe5daea30edc90",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2987,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.427,
+        "cagr": -12.2,
+        "max_drawdown": -79.38,
+        "in_market_pct": 71.7,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.373,
+        "bnh_cagr": -13.21,
+        "bnh_max_drawdown": -85.11,
+        "turnover_per_year": 58.79
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.279,
+          "cagr": -8.11,
+          "max_drawdown": -34.51,
+          "in_market_pct": 59.6,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.317,
+          "bnh_cagr": -10.85,
+          "bnh_max_drawdown": -35.76,
+          "turnover_per_year": 48.79
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.171,
+          "cagr": 1.2,
+          "max_drawdown": -30.72,
+          "in_market_pct": 71.9,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.615,
+          "bnh_cagr": 14.06,
+          "bnh_max_drawdown": -29.39,
+          "turnover_per_year": 80.13
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.871,
+          "cagr": -21.89,
+          "max_drawdown": -76.42,
+          "in_market_pct": 79.3,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -1.001,
+          "bnh_cagr": -27.99,
+          "bnh_max_drawdown": -82.45,
+          "turnover_per_year": 51.88
+        }
+      }
+    }
+  ],
+  "seconds": 9.4
+}

@@ -1,0 +1,98 @@
+{
+  "ticker": "4020",
+  "yahoo": "4020.SR",
+  "name": "Saudi Real Estate Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "ec62c51764cbc494",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.357,
+        "cagr": 6.01,
+        "max_drawdown": -42.71,
+        "in_market_pct": 71.9,
+        "n_bars": 2627,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.279,
+        "bnh_cagr": 3.73,
+        "bnh_max_drawdown": -56.62,
+        "turnover_per_year": 68.41
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.169,
+          "cagr": 0.93,
+          "max_drawdown": -32.41,
+          "in_market_pct": 58.9,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.35,
+          "bnh_cagr": 6.15,
+          "bnh_max_drawdown": -32.41,
+          "turnover_per_year": 73.52
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.821,
+          "cagr": 21.09,
+          "max_drawdown": -24.52,
+          "in_market_pct": 76.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.71,
+          "bnh_cagr": 19.06,
+          "bnh_max_drawdown": -28.9,
+          "turnover_per_year": 76.79
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.16,
+          "cagr": 0.64,
+          "max_drawdown": -42.71,
+          "in_market_pct": 77.5,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.037,
+          "bnh_cagr": -6.13,
+          "bnh_max_drawdown": -56.62,
+          "turnover_per_year": 60.18
+        }
+      }
+    }
+  ],
+  "seconds": 9.1
+}

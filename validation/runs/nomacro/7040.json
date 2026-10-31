@@ -1,0 +1,98 @@
+{
+  "ticker": "7040",
+  "yahoo": "7040.SR",
+  "name": "Etihad GO Telecom Co.",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "38f5ed69be6831f1",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2015-03-23",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2154,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.326,
+        "cagr": 3.43,
+        "max_drawdown": -70.79,
+        "in_market_pct": 52.8,
+        "n_bars": 1959,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.646,
+        "bnh_cagr": 22.61,
+        "bnh_max_drawdown": -68.07,
+        "turnover_per_year": 33.74
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-06-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.854,
+          "cagr": -10.43,
+          "max_drawdown": -34.33,
+          "in_market_pct": 15.2,
+          "n_bars": 593,
+          "n_years": 2.48,
+          "bnh_sharpe": 0.34,
+          "bnh_cagr": 2.71,
+          "bnh_max_drawdown": -49.39,
+          "turnover_per_year": 22.95
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2021-02-14",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.399,
+          "cagr": -11.61,
+          "max_drawdown": -29.26,
+          "in_market_pct": 37.1,
+          "n_bars": 213,
+          "n_years": 0.87,
+          "bnh_sharpe": 2.197,
+          "bnh_cagr": 183.91,
+          "bnh_max_drawdown": -44.84,
+          "turnover_per_year": 58.39
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.531,
+          "cagr": 16.76,
+          "max_drawdown": -58.97,
+          "in_market_pct": 75.0,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.676,
+          "bnh_cagr": 29.0,
+          "bnh_max_drawdown": -58.97,
+          "turnover_per_year": 53.33
+        }
+      }
+    }
+  ],
+  "seconds": 5.4
+}

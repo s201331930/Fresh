@@ -1,0 +1,98 @@
+{
+  "ticker": "2070",
+  "yahoo": "2070.SR",
+  "name": "Saudi Pharmaceutical Industries and Medical Appliances Corporation",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "a6f68824d113fe91",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2986,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.085,
+        "cagr": -1.15,
+        "max_drawdown": -63.7,
+        "in_market_pct": 73.6,
+        "n_bars": 2629,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.159,
+        "bnh_cagr": 0.09,
+        "bnh_max_drawdown": -64.0,
+        "turnover_per_year": 68.22
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.433,
+          "cagr": 7.32,
+          "max_drawdown": -27.89,
+          "in_market_pct": 69.6,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.094,
+          "bnh_cagr": -1.07,
+          "bnh_max_drawdown": -31.78,
+          "turnover_per_year": 66.83
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.751,
+          "cagr": 16.38,
+          "max_drawdown": -22.23,
+          "in_market_pct": 70.8,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.567,
+          "bnh_cagr": 13.02,
+          "bnh_max_drawdown": -39.57,
+          "turnover_per_year": 78.12
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.442,
+          "cagr": -15.14,
+          "max_drawdown": -57.83,
+          "in_market_pct": 77.9,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.03,
+          "bnh_cagr": -6.52,
+          "bnh_max_drawdown": -49.3,
+          "turnover_per_year": 63.09
+        }
+      }
+    }
+  ],
+  "seconds": 10.6
+}

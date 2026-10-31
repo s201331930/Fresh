@@ -1,0 +1,79 @@
+{
+  "ticker": "1201",
+  "yahoo": "1201.SR",
+  "name": "Takween Advanced Industries",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "718baa34d03b28f9",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-03-08",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2582,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.048,
+        "cagr": -2.76,
+        "max_drawdown": -42.6,
+        "in_market_pct": 24.3,
+        "n_bars": 1896,
+        "n_years": 7.82,
+        "bnh_sharpe": -0.479,
+        "bnh_cagr": -20.01,
+        "bnh_max_drawdown": -93.57,
+        "turnover_per_year": 52.03
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.556,
+          "cagr": 5.81,
+          "max_drawdown": -14.55,
+          "in_market_pct": 10.6,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.806,
+          "bnh_cagr": 23.2,
+          "bnh_max_drawdown": -40.5,
+          "turnover_per_year": 28.04
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.242,
+          "cagr": -7.74,
+          "max_drawdown": -37.97,
+          "in_market_pct": 33.0,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -1.228,
+          "bnh_cagr": -38.87,
+          "bnh_max_drawdown": -91.47,
+          "turnover_per_year": 67.03
+        }
+      }
+    }
+  ],
+  "seconds": 7.9
+}

@@ -1,0 +1,10 @@
+paired nomacro minus lag1
+period rows 438 names 155
+median d_sharpe +0.0585
+median d_gap +0.0585
+beat rate base 61.644% alt 62.557%
+full names 155 median d_sharpe +0.0220
+full beat base 62.581% alt 69.032%
+full median sharpe base 0.281 alt 0.315
+full median gap base +0.078 alt +0.117
+full median cagr gap base +3.11 alt +4.38

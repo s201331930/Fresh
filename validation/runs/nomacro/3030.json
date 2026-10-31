@@ -1,0 +1,98 @@
+{
+  "ticker": "3030",
+  "yahoo": "3030.SR",
+  "name": "Saudi Cement Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "2b3aa01ae9968b5a",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2994,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.749,
+        "cagr": 11.45,
+        "max_drawdown": -34.83,
+        "in_market_pct": 50.9,
+        "n_bars": 2634,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.009,
+        "bnh_cagr": -2.39,
+        "bnh_max_drawdown": -55.12,
+        "turnover_per_year": 84.22
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.941,
+          "cagr": 18.59,
+          "max_drawdown": -20.17,
+          "in_market_pct": 45.3,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.066,
+          "bnh_cagr": -2.19,
+          "bnh_max_drawdown": -42.88,
+          "turnover_per_year": 73.85
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.753,
+          "cagr": 36.62,
+          "max_drawdown": -14.18,
+          "in_market_pct": 59.0,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.551,
+          "bnh_cagr": 11.29,
+          "bnh_max_drawdown": -48.62,
+          "turnover_per_year": 85.8
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.456,
+          "cagr": -5.5,
+          "max_drawdown": -30.66,
+          "in_market_pct": 49.4,
+          "n_bars": 1158,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.602,
+          "bnh_cagr": -10.15,
+          "bnh_max_drawdown": -53.37,
+          "turnover_per_year": 89.86
+        }
+      }
+    }
+  ],
+  "seconds": 10.9
+}

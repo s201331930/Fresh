@@ -1,0 +1,98 @@
+{
+  "ticker": "4030",
+  "yahoo": "4030.SR",
+  "name": "The National Shipping Company of Saudi Arabia",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "2c1598f36641373c",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2992,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.499,
+        "cagr": 8.95,
+        "max_drawdown": -46.09,
+        "in_market_pct": 79.3,
+        "n_bars": 2634,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.52,
+        "bnh_cagr": 10.27,
+        "bnh_max_drawdown": -41.06,
+        "turnover_per_year": 50.94
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.204,
+          "cagr": -8.24,
+          "max_drawdown": -38.77,
+          "in_market_pct": 85.2,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.089,
+          "bnh_cagr": -6.12,
+          "bnh_max_drawdown": -39.02,
+          "turnover_per_year": 31.08
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.333,
+          "cagr": 4.85,
+          "max_drawdown": -20.21,
+          "in_market_pct": 81.6,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.333,
+          "bnh_cagr": 5.11,
+          "bnh_max_drawdown": -27.94,
+          "turnover_per_year": 50.08
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.128,
+          "cagr": 24.16,
+          "max_drawdown": -26.66,
+          "in_market_pct": 74.0,
+          "n_bars": 1159,
+          "n_years": 4.82,
+          "bnh_sharpe": 1.047,
+          "bnh_cagr": 25.58,
+          "bnh_max_drawdown": -36.05,
+          "turnover_per_year": 63.92
+        }
+      }
+    }
+  ],
+  "seconds": 11.2
+}

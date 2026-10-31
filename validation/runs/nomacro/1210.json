@@ -1,0 +1,98 @@
+{
+  "ticker": "1210",
+  "yahoo": "1210.SR",
+  "name": "Basic Chemical Industries Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "5698271dd93a54c0",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2987,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.225,
+        "cagr": 2.47,
+        "max_drawdown": -40.29,
+        "in_market_pct": 62.4,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.215,
+        "bnh_cagr": 2.12,
+        "bnh_max_drawdown": -57.33,
+        "turnover_per_year": 70.81
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.797,
+          "cagr": 14.6,
+          "max_drawdown": -32.32,
+          "in_market_pct": 52.4,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.317,
+          "bnh_cagr": 4.89,
+          "bnh_max_drawdown": -43.72,
+          "turnover_per_year": 67.84
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.302,
+          "cagr": 4.43,
+          "max_drawdown": -20.04,
+          "in_market_pct": 54.2,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.897,
+          "bnh_cagr": 25.08,
+          "bnh_max_drawdown": -26.57,
+          "turnover_per_year": 84.47
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.199,
+          "cagr": -5.52,
+          "max_drawdown": -40.29,
+          "in_market_pct": 74.0,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.425,
+          "bnh_cagr": -11.46,
+          "bnh_max_drawdown": -52.95,
+          "turnover_per_year": 64.33
+        }
+      }
+    }
+  ],
+  "seconds": 9.2
+}

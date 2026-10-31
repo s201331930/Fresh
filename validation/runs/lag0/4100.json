@@ -1,0 +1,98 @@
+{
+  "ticker": "4100",
+  "yahoo": "4100.SR",
+  "name": "Makkah Construction and Development Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "fa2c028bd751a3cb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2976,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.381,
+        "cagr": 6.05,
+        "max_drawdown": -47.77,
+        "in_market_pct": 71.6,
+        "n_bars": 2615,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.152,
+        "bnh_cagr": 0.55,
+        "bnh_max_drawdown": -52.48,
+        "turnover_per_year": 69.52
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.432,
+          "cagr": 7.89,
+          "max_drawdown": -47.77,
+          "in_market_pct": 82.5,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.013,
+          "bnh_cagr": -3.01,
+          "bnh_max_drawdown": -52.48,
+          "turnover_per_year": 36.42
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.362,
+          "cagr": 4.97,
+          "max_drawdown": -23.8,
+          "in_market_pct": 64.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.117,
+          "bnh_cagr": 0.16,
+          "bnh_max_drawdown": -30.86,
+          "turnover_per_year": 76.46
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.362,
+          "cagr": 5.6,
+          "max_drawdown": -33.69,
+          "in_market_pct": 69.0,
+          "n_bars": 1139,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.255,
+          "bnh_cagr": 3.08,
+          "bnh_max_drawdown": -40.06,
+          "turnover_per_year": 85.92
+        }
+      }
+    }
+  ],
+  "seconds": 11.5
+}

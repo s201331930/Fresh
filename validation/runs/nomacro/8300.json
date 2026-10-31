@@ -1,0 +1,98 @@
+{
+  "ticker": "8300",
+  "yahoo": "8300.SR",
+  "name": "Wataniya Insurance Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "af0bfabe984ce5e5",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-10-28",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2915,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.262,
+        "cagr": -8.07,
+        "max_drawdown": -67.09,
+        "in_market_pct": 36.6,
+        "n_bars": 2628,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.01,
+        "bnh_cagr": -6.54,
+        "bnh_max_drawdown": -74.77,
+        "turnover_per_year": 66.65
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.256,
+          "cagr": -8.13,
+          "max_drawdown": -29.76,
+          "in_market_pct": 28.0,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.273,
+          "bnh_cagr": -16.21,
+          "bnh_max_drawdown": -56.89,
+          "turnover_per_year": 52.8
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.221,
+          "cagr": 2.43,
+          "max_drawdown": -23.3,
+          "in_market_pct": 25.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.648,
+          "bnh_cagr": 19.93,
+          "bnh_max_drawdown": -46.29,
+          "turnover_per_year": 56.09
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.514,
+          "cagr": -14.03,
+          "max_drawdown": -60.33,
+          "in_market_pct": 49.4,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.274,
+          "bnh_cagr": -14.37,
+          "bnh_max_drawdown": -66.86,
+          "turnover_per_year": 81.97
+        }
+      }
+    }
+  ],
+  "seconds": 10.1
+}

@@ -1,0 +1,98 @@
+{
+  "ticker": "8180",
+  "yahoo": "8180.SR",
+  "name": "Al Sagr Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "6c8d68a9f2c58ce0",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2854,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.082,
+        "cagr": -2.27,
+        "max_drawdown": -67.72,
+        "in_market_pct": 67.1,
+        "n_bars": 2500,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.217,
+        "bnh_cagr": -15.43,
+        "bnh_max_drawdown": -89.48,
+        "turnover_per_year": 74.05
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.407,
+          "cagr": -17.16,
+          "max_drawdown": -54.37,
+          "in_market_pct": 79.3,
+          "n_bars": 735,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.15,
+          "bnh_cagr": -13.7,
+          "bnh_max_drawdown": -61.07,
+          "turnover_per_year": 41.77
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.956,
+          "cagr": 24.38,
+          "max_drawdown": -21.17,
+          "in_market_pct": 69.8,
+          "n_bars": 693,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.559,
+          "bnh_cagr": 13.29,
+          "bnh_max_drawdown": -39.84,
+          "turnover_per_year": 76.12
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.081,
+          "cagr": -6.79,
+          "max_drawdown": -67.72,
+          "in_market_pct": 56.9,
+          "n_bars": 1072,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.646,
+          "bnh_cagr": -30.4,
+          "bnh_max_drawdown": -84.86,
+          "turnover_per_year": 92.97
+        }
+      }
+    }
+  ],
+  "seconds": 9.8
+}

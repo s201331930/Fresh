@@ -1,0 +1,98 @@
+{
+  "ticker": "2150",
+  "yahoo": "2150.SR",
+  "name": "The National Company for Glass Industries",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "776a9ca00ebfea3d",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.474,
+        "cagr": 8.53,
+        "max_drawdown": -47.64,
+        "in_market_pct": 62.0,
+        "n_bars": 2633,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.351,
+        "bnh_cagr": 6.05,
+        "bnh_max_drawdown": -40.62,
+        "turnover_per_year": 84.22
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.484,
+          "cagr": 8.15,
+          "max_drawdown": -33.92,
+          "in_market_pct": 59.8,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.149,
+          "bnh_cagr": -7.02,
+          "bnh_max_drawdown": -35.72,
+          "turnover_per_year": 85.88
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.964,
+          "cagr": 23.89,
+          "max_drawdown": -27.67,
+          "in_market_pct": 53.0,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.129,
+          "bnh_cagr": 37.8,
+          "bnh_max_drawdown": -31.7,
+          "turnover_per_year": 93.48
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.127,
+          "cagr": 0.2,
+          "max_drawdown": -47.64,
+          "in_market_pct": 69.1,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.077,
+          "bnh_cagr": -2.19,
+          "bnh_max_drawdown": -40.62,
+          "turnover_per_year": 77.62
+        }
+      }
+    }
+  ],
+  "seconds": 9.9
+}

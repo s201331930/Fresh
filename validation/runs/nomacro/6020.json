@@ -1,0 +1,98 @@
+{
+  "ticker": "6020",
+  "yahoo": "6020.SR",
+  "name": "Al Gassim Investment Holding Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "e4d46f16d18e3055",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2983,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.374,
+        "cagr": 5.93,
+        "max_drawdown": -37.14,
+        "in_market_pct": 43.4,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.112,
+        "bnh_cagr": -2.52,
+        "bnh_max_drawdown": -72.72,
+        "turnover_per_year": 76.27
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.177,
+          "cagr": 1.45,
+          "max_drawdown": -26.98,
+          "in_market_pct": 27.4,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.076,
+          "bnh_cagr": -6.21,
+          "bnh_max_drawdown": -46.93,
+          "turnover_per_year": 52.13
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.794,
+          "cagr": 16.19,
+          "max_drawdown": -23.36,
+          "in_market_pct": 33.3,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.882,
+          "bnh_cagr": 29.74,
+          "bnh_max_drawdown": -33.35,
+          "turnover_per_year": 74.45
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.237,
+          "cagr": 2.76,
+          "max_drawdown": -37.14,
+          "in_market_pct": 60.0,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.454,
+          "bnh_cagr": -16.41,
+          "bnh_max_drawdown": -67.66,
+          "turnover_per_year": 92.56
+        }
+      }
+    }
+  ],
+  "seconds": 11.1
+}

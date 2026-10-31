@@ -1,0 +1,79 @@
+{
+  "ticker": "4006",
+  "yahoo": "4006.SR",
+  "name": "Saudi Marketing Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "6da72e839a9d3e12",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2018-03-22",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2092,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.586,
+        "cagr": 9.62,
+        "max_drawdown": -34.13,
+        "in_market_pct": 35.4,
+        "n_bars": 1900,
+        "n_years": 7.82,
+        "bnh_sharpe": -0.068,
+        "bnh_cagr": -6.24,
+        "bnh_max_drawdown": -77.63,
+        "turnover_per_year": 78.11
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.712,
+          "cagr": 13.38,
+          "max_drawdown": -21.72,
+          "in_market_pct": 25.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.741,
+          "bnh_cagr": 21.01,
+          "bnh_max_drawdown": -32.72,
+          "turnover_per_year": 63.77
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.496,
+          "cagr": 7.36,
+          "max_drawdown": -30.02,
+          "in_market_pct": 41.6,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.693,
+          "bnh_cagr": -20.0,
+          "bnh_max_drawdown": -71.75,
+          "turnover_per_year": 87.16
+        }
+      }
+    }
+  ],
+  "seconds": 7.5
+}

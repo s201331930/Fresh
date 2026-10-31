@@ -1,0 +1,98 @@
+{
+  "ticker": "7010",
+  "yahoo": "7010.SR",
+  "name": "Saudi Telecom Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "f7bd22ce7f3be3bb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2995,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.681,
+        "cagr": 11.43,
+        "max_drawdown": -31.2,
+        "in_market_pct": 91.2,
+        "n_bars": 2638,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.577,
+        "bnh_cagr": 9.75,
+        "bnh_max_drawdown": -34.54,
+        "turnover_per_year": 29.58
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.932,
+          "cagr": 17.26,
+          "max_drawdown": -21.81,
+          "in_market_pct": 88.2,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.869,
+          "bnh_cagr": 17.21,
+          "bnh_max_drawdown": -20.34,
+          "turnover_per_year": 33.75
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.868,
+          "cagr": 17.39,
+          "max_drawdown": -29.03,
+          "in_market_pct": 91.5,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.617,
+          "bnh_cagr": 11.79,
+          "bnh_max_drawdown": -33.27,
+          "turnover_per_year": 31.72
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.357,
+          "cagr": 4.55,
+          "max_drawdown": -24.41,
+          "in_market_pct": 93.0,
+          "n_bars": 1166,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.329,
+          "bnh_cagr": 4.19,
+          "bnh_max_drawdown": -26.48,
+          "turnover_per_year": 25.73
+        }
+      }
+    }
+  ],
+  "seconds": 11.0
+}

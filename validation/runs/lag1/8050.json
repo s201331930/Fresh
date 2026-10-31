@@ -1,0 +1,98 @@
+{
+  "ticker": "8050",
+  "yahoo": "8050.SR",
+  "name": "Salama Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "a15cb813bf811a8f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-05",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3046,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.274,
+        "cagr": 3.67,
+        "max_drawdown": -55.99,
+        "in_market_pct": 46.1,
+        "n_bars": 2634,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.038,
+        "bnh_cagr": -10.53,
+        "bnh_max_drawdown": -89.33,
+        "turnover_per_year": 68.04
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.578,
+          "cagr": 12.34,
+          "max_drawdown": -31.26,
+          "in_market_pct": 30.7,
+          "n_bars": 740,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.37,
+          "bnh_cagr": 6.52,
+          "bnh_max_drawdown": -59.88,
+          "turnover_per_year": 38.43
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.689,
+          "cagr": 13.83,
+          "max_drawdown": -20.13,
+          "in_market_pct": 54.0,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.267,
+          "bnh_cagr": 3.06,
+          "bnh_max_drawdown": -43.33,
+          "turnover_per_year": 71.78
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.059,
+          "cagr": -6.93,
+          "max_drawdown": -55.99,
+          "in_market_pct": 51.0,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.446,
+          "bnh_cagr": -26.48,
+          "bnh_max_drawdown": -83.98,
+          "turnover_per_year": 84.26
+        }
+      }
+    }
+  ],
+  "seconds": 10.4
+}

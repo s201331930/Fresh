@@ -1,0 +1,98 @@
+{
+  "ticker": "8020",
+  "yahoo": "8020.SR",
+  "name": "Malath Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "b8903512ec2f44c6",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2985,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.141,
+        "cagr": -6.39,
+        "max_drawdown": -62.21,
+        "in_market_pct": 43.1,
+        "n_bars": 2631,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.157,
+        "bnh_cagr": -12.73,
+        "bnh_max_drawdown": -78.22,
+        "turnover_per_year": 75.9
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.676,
+          "cagr": -21.67,
+          "max_drawdown": -57.32,
+          "in_market_pct": 42.2,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.569,
+          "bnh_cagr": -30.07,
+          "bnh_max_drawdown": -70.56,
+          "turnover_per_year": 77.53
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.339,
+          "cagr": 4.65,
+          "max_drawdown": -28.0,
+          "in_market_pct": 33.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.81,
+          "bnh_cagr": 25.93,
+          "bnh_max_drawdown": -38.69,
+          "turnover_per_year": 50.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.028,
+          "cagr": -2.46,
+          "max_drawdown": -43.3,
+          "in_market_pct": 50.0,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.47,
+          "bnh_cagr": -20.3,
+          "bnh_max_drawdown": -73.0,
+          "turnover_per_year": 90.69
+        }
+      }
+    }
+  ],
+  "seconds": 9.7
+}

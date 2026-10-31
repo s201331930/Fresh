@@ -1,0 +1,98 @@
+{
+  "ticker": "4310",
+  "yahoo": "4310.SR",
+  "name": "Knowledge Economic City Company",
+  "status": "ok",
+  "macro_lag": "0",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "020bdb29ea686e08",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-12-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2894,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.155,
+        "cagr": 0.96,
+        "max_drawdown": -50.68,
+        "in_market_pct": 49.5,
+        "n_bars": 2631,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.223,
+        "bnh_cagr": 2.06,
+        "bnh_max_drawdown": -64.32,
+        "turnover_per_year": 66.38
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.175,
+          "cagr": 1.18,
+          "max_drawdown": -40.36,
+          "in_market_pct": 57.7,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.394,
+          "bnh_cagr": -15.99,
+          "bnh_max_drawdown": -57.42,
+          "turnover_per_year": 59.82
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.13,
+          "cagr": 0.69,
+          "max_drawdown": -31.43,
+          "in_market_pct": 45.6,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.796,
+          "bnh_cagr": 21.44,
+          "bnh_max_drawdown": -34.17,
+          "turnover_per_year": 73.78
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.155,
+          "cagr": 1.01,
+          "max_drawdown": -49.99,
+          "in_market_pct": 46.8,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.266,
+          "bnh_cagr": 3.39,
+          "bnh_max_drawdown": -45.15,
+          "turnover_per_year": 65.99
+        }
+      }
+    }
+  ],
+  "seconds": 9.9
+}

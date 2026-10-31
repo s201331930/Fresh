@@ -1,0 +1,98 @@
+{
+  "ticker": "4180",
+  "yahoo": "4180.SR",
+  "name": "Fitaihi Holding Group",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "9cabf2ceed35446a",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-05",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 3047,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.258,
+        "cagr": 3.26,
+        "max_drawdown": -54.25,
+        "in_market_pct": 67.5,
+        "n_bars": 2634,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.082,
+        "bnh_cagr": -2.62,
+        "bnh_max_drawdown": -75.34,
+        "turnover_per_year": 68.87
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.147,
+          "cagr": 0.51,
+          "max_drawdown": -39.09,
+          "in_market_pct": 64.8,
+          "n_bars": 742,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.175,
+          "bnh_cagr": -8.8,
+          "bnh_max_drawdown": -42.6,
+          "turnover_per_year": 76.19
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.984,
+          "cagr": 26.24,
+          "max_drawdown": -26.98,
+          "in_market_pct": 65.4,
+          "n_bars": 740,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.845,
+          "bnh_cagr": 26.47,
+          "bnh_max_drawdown": -49.12,
+          "turnover_per_year": 70.11
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.146,
+          "cagr": -7.33,
+          "max_drawdown": -54.25,
+          "in_market_pct": 70.5,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.298,
+          "bnh_cagr": -13.78,
+          "bnh_max_drawdown": -63.54,
+          "turnover_per_year": 63.71
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

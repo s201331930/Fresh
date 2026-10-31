@@ -1,0 +1,98 @@
+{
+  "ticker": "6090",
+  "yahoo": "6090.SR",
+  "name": "Jazan Development and Investment Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "816410140e05dcca",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2015-04-12",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2821,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.165,
+        "cagr": -5.93,
+        "max_drawdown": -55.49,
+        "in_market_pct": 50.1,
+        "n_bars": 2640,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.14,
+        "bnh_cagr": -8.74,
+        "bnh_max_drawdown": -77.08,
+        "turnover_per_year": 74.97
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.123,
+          "cagr": 0.05,
+          "max_drawdown": -41.28,
+          "in_market_pct": 53.3,
+          "n_bars": 741,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.003,
+          "bnh_cagr": -5.52,
+          "bnh_max_drawdown": -55.91,
+          "turnover_per_year": 73.18
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.038,
+          "cagr": -2.86,
+          "max_drawdown": -42.07,
+          "in_market_pct": 38.1,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.44,
+          "bnh_cagr": 9.33,
+          "bnh_max_drawdown": -39.18,
+          "turnover_per_year": 81.13
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.433,
+          "cagr": -11.26,
+          "max_drawdown": -48.84,
+          "in_market_pct": 55.7,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.668,
+          "bnh_cagr": -20.18,
+          "bnh_max_drawdown": -69.66,
+          "turnover_per_year": 72.43
+        }
+      }
+    }
+  ],
+  "seconds": 10.6
+}

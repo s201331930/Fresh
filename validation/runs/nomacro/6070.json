@@ -1,0 +1,98 @@
+{
+  "ticker": "6070",
+  "yahoo": "6070.SR",
+  "name": "Al-Jouf Agricultural Development Co.",
+  "status": "ok",
+  "macro_lag": "none",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "e3af634d8d9629f149327e74eff313bd7bb2b9a6",
+  "data_hash": "2e50134a706c6fff",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": false,
+  "n_neutralized_labels": 0,
+  "n_features": 104,
+  "n_predictions": 2986,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.165,
+        "cagr": 0.83,
+        "max_drawdown": -52.76,
+        "in_market_pct": 63.1,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.269,
+        "bnh_cagr": 3.37,
+        "bnh_max_drawdown": -64.04,
+        "turnover_per_year": 74.51
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.318,
+          "cagr": -12.07,
+          "max_drawdown": -43.33,
+          "in_market_pct": 63.7,
+          "n_bars": 735,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.175,
+          "bnh_cagr": -10.39,
+          "bnh_max_drawdown": -43.99,
+          "turnover_per_year": 90.56
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.201,
+          "cagr": 33.18,
+          "max_drawdown": -28.57,
+          "in_market_pct": 46.7,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.148,
+          "bnh_cagr": 45.29,
+          "bnh_max_drawdown": -44.97,
+          "turnover_per_year": 73.12
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.21,
+          "cagr": -7.66,
+          "max_drawdown": -45.5,
+          "in_market_pct": 73.2,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.184,
+          "bnh_cagr": -8.57,
+          "bnh_max_drawdown": -53.57,
+          "turnover_per_year": 65.58
+        }
+      }
+    }
+  ],
+  "seconds": 9.3
+}
