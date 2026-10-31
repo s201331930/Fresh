@@ -40,6 +40,7 @@ Seed for the ensembles is the hard-coded `random_state=42` in `daily_vs_weekly.p
 | Task | Concern | Verdict | Key number | Evidence |
 | --- | --- | --- | --- | --- |
 | 1 | Same-day US/ICE macro on a 15:00 Riyadh decision | **CONFIRMED** | Period median Sharpe 0.435 → 0.327 (paired median −0.086). Beat-buy-and-hold 300/438 (68.5%) → 270/438 (61.6%), a drop of 6.8 points. Lag 1 is the new baseline. | `validation/paired_lag1_minus_lag0.csv`, `validation/macro_same_day_counts.csv` |
+| 2 | Corporate-action jumps in Yahoo `.SR` | **CONFIRMED** | On the lag-1 tape, neutralizing \|return\| > 15% moves the period median Sharpe gap +0.108 → +0.138 (+28% relative). Beat rate 270/438 → 274/438 (+1.5% relative). Paired median gap change is 0.00 because 221/438 periods are untouched. Maaden and Tawuniya lose the 2022–2026 edge. | `validation/pipeline_jumps.csv`, `validation/paired_clean_minus_lag1.csv` |
 
 ## 3. Task 1 — cross-timezone macro look-ahead
 
@@ -98,18 +99,73 @@ Published Study C (the October tape, same leaky join) was 290/438, median gap +0
 
 ## 4. Headline after accepted fixes
 
-Only Task 1 is accepted so far. TASI daily Binary (t=0), lag 1, fill at the close, 2 bps, seed 42:
+Tasks 1 and 2 are in. The running baseline is lag 1, jumps with \|adjusted return\| > 15% removed from the price path, labels on those sessions dropped from training, fill at the close, 2 bps, seed 42.
 
-- Period pool: beat rate 61.6% (was 68.5% on this tape, 66% in the published file), median Sharpe 0.327 (was 0.435 / published 0.404), median gap +0.109 (was +0.216 / published +0.187), median CAGR 4.66% vs buy-and-hold 1.98%.
-- Full window: 97/155 beat buy-and-hold (was 114/155), median Sharpe 0.281 vs 0.172, median gap +0.078, median CAGR 3.56% vs 0.09%.
+| | Published Study C (leaky join, October tape) | This tape, lag 0 | Lag 1 | Lag 1, jumps neutralized |
+| --- | --- | --- | --- | --- |
+| Periods beating buy-and-hold | 290/438 (66%) | 300/438 (68.5%) | 270/438 (61.6%) | 274/438 (62.6%) |
+| Median period Sharpe | 0.404 | 0.435 | 0.327 | 0.327 |
+| Median period gap | +0.187 | +0.216 | +0.108 | +0.138 |
+| Median period CAGR | 6.40% | 7.28% | 4.66% | 4.94% |
+| Median period buy-and-hold CAGR | 1.81% | 1.98% | 1.98% | 1.70% |
+| Full-window names beating buy-and-hold | 114/155 | 114/155 | 97/155 | 112/155 |
+| Full-window median Sharpe | 0.361 | 0.393 | 0.281 | 0.311 |
+| Full-window median gap | +0.177 | +0.185 | +0.078 | +0.118 |
+| Full-window median CAGR | 5.96% | 6.74% | 3.56% | 4.44% |
 
-## 5. Run log
+The two fixes cut the published period gap from +0.187 to +0.138. Most of that cut is the macro lag, not the price jumps. The jump fix raises the gap relative to lag 1 because buy-and-hold on the contaminated names gets worse once the false up-moves are removed.
+
+## 5. Task 2 — corporate-action contamination
+
+Tadawul's daily limit is ±10%. An adjusted close-to-close move larger than 15% is not a normal continuous-trading print. On the tape the model sees (`daily_study/cache/`, adjusted OHLC, volume 0 dropped):
+
+- 225 such sessions, 85 of 155 names, 87 of them on or after 2016-01-01 across 47 names.
+- After neutralization, every name's annualized volatility (√250) is between the original clean names and 51%. Median 33%. No remaining \|return\| above 15%. Before the fix, Saudi Fisheries was 95% and Methanol Chemicals 85%.
+
+The raw Yahoo file, before the volume filter and the adjustment ratio, is much worse. Al Rajhi's raw close has 40 days above 15% in 2010–2013, including +270% prints that reverse the next session. The adjusted pipeline series for Al Rajhi and Jarir has **zero** days above 15%, and weekly volatility on the current adjusted tape is 22% for both. Study A's published annualized vols (Jarir 439%, Al Rajhi 199%, Maaden 105%, Tawuniya 97%) do not reproduce on this download. Those four numbers were a property of the tape Study A stored, not of the adjusted series used here. Study A's weekly model was not refit in this pass. The 12 TASI names inside Study B are inside the 155 and are covered by the daily rerun below.
+
+Cross-checks against Tadawul actions, on the adjusted series the model actually uses:
+
+- Maaden (1211), 8 Jun 2023 +51% and 11 Jun 2023 −34%. Shareholders approved a 1-for-2 bonus on 7 Jun 2023; Edaa implemented it on 12 Jun 2023. A 1-for-2 bonus cuts the price by one third. The adjusted series contains a spurious +51% and then the −33% ex-date. Both are above the limit.
+- Tawuniya (8010), 6 Sep 2026 +50% and 7 Sep 2026 −33.5%. The 3 Sep 2026 EGM approved a 1-for-2 bonus; the exchange reset the 6 Sep limit off SAR 90.65; Edaa credited the shares on 8 Sep 2026. Same broken pattern.
+- Saudi Fisheries (6050). The CMA approved a capital reduction from SAR 400 million to SAR 66.986 million. The adjusted series in Aug–Sep 2026 has −71.5%, +238%, −69%, and +203%. Those are not tradable limit moves.
+
+Neutralization scales the flagged session's OHLC so its close equals the previous close, and scales every later price by the same factor so later returns are unchanged. The label on the previous session is dropped from training. Cost stays 2 bps. Macro lag stays 1. Commit `76280546ba16f4024d1663aba2d3a0823f99093f`. Finished 31 Oct 2026, 14:06 Asia/Riyadh. 155/155 succeeded. 85 names had at least one dropped label (225 labels).
+
+Pass bar: beat rate, median Sharpe gap, and median CAGR gap each move by less than 20% relative versus lag 1.
+
+| Headline | Lag 1 | Lag 1, cleaned | Relative change |
+| --- | --- | --- | --- |
+| Period beat rate | 270/438 (61.6%) | 274/438 (62.6%) | +1.5% |
+| Period median Sharpe gap | +0.108 | +0.138 | **+28%** |
+| Period median CAGR gap | +3.21 | +3.51 | +9% |
+| Full-window beat rate | 97/155 | 112/155 | +15% |
+| Full-window median Sharpe gap | +0.078 | +0.118 | **+51%** |
+| Full-window median CAGR gap | +3.11 | +3.39 | +9% |
+
+The Sharpe-gap headlines miss the 20% bar. The paired median of (cleaned − lag 1) is **0.000** on both Sharpe and the gap, because 221 of 438 periods have no flagged session and do not move. The level of the median moves because the contaminated minority shifts the center of the distribution. Buy-and-hold is not held fixed: the max absolute change in a period's buy-and-hold Sharpe is 1.36.
+
+Names, full window, lag 1 → cleaned:
+
+- Tawuniya: Sharpe gap +0.313 → +0.035, CAGR gap +11.63 → +0.76. In 2022–2026 the gap goes from +0.412 to −0.046 and the CAGR gap from +18.37 to −2.62. The recent edge was the botched bonus.
+- Maaden: full-window gap +0.066 → −0.042, so it stops beating buy-and-hold. The 2022–2026 CAGR gap goes from +10.34 to −0.04. The June 2023 bonus was the edge in that window. 2016–2021 is unchanged, because the jumps are not in those periods.
+- Saudi Fisheries: strategy Sharpe 0.524 → 0.503, but buy-and-hold Sharpe 0.234 → −0.062, so the Sharpe gap **rises** (+0.290 → +0.565). The CAGR gap is cut from +39.9 to +22.6, and in 2022–2026 from +64.9 to +31.2. About half of that CAGR gap was the bad prints. A large remainder is still there, on a series whose cleaned vol is 45%.
+- AFG: Sharpe gap +0.579 → +0.272. Still ahead of its own buy-and-hold, which stays negative.
+- Amiantit: gap +0.505 → +0.482. One flagged day does not explain it.
+- Naseej: gap +0.374 → +0.732. Removing the jumps makes buy-and-hold worse. The edge is not a free ride on a down print.
+- Tihama: gap +0.811 → +0.778.
+- Jarir and Al Rajhi: no flagged days. Unchanged. Jarir still trails buy-and-hold (gap −0.057).
+
+Three full windows flip from ahead of buy-and-hold to behind: 2120 (gap +0.131 → −0.189), Maaden, and 8020 (+0.090 → −0.062). The median name does not lose its edge. The names whose recent window was a mis-adjusted bonus do.
+
+## 6. Run log
 
 | Config | Seed | Commit | Data hash | Finished (Asia/Riyadh) |
 | --- | --- | --- | --- | --- |
 | Lag 0, fill close, 2 bps, 155 names | 42 | `e3af634d8d9629f149327e74eff313bd7bb2b9a6` | per name, Al Rajhi `affdaabf32a08d37` | 31 Oct 2026, 13:22 |
 | Lag 1, same | 42 | same | same hash, different join | 31 Oct 2026, 13:34 |
 | Macro removed, same | 42 | same | same hash | 31 Oct 2026, 13:49 |
+| Lag 1, jumps neutralized, 155 names | 42 | `76280546ba16f4024d1663aba2d3a0823f99093f` | same prices before the jump scaling | 31 Oct 2026, 14:06 |
 
 Per-name JSON: `validation/runs/lag0/`, `validation/runs/lag1/`, `validation/runs/nomacro/`. Predictions are local and gitignored. Prices are in `daily_study/cache/` and are gitignored.
 

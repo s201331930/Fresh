@@ -1,0 +1,98 @@
+{
+  "ticker": "2050",
+  "yahoo": "2050.SR",
+  "name": "Savola Group Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "c2f05d1a01aac79f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.526,
+        "cagr": 10.74,
+        "max_drawdown": -42.64,
+        "in_market_pct": 66.5,
+        "n_bars": 2627,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.223,
+        "bnh_cagr": 1.91,
+        "bnh_max_drawdown": -47.61,
+        "turnover_per_year": 69.15
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.509,
+          "cagr": 10.66,
+          "max_drawdown": -38.35,
+          "in_market_pct": 57.5,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.212,
+          "bnh_cagr": -12.63,
+          "bnh_max_drawdown": -44.66,
+          "turnover_per_year": 75.19
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.268,
+          "cagr": 3.59,
+          "max_drawdown": -39.26,
+          "in_market_pct": 75.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.454,
+          "bnh_cagr": 9.23,
+          "bnh_max_drawdown": -38.0,
+          "turnover_per_year": 59.76
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.685,
+          "cagr": 15.51,
+          "max_drawdown": -42.64,
+          "in_market_pct": 66.3,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.391,
+          "bnh_cagr": 7.42,
+          "bnh_max_drawdown": -47.61,
+          "turnover_per_year": 71.39
+        }
+      }
+    }
+  ],
+  "seconds": 10.4
+}

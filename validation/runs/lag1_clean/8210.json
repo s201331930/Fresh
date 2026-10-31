@@ -1,0 +1,98 @@
+{
+  "ticker": "8210",
+  "yahoo": "8210.SR",
+  "name": "Bupa Arabia for Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "9dedb533a9935547",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2994,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.545,
+        "cagr": 12.29,
+        "max_drawdown": -45.64,
+        "in_market_pct": 89.8,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.44,
+        "bnh_cagr": 9.03,
+        "bnh_max_drawdown": -52.85,
+        "turnover_per_year": 21.45
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.283,
+          "cagr": 3.98,
+          "max_drawdown": -43.74,
+          "in_market_pct": 90.5,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.182,
+          "bnh_cagr": 0.66,
+          "bnh_max_drawdown": -47.47,
+          "turnover_per_year": 18.71
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.235,
+          "cagr": 31.06,
+          "max_drawdown": -22.37,
+          "in_market_pct": 82.0,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.775,
+          "bnh_cagr": 18.62,
+          "bnh_max_drawdown": -27.03,
+          "turnover_per_year": 33.39
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.38,
+          "cagr": 7.03,
+          "max_drawdown": -45.64,
+          "in_market_pct": 94.5,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.428,
+          "bnh_cagr": 8.76,
+          "bnh_max_drawdown": -52.85,
+          "turnover_per_year": 15.77
+        }
+      }
+    }
+  ],
+  "seconds": 11.4
+}

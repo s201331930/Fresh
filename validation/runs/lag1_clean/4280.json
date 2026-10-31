@@ -1,0 +1,98 @@
+{
+  "ticker": "4280",
+  "yahoo": "4280.SR",
+  "name": "Kingdom Holding Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "04b9e789fcf93ca3",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2984,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.311,
+        "cagr": 4.42,
+        "max_drawdown": -47.98,
+        "in_market_pct": 51.7,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.218,
+        "bnh_cagr": 2.16,
+        "bnh_max_drawdown": -49.73,
+        "turnover_per_year": 69.89
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.589,
+          "cagr": -14.43,
+          "max_drawdown": -39.86,
+          "in_market_pct": 48.4,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.573,
+          "bnh_cagr": -16.41,
+          "bnh_max_drawdown": -43.04,
+          "turnover_per_year": 58.48
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.719,
+          "cagr": 12.89,
+          "max_drawdown": -23.12,
+          "in_market_pct": 50.9,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.725,
+          "bnh_cagr": 15.82,
+          "bnh_max_drawdown": -29.93,
+          "turnover_per_year": 74.79
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.639,
+          "cagr": 12.58,
+          "max_drawdown": -27.53,
+          "in_market_pct": 54.3,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.384,
+          "bnh_cagr": 7.04,
+          "bnh_max_drawdown": -34.09,
+          "turnover_per_year": 74.09
+        }
+      }
+    }
+  ],
+  "seconds": 10.1
+}

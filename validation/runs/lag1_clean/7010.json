@@ -1,0 +1,98 @@
+{
+  "ticker": "7010",
+  "yahoo": "7010.SR",
+  "name": "Saudi Telecom Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "f7bd22ce7f3be3bb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2995,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.424,
+        "cagr": 6.37,
+        "max_drawdown": -33.69,
+        "in_market_pct": 94.2,
+        "n_bars": 2638,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.577,
+        "bnh_cagr": 9.75,
+        "bnh_max_drawdown": -34.54,
+        "turnover_per_year": 17.19
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.399,
+          "cagr": 6.0,
+          "max_drawdown": -27.18,
+          "in_market_pct": 91.0,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.869,
+          "bnh_cagr": 17.21,
+          "bnh_max_drawdown": -20.34,
+          "turnover_per_year": 20.72
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.78,
+          "cagr": 15.48,
+          "max_drawdown": -29.57,
+          "in_market_pct": 93.7,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.617,
+          "bnh_cagr": 11.79,
+          "bnh_max_drawdown": -33.27,
+          "turnover_per_year": 19.36
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.164,
+          "cagr": 1.31,
+          "max_drawdown": -26.48,
+          "in_market_pct": 96.7,
+          "n_bars": 1166,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.329,
+          "bnh_cagr": 4.19,
+          "bnh_max_drawdown": -26.48,
+          "turnover_per_year": 13.7
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

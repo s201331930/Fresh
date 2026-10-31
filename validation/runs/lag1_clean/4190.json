@@ -1,0 +1,98 @@
+{
+  "ticker": "4190",
+  "yahoo": "4190.SR",
+  "name": "Jarir Marketing Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "77da80ff34458795",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2991,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.441,
+        "cagr": 6.7,
+        "max_drawdown": -33.43,
+        "in_market_pct": 78.4,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.498,
+        "bnh_cagr": 8.75,
+        "bnh_max_drawdown": -45.78,
+        "turnover_per_year": 46.5
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.32,
+          "cagr": 4.57,
+          "max_drawdown": -30.31,
+          "in_market_pct": 69.0,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.676,
+          "bnh_cagr": 14.99,
+          "bnh_max_drawdown": -45.78,
+          "turnover_per_year": 48.12
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.825,
+          "cagr": 15.23,
+          "max_drawdown": -33.43,
+          "in_market_pct": 82.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.726,
+          "bnh_cagr": 14.4,
+          "bnh_max_drawdown": -34.68,
+          "turnover_per_year": 44.07
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.264,
+          "cagr": 3.02,
+          "max_drawdown": -25.3,
+          "in_market_pct": 81.4,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.194,
+          "bnh_cagr": 1.81,
+          "bnh_max_drawdown": -32.7,
+          "turnover_per_year": 47.11
+        }
+      }
+    }
+  ],
+  "seconds": 10.7
+}

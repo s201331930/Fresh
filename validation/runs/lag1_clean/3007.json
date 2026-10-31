@@ -1,0 +1,79 @@
+{
+  "ticker": "3007",
+  "yahoo": "3007.SR",
+  "name": "Zahrat Al Waha For Trading Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "fb49576f7c862701",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "2y",
+  "oos_start": "2021-05-02",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 1319,
+  "full": {
+    "start": "2022-01-02",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.682,
+        "cagr": -17.49,
+        "max_drawdown": -71.64,
+        "in_market_pct": 59.6,
+        "n_bars": 1159,
+        "n_years": 4.82,
+        "bnh_sharpe": -0.371,
+        "bnh_cagr": -14.88,
+        "bnh_max_drawdown": -64.32,
+        "turnover_per_year": 50.84
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2022-2023",
+      "start": "2022-01-02",
+      "end": "2023-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -1.429,
+          "cagr": -29.12,
+          "max_drawdown": -59.54,
+          "in_market_pct": 47.9,
+          "n_bars": 472,
+          "n_years": 1.99,
+          "bnh_sharpe": -0.489,
+          "bnh_cagr": -17.4,
+          "bnh_max_drawdown": -53.18,
+          "turnover_per_year": 27.59
+        }
+      }
+    },
+    {
+      "label": "2024-2026",
+      "start": "2024-01-01",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.213,
+          "cagr": -8.16,
+          "max_drawdown": -54.58,
+          "in_market_pct": 67.7,
+          "n_bars": 687,
+          "n_years": 2.82,
+          "bnh_sharpe": -0.292,
+          "bnh_cagr": -13.07,
+          "bnh_max_drawdown": -57.75,
+          "turnover_per_year": 67.31
+        }
+      }
+    }
+  ],
+  "seconds": 3.6
+}

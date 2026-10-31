@@ -1,0 +1,98 @@
+{
+  "ticker": "4130",
+  "yahoo": "4130.SR",
+  "name": "Darb Saudi Investment Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "d2afff96b3745de7",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "2y",
+  "oos_start": "2018-08-28",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 4,
+  "n_features": 116,
+  "n_predictions": 1981,
+  "full": {
+    "start": "2020-01-01",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.366,
+        "cagr": 6.59,
+        "max_drawdown": -52.26,
+        "in_market_pct": 47.4,
+        "n_bars": 1641,
+        "n_years": 6.82,
+        "bnh_sharpe": 0.196,
+        "bnh_cagr": -3.61,
+        "bnh_max_drawdown": -75.77,
+        "turnover_per_year": 60.68
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2020-2021",
+      "start": "2020-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.095,
+          "cagr": -0.79,
+          "max_drawdown": -25.35,
+          "in_market_pct": 23.8,
+          "n_bars": 492,
+          "n_years": 2.0,
+          "bnh_sharpe": 0.999,
+          "bnh_cagr": 42.51,
+          "bnh_max_drawdown": -40.97,
+          "turnover_per_year": 36.58
+        }
+      }
+    },
+    {
+      "label": "2022-2023",
+      "start": "2022-01-02",
+      "end": "2023-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.422,
+          "cagr": 8.77,
+          "max_drawdown": -36.88,
+          "in_market_pct": 60.4,
+          "n_bars": 470,
+          "n_years": 1.99,
+          "bnh_sharpe": -0.406,
+          "bnh_cagr": -28.54,
+          "bnh_max_drawdown": -58.93,
+          "turnover_per_year": 90.81
+        }
+      }
+    },
+    {
+      "label": "2024-2026",
+      "start": "2024-01-01",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.457,
+          "cagr": 10.58,
+          "max_drawdown": -52.26,
+          "in_market_pct": 55.5,
+          "n_bars": 679,
+          "n_years": 2.82,
+          "bnh_sharpe": 0.106,
+          "bnh_cagr": -9.7,
+          "bnh_max_drawdown": -75.77,
+          "turnover_per_year": 56.68
+        }
+      }
+    }
+  ],
+  "seconds": 6.8
+}

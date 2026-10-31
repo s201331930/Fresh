@@ -1,0 +1,98 @@
+{
+  "ticker": "2230",
+  "yahoo": "2230.SR",
+  "name": "Saudi Chemical Holding Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "312b844c278d2315",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2980,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.586,
+        "cagr": 12.63,
+        "max_drawdown": -49.56,
+        "in_market_pct": 77.7,
+        "n_bars": 2627,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.314,
+        "bnh_cagr": 4.91,
+        "bnh_max_drawdown": -60.14,
+        "turnover_per_year": 52.23
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.052,
+          "cagr": -3.95,
+          "max_drawdown": -39.85,
+          "in_market_pct": 81.5,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.344,
+          "bnh_cagr": -11.77,
+          "bnh_max_drawdown": -45.8,
+          "turnover_per_year": 49.12
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.994,
+          "cagr": 24.57,
+          "max_drawdown": -16.24,
+          "in_market_pct": 80.9,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.615,
+          "bnh_cagr": 13.98,
+          "bnh_max_drawdown": -27.31,
+          "turnover_per_year": 52.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.689,
+          "cagr": 16.83,
+          "max_drawdown": -49.56,
+          "in_market_pct": 73.3,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.481,
+          "bnh_cagr": 10.95,
+          "bnh_max_drawdown": -60.14,
+          "turnover_per_year": 53.96
+        }
+      }
+    }
+  ],
+  "seconds": 10.8
+}

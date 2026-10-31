@@ -1,0 +1,98 @@
+{
+  "ticker": "2090",
+  "yahoo": "2090.SR",
+  "name": "National Gypsum Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "ecf8767ace1e47dc",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2974,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.225,
+        "cagr": -7.55,
+        "max_drawdown": -80.25,
+        "in_market_pct": 44.6,
+        "n_bars": 2620,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.09,
+        "bnh_cagr": -2.49,
+        "bnh_max_drawdown": -83.1,
+        "turnover_per_year": 72.01
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.231,
+          "cagr": -6.18,
+          "max_drawdown": -32.65,
+          "in_market_pct": 41.5,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.095,
+          "bnh_cagr": -6.91,
+          "bnh_max_drawdown": -45.51,
+          "turnover_per_year": 59.82
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.327,
+          "cagr": 33.43,
+          "max_drawdown": -20.0,
+          "in_market_pct": 33.5,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.469,
+          "bnh_cagr": 60.91,
+          "bnh_max_drawdown": -38.96,
+          "turnover_per_year": 58.09
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -1.184,
+          "cagr": -27.09,
+          "max_drawdown": -80.25,
+          "in_market_pct": 53.8,
+          "n_bars": 1146,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.825,
+          "bnh_cagr": -26.49,
+          "bnh_max_drawdown": -81.51,
+          "turnover_per_year": 88.41
+        }
+      }
+    }
+  ],
+  "seconds": 9.7
+}

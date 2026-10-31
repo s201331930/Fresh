@@ -1,0 +1,98 @@
+{
+  "ticker": "2220",
+  "yahoo": "2220.SR",
+  "name": "National Metal Manufacturing and Casting Co.",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "c18a794fe2249b1c",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2982,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.245,
+        "cagr": 2.95,
+        "max_drawdown": -41.41,
+        "in_market_pct": 53.6,
+        "n_bars": 2629,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.084,
+        "bnh_cagr": -8.09,
+        "bnh_max_drawdown": -79.22,
+        "turnover_per_year": 78.49
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.157,
+          "cagr": 0.76,
+          "max_drawdown": -31.69,
+          "in_market_pct": 57.7,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.189,
+          "bnh_cagr": -10.5,
+          "bnh_max_drawdown": -45.67,
+          "turnover_per_year": 73.52
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.673,
+          "cagr": 14.47,
+          "max_drawdown": -21.93,
+          "in_market_pct": 43.2,
+          "n_bars": 740,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.592,
+          "bnh_cagr": 16.47,
+          "bnh_max_drawdown": -42.7,
+          "turnover_per_year": 67.77
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.011,
+          "cagr": -2.31,
+          "max_drawdown": -34.12,
+          "in_market_pct": 57.5,
+          "n_bars": 1158,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.544,
+          "bnh_cagr": -19.36,
+          "bnh_max_drawdown": -72.62,
+          "turnover_per_year": 88.41
+        }
+      }
+    }
+  ],
+  "seconds": 11.6
+}

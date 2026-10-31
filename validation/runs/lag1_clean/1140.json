@@ -1,0 +1,98 @@
+{
+  "ticker": "1140",
+  "yahoo": "1140.SR",
+  "name": "Bank Albilad",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "5bb1c3610bec22ea",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2990,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.676,
+        "cagr": 14.0,
+        "max_drawdown": -39.4,
+        "in_market_pct": 80.6,
+        "n_bars": 2628,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.524,
+        "bnh_cagr": 10.88,
+        "bnh_max_drawdown": -42.0,
+        "turnover_per_year": 49.18
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.389,
+          "cagr": 6.55,
+          "max_drawdown": -23.71,
+          "in_market_pct": 89.5,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.556,
+          "bnh_cagr": 11.48,
+          "bnh_max_drawdown": -29.59,
+          "turnover_per_year": 34.75
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.708,
+          "cagr": 48.02,
+          "max_drawdown": -29.58,
+          "in_market_pct": 79.1,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.139,
+          "bnh_cagr": 31.87,
+          "bnh_max_drawdown": -38.59,
+          "turnover_per_year": 52.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.168,
+          "cagr": 1.12,
+          "max_drawdown": -39.4,
+          "in_market_pct": 75.8,
+          "n_bars": 1151,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.113,
+          "bnh_cagr": -0.76,
+          "bnh_max_drawdown": -42.0,
+          "turnover_per_year": 56.03
+        }
+      }
+    }
+  ],
+  "seconds": 10.9
+}

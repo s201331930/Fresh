@@ -1,0 +1,98 @@
+{
+  "ticker": "6070",
+  "yahoo": "6070.SR",
+  "name": "Al-Jouf Agricultural Development Co.",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "2e50134a706c6fff",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2986,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.299,
+        "cagr": 4.37,
+        "max_drawdown": -55.3,
+        "in_market_pct": 61.4,
+        "n_bars": 2632,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.269,
+        "bnh_cagr": 3.37,
+        "bnh_max_drawdown": -64.04,
+        "turnover_per_year": 76.91
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.653,
+          "cagr": -17.52,
+          "max_drawdown": -46.19,
+          "in_market_pct": 59.2,
+          "n_bars": 735,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.175,
+          "bnh_cagr": -10.39,
+          "bnh_max_drawdown": -43.99,
+          "turnover_per_year": 90.56
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.416,
+          "cagr": 44.97,
+          "max_drawdown": -39.0,
+          "in_market_pct": 52.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.148,
+          "bnh_cagr": 45.29,
+          "bnh_max_drawdown": -44.97,
+          "turnover_per_year": 68.44
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.058,
+          "cagr": -1.52,
+          "max_drawdown": -37.03,
+          "in_market_pct": 68.6,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.184,
+          "bnh_cagr": -8.57,
+          "bnh_max_drawdown": -53.57,
+          "turnover_per_year": 73.88
+        }
+      }
+    }
+  ],
+  "seconds": 9.6
+}

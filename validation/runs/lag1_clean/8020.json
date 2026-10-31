@@ -1,0 +1,98 @@
+{
+  "ticker": "8020",
+  "yahoo": "8020.SR",
+  "name": "Malath Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "b8903512ec2f44c6",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2985,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.219,
+        "cagr": -9.06,
+        "max_drawdown": -75.43,
+        "in_market_pct": 50.2,
+        "n_bars": 2631,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.157,
+        "bnh_cagr": -12.73,
+        "bnh_max_drawdown": -78.22,
+        "turnover_per_year": 80.8
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.608,
+          "cagr": -22.61,
+          "max_drawdown": -60.12,
+          "in_market_pct": 47.9,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.569,
+          "bnh_cagr": -30.07,
+          "bnh_max_drawdown": -70.56,
+          "turnover_per_year": 82.21
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.176,
+          "cagr": -5.85,
+          "max_drawdown": -31.39,
+          "in_market_pct": 40.0,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.81,
+          "bnh_cagr": 25.93,
+          "bnh_max_drawdown": -38.69,
+          "turnover_per_year": 60.76
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.066,
+          "cagr": -1.64,
+          "max_drawdown": -41.1,
+          "in_market_pct": 58.4,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.47,
+          "bnh_cagr": -20.3,
+          "bnh_max_drawdown": -73.0,
+          "turnover_per_year": 92.56
+        }
+      }
+    }
+  ],
+  "seconds": 9.8
+}

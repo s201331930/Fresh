@@ -1,0 +1,98 @@
+{
+  "ticker": "4250",
+  "yahoo": "4250.SR",
+  "name": "Jabal Omar Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "5b00dd473e93cccc",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2992,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.364,
+        "cagr": 5.91,
+        "max_drawdown": -54.56,
+        "in_market_pct": 66.3,
+        "n_bars": 2630,
+        "n_years": 10.82,
+        "bnh_sharpe": -0.237,
+        "bnh_cagr": -10.78,
+        "bnh_max_drawdown": -81.34,
+        "turnover_per_year": 78.76
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.357,
+          "cagr": -12.27,
+          "max_drawdown": -50.31,
+          "in_market_pct": 92.5,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.448,
+          "bnh_cagr": -14.93,
+          "bnh_max_drawdown": -55.02,
+          "turnover_per_year": 28.07
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.567,
+          "cagr": 11.92,
+          "max_drawdown": -28.94,
+          "in_market_pct": 62.9,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": -0.143,
+          "bnh_cagr": -8.83,
+          "bnh_max_drawdown": -43.59,
+          "turnover_per_year": 87.81
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.791,
+          "cagr": 15.06,
+          "max_drawdown": -32.47,
+          "in_market_pct": 51.9,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.177,
+          "bnh_cagr": -9.36,
+          "bnh_max_drawdown": -55.36,
+          "turnover_per_year": 104.8
+        }
+      }
+    }
+  ],
+  "seconds": 12.0
+}

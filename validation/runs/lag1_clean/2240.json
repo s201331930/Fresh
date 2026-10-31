@@ -1,0 +1,98 @@
+{
+  "ticker": "2240",
+  "yahoo": "2240.SR",
+  "name": "Advanced Building Industries Co.",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "close",
+  "seed": 42,
+  "git_commit": "76280546ba16f4024d1663aba2d3a0823f99093f",
+  "data_hash": "cd90112ba16d3cb3",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2986,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-28",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.38,
+        "cagr": 6.54,
+        "max_drawdown": -48.22,
+        "in_market_pct": 56.9,
+        "n_bars": 2629,
+        "n_years": 10.82,
+        "bnh_sharpe": 0.136,
+        "bnh_cagr": -1.18,
+        "bnh_max_drawdown": -64.15,
+        "turnover_per_year": 80.61
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.258,
+          "cagr": -6.05,
+          "max_drawdown": -25.12,
+          "in_market_pct": 55.3,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.449,
+          "bnh_cagr": -13.56,
+          "bnh_max_drawdown": -42.79,
+          "turnover_per_year": 81.54
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.561,
+          "cagr": 11.71,
+          "max_drawdown": -35.89,
+          "in_market_pct": 54.8,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.607,
+          "bnh_cagr": 16.07,
+          "bnh_max_drawdown": -42.41,
+          "turnover_per_year": 75.12
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-28",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.536,
+          "cagr": 11.87,
+          "max_drawdown": -33.2,
+          "in_market_pct": 59.2,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.114,
+          "bnh_cagr": -2.84,
+          "bnh_max_drawdown": -53.6,
+          "turnover_per_year": 83.63
+        }
+      }
+    }
+  ],
+  "seconds": 10.9
+}
