@@ -1,0 +1,98 @@
+{
+  "ticker": "4230",
+  "yahoo": "4230.SR",
+  "name": "Red Sea International Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "cd0d781f63e60a6d",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2979,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.069,
+        "cagr": -2.34,
+        "max_drawdown": -60.98,
+        "in_market_pct": 69.1,
+        "n_bars": 2626,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.061,
+        "bnh_cagr": -9.08,
+        "bnh_max_drawdown": -84.02,
+        "turnover_per_year": 58.16
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.237,
+          "cagr": -10.52,
+          "max_drawdown": -49.25,
+          "in_market_pct": 75.4,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.147,
+          "bnh_cagr": -10.01,
+          "bnh_max_drawdown": -55.62,
+          "turnover_per_year": 59.15
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.775,
+          "cagr": 21.33,
+          "max_drawdown": -26.47,
+          "in_market_pct": 81.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.415,
+          "bnh_cagr": 8.69,
+          "bnh_max_drawdown": -40.74,
+          "turnover_per_year": 51.42
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.229,
+          "cagr": -9.91,
+          "max_drawdown": -54.49,
+          "in_market_pct": 57.3,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.269,
+          "bnh_cagr": -18.12,
+          "bnh_max_drawdown": -84.02,
+          "turnover_per_year": 61.88
+        }
+      }
+    }
+  ],
+  "seconds": 11.7
+}

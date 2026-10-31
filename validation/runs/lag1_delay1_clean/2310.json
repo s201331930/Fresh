@@ -1,0 +1,98 @@
+{
+  "ticker": "2310",
+  "yahoo": "2310.SR",
+  "name": "Sahara International Petrochemical Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "686067b6e2feb93e",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2981,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.249,
+        "cagr": 3.04,
+        "max_drawdown": -73.42,
+        "in_market_pct": 75.8,
+        "n_bars": 2624,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.26,
+        "bnh_cagr": 3.2,
+        "bnh_max_drawdown": -76.19,
+        "turnover_per_year": 33.84
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.698,
+          "cagr": 13.89,
+          "max_drawdown": -25.22,
+          "in_market_pct": 58.2,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.684,
+          "bnh_cagr": 17.66,
+          "bnh_max_drawdown": -33.78,
+          "turnover_per_year": 43.44
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.35,
+          "cagr": 36.45,
+          "max_drawdown": -31.85,
+          "in_market_pct": 79.9,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.091,
+          "bnh_cagr": 33.02,
+          "bnh_max_drawdown": -48.84,
+          "turnover_per_year": 30.72
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.697,
+          "cagr": -18.68,
+          "max_drawdown": -73.42,
+          "in_market_pct": 84.4,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.6,
+          "bnh_cagr": -18.76,
+          "bnh_max_drawdown": -76.19,
+          "turnover_per_year": 29.9
+        }
+      }
+    }
+  ],
+  "seconds": 9.9
+}

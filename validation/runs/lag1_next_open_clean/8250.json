@@ -1,0 +1,98 @@
+{
+  "ticker": "8250",
+  "yahoo": "8250.SR",
+  "name": "Gulf Insurance Group",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "6f64a7a44e09c16f",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 4,
+  "n_features": 116,
+  "n_predictions": 2987,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.333,
+        "cagr": 5.52,
+        "max_drawdown": -49.44,
+        "in_market_pct": 71.5,
+        "n_bars": 2632,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.457,
+        "bnh_cagr": 10.35,
+        "bnh_max_drawdown": -46.02,
+        "turnover_per_year": 63.16
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.443,
+          "cagr": 9.58,
+          "max_drawdown": -33.64,
+          "in_market_pct": 62.9,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.6,
+          "bnh_cagr": 17.61,
+          "bnh_max_drawdown": -38.24,
+          "turnover_per_year": 83.54
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.164,
+          "cagr": -0.04,
+          "max_drawdown": -42.1,
+          "in_market_pct": 65.1,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.607,
+          "bnh_cagr": 17.58,
+          "bnh_max_drawdown": -40.24,
+          "turnover_per_year": 63.1
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.373,
+          "cagr": 6.62,
+          "max_drawdown": -36.67,
+          "in_market_pct": 81.1,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.226,
+          "bnh_cagr": 1.98,
+          "bnh_max_drawdown": -44.48,
+          "turnover_per_year": 50.67
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

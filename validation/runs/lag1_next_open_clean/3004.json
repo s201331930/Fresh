@@ -1,0 +1,79 @@
+{
+  "ticker": "3004",
+  "yahoo": "3004.SR",
+  "name": "Northern Region Cement Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "99e269731990a8be",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-12-11",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2407,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.12,
+        "cagr": 0.69,
+        "max_drawdown": -22.78,
+        "in_market_pct": 31.2,
+        "n_bars": 1899,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.083,
+        "bnh_cagr": -0.92,
+        "bnh_max_drawdown": -63.14,
+        "turnover_per_year": 60.62
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.174,
+          "cagr": 1.51,
+          "max_drawdown": -20.72,
+          "in_market_pct": 26.7,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.725,
+          "bnh_cagr": 19.47,
+          "bnh_max_drawdown": -39.79,
+          "turnover_per_year": 61.77
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.071,
+          "cagr": 0.18,
+          "max_drawdown": -13.93,
+          "in_market_pct": 34.1,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.655,
+          "bnh_cagr": -11.81,
+          "bnh_max_drawdown": -52.65,
+          "turnover_per_year": 60.01
+        }
+      }
+    }
+  ],
+  "seconds": 7.9
+}

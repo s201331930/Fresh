@@ -1,0 +1,98 @@
+{
+  "ticker": "8030",
+  "yahoo": "8030.SR",
+  "name": "The Mediterranean and Gulf Cooperative Insurance and Reinsurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "f0e2e00e555ef071",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2958,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.026,
+        "cagr": -6.48,
+        "max_drawdown": -74.99,
+        "in_market_pct": 56.2,
+        "n_bars": 2608,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.047,
+        "bnh_cagr": -11.8,
+        "bnh_max_drawdown": -86.16,
+        "turnover_per_year": 57.7
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.292,
+          "cagr": -19.34,
+          "max_drawdown": -62.09,
+          "in_market_pct": 54.7,
+          "n_bars": 718,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.49,
+          "bnh_cagr": -34.33,
+          "bnh_max_drawdown": -78.16,
+          "turnover_per_year": 56.14
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.156,
+          "cagr": -9.03,
+          "max_drawdown": -39.83,
+          "in_market_pct": 59.1,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.301,
+          "bnh_cagr": 4.02,
+          "bnh_max_drawdown": -41.63,
+          "turnover_per_year": 52.08
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.297,
+          "cagr": 4.28,
+          "max_drawdown": -43.1,
+          "in_market_pct": 55.2,
+          "n_bars": 1149,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.107,
+          "bnh_cagr": -4.41,
+          "bnh_max_drawdown": -68.09,
+          "turnover_per_year": 62.29
+        }
+      }
+    }
+  ],
+  "seconds": 8.9
+}

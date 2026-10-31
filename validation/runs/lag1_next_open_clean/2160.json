@@ -1,0 +1,98 @@
+{
+  "ticker": "2160",
+  "yahoo": "2160.SR",
+  "name": "The Saudi Arabian Amiantit Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "5f114f302f8ba4a5",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2976,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.2,
+        "cagr": 1.74,
+        "max_drawdown": -65.94,
+        "in_market_pct": 30.5,
+        "n_bars": 2622,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.104,
+        "bnh_cagr": -12.71,
+        "bnh_max_drawdown": -80.62,
+        "turnover_per_year": 48.92
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.714,
+          "cagr": 11.07,
+          "max_drawdown": -15.36,
+          "in_market_pct": 20.6,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.236,
+          "bnh_cagr": -12.05,
+          "bnh_max_drawdown": -44.66,
+          "turnover_per_year": 44.44
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.605,
+          "cagr": -19.28,
+          "max_drawdown": -65.94,
+          "in_market_pct": 28.2,
+          "n_bars": 738,
+          "n_years": 3.0,
+          "bnh_sharpe": -0.094,
+          "bnh_cagr": -13.49,
+          "bnh_max_drawdown": -64.79,
+          "turnover_per_year": 49.41
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.521,
+          "cagr": 11.26,
+          "max_drawdown": -32.67,
+          "in_market_pct": 38.4,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.056,
+          "bnh_cagr": -12.66,
+          "bnh_max_drawdown": -74.92,
+          "turnover_per_year": 51.5
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

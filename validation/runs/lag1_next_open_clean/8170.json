@@ -1,0 +1,98 @@
+{
+  "ticker": "8170",
+  "yahoo": "8170.SR",
+  "name": "Al-Etihad Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "f74d94ef8fed9849",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2982,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.238,
+        "cagr": -11.57,
+        "max_drawdown": -77.57,
+        "in_market_pct": 72.9,
+        "n_bars": 2632,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.072,
+        "bnh_cagr": -4.33,
+        "bnh_max_drawdown": -76.54,
+        "turnover_per_year": 59.73
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.329,
+          "cagr": -16.51,
+          "max_drawdown": -60.33,
+          "in_market_pct": 56.6,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.453,
+          "bnh_cagr": 10.43,
+          "bnh_max_drawdown": -52.42,
+          "turnover_per_year": 69.17
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.171,
+          "cagr": 1.1,
+          "max_drawdown": -35.89,
+          "in_market_pct": 67.6,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.317,
+          "bnh_cagr": 5.05,
+          "bnh_max_drawdown": -41.93,
+          "turnover_per_year": 79.13
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.377,
+          "cagr": -15.7,
+          "max_drawdown": -77.57,
+          "in_market_pct": 86.6,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.378,
+          "bnh_cagr": -17.44,
+          "bnh_max_drawdown": -76.54,
+          "turnover_per_year": 41.94
+        }
+      }
+    }
+  ],
+  "seconds": 9.4
+}

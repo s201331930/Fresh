@@ -1,0 +1,98 @@
+{
+  "ticker": "4160",
+  "yahoo": "4160.SR",
+  "name": "Thimar Development Holding Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "bff105afa878b392",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 4,
+  "n_features": 116,
+  "n_predictions": 2140,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.009,
+        "cagr": -3.88,
+        "max_drawdown": -66.65,
+        "in_market_pct": 67.5,
+        "n_bars": 1787,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.233,
+        "bnh_cagr": -11.65,
+        "bnh_max_drawdown": -82.76,
+        "turnover_per_year": 39.39
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.084,
+          "cagr": -2.94,
+          "max_drawdown": -48.07,
+          "in_market_pct": 66.3,
+          "n_bars": 700,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.133,
+          "bnh_cagr": -11.44,
+          "bnh_max_drawdown": -51.56,
+          "turnover_per_year": 59.82
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2019-12-10",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.847,
+          "cagr": -19.73,
+          "max_drawdown": -37.0,
+          "in_market_pct": 58.8,
+          "n_bars": 211,
+          "n_years": 0.94,
+          "bnh_sharpe": -0.742,
+          "bnh_cagr": -25.72,
+          "bnh_max_drawdown": -37.79,
+          "turnover_per_year": 73.48
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2023-03-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.091,
+          "cagr": -3.54,
+          "max_drawdown": -66.65,
+          "in_market_pct": 70.7,
+          "n_bars": 876,
+          "n_years": 3.66,
+          "bnh_sharpe": -0.207,
+          "bnh_cagr": -17.35,
+          "bnh_max_drawdown": -82.76,
+          "turnover_per_year": 48.7
+        }
+      }
+    }
+  ],
+  "seconds": 6.5
+}

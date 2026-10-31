@@ -1,0 +1,98 @@
+{
+  "ticker": "2140",
+  "yahoo": "2140.SR",
+  "name": "Ayyan Investment Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "387c030b835f39c7",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2985,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.171,
+        "cagr": 1.24,
+        "max_drawdown": -39.13,
+        "in_market_pct": 51.4,
+        "n_bars": 2632,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.022,
+        "bnh_cagr": -4.15,
+        "bnh_max_drawdown": -75.15,
+        "turnover_per_year": 54.37
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.284,
+          "cagr": -7.12,
+          "max_drawdown": -29.1,
+          "in_market_pct": 47.2,
+          "n_bars": 735,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.062,
+          "bnh_cagr": -6.13,
+          "bnh_max_drawdown": -44.07,
+          "turnover_per_year": 48.12
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.777,
+          "cagr": 15.39,
+          "max_drawdown": -18.81,
+          "in_market_pct": 35.9,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.92,
+          "bnh_cagr": 26.34,
+          "bnh_max_drawdown": -35.38,
+          "turnover_per_year": 60.76
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.069,
+          "cagr": -1.54,
+          "max_drawdown": -39.13,
+          "in_market_pct": 64.2,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.47,
+          "bnh_cagr": -18.22,
+          "bnh_max_drawdown": -75.15,
+          "turnover_per_year": 54.4
+        }
+      }
+    }
+  ],
+  "seconds": 10.4
+}

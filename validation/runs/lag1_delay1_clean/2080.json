@@ -1,0 +1,98 @@
+{
+  "ticker": "2080",
+  "yahoo": "2080.SR",
+  "name": "National Gas and Industrialization Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "64affbc329d948de",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2979,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.506,
+        "cagr": 9.45,
+        "max_drawdown": -51.58,
+        "in_market_pct": 86.1,
+        "n_bars": 2625,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.585,
+        "bnh_cagr": 12.39,
+        "bnh_max_drawdown": -51.67,
+        "turnover_per_year": 34.21
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.64,
+          "cagr": 11.69,
+          "max_drawdown": -27.41,
+          "in_market_pct": 81.6,
+          "n_bars": 730,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.532,
+          "bnh_cagr": 10.02,
+          "bnh_max_drawdown": -30.72,
+          "turnover_per_year": 40.1
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.207,
+          "cagr": 25.06,
+          "max_drawdown": -17.4,
+          "in_market_pct": 91.1,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.277,
+          "bnh_cagr": 28.81,
+          "bnh_max_drawdown": -15.14,
+          "turnover_per_year": 20.7
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.12,
+          "cagr": -0.5,
+          "max_drawdown": -51.58,
+          "in_market_pct": 85.8,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.308,
+          "bnh_cagr": 4.66,
+          "bnh_max_drawdown": -51.67,
+          "turnover_per_year": 39.04
+        }
+      }
+    }
+  ],
+  "seconds": 10.5
+}

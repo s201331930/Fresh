@@ -1,0 +1,79 @@
+{
+  "ticker": "8311",
+  "yahoo": "8311.SR",
+  "name": "Saudi Enaya Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "9f55f90088df8c63",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-04-17",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 5,
+  "n_features": 116,
+  "n_predictions": 2561,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.15,
+        "cagr": 0.6,
+        "max_drawdown": -61.2,
+        "in_market_pct": 20.4,
+        "n_bars": 1895,
+        "n_years": 7.82,
+        "bnh_sharpe": -0.287,
+        "bnh_cagr": -20.57,
+        "bnh_max_drawdown": -89.37,
+        "turnover_per_year": 35.3
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.93,
+          "cagr": 17.09,
+          "max_drawdown": -22.32,
+          "in_market_pct": 11.2,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": -0.126,
+          "bnh_cagr": -15.18,
+          "bnh_max_drawdown": -64.11,
+          "turnover_per_year": 24.71
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.182,
+          "cagr": -8.46,
+          "max_drawdown": -58.61,
+          "in_market_pct": 26.3,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.393,
+          "bnh_cagr": -23.78,
+          "bnh_max_drawdown": -80.41,
+          "turnover_per_year": 41.94
+        }
+      }
+    }
+  ],
+  "seconds": 9.1
+}

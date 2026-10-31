@@ -1,0 +1,98 @@
+{
+  "ticker": "8210",
+  "yahoo": "8210.SR",
+  "name": "Bupa Arabia for Cooperative Insurance Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "9dedb533a9935547",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2993,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.472,
+        "cagr": 10.03,
+        "max_drawdown": -47.42,
+        "in_market_pct": 85.9,
+        "n_bars": 2631,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.432,
+        "bnh_cagr": 8.93,
+        "bnh_max_drawdown": -53.12,
+        "turnover_per_year": 25.89
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.564,
+          "cagr": 13.53,
+          "max_drawdown": -39.02,
+          "in_market_pct": 83.8,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.183,
+          "bnh_cagr": 0.46,
+          "bnh_max_drawdown": -47.42,
+          "turnover_per_year": 28.07
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.85,
+          "cagr": 20.68,
+          "max_drawdown": -25.87,
+          "in_market_pct": 86.7,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.761,
+          "bnh_cagr": 18.82,
+          "bnh_max_drawdown": -28.0,
+          "turnover_per_year": 25.37
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.225,
+          "cagr": 1.9,
+          "max_drawdown": -47.42,
+          "in_market_pct": 86.7,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.42,
+          "bnh_cagr": 8.55,
+          "bnh_max_drawdown": -53.12,
+          "turnover_per_year": 24.92
+        }
+      }
+    }
+  ],
+  "seconds": 11.8
+}

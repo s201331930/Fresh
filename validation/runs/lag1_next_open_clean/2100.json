@@ -1,0 +1,98 @@
+{
+  "ticker": "2100",
+  "yahoo": "2100.SR",
+  "name": "Wafrah for Industry and Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "48fe051fe99e0e28",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-05-13",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 3012,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.317,
+        "cagr": 4.85,
+        "max_drawdown": -61.95,
+        "in_market_pct": 57.3,
+        "n_bars": 2609,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.136,
+        "bnh_cagr": -4.02,
+        "bnh_max_drawdown": -81.72,
+        "turnover_per_year": 76.66
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.677,
+          "cagr": 18.13,
+          "max_drawdown": -31.48,
+          "in_market_pct": 41.8,
+          "n_bars": 715,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.123,
+          "bnh_cagr": -14.05,
+          "bnh_max_drawdown": -57.23,
+          "turnover_per_year": 86.88
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.693,
+          "cagr": 19.45,
+          "max_drawdown": -34.19,
+          "in_market_pct": 44.8,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.043,
+          "bnh_cagr": 49.61,
+          "bnh_max_drawdown": -52.4,
+          "turnover_per_year": 93.48
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.115,
+          "cagr": -10.21,
+          "max_drawdown": -57.4,
+          "in_market_pct": 74.9,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.412,
+          "bnh_cagr": -22.01,
+          "bnh_max_drawdown": -75.08,
+          "turnover_per_year": 60.01
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

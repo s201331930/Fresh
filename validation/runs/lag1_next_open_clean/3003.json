@@ -1,0 +1,79 @@
+{
+  "ticker": "3003",
+  "yahoo": "3003.SR",
+  "name": "City Cement Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "a2a509ffe9a93d04",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-09-22",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2461,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.502,
+        "cagr": 8.73,
+        "max_drawdown": -34.09,
+        "in_market_pct": 57.6,
+        "n_bars": 1897,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.293,
+        "bnh_cagr": 4.18,
+        "bnh_max_drawdown": -59.84,
+        "turnover_per_year": 63.43
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.912,
+          "cagr": 21.07,
+          "max_drawdown": -27.43,
+          "in_market_pct": 53.8,
+          "n_bars": 740,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.047,
+          "bnh_cagr": 35.15,
+          "bnh_max_drawdown": -48.12,
+          "turnover_per_year": 65.77
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.189,
+          "cagr": 1.71,
+          "max_drawdown": -27.79,
+          "in_market_pct": 60.1,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.356,
+          "bnh_cagr": -11.39,
+          "bnh_max_drawdown": -57.46,
+          "turnover_per_year": 62.09
+        }
+      }
+    }
+  ],
+  "seconds": 8.7
+}

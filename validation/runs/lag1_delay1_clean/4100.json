@@ -1,0 +1,98 @@
+{
+  "ticker": "4100",
+  "yahoo": "4100.SR",
+  "name": "Makkah Construction and Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "fa2c028bd751a3cb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2975,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.081,
+        "cagr": -0.98,
+        "max_drawdown": -52.81,
+        "in_market_pct": 88.2,
+        "n_bars": 2614,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.165,
+        "bnh_cagr": 0.89,
+        "bnh_max_drawdown": -52.48,
+        "turnover_per_year": 28.48
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.023,
+          "cagr": -2.47,
+          "max_drawdown": -52.81,
+          "in_market_pct": 89.6,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.065,
+          "bnh_cagr": -1.69,
+          "bnh_max_drawdown": -52.48,
+          "turnover_per_year": 32.08
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.234,
+          "cagr": 2.67,
+          "max_drawdown": -22.3,
+          "in_market_pct": 82.0,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.112,
+          "bnh_cagr": 0.03,
+          "bnh_max_drawdown": -30.86,
+          "turnover_per_year": 36.73
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.045,
+          "cagr": -2.27,
+          "max_drawdown": -45.14,
+          "in_market_pct": 91.3,
+          "n_bars": 1138,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.255,
+          "bnh_cagr": 3.08,
+          "bnh_max_drawdown": -40.06,
+          "turnover_per_year": 21.18
+        }
+      }
+    }
+  ],
+  "seconds": 10.2
+}

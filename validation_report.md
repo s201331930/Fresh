@@ -41,6 +41,7 @@ Seed for the ensembles is the hard-coded `random_state=42` in `daily_vs_weekly.p
 | --- | --- | --- | --- | --- |
 | 1 | Same-day US/ICE macro on a 15:00 Riyadh decision | **CONFIRMED** | Period median Sharpe 0.435 → 0.327 (paired median −0.086). Beat-buy-and-hold 300/438 (68.5%) → 270/438 (61.6%), a drop of 6.8 points. Lag 1 is the new baseline. | `validation/paired_lag1_minus_lag0.csv`, `validation/macro_same_day_counts.csv` |
 | 2 | Corporate-action jumps in Yahoo `.SR` | **CONFIRMED** | On the lag-1 tape, neutralizing \|return\| > 15% moves the period median Sharpe gap +0.108 → +0.138 (+28% relative). Beat rate 270/438 → 274/438 (+1.5% relative). Paired median gap change is 0.00 because 221/438 periods are untouched. Maaden and Tawuniya lose the 2022–2026 edge. | `validation/pipeline_jumps.csv`, `validation/paired_clean_minus_lag1.csv` |
+| 3 | Close-to-close fill is not a trade you can place at 15:00 after seeing that close | **CONFIRMED** | Same cleaned lag-1 tape. Next-open median period gap +0.138 → +0.017 (12% of the close-fill gap; the bar was 60%). One-bar delay → −0.033. Median close-to-close mean is 99% overnight. | `validation/paired_next_open_minus_close.csv`, `validation/paired_delay1_minus_close.csv`, `validation/overnight_intraday.csv` |
 
 ## 3. Task 1 — cross-timezone macro look-ahead
 
@@ -113,7 +114,16 @@ Tasks 1 and 2 are in. The running baseline is lag 1, jumps with \|adjusted retur
 | Full-window median gap | +0.177 | +0.185 | +0.078 | +0.118 |
 | Full-window median CAGR | 5.96% | 6.74% | 3.56% | 4.44% |
 
-The two fixes cut the published period gap from +0.187 to +0.138. Most of that cut is the macro lag, not the price jumps. The jump fix raises the gap relative to lag 1 because buy-and-hold on the contaminated names gets worse once the false up-moves are removed.
+The two data fixes cut the published period gap from +0.187 to +0.138. Most of that cut is the macro lag, not the price jumps. That +0.138 still assumes the position is on at the close that produced the signal. Entering at the next open, on the same cleaned lag-1 tape, leaves a median period gap of **+0.017**, which is 12% of the close-fill gap. A one-bar delay leaves **−0.033**. The close-to-close headline is not a fill that can be traded after seeing the close.
+
+| | Close fill (research upper bound) | Next open | Position delayed one bar |
+| --- | --- | --- | --- |
+| Periods beating buy-and-hold | 274/438 (62.6%) | 227/438 (51.8%) | 202/438 (46.1%) |
+| Median period Sharpe | 0.327 | 0.205 | 0.170 |
+| Median period gap | +0.138 | +0.017 | −0.033 |
+| Median period CAGR gap | +3.51 | +1.16 | −0.14 |
+| Full-window names beating buy-and-hold | 112/155 | 80/155 | 60/155 |
+| Full-window median gap | +0.118 | +0.009 | −0.049 |
 
 ## 5. Task 2 — corporate-action contamination
 
@@ -158,7 +168,33 @@ Names, full window, lag 1 → cleaned:
 
 Three full windows flip from ahead of buy-and-hold to behind: 2120 (gap +0.131 → −0.189), Maaden, and 8020 (+0.090 → −0.062). The median name does not lose its edge. The names whose recent window was a mis-adjusted bonus do.
 
-## 6. Run log
+## 6. Task 3 — execution timing
+
+The label in the published pipeline is close(t) → close(t+1), and the features at t include close(t). A decision that uses the closing print can be filled in the closing auction. It cannot be filled in the continuous session that has already ended. Two flags, both on the cleaned lag-1 tape, cost still 2 bps, seed 42:
+
+- `--fill next_open`: the signal at close t is entered at open t+1 and earns open(t+1) → open(t+2). Buy-and-hold is the same open-to-open return.
+- `--fill delay1`: the position is applied one full bar later and earns close(t+1) → close(t+2).
+
+155/155 names, 438 periods, both fills. Paired against the cleaned close fill. Finished 31 Oct 2026, 14:23 and 14:37 Asia/Riyadh.
+
+Pass bar: the edge over buy-and-hold keeps at least 60% of the close-fill median Sharpe gap.
+
+Next open keeps **12%** of the period gap (+0.138 → +0.017) and **8%** of the full-window gap (+0.118 → +0.009). Paired median change in the period gap is −0.121. The beat rate falls from 62.6% to 51.8%. One-bar delay does not keep any of it: the period median gap is −0.033 (202/438 still ahead) and the full-window median gap is −0.049 (60/155). **CONFIRMED.** The close-to-close result does not survive a fill that happens after the close.
+
+Where the close-fill return sits, using the cleaned close-fill positions already saved (not a new model). For each name, from the full-window start, the position at close t is applied separately to close(t)→open(t+1) and to open(t+1)→close(t+1):
+
+- Median strategy mean: overnight +4.5 bps, intraday −1.3 bps, close-to-close +3.7 bps. The overnight piece is 0.99 of the close-to-close mean.
+- Median buy-and-hold mean: overnight +5.8 bps, intraday −3.9 bps.
+- Median Sharpe of those pieces: strategy overnight 0.87 vs buy-and-hold overnight 0.93; strategy intraday −0.13 vs buy-and-hold intraday −0.36.
+- On 111 of 155 names the overnight mean is larger in absolute value than the intraday mean.
+
+The book earns its close-to-close average by being long the overnight gap. The open-to-open rerun, which never collects that gap, gives the gap back. The intraday piece of the close-fill book is a small loss, less bad than buy-and-hold's intraday loss, and it is not large enough to carry a next-open strategy.
+
+The 102-asset daily set was not rerun under the three fills in this pass. The TASI result is the one the pass rule was aimed at, and it already fails.
+
+Phase 2 is not started. The instruction is to run it only after tasks 1–3 pass or are fixed. Task 1 is fixed by lag 1. Task 2 is fixed by dropping the bad prints, and the median edge survived that fix. Task 3 failed and was not repaired: there is no fill, other than the close itself, that keeps 60% of the gap.
+
+## 7. Run log
 
 | Config | Seed | Commit | Data hash | Finished (Asia/Riyadh) |
 | --- | --- | --- | --- | --- |
@@ -166,6 +202,8 @@ Three full windows flip from ahead of buy-and-hold to behind: 2120 (gap +0.131 �
 | Lag 1, same | 42 | same | same hash, different join | 31 Oct 2026, 13:34 |
 | Macro removed, same | 42 | same | same hash | 31 Oct 2026, 13:49 |
 | Lag 1, jumps neutralized, 155 names | 42 | `76280546ba16f4024d1663aba2d3a0823f99093f` | same prices before the jump scaling | 31 Oct 2026, 14:06 |
+| Same, fill next open | 42 | `844a5ab6228d175dc37e760cae184f0ceaebb7a9` | cleaned prices, open-to-open label | 31 Oct 2026, 14:23 |
+| Same, fill delayed one bar | 42 | same | cleaned prices, close(t+1)→close(t+2) label | 31 Oct 2026, 14:37 |
 
 Per-name JSON: `validation/runs/lag0/`, `validation/runs/lag1/`, `validation/runs/nomacro/`. Predictions are local and gitignored. Prices are in `daily_study/cache/` and are gitignored.
 

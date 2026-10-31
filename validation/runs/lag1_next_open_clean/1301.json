@@ -1,0 +1,79 @@
+{
+  "ticker": "1301",
+  "yahoo": "1301.SR",
+  "name": "United Wire Factories Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "451aceec0516718e",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-02-23",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2593,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.612,
+        "cagr": 11.67,
+        "max_drawdown": -34.95,
+        "in_market_pct": 44.5,
+        "n_bars": 1898,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.117,
+        "bnh_cagr": -1.66,
+        "bnh_max_drawdown": -69.13,
+        "turnover_per_year": 92.85
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.904,
+          "cagr": 22.63,
+          "max_drawdown": -20.68,
+          "in_market_pct": 48.0,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.765,
+          "bnh_cagr": 23.08,
+          "bnh_max_drawdown": -38.72,
+          "turnover_per_year": 99.83
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.373,
+          "cagr": 5.37,
+          "max_drawdown": -34.95,
+          "in_market_pct": 42.2,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.358,
+          "bnh_cagr": -14.47,
+          "bnh_max_drawdown": -63.08,
+          "turnover_per_year": 88.67
+        }
+      }
+    }
+  ],
+  "seconds": 8.4
+}

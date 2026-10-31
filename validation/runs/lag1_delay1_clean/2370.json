@@ -1,0 +1,98 @@
+{
+  "ticker": "2370",
+  "yahoo": "2370.SR",
+  "name": "Middle East Specialized Cables Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "f6c5597c9210dbe4",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 3,
+  "n_features": 116,
+  "n_predictions": 2973,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.308,
+        "cagr": 4.41,
+        "max_drawdown": -32.21,
+        "in_market_pct": 30.4,
+        "n_bars": 2620,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.386,
+        "bnh_cagr": 7.46,
+        "bnh_max_drawdown": -66.74,
+        "turnover_per_year": 45.96
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.28,
+          "cagr": 3.76,
+          "max_drawdown": -31.67,
+          "in_market_pct": 22.6,
+          "n_bars": 725,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.263,
+          "bnh_cagr": 2.73,
+          "bnh_max_drawdown": -33.94,
+          "turnover_per_year": 39.1
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.092,
+          "cagr": -2.63,
+          "max_drawdown": -25.02,
+          "in_market_pct": 12.7,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.622,
+          "bnh_cagr": 17.13,
+          "bnh_max_drawdown": -46.68,
+          "turnover_per_year": 27.71
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.486,
+          "cagr": 9.48,
+          "max_drawdown": -32.21,
+          "in_market_pct": 46.7,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.32,
+          "bnh_cagr": 4.75,
+          "bnh_max_drawdown": -64.51,
+          "turnover_per_year": 61.67
+        }
+      }
+    }
+  ],
+  "seconds": 9.5
+}

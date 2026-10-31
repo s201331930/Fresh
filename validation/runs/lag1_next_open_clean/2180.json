@@ -1,0 +1,98 @@
+{
+  "ticker": "2180",
+  "yahoo": "2180.SR",
+  "name": "Filling and Packing Materials Manufacturing Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "ca8a3e1ecf133407",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 2,
+  "n_features": 116,
+  "n_predictions": 2987,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.375,
+        "cagr": 6.8,
+        "max_drawdown": -59.64,
+        "in_market_pct": 67.4,
+        "n_bars": 2632,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.208,
+        "bnh_cagr": 0.96,
+        "bnh_max_drawdown": -68.82,
+        "turnover_per_year": 60.29
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.211,
+          "cagr": 1.81,
+          "max_drawdown": -47.95,
+          "in_market_pct": 54.2,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.168,
+          "bnh_cagr": -0.21,
+          "bnh_max_drawdown": -50.1,
+          "turnover_per_year": 78.2
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.147,
+          "cagr": 35.94,
+          "max_drawdown": -29.82,
+          "in_market_pct": 64.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.561,
+          "bnh_cagr": 15.19,
+          "bnh_max_drawdown": -35.32,
+          "turnover_per_year": 69.44
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.035,
+          "cagr": -5.3,
+          "max_drawdown": -59.64,
+          "in_market_pct": 77.7,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.027,
+          "bnh_cagr": -6.31,
+          "bnh_max_drawdown": -60.43,
+          "turnover_per_year": 43.61
+        }
+      }
+    }
+  ],
+  "seconds": 12.3
+}

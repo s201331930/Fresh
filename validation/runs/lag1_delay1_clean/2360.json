@@ -1,0 +1,98 @@
+{
+  "ticker": "2360",
+  "yahoo": "2360.SR",
+  "name": "Saudi Vitrified Clay Pipe Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "458ec30cc955ef98",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2980,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.466,
+        "cagr": -15.15,
+        "max_drawdown": -84.01,
+        "in_market_pct": 69.2,
+        "n_bars": 2630,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.299,
+        "bnh_cagr": -14.77,
+        "bnh_max_drawdown": -89.05,
+        "turnover_per_year": 64.54
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.629,
+          "cagr": -18.52,
+          "max_drawdown": -57.26,
+          "in_market_pct": 81.0,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.352,
+          "bnh_cagr": -14.14,
+          "bnh_max_drawdown": -53.33,
+          "turnover_per_year": 46.45
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.15,
+          "cagr": -0.1,
+          "max_drawdown": -40.46,
+          "in_market_pct": 62.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.538,
+          "bnh_cagr": 14.34,
+          "bnh_max_drawdown": -46.71,
+          "turnover_per_year": 66.77
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.813,
+          "cagr": -21.41,
+          "max_drawdown": -71.62,
+          "in_market_pct": 66.3,
+          "n_bars": 1156,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.92,
+          "bnh_cagr": -29.36,
+          "bnh_max_drawdown": -83.46,
+          "turnover_per_year": 74.55
+        }
+      }
+    }
+  ],
+  "seconds": 10.6
+}

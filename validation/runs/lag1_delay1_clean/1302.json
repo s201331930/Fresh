@@ -1,0 +1,79 @@
+{
+  "ticker": "1302",
+  "yahoo": "1302.SR",
+  "name": "Bawan Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "d8821632ba198463",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2018-03-08",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2098,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.288,
+        "cagr": 3.86,
+        "max_drawdown": -51.17,
+        "in_market_pct": 49.2,
+        "n_bars": 1897,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.521,
+        "bnh_cagr": 11.83,
+        "bnh_max_drawdown": -61.25,
+        "turnover_per_year": 44.25
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.759,
+          "cagr": 8.1,
+          "max_drawdown": -11.94,
+          "in_market_pct": 18.8,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.351,
+          "bnh_cagr": 42.89,
+          "bnh_max_drawdown": -40.45,
+          "turnover_per_year": 30.05
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.188,
+          "cagr": 1.32,
+          "max_drawdown": -51.17,
+          "in_market_pct": 68.9,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.042,
+          "bnh_cagr": -3.96,
+          "bnh_max_drawdown": -61.25,
+          "turnover_per_year": 53.16
+        }
+      }
+    }
+  ],
+  "seconds": 7.1
+}

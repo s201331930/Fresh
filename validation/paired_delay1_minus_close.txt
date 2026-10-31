@@ -1,0 +1,10 @@
+paired lag1_delay1_clean minus lag1_clean
+period rows 438 names 155
+median d_sharpe -0.1395
+median d_gap -0.1465
+beat rate base 62.557% alt 46.119%
+full names 155 median d_sharpe -0.1480
+full beat base 72.258% alt 38.710%
+full median sharpe base 0.311 alt 0.175
+full median gap base +0.118 alt -0.049
+full median cagr gap base +3.39 alt -0.16

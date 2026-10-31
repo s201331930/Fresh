@@ -1,0 +1,98 @@
+{
+  "ticker": "2190",
+  "yahoo": "2190.SR",
+  "name": "Sustained Infrastructure Holding Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "0b98a44aa7880480",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2982,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.44,
+        "cagr": 8.43,
+        "max_drawdown": -67.15,
+        "in_market_pct": 70.4,
+        "n_bars": 2625,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.552,
+        "bnh_cagr": 13.24,
+        "bnh_max_drawdown": -60.32,
+        "turnover_per_year": 40.69
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.555,
+          "cagr": 10.49,
+          "max_drawdown": -26.61,
+          "in_market_pct": 53.5,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.133,
+          "bnh_cagr": -0.58,
+          "bnh_max_drawdown": -32.3,
+          "turnover_per_year": 54.8
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 1.03,
+          "cagr": 29.04,
+          "max_drawdown": -46.43,
+          "in_market_pct": 69.4,
+          "n_bars": 742,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.303,
+          "bnh_cagr": 47.45,
+          "bnh_max_drawdown": -45.53,
+          "turnover_per_year": 32.72
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.009,
+          "cagr": -3.81,
+          "max_drawdown": -53.2,
+          "in_market_pct": 81.7,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.297,
+          "bnh_cagr": 4.23,
+          "bnh_max_drawdown": -43.71,
+          "turnover_per_year": 36.96
+        }
+      }
+    }
+  ],
+  "seconds": 10.9
+}

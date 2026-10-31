@@ -1,0 +1,98 @@
+{
+  "ticker": "4240",
+  "yahoo": "4240.SR",
+  "name": "AFG International Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "066cbd39805a513a",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2989,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.249,
+        "cagr": -12.47,
+        "max_drawdown": -85.32,
+        "in_market_pct": 52.6,
+        "n_bars": 2627,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.25,
+        "bnh_cagr": -20.36,
+        "bnh_max_drawdown": -94.79,
+        "turnover_per_year": 56.5
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.667,
+          "cagr": -29.71,
+          "max_drawdown": -68.95,
+          "in_market_pct": 82.7,
+          "n_bars": 732,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.771,
+          "bnh_cagr": -36.01,
+          "bnh_max_drawdown": -77.69,
+          "turnover_per_year": 44.78
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.312,
+          "cagr": -10.18,
+          "max_drawdown": -47.28,
+          "in_market_pct": 47.0,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": -0.066,
+          "bnh_cagr": -10.49,
+          "bnh_max_drawdown": -48.8,
+          "turnover_per_year": 69.11
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.113,
+          "cagr": -1.31,
+          "max_drawdown": -46.29,
+          "in_market_pct": 37.0,
+          "n_bars": 1151,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.059,
+          "bnh_cagr": -15.21,
+          "bnh_max_drawdown": -75.0,
+          "turnover_per_year": 56.06
+        }
+      }
+    }
+  ],
+  "seconds": 9.0
+}

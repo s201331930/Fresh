@@ -1,0 +1,79 @@
+{
+  "ticker": "4320",
+  "yahoo": "4320.SR",
+  "name": "Alandalus Property Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "c2f188fa1894364a",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "2y",
+  "oos_start": "2019-09-05",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 1729,
+  "full": {
+    "start": "2022-01-02",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.246,
+        "cagr": -9.14,
+        "max_drawdown": -55.76,
+        "in_market_pct": 71.2,
+        "n_bars": 1154,
+        "n_years": 4.82,
+        "bnh_sharpe": -0.011,
+        "bnh_cagr": -4.74,
+        "bnh_max_drawdown": -58.56,
+        "turnover_per_year": 58.76
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2022-2023",
+      "start": "2022-01-02",
+      "end": "2023-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.213,
+          "cagr": 2.02,
+          "max_drawdown": -15.04,
+          "in_market_pct": 59.2,
+          "n_bars": 471,
+          "n_years": 1.99,
+          "bnh_sharpe": 0.573,
+          "bnh_cagr": 11.04,
+          "bnh_max_drawdown": -22.05,
+          "turnover_per_year": 63.22
+        }
+      }
+    },
+    {
+      "label": "2024-2026",
+      "start": "2024-01-01",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.421,
+          "cagr": -16.29,
+          "max_drawdown": -55.76,
+          "in_market_pct": 79.5,
+          "n_bars": 683,
+          "n_years": 2.82,
+          "bnh_sharpe": -0.298,
+          "bnh_cagr": -14.53,
+          "bnh_max_drawdown": -58.56,
+          "turnover_per_year": 55.67
+        }
+      }
+    }
+  ],
+  "seconds": 5.3
+}

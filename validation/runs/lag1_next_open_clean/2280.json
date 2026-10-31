@@ -1,0 +1,98 @@
+{
+  "ticker": "2280",
+  "yahoo": "2280.SR",
+  "name": "Almarai Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "843402ffb221d5c1",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2990,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.097,
+        "cagr": -0.66,
+        "max_drawdown": -50.77,
+        "in_market_pct": 86.0,
+        "n_bars": 2628,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.168,
+        "bnh_cagr": 0.88,
+        "bnh_max_drawdown": -51.31,
+        "turnover_per_year": 38.65
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.122,
+          "cagr": -0.43,
+          "max_drawdown": -37.95,
+          "in_market_pct": 86.1,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.2,
+          "bnh_cagr": 1.51,
+          "bnh_max_drawdown": -46.4,
+          "turnover_per_year": 36.09
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.452,
+          "cagr": 8.1,
+          "max_drawdown": -35.95,
+          "in_market_pct": 81.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.22,
+          "bnh_cagr": 2.32,
+          "bnh_max_drawdown": -39.67,
+          "turnover_per_year": 40.06
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.15,
+          "cagr": -5.88,
+          "max_drawdown": -45.64,
+          "in_market_pct": 89.1,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.111,
+          "bnh_cagr": -0.4,
+          "bnh_max_drawdown": -43.97,
+          "turnover_per_year": 39.45
+        }
+      }
+    }
+  ],
+  "seconds": 10.0
+}

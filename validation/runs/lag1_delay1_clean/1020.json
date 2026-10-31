@@ -1,0 +1,98 @@
+{
+  "ticker": "1020",
+  "yahoo": "1020.SR",
+  "name": "aljazira bank",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "78fd103b5a4a0ab3",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 3,
+  "n_features": 116,
+  "n_predictions": 2990,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.058,
+        "cagr": -0.74,
+        "max_drawdown": -43.43,
+        "in_market_pct": 62.3,
+        "n_bars": 2631,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.372,
+        "bnh_cagr": 6.15,
+        "bnh_max_drawdown": -50.88,
+        "turnover_per_year": 56.59
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.169,
+          "cagr": -4.35,
+          "max_drawdown": -29.44,
+          "in_market_pct": 44.1,
+          "n_bars": 734,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.526,
+          "bnh_cagr": 10.87,
+          "bnh_max_drawdown": -38.18,
+          "turnover_per_year": 68.17
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.274,
+          "cagr": 3.29,
+          "max_drawdown": -36.06,
+          "in_market_pct": 62.2,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.745,
+          "bnh_cagr": 15.23,
+          "bnh_max_drawdown": -40.03,
+          "turnover_per_year": 54.75
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.06,
+          "cagr": -0.91,
+          "max_drawdown": -41.25,
+          "in_market_pct": 73.9,
+          "n_bars": 1154,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.05,
+          "bnh_cagr": -1.8,
+          "bnh_max_drawdown": -50.88,
+          "turnover_per_year": 50.67
+        }
+      }
+    }
+  ],
+  "seconds": 9.8
+}

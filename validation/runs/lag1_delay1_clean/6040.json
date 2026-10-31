@@ -1,0 +1,98 @@
+{
+  "ticker": "6040",
+  "yahoo": "6040.SR",
+  "name": "Tabuk Agricultural Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "6ed95632e845ccdb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2977,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.059,
+        "cagr": -3.88,
+        "max_drawdown": -66.48,
+        "in_market_pct": 35.2,
+        "n_bars": 2627,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.122,
+        "bnh_cagr": -10.25,
+        "bnh_max_drawdown": -89.09,
+        "turnover_per_year": 51.23
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.081,
+          "cagr": -0.4,
+          "max_drawdown": -33.41,
+          "in_market_pct": 26.1,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.078,
+          "bnh_cagr": -7.86,
+          "bnh_max_drawdown": -50.0,
+          "turnover_per_year": 49.79
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.013,
+          "cagr": -3.77,
+          "max_drawdown": -37.06,
+          "in_market_pct": 39.5,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.858,
+          "bnh_cagr": 30.91,
+          "bnh_max_drawdown": -39.16,
+          "turnover_per_year": 53.08
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.169,
+          "cagr": -6.06,
+          "max_drawdown": -57.95,
+          "in_market_pct": 38.3,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.921,
+          "bnh_cagr": -30.19,
+          "bnh_max_drawdown": -85.67,
+          "turnover_per_year": 51.08
+        }
+      }
+    }
+  ],
+  "seconds": 11.1
+}

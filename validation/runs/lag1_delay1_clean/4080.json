@@ -1,0 +1,98 @@
+{
+  "ticker": "4080",
+  "yahoo": "4080.SR",
+  "name": "Sinad Holding Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "352dacc6639fa4c1",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2985,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.04,
+        "cagr": -3.61,
+        "max_drawdown": -53.62,
+        "in_market_pct": 46.6,
+        "n_bars": 2630,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.18,
+        "bnh_cagr": -9.85,
+        "bnh_max_drawdown": -76.45,
+        "turnover_per_year": 58.9
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.518,
+          "cagr": -15.55,
+          "max_drawdown": -46.63,
+          "in_market_pct": 52.8,
+          "n_bars": 733,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.743,
+          "bnh_cagr": -23.67,
+          "bnh_max_drawdown": -59.84,
+          "turnover_per_year": 51.46
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.616,
+          "cagr": 13.29,
+          "max_drawdown": -36.83,
+          "in_market_pct": 35.2,
+          "n_bars": 744,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.843,
+          "bnh_cagr": 26.18,
+          "bnh_max_drawdown": -35.67,
+          "turnover_per_year": 67.44
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.184,
+          "cagr": -5.37,
+          "max_drawdown": -44.67,
+          "in_market_pct": 50.0,
+          "n_bars": 1153,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.597,
+          "bnh_cagr": -18.91,
+          "bnh_max_drawdown": -71.1,
+          "turnover_per_year": 58.35
+        }
+      }
+    }
+  ],
+  "seconds": 10.4
+}

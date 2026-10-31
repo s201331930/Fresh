@@ -1,0 +1,79 @@
+{
+  "ticker": "1820",
+  "yahoo": "1820.SR",
+  "name": "BAAN Holding Group Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "f5d028258094a2e2",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "2y",
+  "oos_start": "2019-08-27",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 1731,
+  "full": {
+    "start": "2022-01-02",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.189,
+        "cagr": -5.28,
+        "max_drawdown": -39.46,
+        "in_market_pct": 26.8,
+        "n_bars": 1150,
+        "n_years": 4.82,
+        "bnh_sharpe": -0.277,
+        "bnh_cagr": -14.72,
+        "bnh_max_drawdown": -61.25,
+        "turnover_per_year": 47.14
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2022-2023",
+      "start": "2022-01-02",
+      "end": "2023-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.655,
+          "cagr": -12.08,
+          "max_drawdown": -33.47,
+          "in_market_pct": 27.4,
+          "n_bars": 468,
+          "n_years": 1.99,
+          "bnh_sharpe": -0.331,
+          "bnh_cagr": -16.58,
+          "bnh_max_drawdown": -54.79,
+          "turnover_per_year": 41.64
+        }
+      }
+    },
+    {
+      "label": "2024-2026",
+      "start": "2024-01-01",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.094,
+          "cagr": -0.17,
+          "max_drawdown": -26.06,
+          "in_market_pct": 26.4,
+          "n_bars": 682,
+          "n_years": 2.82,
+          "bnh_sharpe": -0.238,
+          "bnh_cagr": -13.39,
+          "bnh_max_drawdown": -54.82,
+          "turnover_per_year": 51.06
+        }
+      }
+    }
+  ],
+  "seconds": 4.7
+}

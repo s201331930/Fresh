@@ -1,0 +1,79 @@
+{
+  "ticker": "4003",
+  "yahoo": "4003.SR",
+  "name": "United Electronics Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "b5fa0111c8c7a622",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2016-08-17",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2483,
+  "full": {
+    "start": "2019-01-01",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.115,
+        "cagr": -0.23,
+        "max_drawdown": -44.76,
+        "in_market_pct": 90.7,
+        "n_bars": 1898,
+        "n_years": 7.82,
+        "bnh_sharpe": 0.502,
+        "bnh_cagr": 9.94,
+        "bnh_max_drawdown": -40.46,
+        "turnover_per_year": 25.07
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.562,
+          "cagr": 12.47,
+          "max_drawdown": -44.76,
+          "in_market_pct": 83.4,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 1.305,
+          "bnh_cagr": 42.77,
+          "bnh_max_drawdown": -40.46,
+          "turnover_per_year": 45.41
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.25,
+          "cagr": -7.39,
+          "max_drawdown": -40.35,
+          "in_market_pct": 95.3,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.194,
+          "bnh_cagr": -6.54,
+          "bnh_max_drawdown": -39.38,
+          "turnover_per_year": 12.46
+        }
+      }
+    }
+  ],
+  "seconds": 7.3
+}

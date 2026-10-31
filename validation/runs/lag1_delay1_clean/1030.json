@@ -1,0 +1,98 @@
+{
+  "ticker": "1030",
+  "yahoo": "1030.SR",
+  "name": "The Saudi Investment Bank",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "89548d73c4d2f441",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-24",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 0,
+  "n_features": 116,
+  "n_predictions": 2974,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.436,
+        "cagr": 6.54,
+        "max_drawdown": -45.39,
+        "in_market_pct": 81.6,
+        "n_bars": 2631,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.475,
+        "bnh_cagr": 7.93,
+        "bnh_max_drawdown": -45.8,
+        "turnover_per_year": 44.57
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.497,
+          "cagr": 7.0,
+          "max_drawdown": -27.2,
+          "in_market_pct": 69.1,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.552,
+          "bnh_cagr": 9.57,
+          "bnh_max_drawdown": -36.84,
+          "turnover_per_year": 70.18
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.365,
+          "cagr": 5.52,
+          "max_drawdown": -45.39,
+          "in_market_pct": 84.8,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.374,
+          "bnh_cagr": 5.88,
+          "bnh_max_drawdown": -45.8,
+          "turnover_per_year": 41.4
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.455,
+          "cagr": 6.9,
+          "max_drawdown": -29.74,
+          "in_market_pct": 87.4,
+          "n_bars": 1157,
+          "n_years": 4.82,
+          "bnh_sharpe": 0.493,
+          "bnh_cagr": 8.21,
+          "bnh_max_drawdown": -34.14,
+          "turnover_per_year": 30.73
+        }
+      }
+    }
+  ],
+  "seconds": 10.1
+}

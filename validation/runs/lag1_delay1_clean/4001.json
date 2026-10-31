@@ -1,0 +1,98 @@
+{
+  "ticker": "4001",
+  "yahoo": "4001.SR",
+  "name": "Abdullah Al-Othaim Markets Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "delay1",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "cdabebf2362c6697",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-15",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 3,
+  "n_features": 116,
+  "n_predictions": 2992,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": 0.187,
+        "cagr": 1.58,
+        "max_drawdown": -69.16,
+        "in_market_pct": 93.2,
+        "n_bars": 2630,
+        "n_years": 10.81,
+        "bnh_sharpe": 0.293,
+        "bnh_cagr": 4.14,
+        "bnh_max_drawdown": -70.73,
+        "turnover_per_year": 14.98
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.359,
+          "cagr": 6.08,
+          "max_drawdown": -40.44,
+          "in_market_pct": 88.2,
+          "n_bars": 735,
+          "n_years": 2.99,
+          "bnh_sharpe": 0.846,
+          "bnh_cagr": 21.62,
+          "bnh_max_drawdown": -35.33,
+          "turnover_per_year": 25.4
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.975,
+          "cagr": 22.11,
+          "max_drawdown": -20.95,
+          "in_market_pct": 90.0,
+          "n_bars": 743,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.912,
+          "bnh_cagr": 21.59,
+          "bnh_max_drawdown": -21.34,
+          "turnover_per_year": 20.03
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.493,
+          "cagr": -11.81,
+          "max_drawdown": -69.16,
+          "in_market_pct": 98.4,
+          "n_bars": 1152,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.614,
+          "bnh_cagr": -14.11,
+          "bnh_max_drawdown": -70.73,
+          "turnover_per_year": 5.4
+        }
+      }
+    }
+  ],
+  "seconds": 10.0
+}

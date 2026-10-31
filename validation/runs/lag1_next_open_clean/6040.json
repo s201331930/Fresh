@@ -1,0 +1,98 @@
+{
+  "ticker": "6040",
+  "yahoo": "6040.SR",
+  "name": "Tabuk Agricultural Development Company",
+  "status": "ok",
+  "macro_lag": "1",
+  "fill": "next_open",
+  "seed": 42,
+  "git_commit": "844a5ab6228d175dc37e760cae184f0ceaebb7a9",
+  "data_hash": "6ed95632e845ccdb",
+  "cost_bps": 2.0,
+  "bars_per_year": 252,
+  "schedule": "shifted",
+  "grid": "3y",
+  "oos_start": "2014-07-16",
+  "neutralize_jumps": true,
+  "n_neutralized_labels": 1,
+  "n_features": 116,
+  "n_predictions": 2977,
+  "full": {
+    "start": "2016-01-03",
+    "end": "2026-10-27",
+    "strategies": {
+      "Binary (t=0)": {
+        "sharpe": -0.046,
+        "cagr": -3.89,
+        "max_drawdown": -51.33,
+        "in_market_pct": 34.2,
+        "n_bars": 2627,
+        "n_years": 10.81,
+        "bnh_sharpe": -0.067,
+        "bnh_cagr": -10.28,
+        "bnh_max_drawdown": -89.09,
+        "turnover_per_year": 55.39
+      }
+    }
+  },
+  "periods": [
+    {
+      "label": "2016-2018",
+      "start": "2016-01-03",
+      "end": "2018-12-31",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.402,
+          "cagr": -10.83,
+          "max_drawdown": -34.65,
+          "in_market_pct": 26.1,
+          "n_bars": 731,
+          "n_years": 2.99,
+          "bnh_sharpe": -0.07,
+          "bnh_cagr": -8.93,
+          "bnh_max_drawdown": -50.31,
+          "turnover_per_year": 50.46
+        }
+      }
+    },
+    {
+      "label": "2019-2021",
+      "start": "2019-01-01",
+      "end": "2021-12-30",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": 0.736,
+          "cagr": 15.05,
+          "max_drawdown": -30.87,
+          "in_market_pct": 38.1,
+          "n_bars": 741,
+          "n_years": 3.0,
+          "bnh_sharpe": 0.835,
+          "bnh_cagr": 31.79,
+          "bnh_max_drawdown": -38.78,
+          "turnover_per_year": 60.43
+        }
+      }
+    },
+    {
+      "label": "2022-2026",
+      "start": "2022-01-02",
+      "end": "2026-10-27",
+      "strategies": {
+        "Binary (t=0)": {
+          "sharpe": -0.284,
+          "cagr": -9.98,
+          "max_drawdown": -49.57,
+          "in_market_pct": 36.9,
+          "n_bars": 1155,
+          "n_years": 4.82,
+          "bnh_sharpe": -0.728,
+          "bnh_cagr": -30.02,
+          "bnh_max_drawdown": -85.67,
+          "turnover_per_year": 55.44
+        }
+      }
+    }
+  ],
+  "seconds": 9.7
+}
