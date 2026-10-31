@@ -1,0 +1,33 @@
+{
+  "n": 102,
+  "class_counts": {
+    "Binary (t=opt)": 51,
+    "Scaled": 24,
+    "Adaptive": 14,
+    "Binary (t=0)": 13
+  },
+  "majority_label": "Binary (t=opt)",
+  "majority_exact": 51,
+  "majority_top2": 80,
+  "always_t_opt_exact": 51,
+  "always_t_opt_top2": 80,
+  "tree_loo_exact": 48,
+  "tree_loo_top2": 74,
+  "nested_exact": 48,
+  "nested_top2": 74,
+  "nested_depth_counts": {
+    "3": 96,
+    "4": 5,
+    "5": 1
+  },
+  "tree_permutation_1000": {
+    "n_perm": 1000,
+    "n_ge_observed": 224,
+    "p_value": 0.22477522477522477,
+    "null_mean_exact": 41.599,
+    "null_p95_exact": 53.0
+  },
+  "forest_loo_exact": 50,
+  "forest_loo_top2": 77,
+  "forest_permutation": "not run; one leave-one-out is 7.6s, 1000 shuffles is about two hours. Forest exact 50/102 is already below the 51/102 majority."
+}

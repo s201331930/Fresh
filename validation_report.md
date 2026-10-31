@@ -42,6 +42,8 @@ Seed for the ensembles is the hard-coded `random_state=42` in `daily_vs_weekly.p
 | 1 | Same-day US/ICE macro on a 15:00 Riyadh decision | **CONFIRMED** | Period median Sharpe 0.435 → 0.327 (paired median −0.086). Beat-buy-and-hold 300/438 (68.5%) → 270/438 (61.6%), a drop of 6.8 points. Lag 1 is the new baseline. | `validation/paired_lag1_minus_lag0.csv`, `validation/macro_same_day_counts.csv` |
 | 2 | Corporate-action jumps in Yahoo `.SR` | **CONFIRMED** | On the lag-1 tape, neutralizing \|return\| > 15% moves the period median Sharpe gap +0.108 → +0.138 (+28% relative). Beat rate 270/438 → 274/438 (+1.5% relative). Paired median gap change is 0.00 because 221/438 periods are untouched. Maaden and Tawuniya lose the 2022–2026 edge. | `validation/pipeline_jumps.csv`, `validation/paired_clean_minus_lag1.csv` |
 | 3 | Close-to-close fill is not a trade you can place at 15:00 after seeing that close | **CONFIRMED** | Same cleaned lag-1 tape. Next-open median period gap +0.138 → +0.017 (12% of the close-fill gap; the bar was 60%). One-bar delay → −0.033. Median close-to-close mean is 99% overnight. | `validation/paired_next_open_minus_close.csv`, `validation/paired_delay1_minus_close.csv`, `validation/overnight_intraday.csv` |
+| 4 | Study A's weekly means are not Study B's frozen weekly results | **CONFIRMED** | Mean best Sharpe 0.921 vs Study B mean best weekly 0.521. Mean vs median inside Study A is only 0.921 vs 0.901. t=opt beats buy-and-hold in 100/102 (Study A) vs 35/102 (Study B). Tiers withdrawn. The point split between window and leakage was not isolated by a refit. | `study/expanded_characteristics.csv`, `daily_universe/*.json`, `multi_asset_backtest.py` lines 312–326 and 509–523 |
+| 5 | The strategy-picking tree and forest have no skill beyond "always t=opt" | **CONFIRMED** | Majority exact 51/102, top-2 80/102. Tree 48/102 and 74/102, permutation p = 0.225. Forest 50/102 and 77/102. Nested depth selection stays at 48/102. | `validation/meta_model_tree.json` |
 
 ## 3. Task 1 — cross-timezone macro look-ahead
 
@@ -194,7 +196,58 @@ The 102-asset daily set was not rerun under the three fills in this pass. The TA
 
 Phase 2 is not started. The instruction is to run it only after tasks 1–3 pass or are fixed. Task 1 is fixed by lag 1. Task 2 is fixed by dropping the bad prints, and the median edge survived that fix. Task 3 failed and was not repaired: there is no fill, other than the close itself, that keeps 60% of the gap.
 
-## 7. Run log
+## 7. Task 4 — Study A against Study B
+
+Study A (`multi_asset_backtest.py`) and Study B (`daily_vs_weekly.py`) are not the same weekly test.
+
+Where Study A uses the evaluation sample:
+
+- Early stopping for XGBoost, LightGBM, and CatBoost uses the test fold as `eval_set` (lines 312, 319, 326).
+- The t=opt threshold maximizes Sharpe on the first half of the out-of-sample predictions (lines 509–516). The published backtest then scores the **full** prediction series, including that half (lines 531–532).
+- The Scaled divisor is the 90th percentile of the **full** prediction series (line 523).
+- Missing values are forward-filled and back-filled (`impute_nans`, line 257).
+
+Study B fits the threshold and the Scaled divisor on a calibration block that ends before evaluation (`run_mode`, lines 814–816). Early stopping uses the trailing part of the training window only (`walk_forward`, lines 656–664).
+
+Published numbers, same 102 names, weekly:
+
+| | Study A mean | Study A median | Study B mean | Study B median |
+| --- | --- | --- | --- | --- |
+| Best of the four | 0.921 | 0.901 | 0.521 | 0.532 |
+| Binary (t=opt) | 0.864 | 0.836 | 0.379 | 0.342 |
+| Binary (t=0) | 0.754 | 0.752 | 0.437 | 0.470 |
+| Buy-and-hold | 0.509 | 0.494 | 0.478 | 0.454 |
+
+Mean versus median inside Study A is 0.020 on the best Sharpe (0.921 vs 0.901). That is not the 0.40 gap versus Study B. Reporting a mean instead of a median is rejected as the explanation.
+
+What the two protocols do to the win rate: Study A Binary (t=opt) beats buy-and-hold on **100 of 102** names. Study B's frozen weekly t=opt beats buy-and-hold on **35 of 102**, and its mean Sharpe (0.379) is below its own buy-and-hold mean (0.478). t=opt is in the market less than 20% of the time on 25 of 102 Study B weekly runs.
+
+A refit that holds the model fixed and changes only the calendar, then only the threshold rule, was not run. The 0.40 gap is therefore not split into "window" versus "leakage" in Sharpe points. Both are in the comparison: the samples are not the same window, and Study A's published Sharpe includes the block the threshold was fit on. The code is enough to withdraw the number. It is not enough to say what fraction of 0.40 is each cause.
+
+Study A's Tier 1 (use t=opt, expected mean Sharpe 0.864, beats buy-and-hold for about 95%), Tier 2, and Tier 3 are **withdrawn** as expectations for a live book. They describe a score that was allowed to see part of the sample it reports.
+
+## 8. Task 5 — selection meta-model
+
+Labels are the Study A strategy with the highest saved Sharpe. "Always predict Binary (t=opt)" is the majority class: 51 of 102 exact (50.0%), and that label is one of the two best strategies on 80 of 102 (78.4%).
+
+Leave-one-out, same features and hyperparameters as `generate_expanded_report.py`:
+
+| Rule | Exact | Top-2 |
+| --- | --- | --- |
+| Always t=opt | 51/102 (50.0%) | 80/102 (78.4%) |
+| Tree, depth 3 | 48/102 (47.1%) | 74/102 (72.5%) |
+| Tree, depth chosen inside each training fold | 48/102 (47.1%) | 74/102 (72.5%) |
+| Random forest, 100 trees, depth 4 | 50/102 (49.0%) | 77/102 (75.5%) |
+
+The nested tree picks depth 3 on 96 of 102 folds, depth 4 on 5, depth 5 on 1. Choosing depth on the same leave-one-out that is then reported does not change the result here.
+
+One thousand label shuffles of the depth-3 tree: 224 shuffles had leave-one-out exact accuracy at least as high as 48. p = (224+1)/(1000+1) = **0.225**. The null mean is 41.6 correct. The tree is not distinguishable from a shuffled label, and it is below the majority class.
+
+The forest's 1,000 shuffles were not run. One leave-one-out takes 7.6 seconds, so a thousand takes about two hours. It is already below the majority class on both exact and top-2 accuracy, so it fails the pass rule whether or not a permutation would call it better than a shuffled label.
+
+Pass rule: beat the majority baseline and have permutation p < 0.05. **CONFIRMED, no skill.** The selection framework does not belong in the conclusions. Picking t=opt because a tree said so is worse than picking t=opt because it was the most common winner in this sample, and that common-winner rule is itself fit on the same Sharpes (section 7).
+
+## 9. Run log
 
 | Config | Seed | Commit | Data hash | Finished (Asia/Riyadh) |
 | --- | --- | --- | --- | --- |
@@ -204,6 +257,11 @@ Phase 2 is not started. The instruction is to run it only after tasks 1–3 pass
 | Lag 1, jumps neutralized, 155 names | 42 | `76280546ba16f4024d1663aba2d3a0823f99093f` | same prices before the jump scaling | 31 Oct 2026, 14:06 |
 | Same, fill next open | 42 | `844a5ab6228d175dc37e760cae184f0ceaebb7a9` | cleaned prices, open-to-open label | 31 Oct 2026, 14:23 |
 | Same, fill delayed one bar | 42 | same | cleaned prices, close(t+1)→close(t+2) label | 31 Oct 2026, 14:37 |
+| Study A vs B and the selection tree | 42 for the tree | no new model fit; characteristics and `daily_universe/` already on this branch | `study/expanded_characteristics.csv` | same day, no retrain |
 
-Per-name JSON: `validation/runs/lag0/`, `validation/runs/lag1/`, `validation/runs/nomacro/`. Predictions are local and gitignored. Prices are in `daily_study/cache/` and are gitignored.
+Per-name JSON: `validation/runs/`. Predictions are local and gitignored. Prices are in `daily_study/cache/` and are gitignored.
+
+## 10. Still open
+
+Tasks 6 through 14 were not run. Phase 2 was not started, because task 3 failed the next-open bar and was not repaired. Nothing in those later tasks can put the close-to-close TASI gap back into a fill that happens after the close. The conclusions that are already withdrawn are Study A's tier list and the strategy-selection tree and forest. The TASI daily Binary (t=0) close-to-close edge, after the lag-1 and jump fixes, is a research upper bound. At the next open the median period gap is +0.017.
 
