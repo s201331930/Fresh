@@ -8,3 +8,5 @@ build/
 catboost_info/
 
 daily_study/cache/
+validation/prices/
+validation/runs/*/predictions/

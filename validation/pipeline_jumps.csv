@@ -1,0 +1,226 @@
+ticker,yahoo,name,date,adj_return,in_or_after_2016
+1020,1020.SR,aljazira bank,2012-02-26,0.152913,False
+1020,1020.SR,aljazira bank,2018-03-14,-0.352602,True
+1020,1020.SR,aljazira bank,2018-03-15,0.539907,True
+1180,1180.SR,The Saudi National Bank,2014-11-17,0.202765,False
+1201,1201.SR,Takween Advanced Industries,2016-09-22,0.391622,True
+1201,1201.SR,Takween Advanced Industries,2016-09-25,-0.210526,True
+1201,1201.SR,Takween Advanced Industries,2023-03-29,0.219949,True
+1201,1201.SR,Takween Advanced Industries,2024-02-07,-0.242003,True
+1201,1201.SR,Takween Advanced Industries,2024-02-14,0.216805,True
+1211,1211.SR,Saudi Arabian Mining Company (Maaden),2023-06-08,0.510911,True
+1211,1211.SR,Saudi Arabian Mining Company (Maaden),2023-06-11,-0.341695,True
+1212,1212.SR,Astra Industrial Group Company,2023-06-11,0.152797,True
+1212,1212.SR,Astra Industrial Group Company,2025-04-13,0.178572,True
+1213,1213.SR,Naseej International Trading Company,2021-11-07,-0.608257,True
+1213,1213.SR,Naseej International Trading Company,2023-12-11,1.077259,True
+1213,1213.SR,Naseej International Trading Company,2026-07-13,-0.33792,True
+1213,1213.SR,Naseej International Trading Company,2026-07-15,0.494368,True
+1213,1213.SR,Naseej International Trading Company,2026-08-17,-0.309505,True
+1214,1214.SR,Al Hassan Ghazi Ibrahim Shaker Company,2022-05-19,-0.162238,True
+1301,1301.SR,United Wire Factories Company,2020-09-16,0.253142,True
+1301,1301.SR,United Wire Factories Company,2020-09-20,-0.198842,True
+1303,1303.SR,Electrical Industries Company,2025-04-13,0.207619,True
+2001,2001.SR,Methanol Chemicals Company,2012-02-20,0.174377,False
+2001,2001.SR,Methanol Chemicals Company,2014-05-08,0.151553,False
+2001,2001.SR,Methanol Chemicals Company,2026-07-30,3.047351,True
+2090,2090.SR,National Gypsum Company,2013-04-21,0.16,False
+2100,2100.SR,Wafrah for Industry and Development Company,2011-03-13,0.154762,False
+2110,2110.SR,Saudi Cable Company,2018-04-03,0.798261,True
+2120,2120.SR,Saudi Advanced Industries Company,2010-03-09,0.641304,False
+2120,2120.SR,Saudi Advanced Industries Company,2010-03-10,-0.390728,False
+2130,2130.SR,Saudi Industrial Development Co.,2016-01-12,-0.19754,True
+2130,2130.SR,Saudi Industrial Development Co.,2025-11-02,-0.355075,True
+2150,2150.SR,The National Company for Glass Industries,2010-05-11,-0.178914,False
+2160,2160.SR,The Saudi Arabian Amiantit Company,2024-02-12,-0.68716,True
+2180,2180.SR,Filling and Packing Materials Manufacturing Company,2011-05-15,0.204893,False
+2180,2180.SR,Filling and Packing Materials Manufacturing Company,2011-12-25,0.169492,False
+2200,2200.SR,Arabian Pipes Company,2023-03-29,0.190352,True
+2220,2220.SR,National Metal Manufacturing and Casting Co.,2011-10-02,0.153527,False
+2230,2230.SR,Saudi Chemical Holding Company,2025-04-13,0.157124,True
+2240,2240.SR,Advanced Building Industries Co.,2010-04-06,-0.280597,False
+2250,2250.SR,Saudi Industrial Investment Group,2025-05-26,1.582463,True
+2320,2320.SR,Al-Babtain Power and Telecommunications Company,2025-04-13,0.151358,True
+2330,2330.SR,Advanced Petrochemical Company,2010-03-18,0.199115,False
+2330,2330.SR,Advanced Petrochemical Company,2010-03-21,-0.166051,False
+2360,2360.SR,Saudi Vitrified Clay Pipe Company,2026-06-15,0.155951,True
+2370,2370.SR,Middle East Specialized Cables Company,2013-09-03,0.333335,False
+2370,2370.SR,Middle East Specialized Cables Company,2016-05-24,-0.154206,True
+2370,2370.SR,Middle East Specialized Cables Company,2025-04-13,0.17,True
+2380,2380.SR,Rabigh Refining and Petrochemical Company,2011-04-24,0.162886,False
+3003,3003.SR,City Cement Company,2020-10-28,-0.16419,True
+3004,3004.SR,Northern Region Cement Company,2013-02-11,-0.172222,False
+3030,3030.SR,Saudi Cement Company,2010-05-20,-0.346801,False
+4001,4001.SR,Abdullah Al-Othaim Markets Company,2010-06-01,0.150198,False
+4001,4001.SR,Abdullah Al-Othaim Markets Company,2018-03-14,-0.496921,True
+4001,4001.SR,Abdullah Al-Othaim Markets Company,2018-03-15,0.960833,True
+4002,4002.SR,Mouwasat Medical Services Company,2010-03-24,-0.160643,False
+4002,4002.SR,Mouwasat Medical Services Company,2010-03-25,0.196172,False
+4004,4004.SR,Dallah Healthcare Company,2013-01-14,0.205298,False
+4005,4005.SR,National Medical Care Company,2013-03-17,-0.188525,False
+4007,4007.SR,Al Hammadi Holding Company,2014-07-22,0.455622,False
+4007,4007.SR,Al Hammadi Holding Company,2015-04-16,-0.386364,False
+4030,4030.SR,The National Shipping Company of Saudi Arabia,2012-07-02,0.16265,False
+4040,4040.SR,Saudi Public Transport Company,2012-03-04,0.154412,False
+4040,4040.SR,Saudi Public Transport Company,2026-03-31,0.208009,True
+4050,4050.SR,Saudi Automotive Services Company,2011-05-02,0.151292,False
+4050,4050.SR,Saudi Automotive Services Company,2018-10-14,-0.188659,True
+4050,4050.SR,Saudi Automotive Services Company,2018-10-15,0.24664,True
+4050,4050.SR,Saudi Automotive Services Company,2022-01-30,0.278607,True
+4061,4061.SR,Anaam International Holding Group Company,2011-03-13,0.208,False
+4061,4061.SR,Anaam International Holding Group Company,2012-11-11,-0.315464,False
+4061,4061.SR,Anaam International Holding Group Company,2012-11-12,0.4253,False
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2013-04-07,0.206089,False
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2013-04-14,0.209064,False
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2013-04-21,-0.188347,False
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2015-06-25,0.206858,False
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2016-12-27,0.20922,True
+4070,4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",2021-07-15,-0.437172,True
+4110,4110.SR,Batic Investments and Logistics Company,2011-12-11,0.151125,False
+4130,4130.SR,Darb Saudi Investment Company,2011-08-14,0.151999,False
+4130,4130.SR,Darb Saudi Investment Company,2017-06-04,0.832593,True
+4130,4130.SR,Darb Saudi Investment Company,2024-10-03,0.166667,True
+4130,4130.SR,Darb Saudi Investment Company,2025-04-24,0.169435,True
+4140,4140.SR,Saudi Industrial Export Company,2012-07-02,0.168904,False
+4140,4140.SR,Saudi Industrial Export Company,2012-07-08,0.156942,False
+4140,4140.SR,Saudi Industrial Export Company,2022-05-19,0.208696,True
+4150,4150.SR,Arriyadh Development Co.,2012-12-24,0.150358,False
+4160,4160.SR,Thimar Development Holding Company,2010-04-06,-0.172749,False
+4160,4160.SR,Thimar Development Holding Company,2011-03-06,0.150327,False
+4160,4160.SR,Thimar Development Holding Company,2011-05-08,0.20614,False
+4160,4160.SR,Thimar Development Holding Company,2024-06-03,3.024785,True
+4170,4170.SR,Tourism Enterprise Company (Shams),2011-02-22,-0.69642,False
+4170,4170.SR,Tourism Enterprise Company (Shams),2012-02-20,0.154255,False
+4170,4170.SR,Tourism Enterprise Company (Shams),2013-04-07,0.206687,False
+4180,4180.SR,Fitaihi Holding Group,2011-03-13,0.150537,False
+4180,4180.SR,Fitaihi Holding Group,2011-09-04,0.160976,False
+4180,4180.SR,Fitaihi Holding Group,2012-03-11,0.20603,False
+4200,4200.SR,Aldrees Petroleum and Transport Services Company,2023-06-11,0.151079,True
+4230,4230.SR,Red Sea International Company,2025-04-13,0.159544,True
+4240,4240.SR,AFG International Company,2016-05-24,0.197718,True
+4270,4270.SR,Saudi Printing and Packaging Co.,2012-01-08,0.159269,False
+4280,4280.SR,Kingdom Holding Company,2011-03-13,0.169812,False
+4290,4290.SR,Al Khaleej Training and Education Company,2011-10-09,0.163158,False
+4310,4310.SR,Knowledge Economic City Company,2011-12-19,0.159091,False
+6010,6010.SR,The National Agricultural Development Company,2016-01-12,-0.259388,True
+6020,6020.SR,Al Gassim Investment Holding Company,2012-01-01,0.184729,False
+6020,6020.SR,Al Gassim Investment Holding Company,2012-04-22,0.160714,False
+6020,6020.SR,Al Gassim Investment Holding Company,2017-02-14,0.659686,True
+6020,6020.SR,Al Gassim Investment Holding Company,2023-03-29,0.160017,True
+6040,6040.SR,Tabuk Agricultural Development Company,2022-11-01,0.208383,True
+6050,6050.SR,Saudi Fisheries Company,2011-09-18,0.20642,False
+6050,6050.SR,Saudi Fisheries Company,2011-10-23,0.205387,False
+6050,6050.SR,Saudi Fisheries Company,2026-08-25,-0.715253,True
+6050,6050.SR,Saudi Fisheries Company,2026-09-03,2.380789,True
+6050,6050.SR,Saudi Fisheries Company,2026-09-20,-0.688889,True
+6050,6050.SR,Saudi Fisheries Company,2026-09-21,2.028986,True
+6060,6060.SR,Ash-Sharqiyah Development Co.,2011-10-30,0.156317,False
+6060,6060.SR,Ash-Sharqiyah Development Co.,2012-12-30,0.17734,False
+6060,6060.SR,Ash-Sharqiyah Development Co.,2013-04-14,0.16129,False
+6060,6060.SR,Ash-Sharqiyah Development Co.,2016-01-12,-0.171796,True
+6090,6090.SR,Jazan Development and Investment Company,2011-10-30,0.170068,False
+6090,6090.SR,Jazan Development and Investment Company,2011-12-04,0.163043,False
+6090,6090.SR,Jazan Development and Investment Company,2014-05-20,0.255814,False
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2011-03-13,0.181818,False
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2012-01-30,0.227642,False
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2012-07-08,0.858974,False
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2015-03-05,0.671233,False
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2018-05-07,-0.380769,True
+7030,7030.SR,Mobile Telecommunications Company Saudi Arabia,2023-03-29,0.16141,True
+7040,7040.SR,Etihad GO Telecom Co.,2012-03-25,2.021096,False
+7040,7040.SR,Etihad GO Telecom Co.,2012-04-01,0.207071,False
+7040,7040.SR,Etihad GO Telecom Co.,2012-04-08,-0.188462,False
+7040,7040.SR,Etihad GO Telecom Co.,2012-12-03,0.168182,False
+7040,7040.SR,Etihad GO Telecom Co.,2013-06-02,0.154717,False
+7040,7040.SR,Etihad GO Telecom Co.,2017-04-11,1.506329,True
+7040,7040.SR,Etihad GO Telecom Co.,2018-02-18,0.266436,True
+7040,7040.SR,Etihad GO Telecom Co.,2022-01-23,-0.580063,True
+7040,7040.SR,Etihad GO Telecom Co.,2022-01-30,1.208824,True
+7040,7040.SR,Etihad GO Telecom Co.,2024-02-11,0.208599,True
+8010,8010.SR,The Company for Cooperative Insurance,2013-05-19,0.178322,False
+8010,8010.SR,The Company for Cooperative Insurance,2026-09-06,0.5,True
+8010,8010.SR,The Company for Cooperative Insurance,2026-09-07,-0.334559,True
+8020,8020.SR,Malath Cooperative Insurance Company,2011-03-13,0.20332,False
+8020,8020.SR,Malath Cooperative Insurance Company,2012-04-01,-0.162577,False
+8030,8030.SR,The Mediterranean and Gulf Cooperative Insurance and Reinsurance Company,2015-03-05,0.151515,False
+8040,8040.SR,Mutakamela Insurance Company,2010-04-06,0.203387,False
+8040,8040.SR,Mutakamela Insurance Company,2011-03-13,0.206406,False
+8040,8040.SR,Mutakamela Insurance Company,2012-02-12,0.202128,False
+8040,8040.SR,Mutakamela Insurance Company,2012-02-20,0.232975,False
+8040,8040.SR,Mutakamela Insurance Company,2012-02-26,0.151429,False
+8040,8040.SR,Mutakamela Insurance Company,2012-03-11,-0.187919,False
+8040,8040.SR,Mutakamela Insurance Company,2012-05-15,0.158537,False
+8040,8040.SR,Mutakamela Insurance Company,2012-09-24,-0.187215,False
+8040,8040.SR,Mutakamela Insurance Company,2013-06-23,0.167173,False
+8050,8050.SR,Salama Cooperative Insurance Company,2020-02-17,0.152542,True
+8050,8050.SR,Salama Cooperative Insurance Company,2024-11-18,-0.178568,True
+8050,8050.SR,Salama Cooperative Insurance Company,2024-11-19,0.194822,True
+8050,8050.SR,Salama Cooperative Insurance Company,2024-12-03,-0.179191,True
+8060,8060.SR,Walaa Cooperative Insurance Company,2012-07-15,0.206751,False
+8060,8060.SR,Walaa Cooperative Insurance Company,2012-07-29,0.160714,False
+8060,8060.SR,Walaa Cooperative Insurance Company,2016-05-24,-0.159292,True
+8060,8060.SR,Walaa Cooperative Insurance Company,2024-11-18,-0.157703,True
+8070,8070.SR,Arabian Shield Cooperative Insurance Company,2012-07-08,0.206897,False
+8070,8070.SR,Arabian Shield Cooperative Insurance Company,2012-10-07,0.151596,False
+8120,8120.SR,Gulf Union Alahlia Cooperative Insurance Company,2013-06-23,0.15625,False
+8120,8120.SR,Gulf Union Alahlia Cooperative Insurance Company,2017-05-23,0.493878,True
+8150,8150.SR,Allied Cooperative Insurance Group,2012-05-20,-0.153664,False
+8150,8150.SR,Allied Cooperative Insurance Group,2012-07-29,0.208211,False
+8150,8150.SR,Allied Cooperative Insurance Group,2012-08-05,0.205479,False
+8150,8150.SR,Allied Cooperative Insurance Group,2012-08-12,0.204651,False
+8150,8150.SR,Allied Cooperative Insurance Group,2012-09-09,0.329325,False
+8150,8150.SR,Allied Cooperative Insurance Group,2013-02-25,-0.249362,False
+8150,8150.SR,Allied Cooperative Insurance Group,2013-04-07,-0.16408,False
+8160,8160.SR,Arabia Insurance Cooperative Company,2011-03-06,0.177778,False
+8160,8160.SR,Arabia Insurance Cooperative Company,2016-08-03,0.361111,True
+8160,8160.SR,Arabia Insurance Cooperative Company,2022-05-19,-0.15625,True
+8170,8170.SR,Al-Etihad Cooperative Insurance Company,2012-01-22,0.189189,False
+8170,8170.SR,Al-Etihad Cooperative Insurance Company,2016-05-24,-0.155431,True
+8180,8180.SR,Al Sagr Cooperative Insurance Company,2010-04-06,0.208333,False
+8180,8180.SR,Al Sagr Cooperative Insurance Company,2011-04-11,0.167526,False
+8180,8180.SR,Al Sagr Cooperative Insurance Company,2024-06-23,-0.355288,True
+8200,8200.SR,Saudi Reinsurance Company,2012-01-30,0.151376,False
+8210,8210.SR,Bupa Arabia for Cooperative Insurance Company,2010-04-06,0.159851,False
+8210,8210.SR,Bupa Arabia for Cooperative Insurance Company,2010-04-27,-0.158064,False
+8230,8230.SR,Al Rajhi Company for Cooperative Insurance,2011-04-03,0.152694,False
+8230,8230.SR,Al Rajhi Company for Cooperative Insurance,2016-06-15,0.156236,True
+8240,8240.SR,Chubb Arabia Cooperative Insurance Company,2012-06-03,-0.154255,False
+8240,8240.SR,Chubb Arabia Cooperative Insurance Company,2012-06-17,0.204334,False
+8240,8240.SR,Chubb Arabia Cooperative Insurance Company,2012-12-03,-0.187097,False
+8250,8250.SR,Gulf Insurance Group,2011-04-03,0.206388,False
+8250,8250.SR,Gulf Insurance Group,2011-08-21,0.209091,False
+8250,8250.SR,Gulf Insurance Group,2011-09-11,-0.186747,False
+8250,8250.SR,Gulf Insurance Group,2016-05-24,-0.177872,True
+8260,8260.SR,Gulf General Cooperative Insurance Company,2012-09-30,0.207031,False
+8280,8280.SR,Liva Insurance Company,2011-10-16,0.208333,False
+8280,8280.SR,Liva Insurance Company,2013-01-28,0.189815,False
+8280,8280.SR,Liva Insurance Company,2013-06-02,0.209091,False
+8300,8300.SR,Wataniya Insurance Company,2010-06-30,0.165541,False
+8300,8300.SR,Wataniya Insurance Company,2012-01-01,0.207273,False
+8300,8300.SR,Wataniya Insurance Company,2012-12-10,0.154506,False
+8310,8310.SR,Amana Cooperative Insurance Company,2011-04-17,0.155629,False
+8310,8310.SR,Amana Cooperative Insurance Company,2011-11-13,0.206522,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-01-30,0.203438,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-06-10,0.171429,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-07-02,0.196429,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-07-08,0.203704,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-07-22,0.207747,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-08-26,0.204453,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-09-09,0.187017,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-09-24,0.169154,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-12-03,0.276995,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-12-17,-0.21445,False
+8310,8310.SR,Amana Cooperative Insurance Company,2012-12-24,0.329137,False
+8310,8310.SR,Amana Cooperative Insurance Company,2013-01-14,-0.168342,False
+8310,8310.SR,Amana Cooperative Insurance Company,2013-01-20,0.206522,False
+8310,8310.SR,Amana Cooperative Insurance Company,2013-01-28,-0.242424,False
+8310,8310.SR,Amana Cooperative Insurance Company,2016-07-14,0.153439,True
+8310,8310.SR,Amana Cooperative Insurance Company,2017-02-20,1.196721,True
+8310,8310.SR,Amana Cooperative Insurance Company,2019-01-29,0.25005,True
+8310,8310.SR,Amana Cooperative Insurance Company,2021-11-29,0.207658,True
+8310,8310.SR,Amana Cooperative Insurance Company,2022-05-30,-0.334492,True
+8311,8311.SR,Saudi Enaya Cooperative Insurance Company,2012-04-08,-0.186611,False
+8311,8311.SR,Saudi Enaya Cooperative Insurance Company,2012-06-10,0.207289,False
+8311,8311.SR,Saudi Enaya Cooperative Insurance Company,2012-07-08,-0.185328,False
+8311,8311.SR,Saudi Enaya Cooperative Insurance Company,2016-10-19,0.90678,True
+8311,8311.SR,Saudi Enaya Cooperative Insurance Company,2021-11-29,0.207578,True

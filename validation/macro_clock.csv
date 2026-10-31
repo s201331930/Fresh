@@ -1,0 +1,6 @@
+series,yahoo,source_tz,event,local_time,riyadh_time_edt,riyadh_time_est,known_by_tasi_close,lag0_join,lag1_rule
+VIX,^VIX,America/New_York,CBOE VIX cash close,16:15,23:15 same calendar date,00:15 next calendar date,no,"exact calendar date, then ffill",last print with date < Saudi session
+TNX,^TNX,America/New_York,US Treasury 10-year cash close,16:00,23:00 same calendar date,00:00 next calendar date,no,"exact calendar date, then ffill",last print with date < Saudi session
+DXY,DX-Y.NYB,America/New_York,ICE dollar index futures settle,17:00,00:00 next calendar date,01:00 next calendar date,no,"exact calendar date, then ffill",last print with date < Saudi session
+Gold,GC=F,America/New_York,COMEX gold settlement,13:30,20:30 same calendar date,21:30 same calendar date,no,"exact calendar date, then ffill",last print with date < Saudi session
+Brent,BZ=F,Europe/London,ICE Brent futures settlement,19:30,21:30 same calendar date,22:30 same calendar date,no,"exact calendar date, then ffill",last print with date < Saudi session
