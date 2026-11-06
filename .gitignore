@@ -10,3 +10,4 @@ catboost_info/
 daily_study/cache/
 validation/prices/
 validation/runs/*/predictions/
+demand_line/cache/
