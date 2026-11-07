@@ -1,0 +1,401 @@
+{
+  "windows": {
+    "train": "first bar through 2016-12-31",
+    "validate": "2017-01-01 through 2019-12-31",
+    "test": "2020-01-01 onward"
+  },
+  "choice": "K on the training portfolio Sharpe gap only; tie prefers stricter K",
+  "fixed": {
+    "fear_rsi": 40.0,
+    "greed_rsi": 70.0,
+    "bollinger_pctb": 0.35,
+    "volume_multiple": 1.2,
+    "k_grid": [
+      2,
+      3,
+      4
+    ]
+  },
+  "tasi": {
+    "chosen_k": 2,
+    "train_gaps": {
+      "2": -0.431,
+      "3": -0.567,
+      "4": -0.707
+    },
+    "dip": {
+      "train": {
+        "strategy": {
+          "sharpe": -0.118,
+          "cagr": -0.99,
+          "max_drawdown": -20.39,
+          "total_return": -5.81,
+          "n_days": 1383,
+          "n_years": 5.98,
+          "start": "2011-01-04",
+          "end": "2016-12-29",
+          "in_market_pct": 29.1,
+          "turnover_per_year": 6.23
+        },
+        "bnh": {
+          "sharpe": 0.313,
+          "cagr": 4.45,
+          "max_drawdown": -59.66,
+          "total_return": 29.75,
+          "n_days": 1383,
+          "n_years": 5.98,
+          "start": "2011-01-04",
+          "end": "2016-12-29"
+        },
+        "gap_sharpe": -0.431,
+        "worst_month": -15.51,
+        "median_names": 136
+      },
+      "validate": {
+        "strategy": {
+          "sharpe": 0.042,
+          "cagr": 0.09,
+          "max_drawdown": -7.1,
+          "total_return": 0.26,
+          "n_days": 756,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31",
+          "in_market_pct": 30.3,
+          "turnover_per_year": 5.89
+        },
+        "bnh": {
+          "sharpe": 0.21,
+          "cagr": 1.92,
+          "max_drawdown": -24.03,
+          "total_return": 5.87,
+          "n_days": 756,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31"
+        },
+        "gap_sharpe": -0.168,
+        "worst_month": -2.39,
+        "median_names": 153
+      },
+      "test": {
+        "strategy": {
+          "sharpe": 0.326,
+          "cagr": 1.93,
+          "max_drawdown": -13.99,
+          "total_return": 13.98,
+          "n_days": 1678,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-04",
+          "in_market_pct": 28.2,
+          "turnover_per_year": 5.71
+        },
+        "bnh": {
+          "sharpe": 0.534,
+          "cagr": 8.87,
+          "max_drawdown": -40.98,
+          "total_return": 78.89,
+          "n_days": 1678,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-04"
+        },
+        "gap_sharpe": -0.208,
+        "worst_month": -7.44,
+        "median_names": 154
+      }
+    },
+    "baseline": {
+      "train": {
+        "strategy": {
+          "sharpe": 0.619,
+          "cagr": 6.21,
+          "max_drawdown": -29.17,
+          "total_return": 43.38,
+          "n_days": 1383,
+          "n_years": 5.98,
+          "start": "2011-01-04",
+          "end": "2016-12-29",
+          "in_market_pct": 51.8,
+          "turnover_per_year": 7.26
+        },
+        "bnh": {
+          "sharpe": 0.313,
+          "cagr": 4.45,
+          "max_drawdown": -59.66,
+          "total_return": 29.75,
+          "n_days": 1383,
+          "n_years": 5.98,
+          "start": "2011-01-04",
+          "end": "2016-12-29"
+        },
+        "gap_sharpe": 0.306,
+        "worst_month": -16.84,
+        "median_names": 136
+      },
+      "validate": {
+        "strategy": {
+          "sharpe": 0.171,
+          "cagr": 0.85,
+          "max_drawdown": -9.21,
+          "total_return": 2.57,
+          "n_days": 756,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31",
+          "in_market_pct": 47.7,
+          "turnover_per_year": 8.2
+        },
+        "bnh": {
+          "sharpe": 0.21,
+          "cagr": 1.92,
+          "max_drawdown": -24.03,
+          "total_return": 5.87,
+          "n_days": 756,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31"
+        },
+        "gap_sharpe": -0.039,
+        "worst_month": -4.2,
+        "median_names": 153
+      },
+      "test": {
+        "strategy": {
+          "sharpe": 0.963,
+          "cagr": 9.93,
+          "max_drawdown": -19.09,
+          "total_return": 91.09,
+          "n_days": 1678,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-04",
+          "in_market_pct": 47.7,
+          "turnover_per_year": 6.73
+        },
+        "bnh": {
+          "sharpe": 0.534,
+          "cagr": 8.87,
+          "max_drawdown": -40.98,
+          "total_return": 78.89,
+          "n_days": 1678,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-04"
+        },
+        "gap_sharpe": 0.429,
+        "worst_month": -10.93,
+        "median_names": 154
+      }
+    },
+    "test_names": {
+      "train": {
+        "n": 151,
+        "beat": 39,
+        "median_gap": -0.315
+      },
+      "validate": {
+        "n": 155,
+        "beat": 58,
+        "median_gap": -0.167
+      },
+      "test": {
+        "n": 155,
+        "beat": 67,
+        "median_gap": -0.038
+      }
+    }
+  },
+  "global": {
+    "chosen_k": 2,
+    "train_gaps": {
+      "2": 0.26,
+      "3": 0.223,
+      "4": 0.253
+    },
+    "dip": {
+      "train": {
+        "strategy": {
+          "sharpe": 0.743,
+          "cagr": 4.9,
+          "max_drawdown": -11.66,
+          "total_return": 117.18,
+          "n_days": 4402,
+          "n_years": 16.2,
+          "start": "2000-10-17",
+          "end": "2016-12-30",
+          "in_market_pct": 43.7,
+          "turnover_per_year": 8.59
+        },
+        "bnh": {
+          "sharpe": 0.483,
+          "cagr": 7.56,
+          "max_drawdown": -42.73,
+          "total_return": 225.91,
+          "n_days": 4402,
+          "n_years": 16.2,
+          "start": "2000-10-17",
+          "end": "2016-12-30"
+        },
+        "gap_sharpe": 0.26,
+        "worst_month": -5.53,
+        "median_names": 74
+      },
+      "validate": {
+        "strategy": {
+          "sharpe": 1.094,
+          "cagr": 7.76,
+          "max_drawdown": -8.59,
+          "total_return": 25.1,
+          "n_days": 927,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31",
+          "in_market_pct": 47.4,
+          "turnover_per_year": 10.12
+        },
+        "bnh": {
+          "sharpe": 1.239,
+          "cagr": 16.35,
+          "max_drawdown": -11.89,
+          "total_return": 57.41,
+          "n_days": 927,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31"
+        },
+        "gap_sharpe": -0.145,
+        "worst_month": -6.5,
+        "median_names": 102
+      },
+      "test": {
+        "strategy": {
+          "sharpe": 0.407,
+          "cagr": 2.92,
+          "max_drawdown": -12.83,
+          "total_return": 21.79,
+          "n_days": 2096,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-05",
+          "in_market_pct": 43.5,
+          "turnover_per_year": 10.22
+        },
+        "bnh": {
+          "sharpe": 0.484,
+          "cagr": 7.7,
+          "max_drawdown": -37.25,
+          "total_return": 66.19,
+          "n_days": 2096,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-05"
+        },
+        "gap_sharpe": -0.077,
+        "worst_month": -5.13,
+        "median_names": 102
+      }
+    },
+    "baseline": {
+      "train": {
+        "strategy": {
+          "sharpe": 0.786,
+          "cagr": 6.82,
+          "max_drawdown": -17.38,
+          "total_return": 191.38,
+          "n_days": 4402,
+          "n_years": 16.2,
+          "start": "2000-10-17",
+          "end": "2016-12-30",
+          "in_market_pct": 63.5,
+          "turnover_per_year": 8.88
+        },
+        "bnh": {
+          "sharpe": 0.483,
+          "cagr": 7.56,
+          "max_drawdown": -42.73,
+          "total_return": 225.91,
+          "n_days": 4402,
+          "n_years": 16.2,
+          "start": "2000-10-17",
+          "end": "2016-12-30"
+        },
+        "gap_sharpe": 0.303,
+        "worst_month": -6.49,
+        "median_names": 74
+      },
+      "validate": {
+        "strategy": {
+          "sharpe": 1.318,
+          "cagr": 11.83,
+          "max_drawdown": -8.32,
+          "total_return": 39.79,
+          "n_days": 927,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31",
+          "in_market_pct": 71.0,
+          "turnover_per_year": 8.67
+        },
+        "bnh": {
+          "sharpe": 1.239,
+          "cagr": 16.35,
+          "max_drawdown": -11.89,
+          "total_return": 57.41,
+          "n_days": 927,
+          "n_years": 3.0,
+          "start": "2017-01-01",
+          "end": "2019-12-31"
+        },
+        "gap_sharpe": 0.079,
+        "worst_month": -8.22,
+        "median_names": 102
+      },
+      "test": {
+        "strategy": {
+          "sharpe": 0.572,
+          "cagr": 5.62,
+          "max_drawdown": -15.67,
+          "total_return": 45.36,
+          "n_days": 2096,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-05",
+          "in_market_pct": 64.6,
+          "turnover_per_year": 10.48
+        },
+        "bnh": {
+          "sharpe": 0.484,
+          "cagr": 7.7,
+          "max_drawdown": -37.25,
+          "total_return": 66.19,
+          "n_days": 2096,
+          "n_years": 6.84,
+          "start": "2020-01-01",
+          "end": "2026-11-05"
+        },
+        "gap_sharpe": 0.088,
+        "worst_month": -7.39,
+        "median_names": 102
+      }
+    },
+    "test_names": {
+      "train": {
+        "n": 102,
+        "beat": 51,
+        "median_gap": 0.003
+      },
+      "validate": {
+        "n": 102,
+        "beat": 24,
+        "median_gap": -0.248
+      },
+      "test": {
+        "n": 102,
+        "beat": 26,
+        "median_gap": -0.193
+      }
+    }
+  }
+}
