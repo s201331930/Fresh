@@ -1,62 +1,32 @@
-# Trading System Prototype
+# Data and factors
 
-Predictive-model prototype for identifying favorable entry points on **SPY** using weekly time-frame data.
+Strategy code, trained models, and backtest results have been removed.
+What remains is the market data, the asset lists, and the factor tables
+for a later model.
 
-## Data
+## Universes
 
-### SPY Weekly OHLCV (`data/spy_weekly_ohlcv.csv`)
+- `universes/global.json` — 102 names, with market and asset class
+- `universes/tasi.json` — 252 Tadawul names as listed on 24 Oct 2026
 
-| Field | Description |
-|-------|-------------|
-| `Week_Ending` | Friday date marking the end of each trading week |
-| `Open` | Adjusted opening price (first trading day of the week) |
-| `Low` | Adjusted lowest price during the week |
-| `High` | Adjusted highest price during the week |
-| `Close` | Adjusted closing price (last trading day of the week) |
-| `A2P` | Adjustment-to-price ratio (`Adj Close / Close`) |
-| `Volume` | Total shares traded during the week |
+## Prices
 
-### Enriched Dataset (`data/spy_weekly_enriched.csv`)
+- `data/spy_weekly_ohlcv.csv` — SPY weekly bars from 2000
+- `data/spy_weekly_enriched.csv` — the same weeks with VIX, Brent, indicators, and order-block zones
+- `data/spy_weekly_with_ob.csv` — order-block columns on the weekly bars
 
-SPY weekly data joined with macro variables on matching `Week_Ending`:
+## Factor tables
 
-| Field | Description | Coverage |
-|-------|-------------|----------|
-| `VIX_Open/High/Low/Close` | CBOE Volatility Index weekly OHLC | 2000–present (100%) |
-| `Brent_Open/High/Low/Close` | Brent Crude Oil futures weekly OHLC | 2007–present (71%) |
+- `factors/spy_daily_features.csv` — 6,238 rows, 117 factor columns
+- `factors/spy_weekly_features.csv` — 1,294 rows, 103 factor columns
+- `factors/spy_mixed_features.csv` — daily factors plus the last completed week, 6,238 rows, 155 columns
+- `factors/asset_descriptors.csv` — volatility, autocorrelation, Hurst, drawdown, and related descriptors for the 102 names
 
-### Order Blocks (`data/spy_weekly_with_ob.csv`)
+The old next-bar target column has been removed from the factor tables.
 
-SPY data with bullish/bearish Order Block signals (periods=5, threshold=0%).
+## Rebuild
 
-## Quick Start
-
-```bash
-pip install -r requirements.txt
-python fetch_spy_data.py          # SPY weekly OHLCV
-python fetch_macro_data.py        # join VIX + Brent to SPY
-python order_block_finder.py      # detect Order Blocks
-python analyze_distributions.py   # frequency & outlier analysis
-python plot_ob_chart.py           # candlestick charts with OBs
-```
-
-## Project Structure
-
-```
-.
-├── data/
-│   ├── spy_weekly_ohlcv.csv
-│   ├── spy_weekly_enriched.csv
-│   ├── spy_weekly_with_ob.csv
-│   ├── distribution_report.csv
-│   ├── outliers_detail.csv
-│   ├── spy_weekly_ob_chart.png
-│   └── spy_weekly_ob_chart_zoom.png
-├── fetch_spy_data.py
-├── fetch_macro_data.py
-├── order_block_finder.py
-├── analyze_distributions.py
-├── plot_ob_chart.py
-├── requirements.txt
-└── README.md
-```
+`technical_indicators.py` computes the moving averages, bands, MACD, OBV, RSI, and DI.
+`order_block_finder.py` marks demand and supply zones.
+`fetch_spy_data.py` and `fetch_macro_data.py` refresh the weekly SPY files.
+`factors.py` rebuilds the daily, weekly, and mixed factor matrices, including lags and a causal HMM regime. A finished weekly bar is released on the next calendar day.

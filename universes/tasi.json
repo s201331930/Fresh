@@ -1,0 +1,1770 @@
+{
+  "source": "Tadawul All Share constituents as listed by whichindex.com on 24 Oct 2026",
+  "n": 252,
+  "assets": [
+    {
+      "ticker": "1120",
+      "yahoo": "1120.SR",
+      "name": "Al Rajhi Banking and Investment Corporation",
+      "index_rank": 1,
+      "in_original_12": true
+    },
+    {
+      "ticker": "2222",
+      "yahoo": "2222.SR",
+      "name": "Saudi Arabian Oil Company",
+      "index_rank": 2,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1180",
+      "yahoo": "1180.SR",
+      "name": "The Saudi National Bank",
+      "index_rank": 3,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1211",
+      "yahoo": "1211.SR",
+      "name": "Saudi Arabian Mining Company (Maaden)",
+      "index_rank": 4,
+      "in_original_12": true
+    },
+    {
+      "ticker": "7010",
+      "yahoo": "7010.SR",
+      "name": "Saudi Telecom Company",
+      "index_rank": 5,
+      "in_original_12": true
+    },
+    {
+      "ticker": "2082",
+      "yahoo": "2082.SR",
+      "name": "ACWA Power Company",
+      "index_rank": 6,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1150",
+      "yahoo": "1150.SR",
+      "name": "Alinma Bank",
+      "index_rank": 7,
+      "in_original_12": true
+    },
+    {
+      "ticker": "2010",
+      "yahoo": "2010.SR",
+      "name": "Saudi Basic Industries Corporation",
+      "index_rank": 8,
+      "in_original_12": true
+    },
+    {
+      "ticker": "1010",
+      "yahoo": "1010.SR",
+      "name": "Riyad Bank",
+      "index_rank": 9,
+      "in_original_12": true
+    },
+    {
+      "ticker": "1050",
+      "yahoo": "1050.SR",
+      "name": "Banque Saudi Fransi",
+      "index_rank": 10,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7020",
+      "yahoo": "7020.SR",
+      "name": "Etihad Etisalat Company",
+      "index_rank": 11,
+      "in_original_12": true
+    },
+    {
+      "ticker": "2020",
+      "yahoo": "2020.SR",
+      "name": "SABIC Agri-Nutrients Company",
+      "index_rank": 12,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2280",
+      "yahoo": "2280.SR",
+      "name": "Almarai Company",
+      "index_rank": 13,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4013",
+      "yahoo": "4013.SR",
+      "name": "Dr. Sulaiman Al Habib Medical Services Group Company",
+      "index_rank": 14,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1140",
+      "yahoo": "1140.SR",
+      "name": "Bank Albilad",
+      "index_rank": 15,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4300",
+      "yahoo": "4300.SR",
+      "name": "Dar Al Arkan Real Estate Development Company",
+      "index_rank": 16,
+      "in_original_12": true
+    },
+    {
+      "ticker": "4030",
+      "yahoo": "4030.SR",
+      "name": "The National Shipping Company of Saudi Arabia",
+      "index_rank": 17,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1080",
+      "yahoo": "1080.SR",
+      "name": "Arab National Bank",
+      "index_rank": 18,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4250",
+      "yahoo": "4250.SR",
+      "name": "Jabal Omar Development Company",
+      "index_rank": 19,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1060",
+      "yahoo": "1060.SR",
+      "name": "Saudi Awwal Bank",
+      "index_rank": 20,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4190",
+      "yahoo": "4190.SR",
+      "name": "Jarir Marketing Company",
+      "index_rank": 21,
+      "in_original_12": true
+    },
+    {
+      "ticker": "7203",
+      "yahoo": "7203.SR",
+      "name": "Elm Company",
+      "index_rank": 22,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8010",
+      "yahoo": "8010.SR",
+      "name": "The Company for Cooperative Insurance",
+      "index_rank": 23,
+      "in_original_12": true
+    },
+    {
+      "ticker": "4325",
+      "yahoo": "4325.SR",
+      "name": "Umm Al Qura for Development and Construction Company",
+      "index_rank": 24,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1020",
+      "yahoo": "1020.SR",
+      "name": "aljazira bank",
+      "index_rank": 25,
+      "in_original_12": false
+    },
+    {
+      "ticker": "5110",
+      "yahoo": "5110.SR",
+      "name": "Saudi Energy Company",
+      "index_rank": 26,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4200",
+      "yahoo": "4200.SR",
+      "name": "Aldrees Petroleum and Transport Services Company",
+      "index_rank": 27,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1030",
+      "yahoo": "1030.SR",
+      "name": "The Saudi Investment Bank",
+      "index_rank": 28,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8210",
+      "yahoo": "8210.SR",
+      "name": "Bupa Arabia for Cooperative Insurance Company",
+      "index_rank": 29,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2290",
+      "yahoo": "2290.SR",
+      "name": "Yanbu National Petrochemical Company",
+      "index_rank": 30,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2310",
+      "yahoo": "2310.SR",
+      "name": "Sahara International Petrochemical Company",
+      "index_rank": 31,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8313",
+      "yahoo": "8313.SR",
+      "name": "Rasan Information Technology Company",
+      "index_rank": 32,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2250",
+      "yahoo": "2250.SR",
+      "name": "Saudi Industrial Investment Group",
+      "index_rank": 33,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4100",
+      "yahoo": "4100.SR",
+      "name": "Makkah Construction and Development Company",
+      "index_rank": 34,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8230",
+      "yahoo": "8230.SR",
+      "name": "Al Rajhi Company for Cooperative Insurance",
+      "index_rank": 35,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2223",
+      "yahoo": "2223.SR",
+      "name": "Saudi Aramco Base Oil Company - Luberef",
+      "index_rank": 36,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4142",
+      "yahoo": "4142.SR",
+      "name": "Riyadh Cables Group Company",
+      "index_rank": 37,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4263",
+      "yahoo": "4263.SR",
+      "name": "SAL Saudi Logistics Services Company",
+      "index_rank": 38,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2382",
+      "yahoo": "2382.SR",
+      "name": "ADES Holding Company",
+      "index_rank": 39,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1111",
+      "yahoo": "1111.SR",
+      "name": "Saudi Tadawul Group Holding Company",
+      "index_rank": 40,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7030",
+      "yahoo": "7030.SR",
+      "name": "Mobile Telecommunications Company Saudi Arabia",
+      "index_rank": 41,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4002",
+      "yahoo": "4002.SR",
+      "name": "Mouwasat Medical Services Company",
+      "index_rank": 42,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2330",
+      "yahoo": "2330.SR",
+      "name": "Advanced Petrochemical Company",
+      "index_rank": 43,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2350",
+      "yahoo": "2350.SR",
+      "name": "Saudi Kayan Petrochemical Company",
+      "index_rank": 44,
+      "in_original_12": true
+    },
+    {
+      "ticker": "2050",
+      "yahoo": "2050.SR",
+      "name": "Savola Group Company",
+      "index_rank": 45,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4090",
+      "yahoo": "4090.SR",
+      "name": "Taiba Investment Company",
+      "index_rank": 46,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4321",
+      "yahoo": "4321.SR",
+      "name": "Arabian Centres Company",
+      "index_rank": 47,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7202",
+      "yahoo": "7202.SR",
+      "name": "Arabian Internet and Communication Services Company",
+      "index_rank": 48,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1212",
+      "yahoo": "1212.SR",
+      "name": "Astra Industrial Group Company",
+      "index_rank": 49,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2060",
+      "yahoo": "2060.SR",
+      "name": "National Industrialization Company",
+      "index_rank": 50,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2230",
+      "yahoo": "2230.SR",
+      "name": "Saudi Chemical Holding Company",
+      "index_rank": 51,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1810",
+      "yahoo": "1810.SR",
+      "name": "Seera Holding Group",
+      "index_rank": 52,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4003",
+      "yahoo": "4003.SR",
+      "name": "United Electronics Company",
+      "index_rank": 53,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7200",
+      "yahoo": "7200.SR",
+      "name": "Al Moammar Information Systems Company",
+      "index_rank": 54,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2080",
+      "yahoo": "2080.SR",
+      "name": "National Gas and Industrialization Company",
+      "index_rank": 55,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4310",
+      "yahoo": "4310.SR",
+      "name": "Knowledge Economic City Company",
+      "index_rank": 56,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3040",
+      "yahoo": "3040.SR",
+      "name": "Qassim Cement Company",
+      "index_rank": 57,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3030",
+      "yahoo": "3030.SR",
+      "name": "Saudi Cement Company",
+      "index_rank": 58,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1321",
+      "yahoo": "1321.SR",
+      "name": "East Pipes Integrated Company for Industry",
+      "index_rank": 59,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4004",
+      "yahoo": "4004.SR",
+      "name": "Dallah Healthcare Company",
+      "index_rank": 60,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4164",
+      "yahoo": "4164.SR",
+      "name": "Nahdi Medical Company",
+      "index_rank": 61,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4210",
+      "yahoo": "4210.SR",
+      "name": "Saudi Research and Media Group",
+      "index_rank": 62,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3020",
+      "yahoo": "3020.SR",
+      "name": "YAMAMA Cement Company",
+      "index_rank": 63,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8200",
+      "yahoo": "8200.SR",
+      "name": "Saudi Reinsurance Company",
+      "index_rank": 64,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4015",
+      "yahoo": "4015.SR",
+      "name": "Jamjoom Pharmaceuticals Factory Company",
+      "index_rank": 65,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2083",
+      "yahoo": "2083.SR",
+      "name": "Power and Water Utility Company for Jubail and Yanbu",
+      "index_rank": 66,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4322",
+      "yahoo": "4322.SR",
+      "name": "Retal Urban Development Company",
+      "index_rank": 67,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2320",
+      "yahoo": "2320.SR",
+      "name": "Al-Babtain Power and Telecommunications Company",
+      "index_rank": 68,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6004",
+      "yahoo": "6004.SR",
+      "name": "CATRION Catering Holding Company",
+      "index_rank": 69,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4291",
+      "yahoo": "4291.SR",
+      "name": "National Company for Learning and Education",
+      "index_rank": 70,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1322",
+      "yahoo": "1322.SR",
+      "name": "Al Masane Al Kobra Mining Company",
+      "index_rank": 71,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4150",
+      "yahoo": "4150.SR",
+      "name": "Arriyadh Development Co.",
+      "index_rank": 72,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4220",
+      "yahoo": "4220.SR",
+      "name": "Emaar The Economic City",
+      "index_rank": 73,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2070",
+      "yahoo": "2070.SR",
+      "name": "Saudi Pharmaceutical Industries and Medical Appliances Corporation",
+      "index_rank": 74,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2270",
+      "yahoo": "2270.SR",
+      "name": "Saudia Dairy & Foodstuff Company",
+      "index_rank": 75,
+      "in_original_12": true
+    },
+    {
+      "ticker": "4001",
+      "yahoo": "4001.SR",
+      "name": "Abdullah Al-Othaim Markets Company",
+      "index_rank": 76,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6015",
+      "yahoo": "6015.SR",
+      "name": "Americana Restaurants International PLC",
+      "index_rank": 77,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2381",
+      "yahoo": "2381.SR",
+      "name": "Arabian Drilling Company",
+      "index_rank": 78,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2190",
+      "yahoo": "2190.SR",
+      "name": "Sustained Infrastructure Holding Company",
+      "index_rank": 79,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1303",
+      "yahoo": "1303.SR",
+      "name": "Electrical Industries Company",
+      "index_rank": 80,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4264",
+      "yahoo": "4264.SR",
+      "name": "Flynas Company",
+      "index_rank": 81,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4050",
+      "yahoo": "4050.SR",
+      "name": "Saudi Automotive Services Company",
+      "index_rank": 82,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4260",
+      "yahoo": "4260.SR",
+      "name": "United International Transportation Company",
+      "index_rank": 83,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4007",
+      "yahoo": "4007.SR",
+      "name": "Al Hammadi Holding Company",
+      "index_rank": 84,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7040",
+      "yahoo": "7040.SR",
+      "name": "Etihad GO Telecom Co.",
+      "index_rank": 85,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4005",
+      "yahoo": "4005.SR",
+      "name": "National Medical Care Company",
+      "index_rank": 86,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1834",
+      "yahoo": "1834.SR",
+      "name": "Saudi Manpower Solutions Company",
+      "index_rank": 87,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3060",
+      "yahoo": "3060.SR",
+      "name": "Yanbu Cement Company",
+      "index_rank": 88,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4280",
+      "yahoo": "4280.SR",
+      "name": "Kingdom Holding Company",
+      "index_rank": 89,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1830",
+      "yahoo": "1830.SR",
+      "name": "Leejam Sports Company",
+      "index_rank": 90,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2040",
+      "yahoo": "2040.SR",
+      "name": "Saudi Ceramic Company",
+      "index_rank": 91,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4020",
+      "yahoo": "4020.SR",
+      "name": "Saudi Real Estate Company",
+      "index_rank": 92,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6010",
+      "yahoo": "6010.SR",
+      "name": "The National Agricultural Development Company",
+      "index_rank": 93,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2170",
+      "yahoo": "2170.SR",
+      "name": "Alujain Corporation",
+      "index_rank": 94,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3010",
+      "yahoo": "3010.SR",
+      "name": "Arabian Cement Company",
+      "index_rank": 95,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1302",
+      "yahoo": "1302.SR",
+      "name": "Bawan Company",
+      "index_rank": 96,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1831",
+      "yahoo": "1831.SR",
+      "name": "Maharah for Human Resources Company",
+      "index_rank": 97,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4031",
+      "yahoo": "4031.SR",
+      "name": "Saudi Ground Services Company",
+      "index_rank": 98,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2081",
+      "yahoo": "2081.SR",
+      "name": "Alkhorayef Water and Power Technologies Company",
+      "index_rank": 99,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4018",
+      "yahoo": "4018.SR",
+      "name": "Almoosa Health Company",
+      "index_rank": 100,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4084",
+      "yahoo": "4084.SR",
+      "name": "Derayah Financial Company",
+      "index_rank": 101,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4017",
+      "yahoo": "4017.SR",
+      "name": "Dr. Soliman Abdel Kader Fakeeh Hospital Company",
+      "index_rank": 102,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3050",
+      "yahoo": "3050.SR",
+      "name": "Southern Province Cement Company",
+      "index_rank": 103,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2240",
+      "yahoo": "2240.SR",
+      "name": "Advanced Building Industries Co.",
+      "index_rank": 104,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3003",
+      "yahoo": "3003.SR",
+      "name": "City Cement Company",
+      "index_rank": 105,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2284",
+      "yahoo": "2284.SR",
+      "name": "Modern Mills Company",
+      "index_rank": 106,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8030",
+      "yahoo": "8030.SR",
+      "name": "The Mediterranean and Gulf Cooperative Insurance and Reinsurance Company",
+      "index_rank": 107,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1304",
+      "yahoo": "1304.SR",
+      "name": "Al Yamamah Steel Industries Company",
+      "index_rank": 108,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3080",
+      "yahoo": "3080.SR",
+      "name": "Eastern Province Cement Company",
+      "index_rank": 109,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2300",
+      "yahoo": "2300.SR",
+      "name": "Saudi Paper Manufacturing Company",
+      "index_rank": 110,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4323",
+      "yahoo": "4323.SR",
+      "name": "Sumou Real Estate Company",
+      "index_rank": 111,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4012",
+      "yahoo": "4012.SR",
+      "name": "Thob Al Aseel Company",
+      "index_rank": 112,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4165",
+      "yahoo": "4165.SR",
+      "name": "Al Majed for Oud Company",
+      "index_rank": 113,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2200",
+      "yahoo": "2200.SR",
+      "name": "Arabian Pipes Company",
+      "index_rank": 114,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4161",
+      "yahoo": "4161.SR",
+      "name": "BinDawood Holding Company",
+      "index_rank": 115,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6017",
+      "yahoo": "6017.SR",
+      "name": "Jahez International Company for Information Systems Technology",
+      "index_rank": 116,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1202",
+      "yahoo": "1202.SR",
+      "name": "Middle East Company for Manufacturing and Producing Paper",
+      "index_rank": 117,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4009",
+      "yahoo": "4009.SR",
+      "name": "Middle East Healthcare Company",
+      "index_rank": 118,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4016",
+      "yahoo": "4016.SR",
+      "name": "Middle East Pharmaceutical Industries Company",
+      "index_rank": 119,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2370",
+      "yahoo": "2370.SR",
+      "name": "Middle East Specialized Cables Company",
+      "index_rank": 120,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3004",
+      "yahoo": "3004.SR",
+      "name": "Northern Region Cement Company",
+      "index_rank": 121,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7211",
+      "yahoo": "7211.SR",
+      "name": "Saudi Azm for Communication and Information Technology Company",
+      "index_rank": 122,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2110",
+      "yahoo": "2110.SR",
+      "name": "Saudi Cable Company",
+      "index_rank": 123,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4040",
+      "yahoo": "4040.SR",
+      "name": "Saudi Public Transport Company",
+      "index_rank": 124,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8060",
+      "yahoo": "8060.SR",
+      "name": "Walaa Cooperative Insurance Company",
+      "index_rank": 125,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4163",
+      "yahoo": "4163.SR",
+      "name": "Al-Dawaa Medical Services Company",
+      "index_rank": 126,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4162",
+      "yahoo": "4162.SR",
+      "name": "Almunajem Foods Company",
+      "index_rank": 127,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4071",
+      "yahoo": "4071.SR",
+      "name": "Arabian Contracting Services Company",
+      "index_rank": 128,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4110",
+      "yahoo": "4110.SR",
+      "name": "Batic Investments and Logistics Company",
+      "index_rank": 129,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3002",
+      "yahoo": "3002.SR",
+      "name": "Najran Cement Company",
+      "index_rank": 130,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3092",
+      "yahoo": "3092.SR",
+      "name": "Riyadh Cement Company",
+      "index_rank": 131,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1320",
+      "yahoo": "1320.SR",
+      "name": "Saudi Steel Pipes Company",
+      "index_rank": 132,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2283",
+      "yahoo": "2283.SR",
+      "name": "The First Milling Company",
+      "index_rank": 133,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2150",
+      "yahoo": "2150.SR",
+      "name": "The National Company for Glass Industries",
+      "index_rank": 134,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4261",
+      "yahoo": "4261.SR",
+      "name": "Theeb Rent A Car Company",
+      "index_rank": 135,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1323",
+      "yahoo": "1323.SR",
+      "name": "United Carton Industries Company",
+      "index_rank": 136,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4327",
+      "yahoo": "4327.SR",
+      "name": "Al Ramz Real Estate Company",
+      "index_rank": 137,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6070",
+      "yahoo": "6070.SR",
+      "name": "Al-Jouf Agricultural Development Co.",
+      "index_rank": 138,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6019",
+      "yahoo": "6019.SR",
+      "name": "Almasar Alshamil Education Company JSC",
+      "index_rank": 139,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1833",
+      "yahoo": "1833.SR",
+      "name": "Almawarid Manpower Company",
+      "index_rank": 140,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8070",
+      "yahoo": "8070.SR",
+      "name": "Arabian Shield Cooperative Insurance Company",
+      "index_rank": 141,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6022",
+      "yahoo": "6022.SR",
+      "name": "Armah Sports Co.",
+      "index_rank": 142,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2340",
+      "yahoo": "2340.SR",
+      "name": "Artex Industrial Investment Company",
+      "index_rank": 143,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4292",
+      "yahoo": "4292.SR",
+      "name": "Ataa Educational Company",
+      "index_rank": 144,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2286",
+      "yahoo": "2286.SR",
+      "name": "Fourth Milling Company",
+      "index_rank": 145,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4146",
+      "yahoo": "4146.SR",
+      "name": "Gas Arabian Services Company",
+      "index_rank": 146,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8250",
+      "yahoo": "8250.SR",
+      "name": "Gulf Insurance Group",
+      "index_rank": 147,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4328",
+      "yahoo": "4328.SR",
+      "name": "Ladun Investment Co.",
+      "index_rank": 148,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7204",
+      "yahoo": "7204.SR",
+      "name": "Perfect Presentation for Commercial Services Company",
+      "index_rank": 149,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1183",
+      "yahoo": "1183.SR",
+      "name": "SHL Finance Company",
+      "index_rank": 150,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2120",
+      "yahoo": "2120.SR",
+      "name": "Saudi Advanced Industries Company",
+      "index_rank": 151,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2030",
+      "yahoo": "2030.SR",
+      "name": "Saudi Arabian Refineries Company",
+      "index_rank": 152,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4170",
+      "yahoo": "4170.SR",
+      "name": "Tourism Enterprise Company (Shams)",
+      "index_rank": 153,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4191",
+      "yahoo": "4191.SR",
+      "name": "Abdullah Saad Mohammed Abo Moati for Bookstores Company",
+      "index_rank": 154,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1214",
+      "yahoo": "1214.SR",
+      "name": "Al Hassan Ghazi Ibrahim Shaker Company",
+      "index_rank": 155,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4290",
+      "yahoo": "4290.SR",
+      "name": "Al Khaleej Training and Education Company",
+      "index_rank": 156,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4192",
+      "yahoo": "4192.SR",
+      "name": "Al-Saif Stores for Development & Investment Company",
+      "index_rank": 157,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4320",
+      "yahoo": "4320.SR",
+      "name": "Alandalus Property Company",
+      "index_rank": 158,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1182",
+      "yahoo": "1182.SR",
+      "name": "Amlak International Finance Company",
+      "index_rank": 159,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2285",
+      "yahoo": "2285.SR",
+      "name": "Arabian Mills for Food Products Company",
+      "index_rank": 160,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2140",
+      "yahoo": "2140.SR",
+      "name": "Ayyan Investment Company",
+      "index_rank": 161,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4051",
+      "yahoo": "4051.SR",
+      "name": "Baazeem Trading Company",
+      "index_rank": 162,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4326",
+      "yahoo": "4326.SR",
+      "name": "Dar Al Majed Real Estate Company",
+      "index_rank": 163,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2180",
+      "yahoo": "2180.SR",
+      "name": "Filling and Packing Materials Manufacturing Company",
+      "index_rank": 164,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4072",
+      "yahoo": "4072.SR",
+      "name": "MBC Group",
+      "index_rank": 165,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2084",
+      "yahoo": "2084.SR",
+      "name": "Miahona Company Limited",
+      "index_rank": 166,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4081",
+      "yahoo": "4081.SR",
+      "name": "Nayifat Finance Company",
+      "index_rank": 167,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4193",
+      "yahoo": "4193.SR",
+      "name": "Nice One Beauty Digital Marketing Company",
+      "index_rank": 168,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4014",
+      "yahoo": "4014.SR",
+      "name": "Scientific and Medical Equipment House Company",
+      "index_rank": 169,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4019",
+      "yahoo": "4019.SR",
+      "name": "Specialized Medical Company",
+      "index_rank": 170,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6018",
+      "yahoo": "6018.SR",
+      "name": "Sport Clubs Company",
+      "index_rank": 171,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3090",
+      "yahoo": "3090.SR",
+      "name": "Tabuk Cement Company",
+      "index_rank": 172,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3005",
+      "yahoo": "3005.SR",
+      "name": "Umm Al-Qura Cement Company",
+      "index_rank": 173,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4083",
+      "yahoo": "4083.SR",
+      "name": "United International Holding Company",
+      "index_rank": 174,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6020",
+      "yahoo": "6020.SR",
+      "name": "Al Gassim Investment Holding Company",
+      "index_rank": 175,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3091",
+      "yahoo": "3091.SR",
+      "name": "Al Jouf Cement Company",
+      "index_rank": 176,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4145",
+      "yahoo": "4145.SR",
+      "name": "Al Obeikan Glass Company",
+      "index_rank": 177,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6014",
+      "yahoo": "6014.SR",
+      "name": "Alamar Foods Company",
+      "index_rank": 178,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8012",
+      "yahoo": "8012.SR",
+      "name": "Aljazira Takaful Taawuni Company",
+      "index_rank": 179,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4061",
+      "yahoo": "4061.SR",
+      "name": "Anaam International Holding Group Company",
+      "index_rank": 180,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7201",
+      "yahoo": "7201.SR",
+      "name": "Arab Sea Information Systems Company",
+      "index_rank": 181,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6060",
+      "yahoo": "6060.SR",
+      "name": "Ash-Sharqiyah Development Co.",
+      "index_rank": 182,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1820",
+      "yahoo": "1820.SR",
+      "name": "BAAN Holding Group Company",
+      "index_rank": 183,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1210",
+      "yahoo": "1210.SR",
+      "name": "Basic Chemical Industries Company",
+      "index_rank": 184,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4130",
+      "yahoo": "4130.SR",
+      "name": "Darb Saudi Investment Company",
+      "index_rank": 185,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4180",
+      "yahoo": "4180.SR",
+      "name": "Fitaihi Holding Group",
+      "index_rank": 186,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8120",
+      "yahoo": "8120.SR",
+      "name": "Gulf Union Alahlia Cooperative Insurance Company",
+      "index_rank": 187,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6001",
+      "yahoo": "6001.SR",
+      "name": "Halwani Bros. Co. Ltd.",
+      "index_rank": 188,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6002",
+      "yahoo": "6002.SR",
+      "name": "Herfy Food Services Company",
+      "index_rank": 189,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6090",
+      "yahoo": "6090.SR",
+      "name": "Jazan Development and Investment Company",
+      "index_rank": 190,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4011",
+      "yahoo": "4011.SR",
+      "name": "L'azurde Company for Jewelry",
+      "index_rank": 191,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4262",
+      "yahoo": "4262.SR",
+      "name": "Lumi Rental Company",
+      "index_rank": 192,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8020",
+      "yahoo": "8020.SR",
+      "name": "Malath Cooperative Insurance Company",
+      "index_rank": 193,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2001",
+      "yahoo": "2001.SR",
+      "name": "Methanol Chemicals Company",
+      "index_rank": 194,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4082",
+      "yahoo": "4082.SR",
+      "name": "Morabaha Marina Financing Company",
+      "index_rank": 195,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2282",
+      "yahoo": "2282.SR",
+      "name": "Naqi Water Company",
+      "index_rank": 196,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2090",
+      "yahoo": "2090.SR",
+      "name": "National Gypsum Company",
+      "index_rank": 197,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2288",
+      "yahoo": "2288.SR",
+      "name": "Nofoth Food Products Company",
+      "index_rank": 198,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4144",
+      "yahoo": "4144.SR",
+      "name": "Raoom trading Company",
+      "index_rank": 199,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4230",
+      "yahoo": "4230.SR",
+      "name": "Red Sea International Company",
+      "index_rank": 200,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1832",
+      "yahoo": "1832.SR",
+      "name": "Sadr Logistics Company",
+      "index_rank": 201,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6050",
+      "yahoo": "6050.SR",
+      "name": "Saudi Fisheries Company",
+      "index_rank": 202,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2130",
+      "yahoo": "2130.SR",
+      "name": "Saudi Industrial Development Co.",
+      "index_rank": 203,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4140",
+      "yahoo": "4140.SR",
+      "name": "Saudi Industrial Export Company",
+      "index_rank": 204,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4080",
+      "yahoo": "4080.SR",
+      "name": "Sinad Holding Company",
+      "index_rank": 205,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1835",
+      "yahoo": "1835.SR",
+      "name": "Tamkeen Human Resources Company",
+      "index_rank": 206,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2281",
+      "yahoo": "2281.SR",
+      "name": "Tanmiah Food Company",
+      "index_rank": 207,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2160",
+      "yahoo": "2160.SR",
+      "name": "The Saudi Arabian Amiantit Company",
+      "index_rank": 208,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4070",
+      "yahoo": "4070.SR",
+      "name": "Tihama for Advertising, Public Relations and Marketing Company",
+      "index_rank": 209,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1301",
+      "yahoo": "1301.SR",
+      "name": "United Wire Factories Company",
+      "index_rank": 210,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2100",
+      "yahoo": "2100.SR",
+      "name": "Wafrah for Industry and Development Company",
+      "index_rank": 211,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8300",
+      "yahoo": "8300.SR",
+      "name": "Wataniya Insurance Company",
+      "index_rank": 212,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3007",
+      "yahoo": "3007.SR",
+      "name": "Zahrat Al Waha For Trading Company",
+      "index_rank": 213,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4240",
+      "yahoo": "4240.SR",
+      "name": "AFG International Company",
+      "index_rank": 214,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8180",
+      "yahoo": "8180.SR",
+      "name": "Al Sagr Cooperative Insurance Company",
+      "index_rank": 215,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4143",
+      "yahoo": "4143.SR",
+      "name": "Al Taiseer Group TALCO Industrial Company",
+      "index_rank": 216,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8170",
+      "yahoo": "8170.SR",
+      "name": "Al-Etihad Cooperative Insurance Company",
+      "index_rank": 217,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4141",
+      "yahoo": "4141.SR",
+      "name": "Al-Omran Industrial Trading Company",
+      "index_rank": 218,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8150",
+      "yahoo": "8150.SR",
+      "name": "Allied Cooperative Insurance Group",
+      "index_rank": 219,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4148",
+      "yahoo": "4148.SR",
+      "name": "Alwasail Industrial Company",
+      "index_rank": 220,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8310",
+      "yahoo": "8310.SR",
+      "name": "Amana Cooperative Insurance Company",
+      "index_rank": 221,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8160",
+      "yahoo": "8160.SR",
+      "name": "Arabia Insurance Cooperative Company",
+      "index_rank": 222,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2287",
+      "yahoo": "2287.SR",
+      "name": "Arabian Company for Agricultural and Industrial Investment",
+      "index_rank": 223,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4324",
+      "yahoo": "4324.SR",
+      "name": "Banan Real Estate Company",
+      "index_rank": 224,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4021",
+      "yahoo": "4021.SR",
+      "name": "Canadian General Medical Center Complex Company",
+      "index_rank": 225,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4265",
+      "yahoo": "4265.SR",
+      "name": "Cherry Trading Company",
+      "index_rank": 226,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8240",
+      "yahoo": "8240.SR",
+      "name": "Chubb Arabia Cooperative Insurance Company",
+      "index_rank": 227,
+      "in_original_12": false
+    },
+    {
+      "ticker": "7205",
+      "yahoo": "7205.SR",
+      "name": "Dar AlBalad for Business Solutions Company",
+      "index_rank": 228,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6013",
+      "yahoo": "6013.SR",
+      "name": "Development Works Food Company",
+      "index_rank": 229,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8280",
+      "yahoo": "8280.SR",
+      "name": "Liva Insurance Company",
+      "index_rank": 230,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4194",
+      "yahoo": "4194.SR",
+      "name": "Marketing Home Group Company for Trading Company",
+      "index_rank": 231,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8040",
+      "yahoo": "8040.SR",
+      "name": "Mutakamela Insurance Company",
+      "index_rank": 232,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1213",
+      "yahoo": "1213.SR",
+      "name": "Naseej International Trading Company",
+      "index_rank": 233,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2220",
+      "yahoo": "2220.SR",
+      "name": "National Metal Manufacturing and Casting Co.",
+      "index_rank": 234,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6012",
+      "yahoo": "6012.SR",
+      "name": "Raydan Food Company",
+      "index_rank": 235,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8050",
+      "yahoo": "8050.SR",
+      "name": "Salama Cooperative Insurance Company",
+      "index_rank": 236,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1324",
+      "yahoo": "1324.SR",
+      "name": "Saleh Abdulaziz Al Rashed & Sons Co.",
+      "index_rank": 237,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8100",
+      "yahoo": "8100.SR",
+      "name": "Saudi Arabian Cooperative Insurance Company",
+      "index_rank": 238,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4008",
+      "yahoo": "4008.SR",
+      "name": "Saudi Company for Hardware SACO",
+      "index_rank": 239,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8311",
+      "yahoo": "8311.SR",
+      "name": "Saudi Enaya Cooperative Insurance Company",
+      "index_rank": 240,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4006",
+      "yahoo": "4006.SR",
+      "name": "Saudi Marketing Company",
+      "index_rank": 241,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4270",
+      "yahoo": "4270.SR",
+      "name": "Saudi Printing and Packaging Co.",
+      "index_rank": 242,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2360",
+      "yahoo": "2360.SR",
+      "name": "Saudi Vitrified Clay Pipe Company",
+      "index_rank": 243,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6016",
+      "yahoo": "6016.SR",
+      "name": "Shatirah House Restaurant Co.",
+      "index_rank": 244,
+      "in_original_12": false
+    },
+    {
+      "ticker": "6040",
+      "yahoo": "6040.SR",
+      "name": "Tabuk Agricultural Development Company",
+      "index_rank": 245,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1201",
+      "yahoo": "1201.SR",
+      "name": "Takween Advanced Industries",
+      "index_rank": 246,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4160",
+      "yahoo": "4160.SR",
+      "name": "Thimar Development Holding Company",
+      "index_rank": 247,
+      "in_original_12": false
+    },
+    {
+      "ticker": "1325",
+      "yahoo": "1325.SR",
+      "name": "Watani Iron Steel Company",
+      "index_rank": 248,
+      "in_original_12": false
+    },
+    {
+      "ticker": "3008",
+      "yahoo": "3008.SR",
+      "name": "Al Kathiri Holding Company",
+      "index_rank": 249,
+      "in_original_12": false
+    },
+    {
+      "ticker": "4147",
+      "yahoo": "4147.SR",
+      "name": "Consolidated Grunenfelder Saady Holding Company",
+      "index_rank": 250,
+      "in_original_12": false
+    },
+    {
+      "ticker": "8260",
+      "yahoo": "8260.SR",
+      "name": "Gulf General Cooperative Insurance Company",
+      "index_rank": 251,
+      "in_original_12": false
+    },
+    {
+      "ticker": "2380",
+      "yahoo": "2380.SR",
+      "name": "Rabigh Refining and Petrochemical Company",
+      "index_rank": 252,
+      "in_original_12": false
+    }
+  ]
+}
