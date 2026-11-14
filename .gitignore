@@ -5,9 +5,4 @@ __pycache__/
 dist/
 build/
 .ipynb_checkpoints/
-catboost_info/
-
-daily_study/cache/
-validation/prices/
-validation/runs/*/predictions/
-demand_line/cache/
+data/cache/

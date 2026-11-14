@@ -1,0 +1,719 @@
+{
+  "n": 102,
+  "assets": [
+    {
+      "symbol": "AAPL",
+      "name": "AAPL",
+      "label": "Apple",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "AGG",
+      "name": "AGG",
+      "label": "US Aggregate Bond",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "AMZN",
+      "label": "Amazon",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "ARKK",
+      "name": "ARKK",
+      "label": "ARK Innovation",
+      "market": "US",
+      "asset_class": "Thematic ETF"
+    },
+    {
+      "symbol": "ASML",
+      "name": "ASML",
+      "label": "ASML Holdings",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "1120.SR",
+      "name": "Al_Rajhi",
+      "label": "Al Rajhi Bank",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "1150.SR",
+      "name": "Alinma",
+      "label": "Alinma Bank",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "BA",
+      "name": "BA",
+      "label": "Boeing",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "BABA",
+      "name": "BABA",
+      "label": "Alibaba",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "BND",
+      "name": "BND",
+      "label": "Total Bond Market",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "CEW",
+      "name": "CEW",
+      "label": "EM Currency ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "CPER",
+      "name": "CPER",
+      "label": "Copper ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "DBA",
+      "name": "DBA",
+      "label": "Agriculture ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "DBC",
+      "name": "DBC",
+      "label": "Commodity Index",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "DIA",
+      "name": "DIA",
+      "label": "Dow Jones ETF",
+      "market": "US",
+      "asset_class": "Broad ETF"
+    },
+    {
+      "symbol": "DIS",
+      "name": "DIS",
+      "label": "Disney",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "4300.SR",
+      "name": "Dar_Al_Arkan",
+      "label": "Dar Al Arkan",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "EEM",
+      "name": "EEM",
+      "label": "Emerging Markets",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWA",
+      "name": "EWA",
+      "label": "Australia ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWC",
+      "name": "EWC",
+      "label": "Canada ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWG",
+      "name": "EWG",
+      "label": "Germany ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWJ",
+      "name": "EWJ",
+      "label": "Japan ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWS",
+      "name": "EWS",
+      "label": "Singapore ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWT",
+      "name": "EWT",
+      "label": "Taiwan ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWU",
+      "name": "EWU",
+      "label": "UK ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWY",
+      "name": "EWY",
+      "label": "South Korea ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "EWZ",
+      "name": "EWZ",
+      "label": "Brazil ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "FXA",
+      "name": "FXA",
+      "label": "Australian Dollar ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "FXB",
+      "name": "FXB",
+      "label": "British Pound ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "FXC",
+      "name": "FXC",
+      "label": "Canadian Dollar ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "FXE",
+      "name": "FXE",
+      "label": "Euro Currency ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "FXF",
+      "name": "FXF",
+      "label": "Swiss Franc ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "FXI",
+      "name": "FXI",
+      "label": "China Large-Cap ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "FXY",
+      "name": "FXY",
+      "label": "Japanese Yen ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "GLD",
+      "name": "GLD",
+      "label": "Gold ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "GOOG",
+      "name": "GOOG",
+      "label": "Alphabet",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "HACK",
+      "name": "HACK",
+      "label": "Cybersecurity ETF",
+      "market": "US",
+      "asset_class": "Thematic ETF"
+    },
+    {
+      "symbol": "HD",
+      "name": "HD",
+      "label": "Home Depot",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "HYG",
+      "name": "HYG",
+      "label": "High Yield Corporate",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "IEF",
+      "name": "IEF",
+      "label": "7-10 Year Treasury",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "INDA",
+      "name": "INDA",
+      "label": "India ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "IWM",
+      "name": "IWM",
+      "label": "Russell 2000 SmallCap",
+      "market": "US",
+      "asset_class": "Broad ETF"
+    },
+    {
+      "symbol": "IYR",
+      "name": "IYR",
+      "label": "iShares US REIT",
+      "market": "US",
+      "asset_class": "REIT"
+    },
+    {
+      "symbol": "JNJ",
+      "name": "JNJ",
+      "label": "Johnson & Johnson",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "JPM",
+      "name": "JPM",
+      "label": "JP Morgan",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "4190.SR",
+      "name": "Jarir",
+      "label": "Jarir Marketing",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "KO",
+      "name": "KO",
+      "label": "Coca-Cola",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "KWEB",
+      "name": "KWEB",
+      "label": "China Internet ETF",
+      "market": "US",
+      "asset_class": "Thematic ETF"
+    },
+    {
+      "symbol": "LQD",
+      "name": "LQD",
+      "label": "IG Corporate Bond",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "MA",
+      "name": "MA",
+      "label": "Mastercard",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "MDY",
+      "name": "MDY",
+      "label": "S&P MidCap 400",
+      "market": "US",
+      "asset_class": "Broad ETF"
+    },
+    {
+      "symbol": "META",
+      "name": "META",
+      "label": "Meta Platforms",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "MSFT",
+      "label": "Microsoft",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "MUB",
+      "name": "MUB",
+      "label": "Municipal Bond",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "1211.SR",
+      "name": "Maaden",
+      "label": "Saudi Mining",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "7020.SR",
+      "name": "Mobily",
+      "label": "Mobily (Telecom)",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "NFLX",
+      "name": "NFLX",
+      "label": "Netflix",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVDA",
+      "label": "NVIDIA",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "NVO",
+      "name": "NVO",
+      "label": "Novo Nordisk",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "PALL",
+      "name": "PALL",
+      "label": "Palladium ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "PEP",
+      "name": "PEP",
+      "label": "PepsiCo",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "PG",
+      "name": "PG",
+      "label": "Procter & Gamble",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "PPLT",
+      "name": "PPLT",
+      "label": "Platinum ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "QQQ",
+      "label": "Nasdaq 100 ETF",
+      "market": "US",
+      "asset_class": "Broad ETF"
+    },
+    {
+      "symbol": "REM",
+      "name": "REM",
+      "label": "Mortgage REIT ETF",
+      "market": "US",
+      "asset_class": "REIT"
+    },
+    {
+      "symbol": "RIO",
+      "name": "RIO",
+      "label": "Rio Tinto",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "1010.SR",
+      "name": "Riyad_Bank",
+      "label": "Riyad Bank",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "2010.SR",
+      "name": "SABIC",
+      "label": "SABIC (Chemicals)",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "2270.SR",
+      "name": "SADAFCO",
+      "label": "SADAFCO (Dairy)",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "SAP",
+      "name": "SAP",
+      "label": "SAP SE",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "SHEL",
+      "name": "SHEL",
+      "label": "Shell plc",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "SHY",
+      "name": "SHY",
+      "label": "1-3 Year Treasury",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "SLV",
+      "name": "SLV",
+      "label": "Silver ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "SPY",
+      "name": "SPY",
+      "label": "S&P 500 ETF",
+      "market": "US",
+      "asset_class": "Broad ETF"
+    },
+    {
+      "symbol": "7010.SR",
+      "name": "STC",
+      "label": "Saudi Telecom",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "2350.SR",
+      "name": "Saudi_Kayan",
+      "label": "Saudi Kayan",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "TAN",
+      "name": "TAN",
+      "label": "Solar ETF",
+      "market": "US",
+      "asset_class": "Thematic ETF"
+    },
+    {
+      "symbol": "TIP",
+      "name": "TIP",
+      "label": "TIPS Bond ETF",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "TLT",
+      "name": "TLT",
+      "label": "20+ Year Treasury",
+      "market": "US",
+      "asset_class": "Bond ETF"
+    },
+    {
+      "symbol": "TM",
+      "name": "TM",
+      "label": "Toyota Motor",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "TSLA",
+      "label": "Tesla",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "TSM",
+      "name": "TSM",
+      "label": "TSMC",
+      "market": "US",
+      "asset_class": "Intl Stock"
+    },
+    {
+      "symbol": "8010.SR",
+      "name": "Tawuniya",
+      "label": "Tawuniya Insurance",
+      "market": "TASI",
+      "asset_class": "TASI Stock"
+    },
+    {
+      "symbol": "UNG",
+      "name": "UNG",
+      "label": "Natural Gas ETF",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "UNH",
+      "name": "UNH",
+      "label": "UnitedHealth",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "USO",
+      "name": "USO",
+      "label": "US Oil Fund",
+      "market": "US",
+      "asset_class": "Commodity"
+    },
+    {
+      "symbol": "UUP",
+      "name": "UUP",
+      "label": "US Dollar Bull ETF",
+      "market": "US",
+      "asset_class": "Currency"
+    },
+    {
+      "symbol": "V",
+      "name": "V",
+      "label": "Visa",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "VNQ",
+      "name": "VNQ",
+      "label": "US REIT ETF",
+      "market": "US",
+      "asset_class": "REIT"
+    },
+    {
+      "symbol": "VNQI",
+      "name": "VNQI",
+      "label": "Intl REIT ETF",
+      "market": "US",
+      "asset_class": "REIT"
+    },
+    {
+      "symbol": "VWO",
+      "name": "VWO",
+      "label": "Vanguard EM ETF",
+      "market": "US",
+      "asset_class": "Intl ETF"
+    },
+    {
+      "symbol": "WMT",
+      "name": "WMT",
+      "label": "Walmart",
+      "market": "US",
+      "asset_class": "US Stock"
+    },
+    {
+      "symbol": "XBI",
+      "name": "XBI",
+      "label": "Biotech ETF",
+      "market": "US",
+      "asset_class": "Thematic ETF"
+    },
+    {
+      "symbol": "XLB",
+      "name": "XLB",
+      "label": "Materials Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLE",
+      "name": "XLE",
+      "label": "Energy Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLF",
+      "name": "XLF",
+      "label": "Financial Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLI",
+      "name": "XLI",
+      "label": "Industrials Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLK",
+      "name": "XLK",
+      "label": "Technology Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLP",
+      "name": "XLP",
+      "label": "Consumer Staples",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLRE",
+      "name": "XLRE",
+      "label": "Real Estate Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLU",
+      "name": "XLU",
+      "label": "Utilities Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    },
+    {
+      "symbol": "XLV",
+      "name": "XLV",
+      "label": "Healthcare Sector",
+      "market": "US",
+      "asset_class": "Sector ETF"
+    }
+  ]
+}
