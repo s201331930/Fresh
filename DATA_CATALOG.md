@@ -76,7 +76,7 @@ Last row: week of 26 Jun 2026, close 728.99, volume 295,781,600.
 3. SMA and EMA at 5, 10, 20, 50, 100, and 200 sessions, for SPY, VIX, and Brent, plus Bollinger, MACD, OBV, RSI(14), ADX, and DI for each of the three.
 4. Log volume and percent changes of the price, VIX, and Brent fields.
 
-This file still contains a `Target` column, the next week's return from the old join. The factor matrices do not. Do not use `Target` as a factor.
+This file still contains a `Target` column. It is 1 on a bullish order-block week and 0 otherwise, the same information as `OB_Bull`. It is not a next-week return. The factor matrices have no target column.
 
 ## Factor matrices
 
@@ -112,7 +112,7 @@ One row per name in `universes/global.json`. These are summaries of that name's 
 | `asset`, `label`, `asset_class`, `market` | identity |
 | `n_weeks` | 576 to 1,398 weeks |
 | `ann_volatility`, `downside_vol`, `avg_true_range_pct` | percent |
-| `mean_weekly_ret`, `ann_return` | percent |
+| `mean_weekly_ret`, `ann_return` | percent. One number for the whole history, not a weekly target series. |
 | `raw_sharpe`, `calmar_ratio` | the asset's own path, not a strategy |
 | `skewness`, `kurtosis` | of weekly returns |
 | `autocorr_1`, `autocorr_4` | weekly return autocorrelation |
