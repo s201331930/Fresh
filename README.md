@@ -3,6 +3,7 @@
 Strategy code, trained models, and backtest results have been removed.
 What remains is the market data, the asset lists, and the factor tables
 for a later model. The column-level catalog is `DATA_CATALOG.md`.
+Before any TASI model, `sultan.md` is the leakage check: a US or oil print is usable only when it was already public before that Tadawul open.
 
 ## Universes
 

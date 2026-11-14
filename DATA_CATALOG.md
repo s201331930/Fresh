@@ -4,6 +4,8 @@ Ten files. Three kinds of thing: who can be traded, the SPY weekly prices, and t
 
 Prices are Yahoo Finance, split- and dividend-adjusted. Factor changes such as `Close_PctChg` are in percent. Distances such as `Dist_SMA_200` are ratios (`close / average - 1`), not percent.
 
+The factor matrices are stamped on the US session clock. They are not a TASI feature set. `sultan.md` is the check that runs before any Tadawul strategy: a US or oil value is kept only when its print was public before that day's 10:00 Asia/Riyadh open, and a same-calendar-date join is dropped.
+
 ## Files
 
 | File | Grain | Rows | Columns | Span | Size |
