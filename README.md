@@ -2,7 +2,7 @@
 
 Strategy code, trained models, and backtest results have been removed.
 What remains is the market data, the asset lists, and the factor tables
-for a later model.
+for a later model. The column-level catalog is `DATA_CATALOG.md`.
 
 ## Universes
 
